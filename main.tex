@@ -373,14 +373,25 @@ The values of y-coordinates can then by calculated from the slope by using $y = 
 
 \subsection{Measurements}
 
-After implementation of the elliptical grid projection in Scilab, a 10cm woofer (see \ref{spkrlib:10cm}) have been measured using the NFS. The scan was performed using a spherical grid with a scanning radius of 30 cm, and an elliptical grid with a major radius of 30 cm and a minor radius of 10 cm. Both measurements have been done in the same conditions: equal input voltage, same number of points, and same position of the DUT. Figure \ref{fig:comp_ElSPh_SPL} presents the measured Far-Field SPL responses (left figure) and the Radiated Powers (right figure) for each grid.
+After implementation of the elliptical grid projection in Scilab, a 10cm woofer (see \ref{spkrlib:10cm}) have been measured using the NFS. The scan was performed using a spherical grid with a scanning radius of 30 cm, and an elliptical grid with a major radius of 30 cm and a minor radius of 10 cm. Both measurements have been done in the same conditions: equal input voltage, same number of points, and same position of the DUT. The results are presented in figures \ref{fig:comp_ElSPh_SPL} and \ref{fig:comp_ElSPh_Pow}. \\
 
+\begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.95\textwidth]{GridOpti/Compa_El_Sph}
+	\includegraphics[width=.9\textwidth]{GridOpti/FF_Compa_El_Sph}
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Far-field SPL response and radiated powers for an elliptical and a spherical grid} 
+	\captionof{figure}{Far Field SPL response} 
 	\label{fig:comp_ElSPh_SPL}
 \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=.9\textwidth]{GridOpti/SP_Compa_El_Sph}
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Radiated Sound Power} 
+	\label{fig:comp_ElSPh_Pow}
+\end{center}
+\end{minipage}
+\vspace{0.1cm}
 
 \subsection{Discussion}
 
@@ -484,51 +495,55 @@ To verify the validity of this symmetry check, different measurements have been 
 
 \subsection{10 cm woofer}
 
-The DUT is a circular, 10cm woofer (see appendix \ref{spkrlib:10cm}), mounted on the baffle. 
+The DUT is a circular, 10cm woofer (see appendix \ref{spkrlib:10cm}), mounted on the baffle. \\
 
+\begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.95\textwidth]{Sym/10cm_Woofer_All} 
+	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_10cmWoofer} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Radiated Powers and Symmetry Factors of 10cm woofer} 
+	\captionof{figure}{Radiated Powers of 10cm woofer} 
 	\label{fig:rad_pow_10cm}
 \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_10cmWoofer} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Symmetry Factors of 10cm woofer} 
+	\label{fig:sym_fact_10cm}
+\end{center}
+\end{minipage}
+\vspace{0.1cm}
 
 
-The left graph in figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power for coefficients not fitting the symmetry condition (see \ref{chap:sym}, for example for a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$). \\
+Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power for coefficients not fitting the symmetry condition (see \ref{chap:sym}, for example for a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$). \\
 
-The right graph in figure \ref{fig:rad_pow_10cm} presents the symmetry factors for different types of symmetry, in dB. A 0 dB value means that the different between the radiated power of the symmetry condition and the radiated powers of the rest presents no difference. Observing the symmetry factor for the baffle shows that this value is constantly 0 on the whole frequency band: this result is matching the expectation since the measurement have been done with the speaker mounted on a baffle. \\
+Figure \ref{fig:sym_fact_10cm} presents the symmetry factors for different types of symmetry, in dB. A 0 dB value means that the different between the radiated power of the symmetry condition and the radiated powers of the rest presents no difference. Observing the symmetry factor for the baffle shows that this value is constantly 0 on the whole frequency band: this result is matching the expectation since the measurement have been done with the speaker mounted on a baffle. \\
 
 Comparing the radiated power in figure \ref{fig:rad_pow_10cm} for the different symmetries gives interesting results: in the low frequency domain, the total radiated power and different powers are extremely similar, no matter the symmetry type. In high frequencies, disruptions appears and the rest increases significantly: the higher the frequency, and the more interferences will be produced by the speaker. \\
 
 Comparing the symmetry factor shows that the most present symmetries are the Single Plane symmetries. This result could be a bit surprising as the rotational symmetry is expected to be dominant, but in high frequencies the speaker does not behave as a piston: the cone breakups spoils the rotational symmetry. 
 
 \subsection{Oval speaker}
-The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baffle. The particular geometry of this speaker gives hints about the type of symmetry that should be expected: the rotational symmetry should be the lowest one, and the plane symmetries should be dominant. Figure \ref{fig:rad_pow_Oval} presents the radiated powers and the symmetry factors respectively.\\
+The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baffle. The particular geometry of this speaker gives hints about the type of symmetry that should be expected: the rotational symmetry should be the lowest one, and the plane symmetries should be dominant.  Figures \ref{fig:rad_pow_Oval} and \ref{fig:sym_fact_Oval} presents the radiated powers and the symmetry factors respectively.\\
 
+\begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.95\textwidth]{Sym/Oval_Spkr_All} 
+	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_OvalSpkr} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Radiated Powers and Symmetry Factors of oval speaker} 
+	\captionof{figure}{Radiated Powers of oval speaker} 
 	\label{fig:rad_pow_Oval}
 \end{center}
-
-% \begin{minipage}{0.5\textwidth}
-% \begin{center}
-% 	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_OvalSpkr} 
-%     \captionsetup{hypcap=false} 
-% 	\captionof{figure}{Radiated Powers of oval speaker} 
-% 	\label{fig:rad_pow_Oval}
-% \end{center}
-% \end{minipage}
-% \begin{minipage}{0.5\textwidth}
-% \begin{center}
-% 	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_OvalSpkr} 
-%     \captionsetup{hypcap=false} 
-% 	\captionof{figure}{Symmetry Factors of oval speaker} 
-% 	\label{fig:sym_fact_Oval}
-% \end{center}
-% \end{minipage}
-% \vspace{0.1cm}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_OvalSpkr} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Symmetry Factors of oval speaker} 
+	\label{fig:sym_fact_Oval}
+\end{center}
+\end{minipage}
+\vspace{0.1cm}
 
 Observing the Radiated Powers shows that expected results have been encountered: in the high frequencies (a zoom on the 7 - 20 kHz range is given in appendix \ref{Curves:oval}) from 8.5 kHz, the rest of the rotational symmetry radiated power is higher that the radiated power by the rotational symmetry. This means that there is more power given by the coefficients which do not respect the condition for rotational symmetry, than by the coefficients validating $C_{mn} = 0 \;  \textup{for m}  \neq 0$.  \\
 
@@ -541,21 +556,32 @@ As expected, the rotational symmetry factor is below all other factors, a phenom
 
 \subsection{2-way "diagonal" speaker}
 
-The DUT is a "diagonal" 2-way speaker, and the scan is centred on the tweeter (see appendix \ref{spkrlib:BnO}). This speaker's asymmetrical geometry is very interesting to test the symmetry check. The device also have an integrated crossover. Figure \ref{fig:rad_pow_BnO} presents the radiated powers and the symmetry factors respectively. \\
+The DUT is a "diagonal" 2-way speaker, and the scan is centred on the tweeter (see appendix \ref{spkrlib:BnO}). This speaker's asymmetrical geometry is very interesting to test the symmetry check. The device also have an integrated crossover. Figures \ref{fig:rad_pow_BnO} and \ref{fig:sym_fact_BnO} presents the radiated powers and the symmetry factors respectively. \\
 
 The crossover frequency range can be observed clearly on both result result curves: the symmetry factors take a dip, and the rest powers are higher than the symmetrical powers (a zoom on the crossover range for the radiated powers in provided in \ref{Curves:2way}).\\
 
 Observing the Symmetry Factors shows that there is no baffle symmetry for this measurement. Although this result might seem quite trivial since the DUT was not mounted on a baffle, it is good indication that the symmetry estimation works correctly. Another interesting observation is at the crossover frequency: the symmetry factors take a dip. \\
 In this frequency range, both drivers of the DUT are working, and due to their positioning there is no possible symmetry condition. In low frequency, the driver is a monopole, so all symmetry conditions are fulfilled.\\
 
-In high frequency when the twitter alone is emitting, some symmetry is observed. The Top/Bottom single plane symmetry have the highest coefficients, meaning that it could be possible to measure only the top half of this driver and to deduce the coefficients using equation \ref{eq:spsym}.
+In high frequency when the twitter alone is emitting, some symmetry is observed. The Top/Bottom single plane symmetry have the highest coefficients, meaning that it could be possible to measure only the top half of this driver and to deduce the coefficients using equation \ref{eq:spsym}.\\
 
+\begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.95\textwidth]{Sym/BnO_All} 
+	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_BnO} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Radiated Powers and Symmetry Factors of diagonal speaker} 
+	\captionof{figure}{Radiated Powers of diagonal speaker} 
 	\label{fig:rad_pow_BnO}
 \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_BnO} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Symmetry Factors of diagonal speaker} 
+	\label{fig:sym_fact_BnO}
+\end{center}
+\end{minipage}
+\vspace{0.1cm}
 
 \section{Discussion}
 
@@ -574,14 +600,33 @@ This investigation raises several questions:
 \section{Principle}
 
 Being able to generate room correction curves is great for the everyday measurement of loudspeakers since it allows to compensate the effect of any environment and to create quasi-perfect measurements. According to the AES standard \cite{aesstandart}, "\textit{accurate and repeatable loudspeaker driver measurements require that environmental and boundary influence have minimal impact on the measurement}". Such measurements are usually done in anechoic rooms, and accurate results are difficult to achieve for companies not having access to such a room or for a hobbyist. \\
-By using post-processing, it is possible to generate room correction curves. Several methods are available \citep[see][]{aeswb}.
+By using post-processing, it is possible to generate room correction curves. Several methods are available \citep[see][]{aeswb}.\\
 
+\begin{minipage}{0.33333333\textwidth}
 \begin{center}
-	\includegraphics[width=\textwidth]{RoomComp/Sonograph_All} 
+	\includegraphics[width=\textwidth]{RoomComp/Sonograph_MagFilt} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Time-Frequency analysis for different filters.} 
+	\captionof{figure}{Filter on magnitude} 
+	\label{fig:comp_mag}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.33333333\textwidth}
+\begin{center}
+	\includegraphics[width=\textwidth]{RoomComp/Sonograph_MinPhase} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Filter with minimal phase} 
+	\label{fig:comp_minphase}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.33333333\textwidth}
+\begin{center}
+	\includegraphics[width=\textwidth]{RoomComp/Sonograph_RoomCor} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Filter with LFR} 
 	\label{fig:comp_RoomCor}
 \end{center}
+\end{minipage}
+\vspace{0.1cm}
 
 Figure \ref{fig:comp_RoomCor} presents the Time-Frequency Analysis (TFA) of three different methods to perform a room correction, applied on a measurement of a speaker's transfer function: the left graph shows a TFA when a pre-filter have been applied on the magnitude of the Transfer Function, the middle graph is when the pre-filter contains the minimal phase that have been reconstructed from the cepstrum of the Transfer Function, and the right graph shows the TFA of the transfer function filtered by the Room Correction curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}.\\
 

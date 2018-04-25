@@ -1,0 +1,70 @@
+\begin{thebibliography}{10}
+
+\bibitem{aesstandart}
+Loudspeaker driver comparison chambers.
+\newblock AES Standard Draft X223.
+
+\bibitem{LIS}
+C.~Bellmann.
+\newblock The infinite baffle.
+\newblock {\em Loudspeaker Industry Sourcebook}, 2017.
+
+\bibitem{aeswb}
+C.~Bellmann and W.~Klippel.
+\newblock Fast loudspeaker measurement in non-anechoic environment.
+\newblock {\em Journal of the Audio Engineering Society}, 2017.
+
+\bibitem{tetbox}
+G.~Hill.
+\newblock Tetrahedral test system.
+\newblock website \url{http://www.geoff-hill.com/tetrahedral.html}.
+
+\bibitem{dkeele}
+D.~B. Keele~JR.
+\newblock Low frequency loudspeaker assessment by nearfield sound-pressure
+  measurement.
+\newblock {\em Journal of the Audio Engineering Society}, 1973.
+
+\bibitem{lect2018}
+W.~Klippel.
+\newblock Sound radiation and measurement.
+\newblock Klippel 2018 lecture: Sound Quality of Audio Systems.
+
+\bibitem{pres}
+W.~Klippel and C.~Bellmann.
+\newblock The infinite baffle: loudspeaker measurement in half space by
+  holographic near field scanning.
+\newblock Lecture given in 2015, PDF.
+
+\bibitem{aeshs}
+W.~Klippel and C.~Bellmann.
+\newblock Holographic nearfield measurement of loudspeaker directivity.
+\newblock {\em Journal of the Audio Engineering Society}, 2016.
+
+\bibitem{train8}
+W.~Klippel, C.~Bellmann, et~al.
+\newblock Measurement of loudspeaker directivity.
+\newblock Klippel training 8.
+
+\bibitem{lennart1990beta}
+R.~Lennart and B.~Westergren.
+\newblock Beta mathematics handbook, 1990.
+
+\bibitem{melon1}
+M.~Melon, C.~Langrenne, P.~Herzog, and A.~Garcia.
+\newblock Evaluation of a method for the measurement of subwoofers in usual
+  rooms.
+\newblock {\em Journal of the Acoustic Society of America}, 2010.
+
+\bibitem{melon2}
+M.~Melon, C.~Langrenne, and D.~Rousseau.
+\newblock Comparison of four subwoofer measurement techniques.
+\newblock {\em Journal of the Audio Engineering Society}, 2007.
+
+\bibitem{Fourier}
+E.~G. Williams.
+\newblock {\em Fourier Acoustics: Sound radiation and Nearfield Acoustical
+  Holography}.
+\newblock Academic Press, 1999.
+
+\end{thebibliography}
