@@ -56,7 +56,7 @@
 \usepackage{pdfpages}			    % To include PDFs (annexes)
 \usepackage{textcomp}		        % For copyright symbol
 \usepackage{hyperref}				% To make references 
-
+\usepackage{rotating}				% To rotate text, figures,...
 
 %--------------------------------------------------- CUSTOM COMMANDS
 \newcommand{\ts}{\textsuperscript} 	% Simplifies superscript
@@ -129,7 +129,7 @@ Chlo\'{e} \textsc{Corno}
 %	THANKS
 %---------------------------------------------------------------------
 
-\chapter*{}
+
 \thispagestyle{empty}
 \begin{center}
 {\Large\textbf{Acknowledgements}} \\~\\~\\~\\
@@ -674,16 +674,35 @@ Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ of the 16cm fullba
 
 \subsection{Influence of microphone position}
 
-Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphones positions. A schematic of the positions is given in appendix \ref{Curves:InfluMicPos}. 
+Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphones positions. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
 
+Figure \ref{fig:MicPosTRF} shows the tranfer functions obtained for different  distance $D_{ms}$ (a bigger figure is given in appendix \ref{Curves:InfluMicPos}, figure \ref{fig:micpos_TRF_big}).
 \begin{center}
-	\includegraphics[width=0.55\textwidth]{RoomComp/MicPos_TRF_Compa} 
+	\includegraphics[width=0.6\textwidth]{RoomComp/MicPos_TRF} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Comparison of transfer function for different microphone positions} 
-	\label{fig:micposcomp}
+	\captionof{figure}{Transfert Functions for different positions} 
+	\label{fig:MicPosTRF}
 \end{center}
 
-Figure \ref{fig:micposcomp} presents the results for different microphone positions, compared with the results from the NFS (light green curve). The closer the microphone is to the membrane, and the more agreement there is between the NFS and the box measurement. 
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{RoomComp/MicPos_Diff_NFS_TRF} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Difference between NFS and TRF} 
+	\label{fig:MicPosDiffNFS}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{RoomComp/MicPos_Diff_TRF_5cm} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Difference between results for different distance $D_{ms}$} 
+	\label{fig:MicPosDiffTRF}
+\end{center}
+\end{minipage}
+
+
 
 
 \section{Room Correction solutions}
@@ -1207,12 +1226,22 @@ This appendix aims to present additional figures that could not be presented in 
 \subsection{Measurements}
 \subsubsection{Influence of microphone position}
 \label{Curves:InfluMicPos}
+
 \begin{center}
-	\includegraphics[width=\textwidth]{Appendix/micpos} 
+	\includegraphics[width=0.35\textwidth]{RoomComp/Mic_Pos_Schm} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Different microphones positions} 
+	\captionof{figure}{Microphone position inside the box} 
 	\label{fig:micpos_schema}
 \end{center}
+Where $D_{ms}$ is the distance between the driver and the microphone.
+
+\begin{center}	
+	\includegraphics[scale=0.85,angle=90]{RoomComp/MicPos_TRF} 
+	\captionsetup{hypcap=false} 
+	\captionof{figure}{Transfer functions for all microphones positions} 
+	\label{fig:micpos_TRF_big}
+\end{center}
+
 
 \subsection{Room Correction solutions}
 
