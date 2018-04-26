@@ -1,16 +1,16 @@
 \babel@toc {english}{}
 ~\hfill \textbf {Page}\par 
-\contentsline {chapter}{List of Figures}{c}{chapter*.1}
-\contentsline {chapter}{List of Equations}{d}{chapter*.1}
-\contentsline {chapter}{Introduction}{1}{chapter*.2}
+\contentsline {chapter}{List of Figures}{c}{Doc-Start}
+\contentsline {chapter}{List of Equations}{d}{Doc-Start}
+\contentsline {chapter}{Introduction}{1}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Preface}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Presentation of the company}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Context and aim of the work}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Literature review}{3}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Field Separation}{3}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Near Field measurements}{3}{subsection.1.3.2}
-\contentsline {subsubsection}{Measurement principle}{3}{subsubsection*.3}
-\contentsline {subsubsection}{Maximum order of expansion}{4}{subsubsection*.4}
+\contentsline {subsubsection}{Measurement principle}{3}{subsubsection*.2}
+\contentsline {subsubsection}{Maximum order of expansion}{4}{subsubsection*.3}
 \contentsline {chapter}{\numberline {2}Baffle measurements}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Grid optimization}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Principle}{5}{subsection.2.1.1}
@@ -30,10 +30,8 @@
 \contentsline {chapter}{\numberline {4}Room correction}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Principle}{11}{section.4.1}
 \contentsline {section}{\numberline {4.2}Measurements}{11}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}10 cm woofer}{11}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}16 cm fullband driver}{12}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Influence of the load}{12}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Influence of microphone position}{12}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.1}Influence of the load}{11}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Influence of microphone position}{12}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Room Correction solutions}{13}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}D. B. Keele method for Far Field extrapolation}{13}{subsection.4.3.1}
 \contentsline {section}{\numberline {4.4}Discussion}{13}{section.4.4}
@@ -53,8 +51,8 @@
 \contentsline {subsection}{\numberline {D.2.2}2-way "diagonal" speaker}{xi}{subsection.a.D.2.2}
 \contentsline {section}{\numberline {D.3}Room Correction}{xi}{section.a.D.3}
 \contentsline {subsection}{\numberline {D.3.1}Measurements}{xi}{subsection.a.D.3.1}
-\contentsline {subsubsection}{Influence of microphone position}{xi}{subsubsection*.9}
-\contentsline {subsection}{\numberline {D.3.2}Room Correction solutions}{xii}{subsection.a.D.3.2}
-\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{xii}{subsubsection*.10}
-\contentsline {chapter}{Appendix \numberline {E}Application notes}{xiii}{Appendix.a.E}
-\contentsline {section}{\numberline {E.1}Baffle measurement}{xiii}{section.a.E.1}
+\contentsline {subsubsection}{Influence of microphone position}{xi}{subsubsection*.8}
+\contentsline {subsection}{\numberline {D.3.2}Room Correction solutions}{xiii}{subsection.a.D.3.2}
+\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{xiii}{subsubsection*.9}
+\contentsline {chapter}{Appendix \numberline {E}Application notes}{xiv}{Appendix.a.E}
+\contentsline {section}{\numberline {E.1}Baffle measurement}{xiv}{section.a.E.1}
