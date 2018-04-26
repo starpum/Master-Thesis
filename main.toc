@@ -49,10 +49,10 @@
 \contentsline {section}{\numberline {D.2}Measurement time optimization}{x}{section.a.D.2}
 \contentsline {subsection}{\numberline {D.2.1}Oval speaker}{x}{subsection.a.D.2.1}
 \contentsline {subsection}{\numberline {D.2.2}2-way "diagonal" speaker}{xi}{subsection.a.D.2.2}
-\contentsline {section}{\numberline {D.3}Room Correction}{xi}{section.a.D.3}
-\contentsline {subsection}{\numberline {D.3.1}Measurements}{xi}{subsection.a.D.3.1}
-\contentsline {subsubsection}{Influence of microphone position}{xi}{subsubsection*.8}
-\contentsline {subsection}{\numberline {D.3.2}Room Correction solutions}{xiii}{subsection.a.D.3.2}
-\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{xiii}{subsubsection*.9}
-\contentsline {chapter}{Appendix \numberline {E}Application notes}{xiv}{Appendix.a.E}
-\contentsline {section}{\numberline {E.1}Baffle measurement}{xiv}{section.a.E.1}
+\contentsline {section}{\numberline {D.3}Room Correction}{xiii}{section.a.D.3}
+\contentsline {subsection}{\numberline {D.3.1}Measurements}{xiii}{subsection.a.D.3.1}
+\contentsline {subsubsection}{Influence of microphone position}{xiii}{subsubsection*.8}
+\contentsline {subsection}{\numberline {D.3.2}Room Correction solutions}{xiv}{subsection.a.D.3.2}
+\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{xiv}{subsubsection*.9}
+\contentsline {chapter}{Appendix \numberline {E}Application notes}{xv}{Appendix.a.E}
+\contentsline {section}{\numberline {E.1}Baffle measurement}{xv}{section.a.E.1}

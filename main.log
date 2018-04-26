@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600) (preloaded format=pdflatex 2018.4.25)  26 APR 2018 10:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600) (preloaded format=pdflatex 2018.4.25)  26 APR 2018 11:51
 entering extended mode
 **./main.tex
 (main.tex
@@ -1330,7 +1330,7 @@ l.229 \chapter
 
 ]
 Chapter 1.
-<Preface/logo_klippel.png, id=396, 602.25pt x 373.395pt>
+<Preface/logo_klippel.png, id=398, 602.25pt x 373.395pt>
 File: Preface/logo_klippel.png Graphic file (type png)
 <use Preface/logo_klippel.png>
 Package pdftex.def Info: Preface/logo_klippel.png  used on input line 237.
@@ -1353,7 +1353,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
-<Preface/NFS2.jpg, id=398, 1165.35374pt x 1552.80125pt>
+<Preface/NFS2.jpg, id=400, 1165.35374pt x 1552.80125pt>
 File: Preface/NFS2.jpg Graphic file (type jpg)
 <use Preface/NFS2.jpg>
 Package pdftex.def Info: Preface/NFS2.jpg  used on input line 259.
@@ -1425,7 +1425,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--354
 
  []
 
-<GridOpti/El_Grid_Draw.png, id=448, 847.66687pt x 462.22687pt>
+<GridOpti/El_Grid_Draw.png, id=450, 847.66687pt x 462.22687pt>
 File: GridOpti/El_Grid_Draw.png Graphic file (type png)
 <use GridOpti/El_Grid_Draw.png>
 Package pdftex.def Info: GridOpti/El_Grid_Draw.png  used on input line 357.
@@ -1440,12 +1440,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
-<GridOpti/FF_Compa_El_Sph.png, id=453, 246.6816pt x 185.0112pt>
+<GridOpti/FF_Compa_El_Sph.png, id=455, 246.6816pt x 185.0112pt>
 File: GridOpti/FF_Compa_El_Sph.png Graphic file (type png)
 <use GridOpti/FF_Compa_El_Sph.png>
 Package pdftex.def Info: GridOpti/FF_Compa_El_Sph.png  used on input line 380.
 (pdftex.def)             Requested size: 232.89853pt x 174.6784pt.
-<GridOpti/SP_Compa_El_Sph.png, id=454, 246.6816pt x 185.0112pt>
+<GridOpti/SP_Compa_El_Sph.png, id=456, 246.6816pt x 185.0112pt>
 File: GridOpti/SP_Compa_El_Sph.png Graphic file (type png)
 <use GridOpti/SP_Compa_El_Sph.png>
 Package pdftex.def Info: GridOpti/SP_Compa_El_Sph.png  used on input line 388.
@@ -1478,7 +1478,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 416--417
 
  []
 
-<GridOpti/Baffle_Alone_2.png, id=460, 103.24286pt x 92.71208pt>
+<GridOpti/Baffle_Alone_2.png, id=462, 103.24286pt x 92.71208pt>
 File: GridOpti/Baffle_Alone_2.png Graphic file (type png)
 <use GridOpti/Baffle_Alone_2.png>
 Package pdftex.def Info: GridOpti/Baffle_Alone_2.png  used on input line 422.
@@ -1503,12 +1503,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
  []
 
-<GridOpti/Vib_Pow.png, id=463, 246.6816pt x 185.0112pt>
+<GridOpti/Vib_Pow.png, id=465, 246.6816pt x 185.0112pt>
 File: GridOpti/Vib_Pow.png Graphic file (type png)
 <use GridOpti/Vib_Pow.png>
 Package pdftex.def Info: GridOpti/Vib_Pow.png  used on input line 440.
 (pdftex.def)             Requested size: 232.89853pt x 174.6784pt.
-<GridOpti/compa_baffle_Vib.png, id=464, 1211.27531pt x 684.30656pt>
+<GridOpti/compa_baffle_Vib.png, id=466, 1211.27531pt x 684.30656pt>
 File: GridOpti/compa_baffle_Vib.png Graphic file (type png)
 <use GridOpti/compa_baffle_Vib.png>
 Package pdftex.def Info: GridOpti/compa_baffle_Vib.png  used on input line 445.
@@ -1546,12 +1546,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
-<Sym/Rad_Pow_10cmWoofer.png, id=488, 246.6816pt x 185.0112pt>
+<Sym/Rad_Pow_10cmWoofer.png, id=490, 246.6816pt x 185.0112pt>
 File: Sym/Rad_Pow_10cmWoofer.png Graphic file (type png)
 <use Sym/Rad_Pow_10cmWoofer.png>
 Package pdftex.def Info: Sym/Rad_Pow_10cmWoofer.png  used on input line 502.
 (pdftex.def)             Requested size: 232.89853pt x 174.6784pt.
-<Sym/Sym_Fact_10cmWoofer.png, id=489, 246.6816pt x 185.0112pt>
+<Sym/Sym_Fact_10cmWoofer.png, id=491, 246.6816pt x 185.0112pt>
 File: Sym/Sym_Fact_10cmWoofer.png Graphic file (type png)
 <use Sym/Sym_Fact_10cmWoofer.png>
 Package pdftex.def Info: Sym/Sym_Fact_10cmWoofer.png  used on input line 510.
@@ -1584,12 +1584,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 528--529
 
  []
 
-<Sym/Rad_Pow_OvalSpkr.png, id=501, 246.6816pt x 185.0112pt>
+<Sym/Rad_Pow_OvalSpkr.png, id=503, 246.6816pt x 185.0112pt>
 File: Sym/Rad_Pow_OvalSpkr.png Graphic file (type png)
 <use Sym/Rad_Pow_OvalSpkr.png>
 Package pdftex.def Info: Sym/Rad_Pow_OvalSpkr.png  used on input line 532.
 (pdftex.def)             Requested size: 232.89853pt x 174.6784pt.
-<Sym/Sym_Fact_OvalSpkr.png, id=502, 246.6816pt x 185.0112pt>
+<Sym/Sym_Fact_OvalSpkr.png, id=504, 246.6816pt x 185.0112pt>
 File: Sym/Sym_Fact_OvalSpkr.png Graphic file (type png)
 <use Sym/Sym_Fact_OvalSpkr.png>
 Package pdftex.def Info: Sym/Sym_Fact_OvalSpkr.png  used on input line 540.
@@ -1624,12 +1624,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
-<Sym/Rad_Pow_BnO.png, id=509, 246.6816pt x 185.0112pt>
+<Sym/Rad_Pow_BnO.png, id=511, 246.6816pt x 185.0112pt>
 File: Sym/Rad_Pow_BnO.png Graphic file (type png)
 <use Sym/Rad_Pow_BnO.png>
 Package pdftex.def Info: Sym/Rad_Pow_BnO.png  used on input line 570.
 (pdftex.def)             Requested size: 232.89853pt x 174.6784pt.
-<Sym/Sym_Fact_BnO.png, id=510, 246.6816pt x 185.0112pt>
+<Sym/Sym_Fact_BnO.png, id=512, 246.6816pt x 185.0112pt>
 File: Sym/Sym_Fact_BnO.png Graphic file (type png)
 <use Sym/Sym_Fact_BnO.png>
 Package pdftex.def Info: Sym/Sym_Fact_BnO.png  used on input line 578.
@@ -1647,19 +1647,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 602--604
 
  []
 
-<RoomComp/Sonograph_MagFilt.png, id=523, 246.6816pt x 185.0112pt>
+<RoomComp/Sonograph_MagFilt.png, id=525, 246.6816pt x 185.0112pt>
 File: RoomComp/Sonograph_MagFilt.png Graphic file (type png)
 <use RoomComp/Sonograph_MagFilt.png>
 Package pdftex.def Info: RoomComp/Sonograph_MagFilt.png  used on input line 607
 .
 (pdftex.def)             Requested size: 172.51598pt x 129.3912pt.
-<RoomComp/Sonograph_MinPhase.png, id=524, 246.6816pt x 185.0112pt>
+<RoomComp/Sonograph_MinPhase.png, id=526, 246.6816pt x 185.0112pt>
 File: RoomComp/Sonograph_MinPhase.png Graphic file (type png)
 <use RoomComp/Sonograph_MinPhase.png>
 Package pdftex.def Info: RoomComp/Sonograph_MinPhase.png  used on input line 61
 5.
 (pdftex.def)             Requested size: 172.51598pt x 129.3912pt.
-<RoomComp/Sonograph_RoomCor.png, id=525, 246.6816pt x 185.0112pt>
+<RoomComp/Sonograph_RoomCor.png, id=527, 246.6816pt x 185.0112pt>
 File: RoomComp/Sonograph_RoomCor.png Graphic file (type png)
 <use RoomComp/Sonograph_RoomCor.png>
 Package pdftex.def Info: RoomComp/Sonograph_RoomCor.png  used on input line 623
@@ -1685,12 +1685,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 643--644
 
  []
 
-<RoomComp/Kms_10cm.png, id=528, 246.6816pt x 185.0112pt>
+<RoomComp/Kms_10cm.png, id=530, 246.6816pt x 185.0112pt>
 File: RoomComp/Kms_10cm.png Graphic file (type png)
 <use RoomComp/Kms_10cm.png>
 Package pdftex.def Info: RoomComp/Kms_10cm.png  used on input line 647.
 (pdftex.def)             Requested size: 181.14374pt x 135.8616pt.
-<RoomComp/Kms_12cm.png, id=529, 246.6816pt x 185.0112pt>
+<RoomComp/Kms_12cm.png, id=531, 246.6816pt x 185.0112pt>
 File: RoomComp/Kms_12cm.png Graphic file (type png)
 <use RoomComp/Kms_12cm.png>
 Package pdftex.def Info: RoomComp/Kms_12cm.png  used on input line 655.
@@ -1713,31 +1713,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
 
-<RoomComp/MicPos_TRF.png, id=543, 796.6563pt x 597.432pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+
+ []
+
+<RoomComp/Mic_Pos_Schm.png, id=545, 538.26094pt x 542.77782pt>
+File: RoomComp/Mic_Pos_Schm.png Graphic file (type png)
+<use RoomComp/Mic_Pos_Schm.png>
+Package pdftex.def Info: RoomComp/Mic_Pos_Schm.png  used on input line 675.
+(pdftex.def)             Requested size: 163.03181pt x 164.39992pt.
+<RoomComp/MicPos_TRF.png, id=546, 796.6563pt x 597.432pt>
 File: RoomComp/MicPos_TRF.png Graphic file (type png)
 <use RoomComp/MicPos_TRF.png>
-Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 674.
+Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 683.
 (pdftex.def)             Requested size: 310.53665pt x 232.87903pt.
-<RoomComp/MicPos_Diff_NFS_TRF.png, id=544, 246.6816pt x 185.0112pt>
+[12 <./RoomComp/Kms_10cm.png (PNG copy)> <./RoomComp/Kms_12cm.png (PNG copy)> <
+./RoomComp/Mic_Pos_Schm.png> <./RoomComp/MicPos_TRF.png (PNG copy)>]
+<RoomComp/MicPos_Diff_NFS_TRF.png, id=555, 246.6816pt x 185.0112pt>
 File: RoomComp/MicPos_Diff_NFS_TRF.png Graphic file (type png)
 <use RoomComp/MicPos_Diff_NFS_TRF.png>
 Package pdftex.def Info: RoomComp/MicPos_Diff_NFS_TRF.png  used on input line 6
-83.
+96.
 (pdftex.def)             Requested size: 232.89853pt x 174.6784pt.
-<RoomComp/MicPos_Diff_TRF_5cm.png, id=545, 796.6563pt x 597.432pt>
+<RoomComp/MicPos_Diff_TRF_5cm.png, id=556, 796.6563pt x 597.432pt>
 File: RoomComp/MicPos_Diff_TRF_5cm.png Graphic file (type png)
 <use RoomComp/MicPos_Diff_TRF_5cm.png>
-Package pdftex.def Info: RoomComp/MicPos_Diff_TRF_5cm.png  used on input line 6
-91.
+Package pdftex.def Info: RoomComp/MicPos_Diff_TRF_5cm.png  used on input line 7
+04.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 681--697
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 694--710
 []$[]$ $[]$ 
  []
 
-[12 <./RoomComp/Kms_10cm.png (PNG copy)> <./RoomComp/Kms_12cm.png (PNG copy)> <
-./RoomComp/MicPos_TRF.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
 
  []
 
@@ -1751,97 +1762,97 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 
 ]
 Appendix A.
-<Appendix/Plan1.png, id=572, 915.42pt x 731.73375pt>
+<Appendix/Plan1.png, id=577, 915.42pt x 731.73375pt>
 File: Appendix/Plan1.png Graphic file (type png)
 <use Appendix/Plan1.png>
-Package pdftex.def Info: Appendix/Plan1.png  used on input line 757.
+Package pdftex.def Info: Appendix/Plan1.png  used on input line 770.
 (pdftex.def)             Requested size: 517.55583pt x 413.72064pt.
 [1
 
  <./Appendix/Plan1.png>]
 Appendix B.
 
-Overfull \hbox (14.50508pt too wide) in paragraph at lines 761--761
+Overfull \hbox (14.50508pt too wide) in paragraph at lines 774--774
 |[]\T1/phv/b/n/17.28 Equations for sym-me-try con-di-tion on com-plex co-ef-fi-
 cients
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 764.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 777.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 764.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 777.
 
-Underfull \hbox (badness 10000) in paragraph at lines 764--765
+Underfull \hbox (badness 10000) in paragraph at lines 777--778
 
  []
 
-<Appendix/Spherical_Harmo.png, id=579, 902.6222pt x 493.845pt>
+<Appendix/Spherical_Harmo.png, id=584, 902.6222pt x 493.845pt>
 File: Appendix/Spherical_Harmo.png Graphic file (type png)
 <use Appendix/Spherical_Harmo.png>
-Package pdftex.def Info: Appendix/Spherical_Harmo.png  used on input line 768.
+Package pdftex.def Info: Appendix/Spherical_Harmo.png  used on input line 781.
 (pdftex.def)             Requested size: 225.655pt x 123.46094pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 776--777
+Underfull \hbox (badness 10000) in paragraph at lines 789--790
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
+Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
+Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
+Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
+Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
 
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 766--780
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 779--793
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--783
+Underfull \hbox (badness 10000) in paragraph at lines 795--796
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--792
+Underfull \hbox (badness 10000) in paragraph at lines 803--805
 
  []
 
-<Appendix/Rot_Sym.png, id=588, 494.59781pt x 494.59781pt>
+<Appendix/Rot_Sym.png, id=593, 494.59781pt x 494.59781pt>
 File: Appendix/Rot_Sym.png Graphic file (type png)
 <use Appendix/Rot_Sym.png>
-Package pdftex.def Info: Appendix/Rot_Sym.png  used on input line 804.
+Package pdftex.def Info: Appendix/Rot_Sym.png  used on input line 817.
 (pdftex.def)             Requested size: 155.26833pt x 155.26329pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 784--810
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 797--823
 []$[]$ $[]$ 
  []
 
-<Appendix/Dual_Plane_Sym.png, id=592, 496.85625pt x 505.13719pt>
+<Appendix/Dual_Plane_Sym.png, id=597, 496.85625pt x 505.13719pt>
 File: Appendix/Dual_Plane_Sym.png Graphic file (type png)
 <use Appendix/Dual_Plane_Sym.png>
-Package pdftex.def Info: Appendix/Dual_Plane_Sym.png  used on input line 832.
+Package pdftex.def Info: Appendix/Dual_Plane_Sym.png  used on input line 845.
 (pdftex.def)             Requested size: 155.26833pt x 157.85498pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 813--838
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 826--851
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 813--838
+Underfull \hbox (badness 10000) in paragraph at lines 826--851
 
  []
 
@@ -1849,174 +1860,180 @@ Underfull \hbox (badness 10000) in paragraph at lines 813--838
 
  <./Appendix/Spherical_Harmo.png> <./Appendix/Rot_Sym.png> <./Appendix/Dual_Pla
 ne_Sym.png>]
-<Appendix/Baffle_Sym.png, id=605, 411.78844pt x 457.71pt>
+<Appendix/Baffle_Sym.png, id=610, 411.78844pt x 457.71pt>
 File: Appendix/Baffle_Sym.png Graphic file (type png)
 <use Appendix/Baffle_Sym.png>
-Package pdftex.def Info: Appendix/Baffle_Sym.png  used on input line 876.
+Package pdftex.def Info: Appendix/Baffle_Sym.png  used on input line 889.
 (pdftex.def)             Requested size: 155.26833pt x 172.58368pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 858--882
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 871--895
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--894
+Underfull \hbox (badness 10000) in paragraph at lines 906--907
 
  []
 
-<Appendix/Single_Plane_Sym.png, id=609, 429.85594pt x 439.6425pt>
+<Appendix/Single_Plane_Sym.png, id=614, 429.85594pt x 439.6425pt>
 File: Appendix/Single_Plane_Sym.png Graphic file (type png)
 <use Appendix/Single_Plane_Sym.png>
-Package pdftex.def Info: Appendix/Single_Plane_Sym.png  used on input line 905.
+Package pdftex.def Info: Appendix/Single_Plane_Sym.png  used on input line 918.
 
 (pdftex.def)             Requested size: 155.26833pt x 158.80113pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 885--911
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 898--924
 []$[]$ $[]$ 
  []
 
 [3 <./Appendix/Baffle_Sym.png> <./Appendix/Single_Plane_Sym.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 914--915
+Underfull \hbox (badness 10000) in paragraph at lines 927--928
 
  []
 
 (D:\LaTeX\texmfs\install\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 920.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 933.
 
 (D:\LaTeX\texmfs\install\tex\latex\psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 924.
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 937.
 
 
 (D:\LaTeX\texmfs\install\tex\latex\psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ) [4] [5]
 Appendix C.
-<Appendix/Round_Spkr.png, id=763, 103.24286pt x 93.7445pt>
+<Appendix/Round_Spkr.png, id=768, 103.24286pt x 93.7445pt>
 File: Appendix/Round_Spkr.png Graphic file (type png)
 <use Appendix/Round_Spkr.png>
-Package pdftex.def Info: Appendix/Round_Spkr.png  used on input line 1068.
+Package pdftex.def Info: Appendix/Round_Spkr.png  used on input line 1081.
 (pdftex.def)             Requested size: 103.2426pt x 93.74426pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 1062--1074
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 1075--1087
 $[]$ $[]$ 
  []
 
-<Appendix/Oval_Spkr.png, id=765, 103.24286pt x 68.75975pt>
+<Appendix/Oval_Spkr.png, id=770, 103.24286pt x 68.75975pt>
 File: Appendix/Oval_Spkr.png Graphic file (type png)
 <use Appendix/Oval_Spkr.png>
-Package pdftex.def Info: Appendix/Oval_Spkr.png  used on input line 1099.
+Package pdftex.def Info: Appendix/Oval_Spkr.png  used on input line 1112.
 (pdftex.def)             Requested size: 103.2426pt x 68.75957pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 1092--1105
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 1105--1118
 $[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1126--1127
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1140
 
  []
 
-<Sym/Spkr_BmO.png, id=769, 919.93687pt x 546.54187pt>
+<Sym/Spkr_BmO.png, id=774, 919.93687pt x 546.54187pt>
 File: Sym/Spkr_BmO.png Graphic file (type png)
 <use Sym/Spkr_BmO.png>
-Package pdftex.def Info: Sym/Spkr_BmO.png  used on input line 1133.
+Package pdftex.def Info: Sym/Spkr_BmO.png  used on input line 1146.
 (pdftex.def)             Requested size: 183.98412pt x 109.30643pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 1125--1139
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 1138--1152
 $[]$ $[]$ 
  []
 
 [6
 
  <./Appendix/Round_Spkr.png> <./Appendix/Oval_Spkr.png>]
-<Appendix/bigwoof.png, id=779, 451.6875pt x 451.6875pt>
+<Appendix/bigwoof.png, id=784, 451.6875pt x 451.6875pt>
 File: Appendix/bigwoof.png Graphic file (type png)
 <use Appendix/bigwoof.png>
-Package pdftex.def Info: Appendix/bigwoof.png  used on input line 1156.
+Package pdftex.def Info: Appendix/bigwoof.png  used on input line 1169.
 (pdftex.def)             Requested size: 124.21275pt x 124.211pt.
 
-Overfull \hbox (2.11996pt too wide) in paragraph at lines 1142--1162
+Overfull \hbox (2.11996pt too wide) in paragraph at lines 1155--1175
 $[]$ $[]$ 
  []
 
 [7 <./Sym/Spkr_BmO.png> <./Appendix/bigwoof.png>]
 Appendix D.
-<Appendix/Vib_RadPow.png, id=785, 246.6816pt x 185.0112pt>
+<Appendix/Vib_RadPow.png, id=790, 246.6816pt x 185.0112pt>
 File: Appendix/Vib_RadPow.png Graphic file (type png)
 <use Appendix/Vib_RadPow.png>
-Package pdftex.def Info: Appendix/Vib_RadPow.png  used on input line 1176.
+Package pdftex.def Info: Appendix/Vib_RadPow.png  used on input line 1189.
 (pdftex.def)             Requested size: 465.79709pt x 349.38223pt.
-<Appendix/compa_baffle_Vib_Balloon.png, id=786, 699.36281pt x 458.46281pt>
+<Appendix/compa_baffle_Vib_Balloon.png, id=791, 699.36281pt x 458.46281pt>
 File: Appendix/compa_baffle_Vib_Balloon.png Graphic file (type png)
 <use Appendix/compa_baffle_Vib_Balloon.png>
 Package pdftex.def Info: Appendix/compa_baffle_Vib_Balloon.png  used on input l
-ine 1183.
+ine 1196.
 (pdftex.def)             Requested size: 414.04623pt x 271.42812pt.
 [8
 
  <./Appendix/Vib_RadPow.png>]
-<Appendix/compa_baffle_Vib_SpkrWood_All.png, id=791, 1177.39874pt x 585.68813pt
+<Appendix/compa_baffle_Vib_SpkrWood_All.png, id=796, 1177.39874pt x 585.68813pt
 >
 File: Appendix/compa_baffle_Vib_SpkrWood_All.png Graphic file (type png)
 <use Appendix/compa_baffle_Vib_SpkrWood_All.png>
 Package pdftex.def Info: Appendix/compa_baffle_Vib_SpkrWood_All.png  used on in
-put line 1190.
+put line 1203.
 (pdftex.def)             Requested size: 414.04623pt x 205.95909pt.
-<Appendix/Rad_Pow_OvalSpkr_ZoomHF.png, id=792, 246.6816pt x 185.0112pt>
+<Appendix/Rad_Pow_OvalSpkr_ZoomHF.png, id=797, 246.6816pt x 185.0112pt>
 File: Appendix/Rad_Pow_OvalSpkr_ZoomHF.png Graphic file (type png)
 <use Appendix/Rad_Pow_OvalSpkr_ZoomHF.png>
 Package pdftex.def Info: Appendix/Rad_Pow_OvalSpkr_ZoomHF.png  used on input li
-ne 1202.
+ne 1215.
 (pdftex.def)             Requested size: 465.79709pt x 349.38223pt.
  [9 <./Appendix/compa_baffle_Vib_Balloon.png> <./Appendix/compa_baffle_Vib_Spkr
 Wood_All.png>]
-<Appendix/Rad_Pow_BnO_ZoomHF.png, id=797, 246.6816pt x 185.0112pt>
+<Appendix/Rad_Pow_BnO_ZoomHF.png, id=802, 246.6816pt x 185.0112pt>
 File: Appendix/Rad_Pow_BnO_ZoomHF.png Graphic file (type png)
 <use Appendix/Rad_Pow_BnO_ZoomHF.png>
 Package pdftex.def Info: Appendix/Rad_Pow_BnO_ZoomHF.png  used on input line 12
-10.
+23.
 (pdftex.def)             Requested size: 465.79709pt x 349.38223pt.
  [10 <./Appendix/Rad_Pow_OvalSpkr_ZoomHF.png (PNG copy)>]
-<RoomComp/Mic_Pos_Schm.png, id=802, 538.26094pt x 542.77782pt>
-File: RoomComp/Mic_Pos_Schm.png Graphic file (type png)
-<use RoomComp/Mic_Pos_Schm.png>
-Package pdftex.def Info: RoomComp/Mic_Pos_Schm.png  used on input line 1224.
-(pdftex.def)             Requested size: 181.14769pt x 182.67026pt.
 File: RoomComp/MicPos_TRF.png Graphic file (type png)
 <use RoomComp/MicPos_TRF.png>
-Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 1232.
+Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 1238.
 (pdftex.def)             Requested size: 677.16106pt x 507.8196pt.
- [11 <./Appendix/Rad_Pow_BnO_ZoomHF.png (PNG copy)> <./RoomComp/Mic_Pos_Schm.pn
-g>]
-<Appendix/DKeele_FF_All.png, id=809, 1603.49063pt x 585.68813pt>
+ [11 <./Appendix/Rad_Pow_BnO_ZoomHF.png (PNG copy)>]
+[12]
+Overfull \vbox (48.74411pt too high) has occurred while \output is active []
+
+
+[13]
+<RoomComp/MicPos_Diff_NFS_TRF_zoom.png, id=821, 796.6563pt x 597.432pt>
+File: RoomComp/MicPos_Diff_NFS_TRF_zoom.png Graphic file (type png)
+<use RoomComp/MicPos_Diff_NFS_TRF_zoom.png>
+Package pdftex.def Info: RoomComp/MicPos_Diff_NFS_TRF_zoom.png  used on input l
+ine 1245.
+(pdftex.def)             Requested size: 414.04623pt x 310.51146pt.
+<Appendix/DKeele_FF_All.png, id=822, 1603.49063pt x 585.68813pt>
 File: Appendix/DKeele_FF_All.png Graphic file (type png)
 <use Appendix/DKeele_FF_All.png>
-Package pdftex.def Info: Appendix/DKeele_FF_All.png  used on input line 1245.
+Package pdftex.def Info: Appendix/DKeele_FF_All.png  used on input line 1258.
 (pdftex.def)             Requested size: 517.55583pt x 189.0416pt.
- [12] [13 <./Appendix/DKeele_FF_All.png>]
+ [14 <./RoomComp/MicPos_Diff_NFS_TRF_zoom.png (PNG copy)> <./Appendix/DKeele_FF
+_All.png>]
 Appendix E.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1262.
-[14
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1275.
+[15
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1262.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1275.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1262.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1262.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1275.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1275.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: ED74940A790F6DB3492CF981AF4FBB98;3642.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1262.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1275.
  ) 
 Here is how much of TeX's memory you used:
- 16164 strings out of 495204
- 228650 string characters out of 3181886
- 568236 words of memory out of 3000000
- 18819 multiletter control sequences out of 15000+200000
+ 16172 strings out of 495204
+ 228888 string characters out of 3181886
+ 568377 words of memory out of 3000000
+ 18824 multiletter control sequences out of 15000+200000
  85109 words of font info for 101 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  36i,16n,43p,684b,3186s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2036,9 +2053,9 @@ ll/fonts/type1/urw/courier/ucrr8a.pfb><D:/LaTeX/texmfs/install/fonts/type1/urw/
 helvetic/uhvb8a.pfb><D:/LaTeX/texmfs/install/fonts/type1/urw/helvetic/uhvbo8a.p
 fb><D:/LaTeX/texmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/LaTeX/texmf
 s/install/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (34 pages, 4345013 bytes).
+Output written on main.pdf (35 pages, 4547374 bytes).
 PDF statistics:
- 961 PDF objects out of 1000 (max. 8388607)
- 291 named destinations out of 1000 (max. 500000)
- 617 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 970 PDF objects out of 1000 (max. 8388607)
+ 293 named destinations out of 1000 (max. 500000)
+ 622 words of extra memory for PDF output out of 10000 (max. 10000000)
 

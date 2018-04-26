@@ -666,17 +666,30 @@ Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ for the 16cm fullb
 
 \subsection{Influence of microphone position}
 
-Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distance $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
+Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distance $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
 
-Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different  distance $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150Hz, the transfer functions are similar. 
+Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different  distance $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150 Hz, the transfer functions are similar. After 150 Hz strong differences appear between the transfer functions. The larger the distance $D_{ms}$ is and the bigger the box influences the measurement, generating a dip on the response at around 1 kHz. This phenomenon is believed to be the first box mode and is observed when measuring different speakers. \\
 
+\begin{minipage}{0.35\textwidth}
 \begin{center}
-	\includegraphics[width=0.6\textwidth]{RoomComp/MicPos_TRF} 
+	\includegraphics[width=0.9\textwidth]{RoomComp/Mic_Pos_Schm} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Microphone position} 
+	\label{fig:micpos_schema}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+\begin{center}
+	\includegraphics[width=1\textwidth]{RoomComp/MicPos_TRF} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Transfer Functions for different positions} 
 	\label{fig:MicPosTRF}
 \end{center}
+\end{minipage}
+\vspace{0.1cm}
 
+From this result it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This boost can be easily eased off by applying the LFR room compensation method.\\
+A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoom}. In this frequency range, the accepted level of differences is setted at $\pm$ 10 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -1220,19 +1233,19 @@ This appendix aims to present additional figures that could not be presented in 
 \subsubsection{Influence of microphone position}
 \label{Curves:InfluMicPos}
 
-\begin{center}
-	\includegraphics[width=0.35\textwidth]{RoomComp/Mic_Pos_Schm} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Microphone position inside the box} 
-	\label{fig:micpos_schema}
-\end{center}
-Where $D_{ms}$ is the distance between the driver and the microphone.
 
 \begin{center}	
 	\includegraphics[scale=0.85,angle=90]{RoomComp/MicPos_TRF} 
 	\captionsetup{hypcap=false} 
 	\captionof{figure}{Transfer functions for all microphones positions} 
 	\label{fig:micpos_TRF_big}
+\end{center}
+
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{RoomComp/MicPos_Diff_NFS_TRF_zoom} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Difference between NFS and transfer functions - zoom on 150 Hz - 20 kHz} 
+	\label{fig:MicPos_Diff_NFS_Zoom}
 \end{center}
 
 
