@@ -252,7 +252,7 @@ Over the years, Klippel GmbH has acquired a huge notoriety for their innovative 
 \begin{minipage}{0.6\textwidth}
 The Near Field Scanner (NFS) is a Klippel product, shown in figure \ref{fig:nfs}, used to perform near field measurements of various audio products (laptop speakers, line arrays, ...). The particularity of this product is that the Device Under Test (DUT) is at a fixed position, and the microphone moves thanks to a robotic arm. This allows to ensure a constant interaction between the DUT and the acoustical boundaries, and avoid any diffraction from the edges of a turntable. \\
 
-This works mainly aims to the redaction of several applications notes for Klippel's customers on the utilisation of the NFS with 3 main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS; the optimization of measurement time by exploiting symmetries, and the application of room correction on this measurements.
+This works mainly aims to the redaction of several applications notes for Klippel's customers on the utilization of the NFS with 3 main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS; the optimization of measurement time by exploiting symmetries, and the application of room correction on this measurements.
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{center}
@@ -320,13 +320,13 @@ By scanning on 2 hemispherical surfaces in front of the baffle, and performing t
 
 \subsubsection{Measurement principle}
 
-The advantage of the Near Field compared to the Far Field measure is that the amplitude of the output is significantly higher in the Near Field, and the influence of the conditions (temperature, pressure) is minimised. \\
+The advantage of the Near Field compared to the Far Field measure is that the amplitude of the output is significantly higher in the Near Field, and the influence of the conditions (temperature, pressure) is minimized. \\
 However, the Near-Field being much more complex than the Far Field, holographic processing is required to extrapolate the Far Field data. The complete process will be described succinctly here, and can be found in details in \citep[][sect.~3]{aeshs}.\\
 
 The first step of the scanning process is the generation of the measurement grid. The main difficulty is to avoid spacial aliasing, which is achieved by generating a non-uniform grid. \\
 The first step of the holographic process is to shift the coordinates of all measurements points to fit the expansion point $r_{E}$ of the system. This step is required for further processing, in order to make sure that the calculated Far Field is relevant.\\ 
 
-Then, the parameters are fitted to find the optimum coefficients $C_{mn}$. This is done by estimating the deviation $e(f,r_{E})$ between the measured and the modelled transfer function of the system. \\
+Then, the parameters are fitted to find the optimum coefficients $C_{mn}$. This is done by estimating the deviation $e(f,r_{E})$ between the measured and the modeled transfer function of the system. \\
 
 Finally, the accuracy of the holographic estimation of the sound field is verified by estimating the Total Fitting Error ($TFE$) of the measurement. This parameter is calculated from the ratio of the truncated of the power series at a maximum order $N$ of the deviation $e(f,r_{E})$ by the transfer function of the system. It the $TFE$ is lower than -20 dB, it is considered that the model describes the Far-Field of the system with sufficient accuracy. 
 
@@ -334,7 +334,7 @@ Finally, the accuracy of the holographic estimation of the sound field is verifi
 
 The maximum order of expansion $N$ is a very important parameter to obtain accurate datas. The higher it is and the more accurate the model becomes, but the longer the calculation. In that regard, a trade-off between accuracy and calculation time has to be made. \\
 
-Investigations on this parameter have already been conducted (\cite{train8}, \cite{aeshs}, \cite{pres}) and have shown that a wave expansion truncated after $N$ = 10 is capable of modelling the 3D sound pressure field of a DUT above 30 Hz with sufficient accuracy. \\
+Investigations on this parameter have already been conducted (\cite{train8}, \cite{aeshs}, \cite{pres}) and have shown that a wave expansion truncated after $N$ = 10 is capable of modeling the 3D sound pressure field of a DUT above 30 Hz with sufficient accuracy. \\
 
 At very low frequencies the measurement is polluted by the poor Signal to Noise Ratio (SNR) between the microphone's input and the noise; and increasing the maximum order of expansion has little to no effect on the $TFE$. 
 
@@ -415,7 +415,7 @@ Further investigations should be conducted on the influence of the measurement g
 \begin{minipage}{0.6\textwidth}
 A baffle prototype have been designed to allow relevant measurements of devices mounted on a baffle with the NFS. The prototype is shown figure \ref{fig:baffle_proto}. More pictures are given in appendix \textbf{MAKE REFERENCE}. \\
 
-Before starting the production of this item, a critical evaluation must be performed in order to estimate the influence of the baffle on the measurement. Different analysis will be conduced, mainly to check the vibration of the baffle itself, the vibration of the wood plate used to mount the speaker, and a measurement centred on the speaker in order to have a point of comparison to identify vibration problems.
+Before starting the production of this item, a critical evaluation must be performed in order to estimate the influence of the baffle on the measurement. Different analysis will be conduced, mainly to check the vibration of the baffle itself, the vibration of the wood plate used to mount the speaker, and a measurement centered on the speaker in order to have a point of comparison to identify vibration problems.
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -429,7 +429,7 @@ Before starting the production of this item, a critical evaluation must be perfo
 \subsection{Measurements}
 
 Figure \ref{fig:vib_pow} present the apparent power in the near field of the DUT for the different measurements points. \\
-The blue curve represents the power from the speaker. This scan have been centred on the speaker, using a 5cm radius for the scanning grid. The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centred on the speaker, with a 21cm radius for the scanning grid. The grey curve represents the contribution from the baffle: the scan was centred on the lower right corner of the baffle, with a 5cm scanning radius. Finally, the light orange curve represents the contribution from the wooden plate: this scan was centred midway between the speaker and the baffle, with a 5cm scanning radius. \\
+The blue curve represents the power from the speaker. This scan have been centered on the speaker, using a 5cm radius for the scanning grid. The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centered on the speaker, with a 21cm radius for the scanning grid. The grey curve represents the contribution from the baffle: the scan was centered on the lower right corner of the baffle, with a 5cm scanning radius. Finally, the light orange curve represents the contribution from the wooden plate: this scan was centered midway between the speaker and the baffle, with a 5cm scanning radius. \\
 
 Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration might impact the system: the differences between the 2 plots can only come from the plate vibration, as the field separation method removed all contribution from the room. \\
 
@@ -556,7 +556,7 @@ As expected, the rotational symmetry factor is below all other factors, a phenom
 
 \subsection{2-way "diagonal" speaker}
 
-The DUT is a "diagonal" 2-way speaker, and the scan is centred on the tweeter (see appendix \ref{spkrlib:BnO}). This speaker's asymmetrical geometry is very interesting to test the symmetry check. The device also have an integrated crossover. Figures \ref{fig:rad_pow_BnO} and \ref{fig:sym_fact_BnO} presents the radiated powers and the symmetry factors respectively. \\
+The DUT is a "diagonal" 2-way speaker, and the scan is centered on the tweeter (see appendix \ref{spkrlib:BnO}). This speaker's asymmetrical geometry is very interesting to test the symmetry check. The device also have an integrated crossover. Figures \ref{fig:rad_pow_BnO} and \ref{fig:sym_fact_BnO} presents the radiated powers and the symmetry factors respectively. \\
 
 The crossover frequency range can be observed clearly on both result result curves: the symmetry factors take a dip, and the rest powers are higher than the symmetrical powers (a zoom on the crossover range for the radiated powers in provided in \ref{Curves:2way}).\\
 
@@ -632,17 +632,9 @@ Figure \ref{fig:comp_RoomCor} presents the Time-Frequency Analysis (TFA) of thre
 
 The pre-filtering on the magnitude of the transfer function does not take in account other informations of the measurements, and filters the phase out, generating strange artifacts visible on the TFA. \\
 When using a pre-filter with a reconstructed minimal phase, the accuracy of the correction is enhanced in low frequency. However, this methods is still polluted by noise in high frequencies. \\
-The calculated room correction method provides the best result: by using a reference curve provided by a measurement of the speaker using the NFS, the phase response of the room can be removed completely, removing completely the artifacts visible on the TFA. 
+The calculated room correction method provides the best result: by using a reference curve provided by a measurement of the speaker using the NFS, the phase response of the room can be removed completely, removing totally the artifacts visible on the TFA. 
 
 \section{Measurements}
-
-In order to have compare different curve and have different references, several measurement campaigns have been held. The first measurements have been done using the NFS, with speakers mounted on the baffle. The speakers have then been measured in a tetrahedral text box \citep[see][]{tetbox}. Then, some measurements have been done in the anechoic room of the Technical University in Dresden. Finally, some measurement of the speakers in free air and in a QC test box provided by Klippel have been conducted. 
-
-\subsection{10 cm woofer}
-
-The first measured device is a 10 cm woofer (see \ref{spkrlib:10cm}). 
-
-\subsection{16 cm fullband driver}
 
 \subsection{Influence of the load}
 
@@ -668,19 +660,20 @@ To estimate this, a Large Signal Identification (LSI) have been performed on bot
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:kms10} presents the measurements of $K_{ms}$ of the 10cm woofer (see appendix \ref{spkrlib:10cm}). The curve has the same shape for both measurements, but the $K_{ms}$ is higher for the measurement in the box: since the speaker has to compress more air to generate the same Sound Pressure Level. The difference between the two curves is 0.5 N/mm. \\
+Figure \ref{fig:kms10} presents the measurements of $K_{ms}$ for the 10cm woofer (see appendix \ref{spkrlib:10cm}). The curve has the same shape for both measurements, but the $K_{ms}$ is higher for the measurement in the box: since the speaker has to compress more air to generate the same Sound Pressure Level. The difference between the two curves is 0.5 N/mm. \\
 
-Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ of the 16cm fullband driver (see appendix \ref{spkrlib:12cm}). The curves changes its shape drastically, and the offset between the configurations is almost 3 N/mm. This difference could be explained by the size of the speaker, which might be too big for the test box model used: the volume of the box being too small for this driver, the compression effect is exaggerated, generating high variations of the stiffness $K_{ms}$. 
+Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ for the 16cm fullband driver (see appendix \ref{spkrlib:12cm}). The curves changes its shape drastically, and the offset between the configurations is almost 3 N/mm. This difference could be explained by the size of the speaker, which might be too big for the test box model used: the volume of the box being too small for this driver, the compression effect is exaggerated, generating high variations of the stiffness $K_{ms}$. 
 
 \subsection{Influence of microphone position}
 
-Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphones positions. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
+Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distance $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
 
-Figure \ref{fig:MicPosTRF} shows the tranfer functions obtained for different  distance $D_{ms}$ (a bigger figure is given in appendix \ref{Curves:InfluMicPos}, figure \ref{fig:micpos_TRF_big}).
+Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different  distance $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150Hz, the transfer functions are similar. 
+
 \begin{center}
 	\includegraphics[width=0.6\textwidth]{RoomComp/MicPos_TRF} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Transfert Functions for different positions} 
+	\captionof{figure}{Transfer Functions for different positions} 
 	\label{fig:MicPosTRF}
 \end{center}
 
@@ -920,7 +913,7 @@ S_{sps} = 1-\frac{\sum_{n=1}^{N}\sum_{m=1}^{n}\left | (-1)^{m}(f) C_{-mn}-C_{mn}
 
 \textbf{Implementation} \\
 
-The following code shows hoy these equations have been implemented in SciLab.\\
+The following code shows how these equations have been implemented in SciLab.\\
 \textit{\textbf{NOTE}: This program have been simplified by removing some functions, the aim being to demonstrate how the algorithm calculating the coefficients based on symmetry conditions works.}
 
 \lstset{language=SCilab} 
