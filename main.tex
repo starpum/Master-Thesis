@@ -332,7 +332,7 @@ Finally, the accuracy of the holographic estimation of the sound field is verifi
 
 \subsubsection{Maximum order of expansion}
 
-The maximum order of expansion $N$ is a very important parameter to obtain accurate datas. The higher it is and the more accurate the model becomes, but the longer the calculation. In that regard, a trade-off between accuracy and calculation time has to be made. \\
+The maximum order of expansion $N$ is a very important parameter to obtain accurate data. The higher it is and the more accurate the model becomes, but the longer the calculation. In that regard, a trade-off between accuracy and calculation time has to be made. \\
 
 Investigations on this parameter have already been conducted (\cite{train8}, \cite{aeshs}, \cite{pres}) and have shown that a wave expansion truncated after $N$ = 10 is capable of modeling the 3D sound pressure field of a DUT above 30 Hz with sufficient accuracy. \\
 
@@ -469,12 +469,12 @@ Observing the phase balloon in figure \ref{Curves:Baffle_BalloonWood} shows that
 
 \subsection{Discussion}
 
-The previous investigations highlighted several problems with the baffle prototype.
-\begin{itemize}
-\item \textbf{Wooden plate}: special attention should be given to its thickness, material and damping. A solution to attenuate the vibration of the plate would be to stiffen it by attaching beams to the backside. As a general advice, MDF should be avoided because of its lightness. 
-\item \textbf{Clamping system}: despite being very nicely engineered, the system clamping the plate in place is not satisfying to conduct acoustical measurements. The nuts supposed to hold the wooden plate in place are subject to rattling, even when strongly tightened.
-\item \textbf{Baffle}: the baffle itself generates some vibration, that is believed to not be too critical for the measurements. Maybe damping could be added, although the baffle cannot be modified too much. 
-\end{itemize}
+The previous investigations highlighted several problems with the baffle prototype. Particular attention should be given to the following:
+\begin{description}
+\item[Wooden plate] special attention should be given to its thickness, material and damping. A solution to attenuate the vibration of the plate would be to stiffen it by attaching beams to the backside. As a general advice, MDF should be avoided because of its lightness. 
+\item[Clamping system] despite being very nicely engineered, the system clamping the plate in place is not satisfying to conduct acoustical measurements. The nuts supposed to hold the wooden plate in place are subject to rattling, even when strongly tightened.
+\item[Baffle] the baffle itself generates some vibration, that is believed to not be too critical for the measurements. Maybe damping could be added, although the baffle cannot be modified too much. 
+\end{description}
 
 
 %--------------------------------------------------------------
@@ -600,7 +600,8 @@ This investigation raises several questions:
 \section{Principle}
 
 Being able to generate room correction curves is great for the everyday measurement of loudspeakers since it allows to compensate the effect of any environment and to create quasi-perfect measurements. According to the AES standard \cite{aesstandart}, "\textit{accurate and repeatable loudspeaker driver measurements require that environmental and boundary influence have minimal impact on the measurement}". Such measurements are usually done in anechoic rooms, and accurate results are difficult to achieve for companies not having access to such a room or for a hobbyist. \\
-By using post-processing, it is possible to generate room correction curves. Several methods are available \citep[see][]{aeswb}.\\
+
+A solution to this problematic is to measure in test boxes, such as the tetrahedral test box created by Hill Acoustics \citep[see][]{tetbox}. By using post-processing, it is possible to generate a correction curve for the box, and to obtain accurate measurements by compensating its influence on the DUT. Several methods are available to generate this room correction curves \citep[see][]{aeswb}.\\
 
 \begin{minipage}{0.33333333\textwidth}
 \begin{center}
@@ -628,17 +629,19 @@ By using post-processing, it is possible to generate room correction curves. Sev
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:comp_RoomCor} presents the Time-Frequency Analysis (TFA) of three different methods to perform a room correction, applied on a measurement of a speaker's transfer function: the left graph shows a TFA when a pre-filter have been applied on the magnitude of the Transfer Function, the middle graph is when the pre-filter contains the minimal phase that have been reconstructed from the cepstrum of the Transfer Function, and the right graph shows the TFA of the transfer function filtered by the Room Correction curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}.\\
+Figures \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} presents the Time-Frequency Analysis (TFA) of three different methods to perform a room correction, applied on the measurement of the 10 cm woofer (see \ref{spkrlib:10cm}) Transfer Function (TRF) in free air.
+\begin{description}
+\item[Figure \ref{fig:comp_mag}] a pre-filter have been applied on the magnitude of the TRF. This method is the most straight-forward but generates strange artifacts on the TFA: the filter is only applied to the magnitude and does take the phase between the correction and the measure in consideration. 
+\item[Figure \ref{fig:comp_minphase}] the same pre-filter have been applied on the TRF, and the minimal phase that have been reconstructed from the cepstrum of the TRF. Reconstructing the minimal phase enhances the accuracy of the correction in low frequency. However, in high frequencies this method does not dissociate the room from the speaker's contributions.
+\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Correction curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. This method provides the best result: by using a reference curve provided by a measurement of the woofer using the NFS, the phase response of the room can be dissociated from the measurement, removing the artifacts visible on the TFA. 
+\end{description}
 
-The pre-filtering on the magnitude of the transfer function does not take in account other informations of the measurements, and filters the phase out, generating strange artifacts visible on the TFA. \\
-When using a pre-filter with a reconstructed minimal phase, the accuracy of the correction is enhanced in low frequency. However, this methods is still polluted by noise in high frequencies. \\
-The calculated room correction method provides the best result: by using a reference curve provided by a measurement of the speaker using the NFS, the phase response of the room can be removed completely, removing totally the artifacts visible on the TFA. 
 
 \section{Measurements}
 
 \subsection{Influence of the load}
 
-Measuring in a closed box will influence the behavior of the speaker by modifying the load of air the membrane have to compress. This effect have already been observed in low frequency for both speakers (see \textbf{REFERENCE TO CURVES}). The aim is now to evaluate how critically this load influences the speaker, and how to correct this effect.\\
+Measuring in a closed box will influence the behavior of the speaker by modifying the load of air the membrane have to compress. The aim is to evaluate how critically this load influences the measurement, and how to correct this effect. \\
 
 To estimate this, a Large Signal Identification (LSI) have been performed on both speakers to estimate the non-linear parameters in the box, and in free air. The parameter of interest is the stiffness of the speaker's membrane $K_{ms}$. \\
 
@@ -666,9 +669,9 @@ Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ for the 16cm fullb
 
 \subsection{Influence of microphone position}
 
-Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distance $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
+Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distances $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
 
-Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different  distance $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150 Hz, the transfer functions are similar. After 150 Hz strong differences appear between the transfer functions. The larger the distance $D_{ms}$ is and the bigger the box influences the measurement, generating a dip on the response at around 1 kHz. This phenomenon is believed to be the first box mode and is observed when measuring different speakers. \\
+Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different distances $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150 Hz, the transfer functions are similar. After 150 Hz strong differences appear between the transfer functions. The larger the distance $D_{ms}$ is and the bigger the box influences the measurement, generating a dip on the response at around 1 kHz. This phenomenon is believed to be the first box mode and is observed when measuring different speakers. \\
 
 \begin{minipage}{0.35\textwidth}
 \begin{center}
@@ -731,6 +734,7 @@ The results of this extrapolation, after implementation in SciLab, are given in 
 
 \section{Discussion}
 
+The previous investigations showed promising results for compensating a measurement in the tetrahedral box. To ensure an accurate measurement several 
 
 
 %--------------------------------------------------------------
@@ -1235,7 +1239,7 @@ This appendix aims to present additional figures that could not be presented in 
 
 
 \begin{center}	
-	\includegraphics[scale=0.85,angle=90]{RoomComp/MicPos_TRF} 
+	\includegraphics[scale=0.76,angle=90]{RoomComp/MicPos_TRF} 
 	\captionsetup{hypcap=false} 
 	\captionof{figure}{Transfer functions for all microphones positions} 
 	\label{fig:micpos_TRF_big}
