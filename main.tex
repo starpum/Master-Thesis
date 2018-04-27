@@ -631,9 +631,9 @@ A solution to this problematic is to measure in test boxes, such as the tetrahed
 
 Figures \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} presents the Time-Frequency Analysis (TFA) of three different methods to perform a room correction, applied on the measurement of the 10 cm woofer (see \ref{spkrlib:10cm}) Transfer Function (TRF) in free air.
 \begin{description}
-\item[Figure \ref{fig:comp_mag}] a pre-filter have been applied on the magnitude of the TRF. This method is the most straight-forward but generates strange artifacts on the TFA: the filter is only applied to the magnitude and does take the phase between the correction and the measure in consideration. 
-\item[Figure \ref{fig:comp_minphase}] the same pre-filter have been applied on the TRF, and the minimal phase that have been reconstructed from the cepstrum of the TRF. Reconstructing the minimal phase enhances the accuracy of the correction in low frequency. However, in high frequencies this method does not dissociate the room from the speaker's contributions.
-\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Correction curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. This method provides the best result: by using a reference curve provided by a measurement of the woofer using the NFS, the phase response of the room can be dissociated from the measurement, removing the artifacts visible on the TFA. 
+\item[Figure \ref{fig:comp_mag}] a pre-filter have been applied on the magnitude of the TRF. This method is the most straight-forward but generates ringing artifacts on the TFA: the filter is only applied to the magnitude and does take the phase between the correction curve and the measured curve in consideration. 
+\item[Figure \ref{fig:comp_minphase}] the same pre-filter have been applied on the TRF, and the minimal phase that have been reconstructed from the cepstrum of the TRF. Reconstructing the minimal phase enhances the accuracy of the correction in low frequency. However, in high frequencies this method does not dissociate the room from the speaker's contributions, and some ringing can be observed.
+\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Correction curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. This method provides the best result: by using a reference curve provided by a measurement of the woofer using the NFS, the phase response of the room can be dissociated from the measurement, removing the ringing artifacts visible on the TFA. 
 \end{description}
 
 
@@ -643,7 +643,7 @@ Figures \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} p
 
 Measuring in a closed box will influence the behavior of the speaker by modifying the load of air the membrane have to compress. The aim is to evaluate how critically this load influences the measurement, and how to correct this effect. \\
 
-To estimate this, a Large Signal Identification (LSI) have been performed on both speakers to estimate the non-linear parameters in the box, and in free air. The parameter of interest is the stiffness of the speaker's membrane $K_{ms}$. \\
+To estimate this, a Large Signal Identification (LSI) have been performed on two speakers to estimate their non-linear parameters in the box and in free air. The parameter of interest is the stiffness of the speaker's membrane $K_{ms}$. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -663,9 +663,9 @@ To estimate this, a Large Signal Identification (LSI) have been performed on bot
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:kms10} presents the measurements of $K_{ms}$ for the 10cm woofer (see appendix \ref{spkrlib:10cm}). The curve has the same shape for both measurements, but the $K_{ms}$ is higher for the measurement in the box: since the speaker has to compress more air to generate the same Sound Pressure Level. The difference between the two curves is 0.5 N/mm. \\
+Figure \ref{fig:kms10} presents the measurements of $K_{ms}$ for the 10cm woofer (see appendix \ref{spkrlib:10cm}). The curve has the same shape for both measurements, but the $K_{ms}$ is higher for the measurement in the box: the speaker has to compress more air to generate the same Sound Pressure Level. The difference between the two curves is 0.5 N/mm. \\
 
-Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ for the 16cm fullband driver (see appendix \ref{spkrlib:12cm}). The curves changes its shape drastically, and the offset between the configurations is almost 3 N/mm. This difference could be explained by the size of the speaker, which might be too big for the test box model used: the volume of the box being too small for this driver, the compression effect is exaggerated, generating high variations of the stiffness $K_{ms}$. 
+Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ for the 16cm fullband driver (see appendix \ref{spkrlib:12cm}). The curves changes its shape drastically, and the offset between the configurations is almost 3 N/mm. This difference could be explained by the size of the speaker, which might be too big for the test box model used: the volume of the box is 0.45 L and the equivalent volume of this speaker is 11 L, the compression effect is exaggerated, generating high variations of the stiffness $K_{ms}$. 
 
 \subsection{Influence of microphone position}
 
