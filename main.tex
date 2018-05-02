@@ -585,12 +585,9 @@ In high frequency when the twitter alone is emitting, some symmetry is observed.
 
 \section{Discussion}
 
-The previous results are promising for the investigation on symmetry conditions to ease off the measurement time. The calculated symmetry factors match with the expected results for all measurements, and can be implemented in the NFS scripts to be exploited for reducing the number of measurements points. \\
-This investigation raises several questions: 
-\begin{itemize}
-	\item What is the influence of the position of the speaker?
-	\item Can a mispositioned DUT be detected and adjusted?
-\end{itemize}
+The previous results are promising for the investigation on symmetry conditions to ease off the measurement time. The calculated symmetry factors match with the expected results for all measurements, and can be implemented in the NFS scripts to be exploited for reducing the number of measurements points. 
+
+
 
 %--------------------------------------------------------------
 %	ROOM CORRECTION
@@ -641,14 +638,18 @@ Figures \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} p
 
 \subsection{Influence of the load}
 
-Measuring in a closed box will influence the behavior of the speaker by modifying the load of air the membrane have to compress. The aim is to evaluate how critically this load influences the measurement, and how to correct this effect. \\
+The tetrahedral test box being a closed box system, it will have an impact on the speaker's behavior. Closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the box creates a "bass boost" effect. \\
 
-To estimate this, a Large Signal Identification (LSI) have been performed on two speakers to estimate their non-linear parameters in the box and in free air. The parameter of interest is the stiffness of the speaker's membrane $K_{ms}$. \\
-The measurement curves are presented in appendix \ref{Curves:InfluLoad}.
-Figure \ref{fig:kms10} presents the measurements of $K_{ms}$ for the 10cm woofer (see appendix \ref{spkrlib:10cm}). The curve has the same shape for both measurements, but the $K_{ms}$ is higher for the measurement in the box: the speaker has to compress more air to generate the same Sound Pressure Level. The difference between the two curves is 0.5 N/mm. \\
-Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ for the 16cm fullband driver (see appendix \ref{spkrlib:12cm}). The curves changes its shape drastically, and the offset between the configurations is almost 3 N/mm. This difference could be explained by the size of the speaker, which might be too big for the test box model used: the volume of the box is 0.45 L and the equivalent volume $V_{as}$ of this speaker is 11 L. Because of this the compression effect is exaggerated, generating high variations of the stiffness $K_{ms}$. \\
+To correct 
 
+%Measuring in a closed box will influence the behavior of the speaker by modifying the load of air the membrane have to compress. The aim is to evaluate how critically this load influences the measurement, and how to correct this effect. \\
 
+%To estimate this, a Large Signal Identification (LSI) have been performed on two speakers to estimate their non-linear parameters in the box and in free air. The parameter of interest is the stiffness of the speaker's membrane $K_{ms}$. \\
+%The measurement curves are presented in appendix \ref{Curves:InfluLoad}.
+%Figure \ref{fig:kms10} presents the measurements of $K_{ms}$ for the 10cm woofer (see appendix \ref{spkrlib:10cm}). The curve has the same shape for both measurements, but the $K_{ms}$ is higher for the measurement in the box: the speaker has to compress more air to generate the same Sound Pressure Level. The difference between the two curves is 0.5 N/mm. \\
+%Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ for the 16cm fullband driver (see appendix \ref{spkrlib:12cm}). The curves changes its shape drastically, and the offset between the configurations is almost 3 N/mm. This difference could be explained by the size of the speaker, which might be too big for the test box model used: the volume of the box is 0.45 L and the equivalent volume $V_{as}$ of this speaker is 11 L. Because of this the compression effect is exaggerated, generating high variations of the stiffness $K_{ms}$. \\
+
+%Correcting this effect can be done by considering a simple acoustic load added to the transducer's equivalent network. 
 
 \subsection{Influence of microphone position}
 
@@ -1221,23 +1222,13 @@ This appendix aims to present additional figures that could not be presented in 
 \subsubsection{Influence of the load}
 \label{Curves:InfluLoad}
 
-\begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=0.7\textwidth]{RoomComp/Kms_10cm} 
+	\includegraphics[width=0.8\textwidth]{RoomComp/Compa_NFS_BAffle} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{$K_{ms}$ of 10cm woofer} 
-	\label{fig:kms10}
+	\captionof{figure}{Comparison between the TRF of a measure in baffle and a measure in the box.} 
+	\label{fig:Load_Compa}
 \end{center}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.7\textwidth]{RoomComp/Kms_12cm} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{$K_{ms}$ of 16cm fullband} 
-	\label{fig:kms12}
-\end{center}
-\end{minipage}
-\vspace{0.1cm}
+
 
 \subsubsection{Influence of microphone position}
 \label{Curves:InfluMicPos}
@@ -1266,7 +1257,7 @@ This appendix aims to present additional figures that could not be presented in 
 \begin{center}
 	\includegraphics[width=\textwidth]{Appendix/DKeele_FF_All} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Application of DB Keele method compared with NFS results- Left: shifted curves; Right: non-shifted curves} 
+	\captionof{figure}[Application of DB Keele method compared with NFS results]{Application of DB Keele method compared with NFS results - Left: shifted curves; Right: non-shifted curves} 
 	\label{fig:dbk_fig}
 \end{center}
 
