@@ -404,13 +404,13 @@ After implementation of the elliptical grid projection in Scilab, a 10cm woofer 
 
 \subsection{Discussion}
 
-Observing the magnitude of the Far Field SPL response, it can be noted that the elliptical grid provides a much smoother curve than the spherical grid, especially in the low frequencies. This effect could be explained by the fact that the measurement points being much closer to the driver, it is much less sensible to systematic errors that cannot be removed by Field Separation, such as the baffle vibrating. \\
+Observing the magnitude of the Far Field SPL response, it can be noted that the elliptical grid provides a much smoother curve than the spherical grid, especially in the low frequencies. This effect could be explained by the fact that the measurement points being much closer to the driver, it is much less sensible to systematic errors that cannot be removed by Field Separation, such as the baffle vibrating inside the scanning radius. \\
 
 The phase of the Far Field SPL Response gives interesting results. The elliptical grid's phase presents less phase shifts, meaning that less resonances are present on this measurement, matching with the previous hypothesis of a removed systematic error due to the baffle vibrating. \\
 
 The radiated sound Power is extremely similar for both measurements, which was expected considering that the same speaker have been measured twice using in equal configuration. Similarly to the Far Field SPL response, the curve is smoothed when using an elliptical grid. \\
 
-It can be concluded that using different measurement grid is relevant. A well adjusted grid have shown to give more accurate results. Following this investigation, several grids could be generated, for example a half-cylindrical grid for rectangle systems mounted in baffle, such as wall speakers.\\
+It can be concluded that using different measurement grid is relevant. A well adjusted grid have shown to give more accurate results. Following this investigation, several grids could be generated, for example a half-cylindrical grid for rectangular systems mounted in baffle, such as wall speakers.\\
 Further investigations should be conducted on the influence of the measurement grid on the measurement accuracy.
 
 % \subsection{Application note for baffle measurements}
@@ -466,15 +466,12 @@ However, the contributions from the baffle itself aren't really problematic: if 
 Figure \ref{fig:vib_comp} presents the radiated powers in the Far Field (at 10m) of the speaker and speaker + wood measurements. Here the effect of the wooden plate vibrating can be observed clearly: the radiated power has a lot of oscillations on the speaker + wood measure, which are not found on the speaker only measure. 
 
 \begin{center}
-	\includemovie[draft,repeat,poster,label=baffle_vib,text={\small(Loading Video...)}]{6cm}{4cm}{GridOpti/baffle_vib2.avi}
+	\includemovie[draft,repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{6cm}{4cm}{GridOpti/baffle_vib.avi}
 \end{center}
 
-The movie above shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. It can observed that the plate is vibrating in opposite phase with the speaker, creating a cancellation effect on the Sound Pressure response of the driver. 
+The movie above shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. It can observed that the plate is vibrating in opposite phase with the speaker, creating a cancellation effect on the Sound Pressure response of the driver. This observation matches with the previous measurement results shown in figure \ref{fig:vib_comp}
 
-%presents the contour plot of the speaker and the speaker+wood measurements, for a frequency range of 20Hz - 5kHz and angles from -180° to 180°. This plots are very similar, however the measurement of speaker + wood presents much more fluctuations on the side lobes and the DUT stops emitting as a monopole sooner than the speaker alone: at around 770Hz for the speaker alone, and 350Hz for the speaker + wood.\\
 
-%Figure \ref{Curves:Baffle_BalloonComp} presents a comparison of the directivity balloon at 4m and 5kHz for the speaker and the speaker + wood measurement. When observing the side lobes, it is clear that the speaker + wood configuration has more interferences than the speaker alone. This phenomenon is clearly visible on figure \ref{Curves:Baffle_BalloonWood}, which presents the directivity balloon of the speaker+wood measure at 10kHz and 10m. The contribution from the speaker is in the middle, and the side lobs shows some very strong peaks in SPL. \\
-%Observing the phase balloon in figure \ref{Curves:Baffle_BalloonWood} shows that the side lobes are in opposite phase with the main lobe. This observation confirms the previous hypothesis of this sides lobes being generated by the plate vibrating. 
 
 \subsection{Discussion}
 
@@ -499,7 +496,7 @@ Exploiting symmetry conditions on the complex coefficients of the spherical wave
 To implement this, the idea is to start from a measurement done with a coarse grid, and to check the existence of symmetry condition on the coefficients by using the different equations provided in appendix \ref{chap:sym}. The symmetries under study are given in appendix \ref{chap:sym}.
 Once the coefficients satisfying each symmetry condition have been found, the symmetry factor (given by equations \ref{eq:Srs}, \ref{eq:Sbs}, \ref{eq:Sbs}, \ref{eq:Ssps}) is estimated. By setting different thresholds, the user is informed that the DUT may present certain types of symmetry that could be used to perform a faster full measurement.
 
-\section{Measurement on different speakers}
+\section{Measurements}
 
 To verify the validity of this symmetry check, different measurements have been performed of several speakers presenting interesting geometries. A library of these speakers is given in appendix \ref{chap:spk_lib}. 
 
@@ -690,10 +687,30 @@ e_{gb} = e_{g}\cdot \frac{(2 \pi f_{s})^{2}}{(2 \pi f_{b})^{2}}
 \myequations{Voltage correction for the box as a function of resonance frequency}
 
 Equation \ref{eq:V_corr_fs} gives the compensated voltage for the box, where $ f_{s}$ is the resonance frequency of the driver in free air and $ f_{b}$ the resonance frequency of the driver in the box. This implies that 2 measurements are required: one of the driver in free air, and one of the driver in the box. \\
+Now that the theory is expressed, this assumptions needs to be verified. To do so, several measurements have been performed on the 10 cm woofer. \\
 
-Now that the theory is expressed, this assumptions needs to be verified. To do so, several measurements have been performed on the 10 cm woofer (see appendix \ref{spkrlib:10cm}).
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{RoomComp/Imp_Comps} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Comparison of measured impedance} 
+	\label{fig:imp_comp}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{RoomComp/Disp_Comps} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Comparison of measured displacement TRF} 
+	\label{fig:disp_comp}
+\end{center}
+\end{minipage}
+\vspace{0.1cm}
 
+Figure \ref{fig:imp_comp} presents the comparison of the measured impedances for different conditions: the initial measures in free air and in the box to estimate the voltage compensation to apply, and the results of the new measurements when the voltage compensations calculated from the $K_{ms}$ (measured using Klippel's laser method) and the $F_{s}$ (measured at the maximum of the impedance curves) have been applied. \\
+When looking at this results, few differences between the original impedance in the box and the corrected curves can be found. However, when looking at the displacement transfer functions presented in figure \ref{fig:disp_comp}, interesting results are found. \\
 
+In low frequencies, from 10 to 50 Hz, the membrane's displacement is higher in the box. Howe 
 
 \subsection{Influence of microphone position}
 
@@ -720,7 +737,7 @@ Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different d
 \vspace{0.1cm}
 
 From this result it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This boost can be easily eased off by applying the LFR room compensation method.\\
-A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoom}. In this frequency range, the accepted level of differences is $\pm$ 5 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical
+A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoom}. In this frequency range, the accepted level of differences is $\pm$ 5 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical to ensure an accurate measurement. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
