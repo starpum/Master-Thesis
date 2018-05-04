@@ -3,12 +3,13 @@
 %--------------------------------------------------- PAGE STYLE 
 \usepackage[utf8]{inputenc} 		% Encoding
 \usepackage[T1]{fontenc} 			% To write in French
-\usepackage[english]{babel} 		% To write in English
+\usepackage[english]{babel} 			% To write in English
 \usepackage{fancyhdr} 				% Fancy style
 \usepackage[left=1.7cm,right=1.7cm,top=1.7cm,bottom=1.7cm]{geometry}
 \usepackage[titletoc]{appendix}	   	% Better appendix management
 \usepackage[absolute]{textpos}
 \usepackage{booktabs}
+\usepackage{etoolbox}					% Manage toclof lines
 
 \usepackage{expdlist}
 \newenvironment{itemize*}%			% Creates a custom itemize environment, called by itemize* 
@@ -57,18 +58,26 @@
 \usepackage{textcomp}		        % For copyright symbol
 \usepackage{hyperref}				% To make references 
 \usepackage{rotating}				% To rotate text, figures,...
+\usepackage{movie15}				% To include gifs
 
 %--------------------------------------------------- CUSTOM COMMANDS
 \newcommand{\ts}{\textsuperscript} 	% Simplifies superscript
 \newcommand{\tsb}{\textsubscript}  	% Simplifies subscript
 
-% define list of equations
-\newcommand{\listequationsname}{List of Equations}
+
+\newcommand{\listequationsname}{List of Equations}		% Create list of equations
 \newlistof{myequations}{equ}{\listequationsname}
 \newcommand{\myequations}[1]{%
-\addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}\par}
+  \refstepcounter{myequations}%
+  \addcontentsline{equ}{myequations}
+    {\protect\numberline{\theequation}#1}\par%
+}
+\makeatletter
+	\preto\chapter{\addtocontents{equ}{\protect\addvspace{10\p@}}}%	% Set skips between chapters
+\makeatother
 \setlength{\cftmyequationsnumwidth}{2.5em} % Width of equation number in List of Equations
 \setlength{\cftmyequationsindent}{1.5em}   % Indent of list of equation 
+
 
  
 \begin{document}
@@ -428,44 +437,44 @@ Before starting the production of this item, a critical evaluation must be perfo
 
 \subsection{Measurements}
 
-Figure \ref{fig:vib_pow} present the apparent power in the near field of the DUT for the different measurements points. \\
+Figure \ref{fig:vib_pow} present the apparent power in the near field of the DUT for different measurements points. \\
 The blue curve represents the power from the speaker. This scan have been centered on the speaker, using a 5cm radius for the scanning grid. The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centered on the speaker, with a 21cm radius for the scanning grid. The grey curve represents the contribution from the baffle: the scan was centered on the lower right corner of the baffle, with a 5cm scanning radius. Finally, the light orange curve represents the contribution from the wooden plate: this scan was centered midway between the speaker and the baffle, with a 5cm scanning radius. \\
 
-Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration might impact the system: the differences between the 2 plots can only come from the plate vibration, as the field separation method removed all contribution from the room. \\
+Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration might impact the system: the differences between the 2 plots can only come from the plate vibration, as the field separation method removed all contributions from the room. \\
+Comparing the variations on the speaker+wood results with the contribution of the wood shows that most of the variations matches with the peaks of the wood's contribution; whereas s few variations matches with the baffle contribution's peaks (see figure \ref{Curves:Baffle_RadPow} for matching peaks and a bigger figure). \\
 
-Comparing the variations on the speaker+wood results with the contribution of the wood shows that some of the variation matches with the peaks of the wood's contribution; whereas other matches with the baffle contribution's peaks (see figure \ref{Curves:Baffle_RadPow} for matching peaks and a bigger figure). This evaluation evidences how the baffle is polluting the measurement: the peaks observed on the SPL response could be mistaken as break-ups of the speaker.  \\
+However, the contributions from the baffle itself aren't really problematic: if the scanning radius is correctly chosen, the field separation method will remove the baffle's contribution from the measurement. The contributions from the wooden plate are much more problematic, since the field separation method cannot remove contributions coming from inside the scanning radius, and the scanning radius cannot be smaller than the driver's. 
 
 \begin{minipage}{0.5\textwidth} % Figures
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{GridOpti/Vib_Pow} 
 \end{center}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{GridOpti/compa_baffle_Vib} 
-\end{center}
-\end{minipage}
-
-\begin{minipage}{0.5\textwidth}	% Captions of figure (2 minipages to make sure that they're aligned)
-\begin{center}
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Comparison of apparent power in the Near Field for different measurement points} 
 	\label{fig:vib_pow}
-\end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Comparison of contour plots for speaker only (top) ans speaker+wood (bottom)} 
-	\label{fig:vib_comp}
+	\includegraphics[width=0.9\textwidth]{GridOpti/Vib_Pow_SPW} 
 \end{center}
-\end{minipage}\\
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Comparison of radiated powers in the Far Field for the speaker and speaker + wood measurements} 
+	\label{fig:vib_comp}
+\end{minipage}
+\vspace{0.1cm}
 
+Figure \ref{fig:vib_comp} presents the radiated powers in the Far Field (at 10m) of the speaker and speaker + wood measurements. Here the effect of the wooden plate vibrating can be observed clearly: the radiated power has a lot of oscillations on the speaker + wood measure, which are not found on the speaker only measure. 
 
-Figure \ref{fig:vib_comp} presents the contour plot of the speaker and the speaker+wood measurements, for a frequency range of 20Hz - 5kHz and angles from -180° to 180°. This plots are very similar, however the measurement of speaker + wood presents much more fluctuations on the side lobes and the DUT stops emitting as a monopole sooner than the speaker alone: at around 770Hz for the speaker alone, and 350Hz for the speaker + wood.\\
+\begin{center}
+	\includemovie[draft,repeat,poster,label=baffle_vib,text={\small(Loading Video...)}]{6cm}{4cm}{GridOpti/baffle_vib2.avi}
+\end{center}
 
-Figure \ref{Curves:Baffle_BalloonComp} presents a comparison of the directivity balloon at 4m and 5kHz for the speaker and the speaker + wood measurement. When observing the side lobes, it is clear that the speaker + wood configuration has more interferences than the speaker alone. This phenomenon is clearly visible on figure \ref{Curves:Baffle_BalloonWood}, which presents the directivity balloon of the speaker+wood measure at 10kHz and 10m. The contribution from the speaker is in the middle, and the side lobs shows some very strong peaks in SPL. \\
-Observing the phase balloon in figure \ref{Curves:Baffle_BalloonWood} shows that the side lobes are in opposite phase with the main lobe. This observation confirms the previous hypothesis of this sides lobes being generated by the plate vibrating. 
+The movie above shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. It can observed that the plate is vibrating in opposite phase with the speaker, creating a cancellation effect on the Sound Pressure response of the driver. 
+
+%presents the contour plot of the speaker and the speaker+wood measurements, for a frequency range of 20Hz - 5kHz and angles from -180° to 180°. This plots are very similar, however the measurement of speaker + wood presents much more fluctuations on the side lobes and the DUT stops emitting as a monopole sooner than the speaker alone: at around 770Hz for the speaker alone, and 350Hz for the speaker + wood.\\
+
+%Figure \ref{Curves:Baffle_BalloonComp} presents a comparison of the directivity balloon at 4m and 5kHz for the speaker and the speaker + wood measurement. When observing the side lobes, it is clear that the speaker + wood configuration has more interferences than the speaker alone. This phenomenon is clearly visible on figure \ref{Curves:Baffle_BalloonWood}, which presents the directivity balloon of the speaker+wood measure at 10kHz and 10m. The contribution from the speaker is in the middle, and the side lobs shows some very strong peaks in SPL. \\
+%Observing the phase balloon in figure \ref{Curves:Baffle_BalloonWood} shows that the side lobes are in opposite phase with the main lobe. This observation confirms the previous hypothesis of this sides lobes being generated by the plate vibrating. 
 
 \subsection{Discussion}
 
@@ -473,7 +482,7 @@ The previous investigations highlighted several problems with the baffle prototy
 \begin{description}
 \item[Wooden plate] special attention should be given to its thickness, material and damping. A solution to attenuate the vibration of the plate would be to stiffen it by attaching beams to the backside. As a general advice, MDF should be avoided because of its lightness. 
 \item[Clamping system] despite being very nicely engineered, the system clamping the plate in place is not satisfying to conduct acoustical measurements. The nuts supposed to hold the wooden plate in place are subject to rattling, even when strongly tightened.
-\item[Baffle] the baffle itself generates some vibration, that is believed to not be too critical for the measurements. Maybe damping could be added, although the baffle cannot be modified too much. 
+\item[Baffle] the baffle itself generates some vibration, that is believed to not be critical for the measurements since it can be removed by using the field identification. Maybe damping could be added, although the baffle cannot be modified too much. 
 \end{description}
 
 
@@ -485,9 +494,10 @@ The previous investigations highlighted several problems with the baffle prototy
 
 \section{Principle}
 
-Exploiting symmetry conditions on the complex coefficients of the spherical wave expansion ($c_{n,m}^{out}(j \omega)$, see equation \ref{eq:sphwvexp}) could reduce the measurement time significantly by reducing the number of points of the measurement as explained in the article \textit{Holographic Nearfield Measurement of Loudspeaker Directivity} \citep[][sect.~4]{aeshs}. \\
+Exploiting symmetry conditions on the complex coefficients of the spherical wave expansion $c_{n,m}^{out}(j \omega)$ (see equation \ref{eq:sphwvexp}) could reduce the measurement time significantly by reducing the number of points of the measurement as explained in the article \textit{Holographic Nearfield Measurement of Loudspeaker Directivity} \citep[][sect.~4]{aeshs}. \\
 
-To implement this, the idea is to start from a measurement done with a coarse grid, and to check the symmetry condition on the coefficients by using the different equations provided in appendix \ref{chap:sym}. Once the coefficients satisfying each symmetry condition have been found, the symmetry factor (given by equations \ref{eq:Srs}, \ref{eq:Sbs}, \ref{eq:Sbs}, \ref{eq:Ssps}) is estimated. By setting different thresholds, the user is informed that the DUT may present certain types of symmetry that could be used to perform a faster full measurement.
+To implement this, the idea is to start from a measurement done with a coarse grid, and to check the existence of symmetry condition on the coefficients by using the different equations provided in appendix \ref{chap:sym}. The symmetries under study are given in appendix \ref{chap:sym}.
+Once the coefficients satisfying each symmetry condition have been found, the symmetry factor (given by equations \ref{eq:Srs}, \ref{eq:Sbs}, \ref{eq:Sbs}, \ref{eq:Ssps}) is estimated. By setting different thresholds, the user is informed that the DUT may present certain types of symmetry that could be used to perform a faster full measurement.
 
 \section{Measurement on different speakers}
 
@@ -516,9 +526,9 @@ The DUT is a circular, 10cm woofer (see appendix \ref{spkrlib:10cm}), mounted on
 \vspace{0.1cm}
 
 
-Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power for coefficients not fitting the symmetry condition (see \ref{chap:sym}, for example for a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$). \\
+Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power for coefficients not fitting the symmetry condition (see appendix \ref{chap:sym}, for example for a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$). \\
 
-Figure \ref{fig:sym_fact_10cm} presents the symmetry factors for different types of symmetry, in dB. A 0 dB value means that the different between the radiated power of the symmetry condition and the radiated powers of the rest presents no difference. Observing the symmetry factor for the baffle shows that this value is constantly 0 on the whole frequency band: this result is matching the expectation since the measurement have been done with the speaker mounted on a baffle. \\
+Figure \ref{fig:sym_fact_10cm} presents the symmetry factors for different types of symmetry, in dB. A 0 dB value means that the radiated power of the symmetry condition and the radiated powers of the rest presents no difference. Observing the symmetry factor for the baffle shows that this value is constantly 0 on the whole frequency band: this result is matching the expectations since the measurement have been done with the speaker mounted on a baffle. \\
 
 Comparing the radiated power in figure \ref{fig:rad_pow_10cm} for the different symmetries gives interesting results: in the low frequency domain, the total radiated power and different powers are extremely similar, no matter the symmetry type. In high frequencies, disruptions appears and the rest increases significantly: the higher the frequency, and the more interferences will be produced by the speaker. \\
 
@@ -551,7 +561,6 @@ Interestingly, the top/bottom Single Plane Symmetry factor is higher than other 
 As expected, the rotational symmetry factor is below all other factors, a phenomenon that has already been observed on the Radiated Powers. 
 
 % Make a measure with speaker shifted by 90° and compare the symmetry factors.
-
 
 
 \subsection{2-way "diagonal" speaker}
@@ -638,18 +647,53 @@ Figures \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} p
 
 \subsection{Influence of the load}
 
-The tetrahedral test box being a closed box system, it will have an impact on the speaker's behavior. Closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the box creates a "bass boost" effect. \\
+The tetrahedral test box being a closed box system, it will have an impact on the speaker's behavior. Closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the blue curve is the measure in the box and the orange curve the result of the NFS of the 10 cm woofer (see appendix \ref{spkrlib:10cm}). In the 20 Hz - 150 Hz range the box creates a "bass boost" effect. \\
 
-To correct 
+Assuming that the driver is in the linear range, the effect of the box can be approximated as an additional compliance in the loudspeaker's equivalent network. The displacement transfer function given by equation \ref{eq:TRF_disp}, where $ e_{g}$ is the input voltage, $C_{ms}$ the compliance, $Bl$ the force factor, $\omega_{s}$ the resonance frequency of the system, and $Q_{ts}$ the total quality factor of the system.
 
-%Measuring in a closed box will influence the behavior of the speaker by modifying the load of air the membrane have to compress. The aim is to evaluate how critically this load influences the measurement, and how to correct this effect. \\
+\begin{equation}
+x(\omega ) = e_{g}\cdot \frac{C_{ms}Bl}{R_{e}}\cdot \frac{1}{(j\omega /\omega _{s})^{2}+(1/Q_{ts})(j\omega /\omega _{s})+1}
+\label{eq:TRF_disp}
+\end{equation}
+\myequations{Displacement transfer function in free air}
 
-%To estimate this, a Large Signal Identification (LSI) have been performed on two speakers to estimate their non-linear parameters in the box and in free air. The parameter of interest is the stiffness of the speaker's membrane $K_{ms}$. \\
-%The measurement curves are presented in appendix \ref{Curves:InfluLoad}.
-%Figure \ref{fig:kms10} presents the measurements of $K_{ms}$ for the 10cm woofer (see appendix \ref{spkrlib:10cm}). The curve has the same shape for both measurements, but the $K_{ms}$ is higher for the measurement in the box: the speaker has to compress more air to generate the same Sound Pressure Level. The difference between the two curves is 0.5 N/mm. \\
-%Figure \ref{fig:kms12}  presents the measurements of $K_{ms}$ for the 16cm fullband driver (see appendix \ref{spkrlib:12cm}). The curves changes its shape drastically, and the offset between the configurations is almost 3 N/mm. This difference could be explained by the size of the speaker, which might be too big for the test box model used: the volume of the box is 0.45 L and the equivalent volume $V_{as}$ of this speaker is 11 L. Because of this the compression effect is exaggerated, generating high variations of the stiffness $K_{ms}$. \\
+From equation \ref{eq:TRF_disp} the displacement transfer function of the system in the box can be estimated by assuming that only $C_{ms}$ will change, giving equation \ref{eq:TRF_dispbox} where $C_{msb}$ is the compliance of the system in the box and $e_{gb}$ the input voltage.
 
-%Correcting this effect can be done by considering a simple acoustic load added to the transducer's equivalent network. 
+\begin{equation}
+x_{b}(\omega ) = e_{gb}\cdot \frac{C_{msb}Bl}{R_{e}}\cdot \frac{1}{(j\omega /\omega _{s})^{2}+(1/Q_{ts})(j\omega /\omega _{s})+1}
+\label{eq:TRF_dispbox}
+\end{equation}
+\myequations{Displacement transfer function in the box}
+
+To correct the effect of the box, an input voltage for which $x(\omega )$ = $x_{b}(\omega ) $ can be calculated as given in equation \ref{eq:V_corr} where $K_{ms}$ and $K_{msb}$ are the stiffness in free air and in the box respectively, and $K_{ms}$ = $\frac{1}{C_{ms}}$.
+
+\begin{equation}
+e_{gb} = e_{g}\cdot \frac{C_{ms}}{C_{msb}} = e_{g}\cdot \frac{K_{msb}}{K_{ms}}
+\label{eq:V_corr}
+\end{equation}
+\myequations{Voltage correction for the box}
+
+This voltage can be expressed as a function of the resonance frequency given by equation \ref{eq:fs}, where $M_{ms}$ is the moving mass of the driver. 
+
+\begin{equation}
+f_{s} = \frac{1}{2 \pi \sqrt{\frac{M_{ms}}{K_{ms}}}}
+\label{eq:fs}
+\end{equation}
+\myequations{Resonance frequency of a speaker}
+
+Expressing the voltage as a function of the resonance frequency makes the compensation easier to estimate, as the calculation of the Thiele \& Small parameters is no longer required. From a simple electrical measurement of the impedance, which is the ratio of the output voltage by the output current $Z = U_{s}/I_{s}$, the resonance frequency can be found at the maximum of the impedance. 
+
+\begin{equation}
+e_{gb} = e_{g}\cdot \frac{(2 \pi f_{s})^{2}}{(2 \pi f_{b})^{2}}
+\label{eq:V_corr_fs}
+\end{equation}
+\myequations{Voltage correction for the box as a function of resonance frequency}
+
+Equation \ref{eq:V_corr_fs} gives the compensated voltage for the box, where $ f_{s}$ is the resonance frequency of the driver in free air and $ f_{b}$ the resonance frequency of the driver in the box. This implies that 2 measurements are required: one of the driver in free air, and one of the driver in the box. \\
+
+Now that the theory is expressed, this assumptions needs to be verified. To do so, several measurements have been performed on the 10 cm woofer (see appendix \ref{spkrlib:10cm}).
+
+
 
 \subsection{Influence of microphone position}
 
