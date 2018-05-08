@@ -1,7 +1,7 @@
 \babel@toc {english}{}
 ~\hfill \textbf {Page}\par 
-\contentsline {chapter}{List of Figures}{c}{Doc-Start}
-\contentsline {chapter}{List of Equations}{d}{Doc-Start}
+\contentsline {chapter}{List of Figures}{d}{Doc-Start}
+\contentsline {chapter}{List of Equations}{e}{Doc-Start}
 \contentsline {chapter}{Introduction}{1}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Preface}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Presentation of the company}{2}{section.1.1}
@@ -36,7 +36,7 @@
 \contentsline {subsection}{\numberline {4.3.1}D. B. Keele method for Far Field extrapolation}{14}{subsection.4.3.1}
 \contentsline {section}{\numberline {4.4}Discussion}{14}{section.4.4}
 \contentsline {chapter}{Appendix \numberline {A}Organization of the work}{i}{Appendix.a.A}
-\contentsline {chapter}{Appendix \numberline {B}Equations for symmetry condition on complex coefficients of spherical wave expansion}{ii}{Appendix.a.B}
+\contentsline {chapter}{Appendix \numberline {B}Equations for symmetry condition on complex \\ coefficients of spherical wave expansion}{ii}{Appendix.a.B}
 \contentsline {chapter}{Appendix \numberline {C}Speaker library}{vi}{Appendix.a.C}
 \contentsline {section}{\numberline {C.1}10 cm woofer}{vi}{section.a.C.1}
 \contentsline {section}{\numberline {C.2}Oval speaker}{vi}{section.a.C.2}

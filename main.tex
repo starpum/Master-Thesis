@@ -78,8 +78,9 @@
 \setlength{\cftmyequationsnumwidth}{2.5em} % Width of equation number in List of Equations
 \setlength{\cftmyequationsindent}{1.5em}   % Indent of list of equation 
 
+\hbadness=99999  % or any number >=10000
+\hfuzz=3pt
 
- 
 \begin{document}
 
 %---------------------------------------------------------------------
@@ -137,22 +138,33 @@ Chlo\'{e} \textsc{Corno}
 %---------------------------------------------------------------------
 %	THANKS
 %---------------------------------------------------------------------
-
-
 \thispagestyle{empty}
+
+
 \begin{center}
-{\Large\textbf{Acknowledgements}} \\~\\~\\~\\
+{\Large\textbf{Acknowledgements}} 
 \end{center}
+\vspace{1cm}
+I would first like to thanks my supervisor Chrisitan Bellmann for all the help and support he provided me during these 5 months. 
 
-I would first like to thanks my supervisor Chrisitan Bellmann for all the help and support he provided me during these 5 months. \\
+\vspace{0.5cm}
 
-I want to particularly thanks the Université du Mans and all the professors and supervisors for giving me the opportunity to follow the Internal Master Degree in ElectroAcoustics and allowing me to work in a domain that passionate me. \\
+I want to particularly thanks the Université du Mans and all the professors and supervisors for giving me the opportunity to follow the Internal Master Degree in ElectroAcoustics and allowing me to work in a domain that passionate me. 
 
-I would also like to acknowledge Valentin Binet, for all the support and love he provided since he knows me; and as the second reader of this report. I am gratefully indebted to him for his very valuable comments on this report.\\
+\vspace{0.5cm}
+
+I would also like to acknowledge Valentin Binet, for all the support and love he provided since he knows me; and as the second reader of this report. I am gratefully indebted to him for his very valuable comments on this report.
+
+\vspace{0.5cm}
 
 Finally, I want to express my profound gratitude to my family who supported me during my studies. I would've never made it without you. Thank you.
 
-\newpage
+
+
+
+
+\vfill % Fill the rest of the page with white
+
 %---------------------------------------------------------------------
 %	TABLE OF CONTENTS - LIST OF FIGURES
 %---------------------------------------------------------------------
@@ -243,7 +255,7 @@ This document will cover different points, starting with a preface presenting th
 
 \begin{minipage}{0.35\textwidth}
 \centering
-	\includegraphics[scale=0.2]{Preface/logo_klippel} 
+	\includegraphics[width=0.7\textwidth]{Preface/logo_klippel} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Logo of Klippel GmbH} 
 	\label{fig:lolo_klippel}
@@ -426,9 +438,9 @@ A baffle prototype have been designed to allow relevant measurements of devices 
 
 Before starting the production of this item, a critical evaluation must be performed in order to estimate the influence of the baffle on the measurement. Different analysis will be conduced, mainly to check the vibration of the baffle itself, the vibration of the wood plate used to mount the speaker, and a measurement centered on the speaker in order to have a point of comparison to identify vibration problems.
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.4\textwidth}
 \begin{center}
-	\includegraphics[scale=1.75]{GridOpti/Baffle_Alone_2} 
+	\includegraphics[width=0.8\textwidth]{GridOpti/Baffle_Alone_2} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Baffle Prototype} 
 	\label{fig:baffle_proto}
@@ -606,25 +618,25 @@ Being able to generate room correction curves is great for the everyday measurem
 
 A solution to this problematic is to measure in test boxes, such as the tetrahedral test box created by Hill Acoustics \citep[see][]{tetbox}. By using post-processing, it is possible to generate a correction curve for the box, and to obtain accurate measurements by compensating its influence on the DUT. Several methods are available to generate this room correction curves \citep[see][]{aeswb}.\\
 
-\begin{minipage}{0.33333333\textwidth}
+\begin{minipage}{0.33\textwidth}
 \begin{center}
-	\includegraphics[width=\textwidth]{RoomComp/Sonograph_MagFilt} 
+	\includegraphics[width=0.95\textwidth]{RoomComp/Sonograph_MagFilt} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Filter on magnitude} 
 	\label{fig:comp_mag}
 \end{center}
 \end{minipage}
-\begin{minipage}{0.33333333\textwidth}
+\begin{minipage}{0.33\textwidth}
 \begin{center}
-	\includegraphics[width=\textwidth]{RoomComp/Sonograph_MinPhase} 
+	\includegraphics[width=0.95\textwidth]{RoomComp/Sonograph_MinPhase} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Filter with minimal phase} 
 	\label{fig:comp_minphase}
 \end{center}
 \end{minipage}
-\begin{minipage}{0.33333333\textwidth}
+\begin{minipage}{0.33\textwidth}
 \begin{center}
-	\includegraphics[width=\textwidth]{RoomComp/Sonograph_RoomCor} 
+	\includegraphics[width=0.95\textwidth]{RoomComp/Sonograph_RoomCor} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Filter with LFR} 
 	\label{fig:comp_RoomCor}
@@ -662,7 +674,7 @@ x_{b}(\omega ) = e_{gb}\cdot \frac{C_{msb}Bl}{R_{e}}\cdot \frac{1}{(j\omega /\om
 \end{equation}
 \myequations{Displacement transfer function in the box}
 
-To correct the effect of the box, an input voltage for which $x(\omega )$ = $x_{b}(\omega ) $ can be calculated as given in equation \ref{eq:V_corr} where $K_{ms}$ and $K_{msb}$ are the stiffness in free air and in the box respectively, and $K_{ms}$ = $\frac{1}{C_{ms}}$.
+To correct the effect of the box, an input voltage for which $x(\omega )$ = $x_{b}(\omega ) $ can be calculated as given in equation \ref{eq:V_corr} where $K_{ms}$ and $K_{msb}$ are the stiffness in free air and in the box respectively, such as $K_{ms}$ = $\frac{1}{C_{ms}}$.
 
 \begin{equation}
 e_{gb} = e_{g}\cdot \frac{C_{ms}}{C_{msb}} = e_{g}\cdot \frac{K_{msb}}{K_{ms}}
@@ -707,10 +719,9 @@ Now that the theory is expressed, this assumptions needs to be verified. To do s
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:imp_comp} presents the comparison of the measured impedances for different conditions: the initial measures in free air and in the box to estimate the voltage compensation to apply, and the results of the new measurements when the voltage compensations calculated from the $K_{ms}$ (measured using Klippel's laser method) and the $F_{s}$ (measured at the maximum of the impedance curves) have been applied. \\
-When looking at this results, few differences between the original impedance in the box and the corrected curves can be found. However, when looking at the displacement transfer functions presented in figure \ref{fig:disp_comp}, interesting results are found. \\
+Figure \ref{fig:imp_comp} presents the comparison of the measured impedances for different conditions: the initial measures in free air and in the box to estimate the voltage compensation to apply, and the results of the new measurements when the voltage compensations calculated from the $K_{ms}$ (measured using Klippel's laser method) and the $f_{s}$ (measured at the maximum of the impedance curves) have been applied. \\
+When looking at this results, few differences between the impedance in the box and the corrected curves can be found. However, when looking at the displacement transfer functions presented in figure \ref{fig:disp_comp}, interesting results are found. \\
 
-In low frequencies, from 10 to 50 Hz, the membrane's displacement is higher in the box. Howe 
 
 \subsection{Influence of microphone position}
 
@@ -820,7 +831,8 @@ The following will present the work schedule I have followed, what work have bee
 \end{center}
 
 		% Symmetry
-\chapter{Equations for symmetry condition on complex coefficients of spherical wave expansion}
+
+\chapter{Equations for symmetry condition on complex \\ coefficients of spherical wave expansion}
 \label{chap:sym}
 
 \textit{\textbf{NOTE}: the presented equations are coming from the reference \cite{aeshs}. They are displayed in this report for a more comfortable reading experience and for reference, and I do not take any credits for the presented results.} \\
