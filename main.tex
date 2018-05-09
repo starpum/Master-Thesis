@@ -138,9 +138,16 @@ Chlo\'{e} \textsc{Corno}
 %---------------------------------------------------------------------
 %	THANKS
 %---------------------------------------------------------------------
+\newif\ifdraft
+\drafttrue 
+%\draftfalse
+
+%If in draft mode Acknowledgements will not be shown
+\ifdraft
+
+%If not in draft mode, Acknowledgements are shown
+\else
 \thispagestyle{empty}
-
-
 \begin{center}
 {\Large\textbf{Acknowledgements}} 
 \end{center}
@@ -159,12 +166,8 @@ I would also like to acknowledge Valentin Binet, for all the support and love he
 
 Finally, I want to express my profound gratitude to my family who supported me during my studies. I would've never made it without you. Thank you.
 
-
-
-
-
 \vfill % Fill the rest of the page with white
-
+\fi	% End of condition
 %---------------------------------------------------------------------
 %	TABLE OF CONTENTS - LIST OF FIGURES
 %---------------------------------------------------------------------
@@ -832,7 +835,7 @@ The following will present the work schedule I have followed, what work have bee
 
 		% Symmetry
 
-\chapter{Equations for symmetry condition on complex \\ coefficients of spherical wave expansion}
+\chapter[Equations for symmetry condition on complex coefficients of spherical wave expansion]{Equations for symmetry condition on complex \\ coefficients of spherical wave expansion}
 \label{chap:sym}
 
 \textit{\textbf{NOTE}: the presented equations are coming from the reference \cite{aeshs}. They are displayed in this report for a more comfortable reading experience and for reference, and I do not take any credits for the presented results.} \\
@@ -1252,21 +1255,6 @@ This appendix aims to present additional figures that could not be presented in 
     \captionof{figure}{Radiated Powers at 1m for different measurement points on the baffle}
     \label{Curves:Baffle_RadPow}
 \end{center}
-
-\begin{center}
-	\includegraphics[width=0.8\textwidth]{Appendix/compa_baffle_Vib_Balloon}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Comparison of directivity balloon for the speaker and speaker + wood contribution}
-    \label{Curves:Baffle_BalloonComp}
-\end{center}
-
-\begin{center}
-	\includegraphics[width=0.8\textwidth]{Appendix/compa_baffle_Vib_SpkrWood_All}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Directivity balloon and phase balloon at 9.58 kHz of the speaker + wood}
-    \label{Curves:Baffle_BalloonWood}
-\end{center}
-
 
 
 \section{Measurement time optimization}
