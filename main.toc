@@ -34,6 +34,7 @@
 \contentsline {subsection}{\numberline {4.2.2}Influence of microphone position}{13}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Room Correction solutions}{14}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}D. B. Keele method for Far Field extrapolation}{14}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Generation of a generic Correction Curve for the tetrahedral box}{14}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Discussion}{14}{section.4.4}
 \contentsline {chapter}{Appendix \numberline {A}Organization of the work}{i}{Appendix.a.A}
 \contentsline {chapter}{Appendix \numberline {B}Equations for symmetry condition on complex coefficients of spherical wave expansion}{ii}{Appendix.a.B}

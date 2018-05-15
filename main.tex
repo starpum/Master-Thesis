@@ -480,9 +480,15 @@ However, the contributions from the baffle itself aren't really problematic: if 
 
 Figure \ref{fig:vib_comp} presents the radiated powers in the Far Field (at 10m) of the speaker and speaker + wood measurements. Here the effect of the wooden plate vibrating can be observed clearly: the radiated power has a lot of oscillations on the speaker + wood measure, which are not found on the speaker only measure. 
 
+\ifdraft
 \begin{center}
 	\includemovie[draft,repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{6cm}{4cm}{GridOpti/baffle_vib.avi}
 \end{center}
+\else
+\begin{center}
+	\includemovie[repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{6cm}{4cm}{GridOpti/baffle_vib.avi}
+\end{center}
+\fi
 
 The movie above shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. It can observed that the plate is vibrating in opposite phase with the speaker, creating a cancellation effect on the Sound Pressure response of the driver. This observation matches with the previous measurement results shown in figure \ref{fig:vib_comp}
 
@@ -493,7 +499,7 @@ The movie above shows an animation\footnote{If the animation is not playing corr
 The previous investigations highlighted several problems with the baffle prototype. Particular attention should be given to the following:
 \begin{description}
 \item[Wooden plate] special attention should be given to its thickness, material and damping. A solution to attenuate the vibration of the plate would be to stiffen it by attaching beams to the backside. As a general advice, MDF should be avoided because of its lightness. 
-\item[Clamping system] despite being very nicely engineered, the system clamping the plate in place is not satisfying to conduct acoustical measurements. The nuts supposed to hold the wooden plate in place are subject to rattling, even when strongly tightened.
+\item[Clamping system] the system clamping the plate in place is not satisfying to conduct acoustical measurements. The nuts supposed to hold the wooden plate in place are subject to rattling, even when strongly tightened.
 \item[Baffle] the baffle itself generates some vibration, that is believed to not be critical for the measurements since it can be removed by using the field identification. Maybe damping could be added, although the baffle cannot be modified too much. 
 \end{description}
 
@@ -538,7 +544,7 @@ The DUT is a circular, 10cm woofer (see appendix \ref{spkrlib:10cm}), mounted on
 \vspace{0.1cm}
 
 
-Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power for coefficients not fitting the symmetry condition (see appendix \ref{chap:sym}, for example for a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$). \\
+Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power by coefficients not satisfying the symmetry condition (see appendix \ref{chap:sym}, for example for a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$). \\
 
 Figure \ref{fig:sym_fact_10cm} presents the symmetry factors for different types of symmetry, in dB. A 0 dB value means that the radiated power of the symmetry condition and the radiated powers of the rest presents no difference. Observing the symmetry factor for the baffle shows that this value is constantly 0 on the whole frequency band: this result is matching the expectations since the measurement have been done with the speaker mounted on a baffle. \\
 
@@ -725,6 +731,10 @@ Now that the theory is expressed, this assumptions needs to be verified. To do s
 Figure \ref{fig:imp_comp} presents the comparison of the measured impedances for different conditions: the initial measures in free air and in the box to estimate the voltage compensation to apply, and the results of the new measurements when the voltage compensations calculated from the $K_{ms}$ (measured using Klippel's laser method) and the $f_{s}$ (measured at the maximum of the impedance curves) have been applied. \\
 When looking at this results, few differences between the impedance in the box and the corrected curves can be found. However, when looking at the displacement transfer functions presented in figure \ref{fig:disp_comp}, interesting results are found. \\
 
+Comparing the free air and in box measurement shows that up to 50 Hz the membrane's displacement is greater in the box, generating the "bass boost" effect observed before (figure \ref{Curves:InfluLoad}). The displacement is then larger in free air than in the box, expect at the driver's resonance.\\
+Using the voltage correction calculated either by the ratio of resonance frequencies $f_{s}$ and $f_{b}$ or the ratio of stiffness $K_{ms}$ lowers the membrane's displacement in the box, although the attenuation provided by the ratio of resonance frequencies is overestimated: the membrane's displacement is too attenuated in the 20 - 500 Hz frequency band. The attenuation provided by the ratio of stiffness gives promising results, particularly in the "bass boost" frequency band (20 - 50 Hz) and around the resonance, where the displacement transfer functions is very close to the one measured in free air. \\
+
+The major mismatches between the free air and voltage compensated curves is believed to be due to the linearity assumption. 
 
 \subsection{Influence of microphone position}
 
@@ -790,6 +800,10 @@ p_{N} = \frac{2r}{a} \cdot p_{F}
 Where $p_{N}$ and $p_{F}$ are respectively the Near and Far field pressures, $r$ is the distance between the center of the driver's membrane and the measuring point, and $a$ the radius of the driver's membrane.\\
 
 The results of this extrapolation, after implementation in SciLab, are given in appendix \ref{Curves:dbkFF}. 
+
+\subsection{Generation of a generic Correction Curve for the tetrahedral box}
+
+
 
 \section{Discussion}
 

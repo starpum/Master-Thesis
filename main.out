@@ -30,23 +30,24 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Influence of microphone position}{section.4.2}% 30
 \BOOKMARK [1][-]{section.4.3}{Room Correction solutions}{chapter.4}% 31
 \BOOKMARK [2][-]{subsection.4.3.1}{D. B. Keele method for Far Field extrapolation}{section.4.3}% 32
-\BOOKMARK [1][-]{section.4.4}{Discussion}{chapter.4}% 33
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Organization of the work}{}% 34
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Equations for symmetry condition on complex coefficients of spherical wave expansion}{}% 35
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Speaker library}{}% 36
-\BOOKMARK [1][-]{section.a.C.1}{10 cm woofer}{Appendix.a.C}% 37
-\BOOKMARK [1][-]{section.a.C.2}{Oval speaker}{Appendix.a.C}% 38
-\BOOKMARK [1][-]{section.a.C.3}{16 cm fullband speaker}{Appendix.a.C}% 39
-\BOOKMARK [1][-]{section.a.C.4}{2-way diagonal speaker}{Appendix.a.C}% 40
-\BOOKMARK [1][-]{section.a.C.5}{18'' woofer}{Appendix.a.C}% 41
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix Additional figures}{}% 42
-\BOOKMARK [1][-]{section.a.D.1}{Baffle measurement}{Appendix.a.D}% 43
-\BOOKMARK [2][-]{subsection.a.D.1.1}{Estimation of baffle influence}{section.a.D.1}% 44
-\BOOKMARK [1][-]{section.a.D.2}{Measurement time optimization}{Appendix.a.D}% 45
-\BOOKMARK [2][-]{subsection.a.D.2.1}{Oval speaker}{section.a.D.2}% 46
-\BOOKMARK [2][-]{subsection.a.D.2.2}{2-way "diagonal" speaker}{section.a.D.2}% 47
-\BOOKMARK [1][-]{section.a.D.3}{Room Correction}{Appendix.a.D}% 48
-\BOOKMARK [2][-]{subsection.a.D.3.1}{Measurements}{section.a.D.3}% 49
-\BOOKMARK [2][-]{subsection.a.D.3.2}{Room Correction solutions}{section.a.D.3}% 50
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Application notes}{}% 51
-\BOOKMARK [1][-]{section.a.E.1}{Baffle measurement}{Appendix.a.E}% 52
+\BOOKMARK [2][-]{subsection.4.3.2}{Generation of a generic Correction Curve for the tetrahedral box}{section.4.3}% 33
+\BOOKMARK [1][-]{section.4.4}{Discussion}{chapter.4}% 34
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Organization of the work}{}% 35
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Equations for symmetry condition on complex coefficients of spherical wave expansion}{}% 36
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Speaker library}{}% 37
+\BOOKMARK [1][-]{section.a.C.1}{10 cm woofer}{Appendix.a.C}% 38
+\BOOKMARK [1][-]{section.a.C.2}{Oval speaker}{Appendix.a.C}% 39
+\BOOKMARK [1][-]{section.a.C.3}{16 cm fullband speaker}{Appendix.a.C}% 40
+\BOOKMARK [1][-]{section.a.C.4}{2-way diagonal speaker}{Appendix.a.C}% 41
+\BOOKMARK [1][-]{section.a.C.5}{18'' woofer}{Appendix.a.C}% 42
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Additional figures}{}% 43
+\BOOKMARK [1][-]{section.a.D.1}{Baffle measurement}{Appendix.a.D}% 44
+\BOOKMARK [2][-]{subsection.a.D.1.1}{Estimation of baffle influence}{section.a.D.1}% 45
+\BOOKMARK [1][-]{section.a.D.2}{Measurement time optimization}{Appendix.a.D}% 46
+\BOOKMARK [2][-]{subsection.a.D.2.1}{Oval speaker}{section.a.D.2}% 47
+\BOOKMARK [2][-]{subsection.a.D.2.2}{2-way "diagonal" speaker}{section.a.D.2}% 48
+\BOOKMARK [1][-]{section.a.D.3}{Room Correction}{Appendix.a.D}% 49
+\BOOKMARK [2][-]{subsection.a.D.3.1}{Measurements}{section.a.D.3}% 50
+\BOOKMARK [2][-]{subsection.a.D.3.2}{Room Correction solutions}{section.a.D.3}% 51
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Application notes}{}% 52
+\BOOKMARK [1][-]{section.a.E.1}{Baffle measurement}{Appendix.a.E}% 53
