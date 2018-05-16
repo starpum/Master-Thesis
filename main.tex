@@ -18,7 +18,7 @@
     \setlength{\parskip}{0pt}}%
   {\end{itemize}}
   
-\renewcommand{\rmdefault}{phv}		% Use Helvetica as default font for the whole document
+\renewcommand{\rmdefault}{phv}	% Use Helvetica as default font for the whole document
 
 \setlength{\parindent}{0pt}	      	% Remove auto-ident
 
@@ -59,6 +59,18 @@
 \usepackage{hyperref}				% To make references 
 \usepackage{rotating}				% To rotate text, figures,...
 \usepackage{movie15}				% To include gifs
+
+%--------------------------------------------------- TODOs / DRAFT MODE
+ 
+\newif\ifdraft
+\drafttrue
+%\draftfalse
+
+\ifdraft
+\usepackage{todonotes}
+\else
+\usepackage[disable]{todonotes}
+\fi
 
 %--------------------------------------------------- CUSTOM COMMANDS
 \newcommand{\ts}{\textsuperscript} 	% Simplifies superscript
@@ -131,21 +143,22 @@ Chlo\'{e} \textsc{Corno}
 \end{flushright}
 \end{minipage}\\[2cm]
  
+\todo[inline, color=red]{DISABLE DRAFT MODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!}
 \vfill % Fill the rest of the page with white
 
 \end{titlepage}
 
 %---------------------------------------------------------------------
-%	THANKS
+%	LIST OF TODOS - THANKS
 %---------------------------------------------------------------------
-\newif\ifdraft
-\drafttrue 
-%\draftfalse
 
-%If in draft mode Acknowledgements will not be shown
+
+
+
+%If in draft mode Acknowledgements will not be shown, but the list of todos will
 \ifdraft
-
-%If not in draft mode, Acknowledgements are shown
+\listoftodos
+%If not in draft mode, Acknowledgements are shown and list of tods is removed
 \else
 \thispagestyle{empty}
 \begin{center}
@@ -240,7 +253,7 @@ Although this method is widely used, it presents several drawbacks:
 \end{itemize}
 
 
-
+\todo[inline, color=red!40]{Finir de rédiger l'introduction}
 
 The following reports aims to present the work that have been conducted during a 5-months internship at the company Klippel GmbH. This internship is mandatory to graduate from the International Master Degree in Electro-Acoustics (IMDEA) at the Université du Mans, in France. \\
 
@@ -295,6 +308,7 @@ The room correction part aims to test the room correction module, apply fast non
 
 There is no particular price constrains associated with this project, as most of the required hardware and software is already available. 
 
+\todo[inline]{Peut-être ajouter + de détails sur le contexte du travail et son but?}
 \newpage
 
 	% LITERATURE REVIEW
@@ -353,6 +367,7 @@ The first step of the holographic process is to shift the coordinates of all mea
 Then, the parameters are fitted to find the optimum coefficients $C_{mn}$. This is done by estimating the deviation $e(f,r_{E})$ between the measured and the modeled transfer function of the system. \\
 
 Finally, the accuracy of the holographic estimation of the sound field is verified by estimating the Total Fitting Error ($TFE$) of the measurement. This parameter is calculated from the ratio of the truncated of the power series at a maximum order $N$ of the deviation $e(f,r_{E})$ by the transfer function of the system. It the $TFE$ is lower than -20 dB, it is considered that the model describes the Far-Field of the system with sufficient accuracy. 
+\todo[inline, color=red!40]{Ajouter des équations pour le principe de la measure.}
 
 \subsubsection{Maximum order of expansion}
 
@@ -429,7 +444,7 @@ It can be concluded that using different measurement grid is relevant. A well ad
 Further investigations should be conducted on the influence of the measurement grid on the measurement accuracy.
 
 % \subsection{Application note for baffle measurements}
-
+\todo[inline]{make reference to application note for baffle measurements}
 % Another task was to create an application note to explain how to perform baffle measurements to Klippel's customers. This document being quite heavy, it is given in appendix \ref{chap:AN_Baffle}.
 
 \section{Estimation of baffle influence}
@@ -478,7 +493,8 @@ However, the contributions from the baffle itself aren't really problematic: if 
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:vib_comp} presents the radiated powers in the Far Field (at 10m) of the speaker and speaker + wood measurements. Here the effect of the wooden plate vibrating can be observed clearly: the radiated power has a lot of oscillations on the speaker + wood measure, which are not found on the speaker only measure. 
+Figure \ref{fig:vib_comp} presents the radiated powers in the Far Field (at 10m) of the speaker and speaker + wood measurements. Here the effect of the wooden plate vibrating can be observed clearly: the radiated power has a lot of oscillations on the speaker + wood measure, which are not found on the speaker only measure. At the resonance (f = 150 Hz) a strong cancellation effect is observed, with a difference of 6 dB between the 
+\todo[inline, color=red!40]{This needs to be rephrased}
 
 \ifdraft
 \begin{center}
@@ -490,8 +506,8 @@ Figure \ref{fig:vib_comp} presents the radiated powers in the Far Field (at 10m)
 \end{center}
 \fi
 
-The movie above shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. It can observed that the plate is vibrating in opposite phase with the speaker, creating a cancellation effect on the Sound Pressure response of the driver. This observation matches with the previous measurement results shown in figure \ref{fig:vib_comp}
-
+The movie above shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. It can observed that the plate is vibrating in opposite phase with the speaker, creating a cancellation effect on the Sound Pressure response of the driver. This observation matches with the previous measurement results shown in figure \ref{fig:vib_comp} 
+\todo[inline, color=red!40]{Make a better explanation}
 
 
 \subsection{Discussion}
@@ -576,9 +592,11 @@ The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baf
 Observing the Radiated Powers shows that expected results have been encountered: in the high frequencies (a zoom on the 7 - 20 kHz range is given in appendix \ref{Curves:oval}) from 8.5 kHz, the rest of the rotational symmetry radiated power is higher that the radiated power by the rotational symmetry. This means that there is more power given by the coefficients which do not respect the condition for rotational symmetry, than by the coefficients validating $C_{mn} = 0 \;  \textup{for m}  \neq 0$.  \\
 
 Interestingly, the top/bottom Single Plane Symmetry factor is higher than other symmetries from 5 kHz. This could be explained by the speaker's geometry: the larger dimension makes it more prone to rocking mode, spoiling the Left/Right Single Plane Symmetry. \\
-As expected, the rotational symmetry factor is below all other factors, a phenomenon that has already been observed on the Radiated Powers. 
+As expected, the rotational symmetry factor is below all other factors, a phenomenon that has already been observed on the Radiated Powers. \\
 
-% Make a measure with speaker shifted by 90° and compare the symmetry factors.
+\todo[inline, color=red!40]{Make measurement for 90deg rotated speaker and see of sym factors are changed} 
+
+\missingfigure{Measurement of 90deg rotated driver}
 
 
 \subsection{2-way "diagonal" speaker}
@@ -614,7 +632,7 @@ In high frequency when the twitter alone is emitting, some symmetry is observed.
 
 The previous results are promising for the investigation on symmetry conditions to ease off the measurement time. The calculated symmetry factors match with the expected results for all measurements, and can be implemented in the NFS scripts to be exploited for reducing the number of measurements points. 
 
-
+\todo[inline, color=red!40]{Finish the discussion and see how your code have been implemented}
 
 %--------------------------------------------------------------
 %	ROOM CORRECTION
@@ -661,7 +679,7 @@ Figures \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} p
 \end{description}
 
 
-\section{Measurements}
+\section{Measurements in the tetrahedral box}
 
 \subsection{Influence of the load}
 
@@ -734,14 +752,16 @@ When looking at this results, few differences between the impedance in the box a
 Comparing the free air and in box measurement shows that up to 50 Hz the membrane's displacement is greater in the box, generating the "bass boost" effect observed before (figure \ref{Curves:InfluLoad}). The displacement is then larger in free air than in the box, expect at the driver's resonance.\\
 Using the voltage correction calculated either by the ratio of resonance frequencies $f_{s}$ and $f_{b}$ or the ratio of stiffness $K_{ms}$ lowers the membrane's displacement in the box, although the attenuation provided by the ratio of resonance frequencies is overestimated: the membrane's displacement is too attenuated in the 20 - 500 Hz frequency band. The attenuation provided by the ratio of stiffness gives promising results, particularly in the "bass boost" frequency band (20 - 50 Hz) and around the resonance, where the displacement transfer functions is very close to the one measured in free air. \\
 
-The major mismatches between the free air and voltage compensated curves is believed to be due to the linearity assumption. 
+The major mismatches between the free air and voltage compensated curves can be explained by the approximations made on the box's behavior. A LEM for a sealed box can be much more complicated than a change on the mechanical compliance 
+
+\todo[inline, color=red!40]{Expliquer que les différences sont dues à l'approximation trop simpliste sur le modèle de la boite, mais bien formulé. Ajouter les schémas équivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}
 
 \subsection{Influence of microphone position}
 
 Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distances $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
 
 Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different distances $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150 Hz, the transfer functions are similar. After 150 Hz strong differences appear between the transfer functions. The larger the distance $D_{ms}$ is and the bigger the box influences the measurement, generating a dip on the response at around 1 kHz. This phenomenon is believed to be the first box mode and is observed when measuring different speakers. \\
-
+\todo[inline, color=red!40]{mieux formuler + tirer des conclusions et expliquer les autres figures}
 \begin{minipage}{0.35\textwidth}
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{RoomComp/Mic_Pos_Schm} 
@@ -785,10 +805,20 @@ A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoo
 
 \section{Room Correction solutions}
 
+The aim of this task is to enhance klippel's Complex Room Compensation module. To do so, several approach of how to perform a Room Compensation will be investigated. Furthermore, an application note about how to use the module have been written and is given in appendix \ref{chap:AN_CRC}.
+
+\todo[inline]{Maybe explain a bit more the context of this + flowchart of the module}
+
+\subsection{Generation of a generic Correction Curve for the tetrahedral box}
 In order to correct the previous measurements and ensure a good measurement in the tetrahedral test box, several solution of Room Correction methods have been investigated. The aim is to generate a single Room Correction function, valid for all speaker, up to the cut-off frequency of the box.
+\todo[inline]{Finir le code et créer la courbe de correction générique}
+
+\subsection{Compensation by a Near Field measurement}
+
+Another approach to compensate measurements is to exploit a measure done in the near field of the DUT and to use it as the reference for processing far field and off-axis measurement. 
 
 \subsection{D. B. Keele method for Far Field extrapolation}
-
+\todo[inline]{I don't think this subsection is very pertinent nor interesting}
 D. B. Keele presented a simplified method for extrapolation of the Far Field pressure of a device by measuring in the near field. The theory is given in the article \textit{Low-Frequency Loudspeaker Assessment by Nearfield Sound-Pressure Measurement} \citep[see][]{dkeele}. The Near - Far pressure relation is given in equation \ref{eq:nfpressure}.
 
 \begin{equation}
@@ -801,13 +831,10 @@ Where $p_{N}$ and $p_{F}$ are respectively the Near and Far field pressures, $r$
 
 The results of this extrapolation, after implementation in SciLab, are given in appendix \ref{Curves:dbkFF}. 
 
-\subsection{Generation of a generic Correction Curve for the tetrahedral box}
-
-
 
 \section{Discussion}
 
-The previous investigations showed promising results for compensating a measurement in the tetrahedral box. To ensure an accurate measurement several 
+In this \todo[color=green]{name}{}chapter, several methods for compensating the effect of the environment on an acoustic measurement have been  investigated. 
 
 
 %--------------------------------------------------------------
@@ -1337,13 +1364,21 @@ This appendix aims to present additional figures that could not be presented in 
 \end{center}
 
 
+		% More baffle prototype images
+\chapter{Baffle Prototype pictures}
 
+\missingfigure{Prendre des photos du proto}
 
 		% Application Notes
 \chapter{Application notes}
 
 \section{Baffle measurement}
 \label{chap:AN_Baffle}
+
+
+\section{Complex Room Compensation module}
+\label{chap:AN_CRC}
+
 
 \end{appendices}
 

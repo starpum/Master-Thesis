@@ -1,16 +1,16 @@
 \babel@toc {english}{}
 ~\hfill \textbf {Page}\par 
-\contentsline {chapter}{List of Figures}{c}{Doc-Start}
-\contentsline {chapter}{List of Equations}{d}{Doc-Start}
-\contentsline {chapter}{Introduction}{1}{chapter*.1}
+\contentsline {chapter}{List of Figures}{d}{chapter*.2}
+\contentsline {chapter}{List of Equations}{e}{chapter*.2}
+\contentsline {chapter}{Introduction}{1}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Preface}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Presentation of the company}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Context and aim of the work}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Literature review}{3}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Field Separation}{3}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Near Field measurements}{3}{subsection.1.3.2}
-\contentsline {subsubsection}{Measurement principle}{3}{subsubsection*.2}
-\contentsline {subsubsection}{Maximum order of expansion}{4}{subsubsection*.3}
+\contentsline {subsubsection}{Measurement principle}{3}{subsubsection*.6}
+\contentsline {subsubsection}{Maximum order of expansion}{4}{subsubsection*.8}
 \contentsline {chapter}{\numberline {2}Baffle measurements}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Grid optimization}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Principle}{5}{subsection.2.1.1}
@@ -29,13 +29,14 @@
 \contentsline {section}{\numberline {3.3}Discussion}{10}{section.3.3}
 \contentsline {chapter}{\numberline {4}Room correction}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Principle}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Measurements}{11}{section.4.2}
+\contentsline {section}{\numberline {4.2}Measurements in the tetrahedral box}{11}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Influence of the load}{11}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Influence of microphone position}{13}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Room Correction solutions}{14}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}D. B. Keele method for Far Field extrapolation}{14}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Generation of a generic Correction Curve for the tetrahedral box}{14}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Discussion}{14}{section.4.4}
+\contentsline {subsection}{\numberline {4.3.1}Generation of a generic Correction Curve for the tetrahedral box}{14}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Compensation by a Near Field measurement}{14}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}D. B. Keele method for Far Field extrapolation}{14}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Discussion}{15}{section.4.4}
 \contentsline {chapter}{Appendix \numberline {A}Organization of the work}{i}{Appendix.a.A}
 \contentsline {chapter}{Appendix \numberline {B}Equations for symmetry condition on complex coefficients of spherical wave expansion}{ii}{Appendix.a.B}
 \contentsline {chapter}{Appendix \numberline {C}Speaker library}{vi}{Appendix.a.C}
@@ -52,9 +53,11 @@
 \contentsline {subsection}{\numberline {D.2.2}2-way "diagonal" speaker}{x}{subsection.a.D.2.2}
 \contentsline {section}{\numberline {D.3}Room Correction}{xi}{section.a.D.3}
 \contentsline {subsection}{\numberline {D.3.1}Measurements}{xi}{subsection.a.D.3.1}
-\contentsline {subsubsection}{Influence of the load}{xi}{subsubsection*.8}
-\contentsline {subsubsection}{Influence of microphone position}{xii}{subsubsection*.9}
+\contentsline {subsubsection}{Influence of the load}{xi}{subsubsection*.24}
+\contentsline {subsubsection}{Influence of microphone position}{xii}{subsubsection*.25}
 \contentsline {subsection}{\numberline {D.3.2}Room Correction solutions}{xiii}{subsection.a.D.3.2}
-\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{xiii}{subsubsection*.10}
-\contentsline {chapter}{Appendix \numberline {E}Application notes}{xiv}{Appendix.a.E}
-\contentsline {section}{\numberline {E.1}Baffle measurement}{xiv}{section.a.E.1}
+\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{xiii}{subsubsection*.26}
+\contentsline {chapter}{Appendix \numberline {E}Baffle Prototype pictures}{xiv}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {F}Application notes}{xv}{Appendix.a.F}
+\contentsline {section}{\numberline {F.1}Baffle measurement}{xv}{section.a.F.1}
+\contentsline {section}{\numberline {F.2}Complex Room Compensation module}{xv}{section.a.F.2}
