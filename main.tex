@@ -470,10 +470,10 @@ Before starting the production of this item, a critical evaluation must be perfo
 Figure \ref{fig:vib_pow} present the apparent power in the near field of the DUT for different measurements points. \\
 The blue curve represents the power from the speaker. This scan have been centered on the speaker, using a 5cm radius for the scanning grid. The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centered on the speaker, with a 21cm radius for the scanning grid. The grey curve represents the contribution from the baffle: the scan was centered on the lower right corner of the baffle, with a 5cm scanning radius. Finally, the light orange curve represents the contribution from the wooden plate: this scan was centered midway between the speaker and the baffle, with a 5cm scanning radius. \\
 
-Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration might impact the system: the differences between the 2 plots can only come from the plate vibration, as the field separation method removed all contributions from the room. \\
+Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration impacts the system: the differences between the 2 plots can only come from the plate vibration, as the field separation method removed all contributions from the room. \\
 Comparing the variations on the speaker+wood results with the contribution of the wood shows that most of the variations matches with the peaks of the wood's contribution; whereas s few variations matches with the baffle contribution's peaks (see figure \ref{Curves:Baffle_RadPow} for matching peaks and a bigger figure). \\
 
-However, the contributions from the baffle itself aren't really problematic: if the scanning radius is correctly chosen, the field separation method will remove the baffle's contribution from the measurement. The contributions from the wooden plate are much more problematic, since the field separation method cannot remove contributions coming from inside the scanning radius, and the scanning radius cannot be smaller than the driver's. 
+Moreover, the contributions from the baffle itself aren't really problematic: if the scanning radius is correctly chosen, the field separation method will remove the baffle's contribution from the measurement. The contributions from the wooden plate are much more problematic, since the field separation method cannot remove contributions coming from inside the scanning radius, and the scanning radius cannot be smaller than the driver's. 
 
 \begin{minipage}{0.5\textwidth} % Figures
 \begin{center}
@@ -493,8 +493,10 @@ However, the contributions from the baffle itself aren't really problematic: if 
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:vib_comp} presents the radiated powers in the Far Field (at 10m) of the speaker and speaker + wood measurements. Here the effect of the wooden plate vibrating can be observed clearly: the radiated power has a lot of oscillations on the speaker + wood measure, which are not found on the speaker only measure. At the resonance (f = 150 Hz) a strong cancellation effect is observed, with a difference of 6 dB between the 
-\todo[inline, color=red!40]{This needs to be rephrased}
+Figure \ref{fig:vib_comp} compares the radiated powers in the far field (r = 10m) of the speaker and the speaker+wood measurements, evidencing the effect of the wooden plate's vibration on the measurement. At the resonance (f = 150 Hz), a strong cancellation effect is observed on the speaker+wood measurement, with a difference of almost 6dB between the curves. This cancellation is most likely to be due to the plate vibrating in opposite phase with the speaker. \\
+The movie bellow shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. The plate is vibrating in opposite phase with the speaker,  which confirms the previous hypothesis of the wooden plate creating a cancellation effect on the Sound Pressure response of the driver. 
+
+\todo[inline, color=green!40]{Yeah c'est mieux là}
 
 \ifdraft
 \begin{center}
@@ -505,9 +507,6 @@ Figure \ref{fig:vib_comp} presents the radiated powers in the Far Field (at 10m)
 	\includemovie[repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{6cm}{4cm}{GridOpti/baffle_vib.avi}
 \end{center}
 \fi
-
-The movie above shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. It can observed that the plate is vibrating in opposite phase with the speaker, creating a cancellation effect on the Sound Pressure response of the driver. This observation matches with the previous measurement results shown in figure \ref{fig:vib_comp} 
-\todo[inline, color=red!40]{Make a better explanation}
 
 
 \subsection{Discussion}
@@ -752,7 +751,7 @@ When looking at this results, few differences between the impedance in the box a
 Comparing the free air and in box measurement shows that up to 50 Hz the membrane's displacement is greater in the box, generating the "bass boost" effect observed before (figure \ref{Curves:InfluLoad}). The displacement is then larger in free air than in the box, expect at the driver's resonance.\\
 Using the voltage correction calculated either by the ratio of resonance frequencies $f_{s}$ and $f_{b}$ or the ratio of stiffness $K_{ms}$ lowers the membrane's displacement in the box, although the attenuation provided by the ratio of resonance frequencies is overestimated: the membrane's displacement is too attenuated in the 20 - 500 Hz frequency band. The attenuation provided by the ratio of stiffness gives promising results, particularly in the "bass boost" frequency band (20 - 50 Hz) and around the resonance, where the displacement transfer functions is very close to the one measured in free air. \\
 
-The major mismatches between the free air and voltage compensated curves can be explained by the approximations made on the box's behavior. A LEM for a sealed box can be much more complicated than a change on the mechanical compliance 
+The mismatches between the free air and voltage compensated curves are most likely due to the approximations made on the box's behavior. The effect of the box of the driver is much more complicated than a change on the mechanical compliance, especially since leakage isn't taken in account.  
 
 \todo[inline, color=red!40]{Expliquer que les différences sont dues à l'approximation trop simpliste sur le modèle de la boite, mais bien formulé. Ajouter les schémas équivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}
 
@@ -811,11 +810,23 @@ The aim of this task is to enhance klippel's Complex Room Compensation module. T
 
 \subsection{Generation of a generic Correction Curve for the tetrahedral box}
 In order to correct the previous measurements and ensure a good measurement in the tetrahedral test box, several solution of Room Correction methods have been investigated. The aim is to generate a single Room Correction function, valid for all speaker, up to the cut-off frequency of the box.
-\todo[inline]{Finir le code et créer la courbe de correction générique}
+\todo[inline]{Créer la courbe de correction générique}
 
 \subsection{Compensation by a Near Field measurement}
 
 Another approach to compensate measurements is to exploit a measure done in the near field of the DUT and to use it as the reference for processing far field and off-axis measurement. 
+
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{RoomComp/NFFF_Setup} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Measurement setup} 
+	\label{fig:SetupNFFF}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+
+\end{minipage}
 
 \subsection{D. B. Keele method for Far Field extrapolation}
 \todo[inline]{I don't think this subsection is very pertinent nor interesting}

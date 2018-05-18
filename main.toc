@@ -35,7 +35,7 @@
 \contentsline {section}{\numberline {4.3}Room Correction solutions}{14}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Generation of a generic Correction Curve for the tetrahedral box}{14}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Compensation by a Near Field measurement}{14}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}D. B. Keele method for Far Field extrapolation}{14}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.3}D. B. Keele method for Far Field extrapolation}{15}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Discussion}{15}{section.4.4}
 \contentsline {chapter}{Appendix \numberline {A}Organization of the work}{i}{Appendix.a.A}
 \contentsline {chapter}{Appendix \numberline {B}Equations for symmetry condition on complex coefficients of spherical wave expansion}{ii}{Appendix.a.B}
@@ -53,10 +53,10 @@
 \contentsline {subsection}{\numberline {D.2.2}2-way "diagonal" speaker}{x}{subsection.a.D.2.2}
 \contentsline {section}{\numberline {D.3}Room Correction}{xi}{section.a.D.3}
 \contentsline {subsection}{\numberline {D.3.1}Measurements}{xi}{subsection.a.D.3.1}
-\contentsline {subsubsection}{Influence of the load}{xi}{subsubsection*.24}
-\contentsline {subsubsection}{Influence of microphone position}{xii}{subsubsection*.25}
+\contentsline {subsubsection}{Influence of the load}{xi}{subsubsection*.23}
+\contentsline {subsubsection}{Influence of microphone position}{xii}{subsubsection*.24}
 \contentsline {subsection}{\numberline {D.3.2}Room Correction solutions}{xiii}{subsection.a.D.3.2}
-\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{xiii}{subsubsection*.26}
+\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{xiii}{subsubsection*.25}
 \contentsline {chapter}{Appendix \numberline {E}Baffle Prototype pictures}{xiv}{Appendix.a.E}
 \contentsline {chapter}{Appendix \numberline {F}Application notes}{xv}{Appendix.a.F}
 \contentsline {section}{\numberline {F.1}Baffle measurement}{xv}{section.a.F.1}
