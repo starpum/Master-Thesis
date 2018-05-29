@@ -287,9 +287,9 @@ Over the years, Klippel GmbH has acquired a huge notoriety for their innovative 
 \section{Context and aim of the work}
 
 \begin{minipage}{0.6\textwidth}
-The Near Field Scanner (NFS) is a Klippel product, shown in figure \ref{fig:nfs}, used to perform near field measurements of various audio products (laptop speakers, line arrays, ...). The particularity of this product is that the Device Under Test (DUT) is at a fixed position, and the microphone moves thanks to a robotic arm. This allows to ensure a constant interaction between the DUT and the acoustical boundaries, and avoid any diffraction from the edges of a turntable. \\
+The Near Field Scanner (NFS) is a Klippel product, shown in figure \ref{fig:nfs}, used to perform near field measurements of various audio products (laptop speakers, line arrays, ...). The particularity of this product is that the Device Under Test (DUT) is at a fixed position, and the microphone moves thanks to a robotic arm. This allows to ensure a constant interaction between the DUT and the acoustical boundaries, such as the diffraction from the edges of a turntable. By using the field separation method described in section \ref{sec:FieldSep}, the contributions from the boundaries can be removed from the measurement. \\
 
-This works mainly aims to the redaction of several applications notes for Klippel's customers on the utilization of the NFS with 3 main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS; the optimization of measurement time by exploiting symmetries, and the application of room correction on this measurements.
+This work has three main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS and the enhancement of the measurement grid; the optimization of measurement time by exploiting symmetry conditions on the complex coefficients of the spherical wave expansion; and the application of room correction on non-anechoic measurements.
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{center}
@@ -300,26 +300,26 @@ This works mainly aims to the redaction of several applications notes for Klippe
 \end{center}
 \end{minipage}\newline
 
-The NFS baffle measurement aims to create several application notes on how to perform an near field scanning of a loudspeaker mounted on a baffle and evaluate the measurement error. To do so, the required tasks are the assembly and evaluation a baffle prototype, the optimization the measurement grid and of the measurement time by assuming symmetry conditions on the DUT.\\
+The NFS baffle measurement aims to create several application notes on how to perform a near field scanning of a loudspeaker mounted on a baffle and evaluate the baffle's influence on the measurement. To do so, the required tasks are the assembly and critical evaluation a baffle prototype, and the optimization the measurement grid.\\
 
-The measurement time optimization part aims to reduce the scanning effort of the NFS by exploiting symmetry conditions on the complex coefficients of the spherical wave expansion (see equation \ref{eq:sphwvexp}). \\
+The measurement time optimization part aims to reduce the scanning effort of the NFS by assuming symmetry conditions on the DUT 's geometry and applying these conditions on the complex coefficients of the spherical wave expansion (see equation \ref{eq:sphwvexp}). \\
 
-The room correction part aims to test the room correction module, apply fast non-anechoic measurements, and test a IEC standard measurement box provided by Geoff Hill \citep[see][]{tetbox}. \\
+Finally, the room correction part aims to test and enhance the room correction module allowing to make fast non-anechoic measurements, and test a IEC standard tetrahedral measurement box provided by Geoff Hill \citep[see][]{tetbox}. \\
 
-There is no particular price constrains associated with this project, as most of the required hardware and software is already available. 
+There is no particular price constrains or technical constrains associated with this project, as the required hardware and software is already available. 
 
-\todo[inline]{Peut-être ajouter + de détails sur le contexte du travail et son but?}
 \newpage
 
 	% LITERATURE REVIEW
 \section{Literature review}
 
 Performing measurements of a loudspeaker on a baffle can lead to many problems, mainly caused by the diffraction at the edges of the baffle, and the influence of the room on the measurement \cite{LIS}.\\
-The Klippel Near Field Scanner uses the spherical wave expansion to determine the 3D sound pressure output of a DUT, by performing a measurement in the nearfield of the DUT and solving the wave equation in spherical coordinates in order to apply the field separation method described by G. Weinreich and tested by M. Melon in the AES publication \textit{Evaluation of a method for the measurement of subwoofers in usual rooms} \cite{melon1}. The complete theory behind this method is beyond the scope of this report, and will only be presented succinctly \citep[see][chap.~6]{Fourier} \citep[see][sect.~3]{aeshs}. 
+The Klippel Near Field Scanner uses the spherical wave expansion to determine the 3D sound pressure output of a DUT, by performing a measurement in the nearfield of the DUT and solving the wave equation in spherical coordinates in order to apply the field separation method described by G. Weinreich and tested by M. Melon in the ASA publication \textit{Evaluation of a method for the measurement of subwoofers in usual rooms} and AES publication \textit{Comparison of four subwoofer measurement techniques}  \cite{melon1, melon2}. The complete theory behind this method is beyond the scope of this report, and will only be presented succinctly  \citep[see][sect.~3]{aeshs} \citep[see][chap.~6]{Fourier}. 
 
 \subsection{Field Separation}
+\label{sec:FieldSep}
 
-The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp} \cite{train8}. The first expansion term, with the Hankel function of the second kind $h^{(2)}_{n}$, represents the outgoing waves; while the second expansion term, with the Hankel function of the first kind, represents the incoming waves. The $Y_{n}^{m}(\theta, \phi)$ terms represents the spherical harmonics and describes the dependency on azimuthal angle $\phi$ and polar angle $\theta$. Finally, the terms $c_{n,m}^{out}(j \omega)$ and $c_{n,m}^{in}(j \omega)$ are weighting coefficients.
+The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp} \cite{aeshs, train8}. The first expansion term, with the Hankel function of the second kind $h^{(2)}_{n}$, represents the outgoing waves; while the second expansion term, with the Hankel function of the first kind, represents the incoming waves. The Hankel functions contains the frequency dependence $e^{\pm j\omega t}$. The $Y_{n}^{m}(\theta, \phi)$ terms represents the spherical harmonics and describes the dependency on azimuthal angle $\phi$ and polar angle $\theta$. Finally, the terms $c_{n,m}^{out}(j \omega)$ and $c_{n,m}^{in}(j \omega)$ are weighting coefficients.
 
 
 \begin{equation}
@@ -341,25 +341,27 @@ H_{free}(f, \mathbf{r}) & = \sum_{N(f)}^{n=0}\sum_{n}^{m=-n}C_{mn}(f)\cdot h_{n}
 \myequations{Free-field transfer function of a loudspeaker in spherical coordinates}
 
 Where $\mathbf{b}(f,\mathbf{r})$ represents the base functions used and are solution of the wave equation in spherical coordinates, and $\mathbf{c}(f)$ represents the weighting coefficients. \\
-For non-anechoic measurements, an additional expansion term is required to describe the influence of external sound sources (room reflections, resonances) that are described by the Bessel function $j_{n}(kr)$, leading to the general solution for the sound field measured in a non-anechoic measurement (equation \ref{eq:ffHt}, \cite{aeswb}).
+For non-anechoic measurements, an additional expansion term is required to describe the influence of external sound sources (room reflections, resonances) that are described by the Bessel function $j_{n}(kr)$, leading to the general solution for the sound field measured in a non-anechoic measurement given in equation \ref{eq:ffHt}  \cite{aeswb}.
 
 \begin{equation}
 \begin{split}
 H_{test}(f, \mathbf{r}) &= \sum_{n=0}^{N(f)}\sum_{m=-n}^{n}\left [ C_{mn}(f)\cdot h_{n}^{(2)}(kr )\cdot Y_{n}^{m}(\theta ,\phi )+R_{mn}(f)\cdot j_{n}(kr)\cdot Y_{n}^{m}(\theta ,\phi ) \right ] \\
-&= \mathbf{c}(f)\mathbf{f}(f,\mathbf{r})+\mathbf{r}(f)\mathbf{b}_{room}(f,\mathbf{r})
+&= \mathbf{c}(f)\mathbf{b}(f,\mathbf{r})+\mathbf{r}(f)\mathbf{b}_{room}(f,\mathbf{r})
 \end{split}
 \label{eq:ffHt}
 \end{equation}
 \myequations{General solution for sound field measured in non-anechoic environments}
 
-By scanning on 2 hemispherical surfaces in front of the baffle, and performing the measurement in half-space, the acoustic shortcut and the diffractions generated by the edges can be separated from the transfer function of the speaker \cite{pres}. This method is called field separation, and allows to isolate the speaker's SPL response from any other components. 
+By scanning on 2 hemispherical surfaces in front of the baffle, and performing the measurement in half-space, the acoustic shortcut and the diffractions generated by the edges can be separated from the transfer function of the speaker \cite{pres, aeshs}. This method is called field separation, and allows to isolate the speaker's SPL response from any other components. 
+
+\todo[inline]{donner plus de détails sur la séparation}
 
 \subsection{Near Field measurements}
 
 \subsubsection{Measurement principle}
 
 The advantage of the Near Field compared to the Far Field measure is that the amplitude of the output is significantly higher in the Near Field, and the influence of the conditions (temperature, pressure) is minimized. \\
-However, the Near-Field being much more complex than the Far Field, holographic processing is required to extrapolate the Far Field data. The complete process will be described succinctly here, and can be found in details in \citep[][sect.~3]{aeshs}.\\
+However, the Near-Field being much more complex than the Far Field, holographic processing is required to extrapolate the Far Field data. The complete process will be described succinctly here, and can be found in details in the AES publication \textit{Holographic nearfield measurements of loudspeaker directivity} \citep[][sect.~3]{aeshs}.\\
 
 The first step of the scanning process is the generation of the measurement grid. The main difficulty is to avoid spacial aliasing, which is achieved by generating a non-uniform grid. \\
 The first step of the holographic process is to shift the coordinates of all measurements points to fit the expansion point $r_{E}$ of the system. This step is required for further processing, in order to make sure that the calculated Far Field is relevant.\\ 
@@ -373,7 +375,8 @@ Finally, the accuracy of the holographic estimation of the sound field is verifi
 
 The maximum order of expansion $N$ is a very important parameter to obtain accurate data. The higher it is and the more accurate the model becomes, but the longer the calculation. In that regard, a trade-off between accuracy and calculation time has to be made. \\
 
-Investigations on this parameter have already been conducted (\cite{train8}, \cite{aeshs}, \cite{pres}) and have shown that a wave expansion truncated after $N$ = 10 is capable of modeling the 3D sound pressure field of a DUT above 30 Hz with sufficient accuracy. \\
+Investigations on this parameter have already been conducted \cite{pres, aeshs, train8} and have shown that a wave expansion truncated after $N$ = 10 is capable of modeling the 3D sound pressure field of a DUT above 30 Hz with sufficient accuracy. \\
+\todo[inline]{Développer les limites fréquencielles du systeme}
 
 At very low frequencies the measurement is polluted by the poor Signal to Noise Ratio (SNR) between the microphone's input and the noise; and increasing the maximum order of expansion has little to no effect on the $TFE$. 
 
@@ -400,7 +403,7 @@ The first grid that have been implemented is an elliptical grid. To do so, the s
 \end{center}
 \end{minipage}
 
-The projection to an elliptical grid have been implemented by using the following calculations: first of all, the equation of a line $y = f(x)$ intercepting y-axis in zero gives the slope $m = \frac{y}{x}$. Introducing in the ellipse equation and using $y = m*x$ leads to a solution for x, given by equation \ref{eq:ellipse}, where a is the major radius and b the minor radius.
+The projection to an elliptical grid have been implemented by using the following calculations: first of all, the equation of a line $y = f(x)$ intercepting y-axis in zero gives the slope $m = \frac{y}{x}$. Introducing in the ellipse equation and using $y = m*x$ leads to a solution for x, given by equation \ref{eq:ellipse}, where $a$ is the major radius and $b$ the minor radius.
 
 \begin{equation}
 \left ( \frac{x}{a} \right )^{2} + \left ( \frac{y}{b} \right )^{2} = 1 \; \; \;  \Leftrightarrow \; \; \;  x = \sqrt{\frac{a^{2}b^{2}}{b^{2}+a^{2}m}}
@@ -412,7 +415,7 @@ The values of y-coordinates can then by calculated from the slope by using $y = 
 
 \subsection{Measurements}
 
-After implementation of the elliptical grid projection in Scilab, a 10cm woofer (see \ref{spkrlib:10cm}) have been measured using the NFS. The scan was performed using a spherical grid with a scanning radius of 30 cm, and an elliptical grid with a major radius of 30 cm and a minor radius of 10 cm. Both measurements have been done in the same conditions: equal input voltage, same number of points, and same position of the DUT. The results are presented in figures \ref{fig:comp_ElSPh_SPL} and \ref{fig:comp_ElSPh_Pow}. \\
+After implementation of the elliptical grid projection in Scilab, a 10 cm woofer (see \ref{spkrlib:10cm}) have been measured using the NFS. The scan was performed using a spherical grid with a scanning radius of 30 cm, and an elliptical grid with a major radius of 30 cm and a minor radius of 10 cm. Both measurements have been done in the same conditions: equal input voltage, same number of points, and same position of the DUT. The results are presented in figures \ref{fig:comp_ElSPh_SPL} and \ref{fig:comp_ElSPh_Pow}. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -452,7 +455,7 @@ Further investigations should be conducted on the influence of the measurement g
 \subsection{Presentation of the prototype}
 
 \begin{minipage}{0.6\textwidth}
-A baffle prototype have been designed to allow relevant measurements of devices mounted on a baffle with the NFS. The prototype is shown figure \ref{fig:baffle_proto}. More pictures are given in appendix \textbf{MAKE REFERENCE}. \\
+A baffle prototype has been designed to allow relevant measurements of devices mounted on a baffle with the NFS. The prototype is shown figure \ref{fig:baffle_proto}. More pictures are given in appendix \textbf{MAKE REFERENCE}. \\
 
 Before starting the production of this item, a critical evaluation must be performed in order to estimate the influence of the baffle on the measurement. Different analysis will be conduced, mainly to check the vibration of the baffle itself, the vibration of the wood plate used to mount the speaker, and a measurement centered on the speaker in order to have a point of comparison to identify vibration problems.
 \end{minipage}
@@ -468,7 +471,7 @@ Before starting the production of this item, a critical evaluation must be perfo
 \subsection{Measurements}
 
 Figure \ref{fig:vib_pow} present the apparent power in the near field of the DUT for different measurements points. \\
-The blue curve represents the power from the speaker. This scan have been centered on the speaker, using a 5cm radius for the scanning grid. The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centered on the speaker, with a 21cm radius for the scanning grid. The grey curve represents the contribution from the baffle: the scan was centered on the lower right corner of the baffle, with a 5cm scanning radius. Finally, the light orange curve represents the contribution from the wooden plate: this scan was centered midway between the speaker and the baffle, with a 5cm scanning radius. \\
+The blue curve represents the power from the speaker. This scan have been centered on the speaker, using a 5 cm radius for the scanning grid. The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centered on the speaker, with a 21 cm radius for the scanning grid. The grey curve represents the contribution from the baffle: the scan was centered on the lower right corner of the baffle, with a 5 cm scanning radius. Finally, the light orange curve represents the contribution from the wooden plate: this scan was centered midway between the speaker and the baffle, with a 5 cm scanning radius. \\
 
 Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration impacts the system: the differences between the 2 plots can only come from the plate vibration, as the field separation method removed all contributions from the room. \\
 Comparing the variations on the speaker+wood results with the contribution of the wood shows that most of the variations matches with the peaks of the wood's contribution; whereas s few variations matches with the baffle contribution's peaks (see figure \ref{Curves:Baffle_RadPow} for matching peaks and a bigger figure). \\
@@ -725,7 +728,7 @@ e_{gb} = e_{g}\cdot \frac{(2 \pi f_{s})^{2}}{(2 \pi f_{b})^{2}}
 \myequations{Voltage correction for the box as a function of resonance frequency}
 
 Equation \ref{eq:V_corr_fs} gives the compensated voltage for the box, where $ f_{s}$ is the resonance frequency of the driver in free air and $ f_{b}$ the resonance frequency of the driver in the box. This implies that 2 measurements are required: one of the driver in free air, and one of the driver in the box. \\
-Now that the theory is expressed, this assumptions needs to be verified. To do so, several measurements have been performed on the 10 cm woofer. \\
+Now that the theory is expressed, this assumptions needs to be verified. To do so, the impedance of the driver and the displacement transfer function of the driver's membrane have been measured on the 10 cm woofer by using the Klippel system, coupled with a laser for the displacement. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -745,11 +748,11 @@ Now that the theory is expressed, this assumptions needs to be verified. To do s
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:imp_comp} presents the comparison of the measured impedances for different conditions: the initial measures in free air and in the box to estimate the voltage compensation to apply, and the results of the new measurements when the voltage compensations calculated from the $K_{ms}$ (measured using Klippel's laser method) and the $f_{s}$ (measured at the maximum of the impedance curves) have been applied. \\
+Figure \ref{fig:imp_comp} presents the comparison of the measured impedances for different conditions: the initial measures in free air and in the box to estimate the voltage compensation to apply, and the results of the new measurements when the voltage compensations is calculated from the $K_{ms}$ (measured using Klippel's laser method for Thiele \& Small parameters estimation) and the $f_{s}$ (measured at the maximum of the impedance curves) have been applied. \\
 When looking at this results, few differences between the impedance in the box and the corrected curves can be found. However, when looking at the displacement transfer functions presented in figure \ref{fig:disp_comp}, interesting results are found. \\
 
 Comparing the free air and in box measurement shows that up to 50 Hz the membrane's displacement is greater in the box, generating the "bass boost" effect observed before (figure \ref{Curves:InfluLoad}). The displacement is then larger in free air than in the box, expect at the driver's resonance.\\
-Using the voltage correction calculated either by the ratio of resonance frequencies $f_{s}$ and $f_{b}$ or the ratio of stiffness $K_{ms}$ lowers the membrane's displacement in the box, although the attenuation provided by the ratio of resonance frequencies is overestimated: the membrane's displacement is too attenuated in the 20 - 500 Hz frequency band. The attenuation provided by the ratio of stiffness gives promising results, particularly in the "bass boost" frequency band (20 - 50 Hz) and around the resonance, where the displacement transfer functions is very close to the one measured in free air. \\
+Using the voltage correction calculated either by the ratio of resonance frequencies $f_{s}$ and $f_{b}$ or the ratio of stiffness $K_{ms}$ lowers the membrane's displacement in the box, although the attenuation provided by the ratio of resonance frequencies is overestimated: the membrane's displacement is too attenuated in the 20 - 500 Hz frequency band. The attenuation provided by the ratio of stiffness gives promising results, particularly in the "bass boost" frequency band (20 - 50 Hz) and around the resonance, where the displacement transfer function in the box gets close to the one measured in free air. \\
 
 The mismatches between the free air and voltage compensated curves are most likely due to the approximations made on the box's behavior. The effect of the box of the driver is much more complicated than a change on the mechanical compliance, especially since leakage isn't taken in account.  
 
@@ -760,7 +763,7 @@ The mismatches between the free air and voltage compensated curves are most like
 Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distances $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
 
 Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different distances $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150 Hz, the transfer functions are similar. After 150 Hz strong differences appear between the transfer functions. The larger the distance $D_{ms}$ is and the bigger the box influences the measurement, generating a dip on the response at around 1 kHz. This phenomenon is believed to be the first box mode and is observed when measuring different speakers. \\
-\todo[inline, color=red!40]{mieux formuler + tirer des conclusions et expliquer les autres figures}
+\todo[inline, color=red!40]{mieux formuler + tirer des conclusions etfaire le lien avec les autres figures}
 \begin{minipage}{0.35\textwidth}
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{RoomComp/Mic_Pos_Schm} 
@@ -777,9 +780,11 @@ Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different d
 	\label{fig:MicPosTRF}
 \end{center}
 \end{minipage}
-\vspace{0.1cm}
+\vspace{0.1cm} 
+\newpage
 
-From this result it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This boost can be easily eased off by applying the LFR room compensation method.\\
+From this result it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. This set of curves is the Room Compensation functions, or references. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This boost can be easily eased off by applying the LFR room compensation method.\\
+\todo[inline, color=red!40]{Tu ne parle pas de la bonne figure pour apprécier les différences. La différence entre les RCs est + pertinente car elle devrais être de 0 dB si le mic n'avais pas d'influence}
 A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoom}. In this frequency range, the accepted level of differences is $\pm$ 5 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical to ensure an accurate measurement. \\
 
 \begin{minipage}{0.5\textwidth}
@@ -794,8 +799,8 @@ A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoo
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{RoomComp/MicPos_Diff_RefMEas} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Difference between reference curves and results for different distance $D_{ms}$} 
-	\label{fig:MicPosDiffTRF}
+	\captionof{figure}{Difference between Room Compensation functions} 
+	\label{fig:MicPosDiffRC}
 \end{center}
 \end{minipage}
 
@@ -1189,7 +1194,7 @@ endfunction
 \label{spkrlib:10cm}
 
 \begin{minipage}{0.6\textwidth}
-This speaker is a 10 cm (4'') woofer from Phillips, designed for PSS usage (car speaker). A picture is shown in figure \ref{fig:spkr_lib_10cm}\\ 
+This speaker is a 10 cm (4'') woofer from PSS, designed for automotive applications. A picture is shown in figure \ref{fig:spkr_lib_10cm}\\ 
 The Thiele \& Small  parameters of this speaker have been measured using the Klippel scanning system and are presented in table \ref{tab:TnS_10cmWoofer}. 
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
