@@ -2,15 +2,14 @@
 \contentsline {todo}{Finir de r\IeC {\'e}diger l'introduction}{1}{section*.4}
 \contentsline {todo}{D\IeC {\'e}velopper les limites fr\IeC {\'e}quencielles du systeme}{5}{section*.7}
 \contentsline {todo}{make reference to application note for baffle measurements}{7}{section*.8}
-\contentsline {todo}{Yeah c'est mieux l\IeC {\`a}}{8}{section*.9}
-\contentsline {todo}{Make measurement for 90deg rotated speaker and see of sym factors are changed}{10}{section*.10}
-\contentsline {todo}{Figure: Measurement of 90deg rotated driver}{10}{section*.10}
+\contentsline {todo}{ change text}{10}{section*.9}
+\contentsline {todo}{Make appendix in spkr lib, add figures, and explain them}{11}{section*.10}
 \contentsline {todo}{Finish the discussion and see how your code have been implemented}{11}{section*.11}
-\contentsline {todo}{Expliquer que les diff\IeC {\'e}rences sont dues \IeC {\`a} l'approximation trop simpliste sur le mod\IeC {\`e}le de la boite, mais bien formul\IeC {\'e}. Ajouter les sch\IeC {\'e}mas \IeC {\'e}quivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}{14}{section*.12}
-\contentsline {todo}{mieux formuler + tirer des conclusions etfaire le lien avec les autres figures}{14}{section*.13}
-\contentsline {todo}{Tu ne parle pas de la bonne figure pour appr\IeC {\'e}cier les diff\IeC {\'e}rences. La diff\IeC {\'e}rence entre les RCs est + pertinente car elle devrais \IeC {\^e}tre de 0 dB si le mic n'avais pas d'influence}{15}{section*.14}
-\contentsline {todo}{Maybe explain a bit more the context of this + flowchart of the module}{15}{section*.15}
-\contentsline {todo}{Cr\IeC {\'e}er la courbe de correction g\IeC {\'e}n\IeC {\'e}rique}{15}{section*.16}
-\contentsline {todo}{I don't think this subsection is very pertinent nor interesting}{16}{section*.17}
-\contentsline {todo}{name}{16}{section*.18}
-\contentsline {todo}{Figure: Prendre des photos du proto}{xiv}{Appendix.a.E}
+\contentsline {todo}{Expliquer que les diff\IeC {\'e}rences sont dues \IeC {\`a} l'approximation trop simpliste sur le mod\IeC {\`e}le de la boite, mais bien formul\IeC {\'e}. Ajouter les sch\IeC {\'e}mas \IeC {\'e}quivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}{15}{section*.13}
+\contentsline {todo}{mieux formuler + tirer des conclusions etfaire le lien avec les autres figures}{15}{section*.14}
+\contentsline {todo}{Tu ne parle pas de la bonne figure pour appr\IeC {\'e}cier les diff\IeC {\'e}rences. La diff\IeC {\'e}rence entre les RCs est + pertinente car elle devrais \IeC {\^e}tre de 0 dB si le mic n'avais pas d'influence}{16}{section*.15}
+\contentsline {todo}{Maybe explain a bit more the context of this + flowchart of the module}{16}{section*.16}
+\contentsline {todo}{Cr\IeC {\'e}er la courbe de correction g\IeC {\'e}n\IeC {\'e}rique}{17}{section*.17}
+\contentsline {todo}{I don't think this subsection is very pertinent nor interesting}{17}{section*.18}
+\contentsline {todo}{name}{17}{section*.19}
+\contentsline {todo}{Figure: Prendre des photos du proto}{ii}{Appendix.a.E}

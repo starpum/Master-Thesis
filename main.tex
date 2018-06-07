@@ -45,20 +45,19 @@
 \usepackage{tocloft}				% Different codes inputs manager (python, SciLab, ...)
 
 %--------------------------------------------------- INCLUSIONS 
-\usepackage{array}					% Required for tabulars 
-\usepackage{graphicx} 				% Required for the inclusion of images
-\usepackage{wrapfig}			    % To make wrapped figures 
+\usepackage{array}									% Required for tabulars 
+\usepackage{graphicx} 							% Required for the inclusion of images
 \usepackage[format=plain,
 			font={small},
 			labelfont={bf,it},
-			textfont=it]{caption}   % To include captions (small, figure in bold, all text in italic)
-\usepackage{enumitem}               % To make lists
-\usepackage{url}                    % to quote URLs
-\usepackage{pdfpages}			    % To include PDFs (annexes)
-\usepackage{textcomp}		        % For copyright symbol
-\usepackage{hyperref}				% To make references 
-\usepackage{rotating}				% To rotate text, figures,...
-\usepackage{movie15}				% To include gifs
+			textfont=it]{caption}   					% To include captions (small, figure in bold, all text in italic)
+\usepackage{enumitem}              				% To make lists
+\usepackage{url}                    					% to quote URLs
+\usepackage{pdfpages}			    			% To include PDFs (annexes)
+\usepackage{textcomp}		        			% For copyright symbol
+\usepackage{hyperref}								% To make references 
+\usepackage{movie15}								% To include gifs
+\usepackage{circuitikz}				% To include circuits
 
 %--------------------------------------------------- TODOs / DRAFT MODE
  
@@ -417,13 +416,23 @@ Then, the parameters are fitted to find the optimum coefficients $C_{mn}$. This 
 \end{equation}
 \myequations{Parameter fitting}
 
-The accuracy of the holographic estimation of the sound field is then verified by estimating the Total Fitting Error ($TFE$) of the measurement. This parameter is calculated from the ratio of the truncated of the power series at a maximum order $N$ of the deviation $e(f,r_{E})$ by the transfer function of the system. It the $TFE$ is lower than -20 dB, it is considered that the model describes the Far-Field of the system with sufficient accuracy. 
+The accuracy of the holographic estimation of the sound field is then verified by estimating the Total Fitting Error ($TFE$) of the measurement. This parameter is calculated from the ratio of the truncated of the power series at a maximum order $N$ of the deviation $e(f,r_{E})$ by the transfer function of the system. Evaluating the $TFE$ allows to verify the accuracy of a measurement: if it is lower than -20 dB, it is considered that the holographic model describes the Far-Field of the system with sufficient accuracy. 
 
 \begin{equation}
 TFE(f) = 10\textup{log}\left ( \frac{\sum_{\mathbf{r}_{e}\in G}\left | e(f,\mathbf{r}_{e}) \right |^{2}}{\sum_{\mathbf{r}_{e}\in G}\left | H(f,\mathbf{r}_{e}) \right |^{2}} \right )
 \label{eq:TFE}
 \end{equation}
 \myequations{Total Fitting Error}
+
+Another verification is the estimation of the Multi-Layer Error (MLE), given by equation \ref{eq:MLE}. This parameter allows to check the agreement between the error at the points $ \mathbf{r}_{e} $ on the outer layer and the error at the closest points $ \mathbf{r}'_{e} $ on the inner layer. 
+
+\begin{equation}
+MLE = 10log\left ( \frac{\sum_{\mathbf{r}_{e}\in G}\left | e(f,\mathbf{r}_{e})-e\textup{'}(f,\mathbf{r}\textup{'}_{e}) \right |^{2}}{\sum_{\mathbf{r}_{e}\in G} \left |H(f,\mathbf{r}_{e})  \right |^{2}-\left |H\textup{'}(f,\mathbf{r}\textup{'}_{e})  \right |^{2} } \right )
+\label{eq:MLE}
+\end{equation}
+\myequations{Multi Layer Error}
+
+Comparing the $ TFE $ and the $MLE$ allows to estimate the measurement's relevancy: if the errors have the same order of magnitude, it is considered that the measurement is polluted.
 
 \subsubsection{Maximum order of expansion}
 
@@ -553,8 +562,6 @@ Moreover, the contributions from the baffle itself aren't really problematic: if
 Figure \ref{fig:vib_comp} compares the radiated powers in the far field (r = 10m) of the speaker and the speaker+wood measurements, evidencing the effect of the wooden plate's vibration on the measurement. At the resonance (f = 150 Hz), a strong cancellation effect is observed on the speaker+wood measurement, with a difference of almost 6dB between the curves. This cancellation is most likely to be due to the plate vibrating in opposite phase with the speaker. \\
 The movie bellow shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 190 Hz. The plate is vibrating in opposite phase with the speaker,  which confirms the previous hypothesis of the wooden plate creating a cancellation effect on the Sound Pressure response of the driver. 
 
-\todo[inline, color=green!40]{Yeah c'est mieux là}
-
 \ifdraft
 \begin{center}
 	\includemovie[draft,repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{6cm}{4cm}{GridOpti/baffle_vib.avi}
@@ -587,15 +594,15 @@ The previous investigations highlighted several problems with the baffle prototy
 Exploiting symmetry conditions on the complex coefficients of the spherical wave expansion $c_{n,m}^{out}(j \omega)$ (see equation \ref{eq:sphwvexp}) could reduce the measurement time significantly by reducing the number of points of the measurement as explained in the article \textit{Holographic Nearfield Measurement of Loudspeaker Directivity} \citep[][sect.~4]{aeshs}. \\
 
 To implement this, the idea is to start from a measurement done with a coarse grid, and to check the existence of symmetry condition on the coefficients by using the different equations provided in appendix \ref{chap:sym}. The symmetries under study are given in appendix \ref{chap:sym}.
-Once the coefficients satisfying each symmetry condition have been found, the symmetry factor (given by equations \ref{eq:Srs}, \ref{eq:Sbs}, \ref{eq:Sbs}, \ref{eq:Ssps}) is estimated. By setting different thresholds, the user is informed that the DUT may present certain types of symmetry that could be used to perform a faster full measurement.
+Once the coefficients satisfying each symmetry condition have been found, the symmetry factor (given by equations \ref{eq:Srs}, \ref{eq:Sdps}, \ref{eq:Sbs}, \ref{eq:Ssps}) is estimated. By setting different thresholds, the user is informed that the DUT may present certain types of symmetry that could be used to perform a faster full measurement.
 
 \section{Measurements}
 
-To verify the validity of this symmetry check, different measurements have been performed of several speakers presenting interesting geometries. A library of these speakers is given in appendix \ref{chap:spk_lib}. 
+After implementation in SciLab, the validity of these symmetry assumptions must be verified. To do so, different measurements have been performed of several speakers presenting interesting geometries. A library of these speakers is given in appendix \ref{chap:spk_lib}. 
 
 \subsection{10 cm woofer}
 
-The DUT is a circular, 10cm woofer (see appendix \ref{spkrlib:10cm}), mounted on the baffle. \\
+The DUT is a circular, 10 cm woofer (see appendix \ref{spkrlib:10cm}), mounted on the baffle. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -615,17 +622,17 @@ The DUT is a circular, 10cm woofer (see appendix \ref{spkrlib:10cm}), mounted on
 \end{minipage}
 \vspace{0.1cm}
 
+Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power by coefficients not satisfying the symmetry condition described in appendix \ref{chap:sym}, in the example of a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$. For a better reading, all the radiated power curves are provided in separate graphs in appendix \ref{Curves:10cm}.\\
 
-Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power by coefficients not satisfying the symmetry condition (see appendix \ref{chap:sym}, for example for a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$). \\
+Figure \ref{fig:sym_fact_10cm} presents the symmetry factors for different types of symmetry, expressed in dB. A 0 dB value means that the power radiated by considering only the coefficients satisfying the symmetry condition and the total radiated power present no differences. Observing the symmetry factor for the baffle symmetry shows that this value is 0 dB over the whole frequency band: this result is matching the expectations since the measurement have been done with the speaker mounted on a baffle. \\
 
-Figure \ref{fig:sym_fact_10cm} presents the symmetry factors for different types of symmetry, in dB. A 0 dB value means that the radiated power of the symmetry condition and the radiated powers of the rest presents no difference. Observing the symmetry factor for the baffle shows that this value is constantly 0 on the whole frequency band: this result is matching the expectations since the measurement have been done with the speaker mounted on a baffle. \\
+Comparing the radiated power in figure \ref{fig:rad_pow_10cm} and appendix \ref{Curves:10cm} for the different symmetries gives interesting results: in the low frequency domain, the total radiated power and the powers radiated by the different symmetry conditions presents no differences, no matter the symmetry type. In low frequency, the driver behaves as a monopole and have an omnidirectional directivity pattern; fulfilling all the symmetry conditions. \\
+However, in high frequencies, disruptions appears and the rest increases significantly: the higher the frequency, and the more interferences will be produced by the speaker. This can be observed on the contour plot of the woofer's directivity, presented in appendix \ref{fig:contour_10cm}. \\
 
-Comparing the radiated power in figure \ref{fig:rad_pow_10cm} for the different symmetries gives interesting results: in the low frequency domain, the total radiated power and different powers are extremely similar, no matter the symmetry type. In high frequencies, disruptions appears and the rest increases significantly: the higher the frequency, and the more interferences will be produced by the speaker. \\
-
-Comparing the symmetry factor shows that the most present symmetries are the Single Plane symmetries. This result could be a bit surprising as the rotational symmetry is expected to be dominant, but in high frequencies the speaker does not behave as a piston: the cone breakups spoils the rotational symmetry. 
+Comparing the symmetry factors shows that the most present symmetries are the Single Plane symmetries. This result could be a bit surprising as the rotational symmetry is expected to be dominant, but as seen with the radiated powers in high frequencies the speaker isn't a monopole: the cone breakups spoils the rotational symmetry. 
 
 \subsection{Oval speaker}
-The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baffle. The particular geometry of this speaker gives hints about the type of symmetry that should be expected: the rotational symmetry should be the lowest one, and the plane symmetries should be dominant.  Figures \ref{fig:rad_pow_Oval} and \ref{fig:sym_fact_Oval} presents the radiated powers and the symmetry factors respectively.\\
+The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baffle. The particular geometry of this speaker gives hints about the expected results: the rotational symmetry should be the lowest one, and the planar symmetries should be dominant (single plane or dual plane symmetries).  Figures \ref{fig:rad_pow_Oval} and \ref{fig:sym_fact_Oval} presents the radiated powers and the symmetry factors respectively. The radiated powers are presented in separated graphs in appendix \ref{Curves:oval}.\\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -645,21 +652,19 @@ The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baf
 \end{minipage}
 \vspace{0.1cm}
 
-Observing the Radiated Powers shows that expected results have been encountered: in the high frequencies (a zoom on the 7 - 20 kHz range is given in appendix \ref{Curves:oval}) from 8.5 kHz, the rest of the rotational symmetry radiated power is higher that the radiated power by the rotational symmetry. This means that there is more power given by the coefficients which do not respect the condition for rotational symmetry, than by the coefficients validating $C_{mn} = 0 \;  \textup{for m}  \neq 0$.  \\
+Observing the Radiated Powers shows that expected results have been encountered: in the high frequencies from 8.5 kHz, the rest of the rotational symmetry radiated power is higher that the radiated power by the rotational symmetry. This means that there is more power given by the coefficients which do not respect the condition for rotational symmetry, than by the coefficients validating $C_{mn} = 0 \;  \textup{for m}  \neq 0$.  \\
 
 Interestingly, the top/bottom Single Plane Symmetry factor is higher than other symmetries from 5 kHz. This could be explained by the speaker's geometry: the larger dimension makes it more prone to rocking mode, spoiling the Left/Right Single Plane Symmetry. \\
 As expected, the rotational symmetry factor is below all other factors, a phenomenon that has already been observed on the Radiated Powers. \\
 
-\todo[inline, color=red!40]{Make measurement for 90deg rotated speaker and see of sym factors are changed} 
-
-\missingfigure{Measurement of 90deg rotated driver}
+\todo[inline, color=red!40]{ change text} 
 
 
 \subsection{2-way "diagonal" speaker}
 
 The DUT is a "diagonal" 2-way speaker, and the scan is centered on the tweeter (see appendix \ref{spkrlib:BnO}). This speaker's asymmetrical geometry is very interesting to test the symmetry check. The device also have an integrated crossover. Figures \ref{fig:rad_pow_BnO} and \ref{fig:sym_fact_BnO} presents the radiated powers and the symmetry factors respectively. \\
 
-The crossover frequency range can be observed clearly on both result result curves: the symmetry factors take a dip, and the rest powers are higher than the symmetrical powers (a zoom on the crossover range for the radiated powers in provided in \ref{Curves:2way}).\\
+The crossover frequency range can be observed clearly on both result result curves: the symmetry factors take a dip, and the rest powers are higher than the symmetrical powers (a zoom on the crossover range for the radiated powers in provided in \ref{Curves:2way_zoom}).\\
 
 Observing the Symmetry Factors shows that there is no baffle symmetry for this measurement. Although this result might seem quite trivial since the DUT was not mounted on a baffle, it is good indication that the symmetry estimation works correctly. Another interesting observation is at the crossover frequency: the symmetry factors take a dip. \\
 In this frequency range, both drivers of the DUT are working, and due to their positioning there is no possible symmetry condition. In low frequency, the driver is a monopole, so all symmetry conditions are fulfilled.\\
@@ -680,6 +685,28 @@ In high frequency when the twitter alone is emitting, some symmetry is observed.
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Symmetry Factors of diagonal speaker} 
 	\label{fig:sym_fact_BnO}
+\end{center}
+\end{minipage}
+\vspace{0.1cm}
+
+\subsection{Studio Monitor}
+ The DUT is a 2-way studio monitor (see appendix \ref{sprklib:Studio}). Similarly to the 2-way diagonal speaker, this system have a built-in crossover. Figures \ref{fig:rad_pow_studio} and \ref{fig:sym_fact_studio} presents the radiated powers and the symmetry factors respectively.
+\todo[inline, color=red!40]{Make appendix in spkr lib, add figures, and explain them}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_studio} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Radiated Powers of studio monitor} 
+	\label{fig:rad_pow_studio}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_studio} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Symmetry Factors of studio monitor} 
+	\label{fig:sym_fact_studio}
 \end{center}
 \end{minipage}
 \vspace{0.1cm}
@@ -731,7 +758,7 @@ Figures \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} p
 \begin{description}
 \item[Figure \ref{fig:comp_mag}] a pre-filter have been applied on the magnitude of the TRF. This method is the most straight-forward but generates ringing artifacts on the TFA: the filter is only applied to the magnitude and does take the phase between the correction curve and the measured curve in consideration. 
 \item[Figure \ref{fig:comp_minphase}] the same pre-filter have been applied on the TRF, including the minimal phase that have been reconstructed from the cepstrum of the TRF. Reconstructing the minimal phase enhances the accuracy of the correction in low frequency. However, in high frequencies this method does not dissociate the room from the speaker's contributions, and some ringing can still be observed.
-\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Correction curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. This method provides the best result: by using a reference curve provided by a measurement of the woofer using the NFS, the phase response of the room can be dissociated from the measurement, removing the ringing artifacts visible on the TFA. 
+\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Correction curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. This method provides the best result: by using a reference curve provided by a measurement of the woofer using the NFS, the phase response of the room can be isolated from the measurement, removing the ringing artifacts visible on the TFA. 
 \end{description}
 
 
@@ -741,13 +768,34 @@ Figures \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} p
 
 The tetrahedral test box being a closed box system, it will have an impact on the speaker's behavior. Closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the blue curve is the measure in the box and the orange curve the result of the NFS of the 10 cm woofer (see appendix \ref{spkrlib:10cm}). In the 20 Hz - 150 Hz range the box creates a "bass boost" effect. \\
 
-Assuming that the driver is in the linear range, the effect of the box can be approximated as an additional compliance in the loudspeaker's equivalent network. The displacement transfer function given by equation \ref{eq:TRF_disp}, where $ e_{g}$ is the input voltage, $C_{ms}$ the compliance, $Bl$ the force factor, $\omega_{s}$ the resonance frequency of the system, and $Q_{ts}$ the total quality factor of the system.
+Assuming that the driver is in the linear range, the displacement transfer function of a driver in free air is given by equation \ref{eq:TRF_disp}, where $ e_{g}$ is the input voltage, $C_{ms}$ the compliance, $Bl$ the force factor, $\omega_{s}$ the resonance frequency of the system, and $Q_{ts}$ the total quality factor of the system.
 
 \begin{equation}
 x(\omega ) = e_{g}\cdot \frac{C_{ms}Bl}{R_{e}}\cdot \frac{1}{(j\omega /\omega _{s})^{2}+(1/Q_{ts})(j\omega /\omega _{s})+1}
 \label{eq:TRF_disp}
 \end{equation}
 \myequations{Displacement transfer function in free air}
+
+Figure \ref{fig:eq_circ} represents the simplified equivalent circuit of the driver in the box.
+
+\begin{figure}[ht]
+	\begin{center}
+	\begin{circuitikz}
+		\draw
+  	 	 (2,2) node[gyrator] (T) {}
+    (T.A2)  -- + (-2,0) coordinate (aux1)
+            to[V^=$U_{in}$]    (aux1  |- T.A1) 
+            to[generic,l=$R_{e}$] (T.A1)           
+    (T.B1)  to[R=$R_{ms}$] + (2,0)
+            to[C=$C_{ms}$] + (2,0)
+            to[L=$M_{ms}$] + (2,0)
+            to[C=$C_{box}$] + (0,-2) |- (T.B2)
+    (T.base) node{Bl:1};
+	\end{circuitikz}
+	\caption{Equivalent circuit of a driver in the box}
+	\label{fig:eq_circ}
+	\end{center}
+\end{figure}
 
 From equation \ref{eq:TRF_disp} the displacement transfer function of the system in the box can be estimated by assuming that only $C_{ms}$ will change, giving equation \ref{eq:TRF_dispbox} where $C_{msb}$ is the compliance of the system in the box and $e_{gb}$ the input voltage.
 
@@ -835,7 +883,7 @@ Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different d
 \end{center}
 \end{minipage}
 \vspace{0.1cm} 
-\newpage
+
 
 From this result it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. This set of curves is the Room Compensation functions, or references. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This boost can be easily eased off by applying the LFR room compensation method.\\
 \todo[inline, color=red!40]{Tu ne parle pas de la bonne figure pour apprécier les différences. La différence entre les RCs est + pertinente car elle devrais être de 0 dB si le mic n'avais pas d'influence}
@@ -934,15 +982,272 @@ In this \todo[color=green]{name}{}chapter, several methods for compensating the 
 
 \begin{appendices}
 
-		% GANTT CHART
-\chapter{Organization of the work}
-\pagenumbering{roman}
+		% Additional curves
+\chapter{Additional figures}
+This appendix aims to present additional figures that could not be presented in the corpus of this report because of their size, or lacked of relevancy for the discussions. To simplify the navigation, the titles of the section will be the same as the tittle of the chapters this figures are complemented with. 
 
-The following will present the work schedule I have followed, what work have been done and when it have been started and finished. This is presented in the following GANTT chart.
+
+\section{Baffle measurement}
+\subsection{Estimation of baffle influence}
+\label{Curves:BaffleInfluence}
 
 \begin{center}
-	\includegraphics[width=\textwidth]{Appendix/Plan1} 
+	\includegraphics[width=0.9\textwidth]{Appendix/Vib_RadPow}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Radiated Powers at 1m for different measurement points on the baffle}
+    \label{Curves:Baffle_RadPow}
 \end{center}
+
+
+\section{Measurement time optimization}
+
+\subsection{10 cm woofer}
+\label{Curves:10cm}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=.9\textwidth]{Sym/contour} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Contour plot of the woofer at 10 m, centered on-axis, horizontal plane.} 
+	\label{fig:contour_10cm}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/10cm_RadPow_Rot}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{10 cm woofer, Radiated Powers: rotational symmetry}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/10cm_RadPow_B}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{10 cm woofer, Radiated Powers: baffle symmetry}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/10cm_RadPow_Dps}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{10 cm woofer, Radiated Powers: dual plane symmetry}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/10cm_RadPow_SpsLR}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{10 cm woofer, Radiated Powers: single plane (left/right) symmetry}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/10cm_RadPow_SpsTB}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{10 cm woofer, Radiated Powers: single plane (top/bottom) symmetry}
+\end{center}
+\end{minipage}
+
+\subsection{Oval speaker}
+\label{Curves:oval}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Appendix/Rad_Pow_Oval_ZoomHF}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Oval speaker, Radiated Powers: zoom on 6 - 20 kHz}
+    \label{Curves:oval_zoom}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/Oval_RadPow_Rot}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Oval speaker, Radiated Powers: rotational symmetry}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/Oval_RadPow_B}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Oval speaker, Radiated Powers: baffle symmetry}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/Oval_RadPow_Dps}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Oval speaker, Radiated Powers: dual plane symmetry}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/Oval_RadPow_SpsLR}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Oval speaker, Radiated Powers: single plane (left/right) symmetry}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/Oval_RadPow_SpsTB}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Oval speaker, Radiated Powers: single plane (top/bottom) symmetry}
+\end{center}
+\end{minipage}
+
+\subsection{2-way "diagonal" speaker}
+\label{Curves:2way}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/Contour_BnO}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Contour plot of the diagonal speaker at 10 m, centered on-axis, horizontal plane.}
+    \label{Curves:2way_zoom}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/BnO_RadPow_Rot}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Diagonal speaker, Radiated Powers: rotational symmetry}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/BnO_RadPow_B}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Diagonal speaker, Radiated Powers: baffle symmetry}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/BnO_RadPow_Dps}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Diagonal speaker, Radiated Powers: dual plane symmetry}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/BnO_RadPow_SpsLR}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Diagonal speaker, Radiated Powers: single plane (left/right) symmetry}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/BnO_RadPow_SpsTB}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Diagonal speaker, Radiated Powers: single plane (top/bottom) symmetry}
+\end{center}
+\end{minipage}
+
+\subsection{Studio monitor}
+\label{Curves:studio}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Appendix/Rad_Pow_studio_ZoomHF}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Studio monitor, Radiated Powers: zoom on crossover frequency}
+    \label{Curves:studio_zoom}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_Rot}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Studio monitor, Radiated Powers: rotational symmetry}
+    \label{Curves:studio_rot}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_B}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Studio monitor, Radiated Powers: baffle symmetry}
+    \label{Curves:studio_B}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_Dps}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Studio monitor, Radiated Powers: dual plane symmetry}
+    \label{Curves:studio_Dps}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_SpsLR}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Studio monitor, Radiated Powers: single plane (left/right) symmetry}
+    \label{Curves:studio_SpsLR}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_SpsTB}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Studio monitor, Radiated Powers: single plane (top/bottom) symmetry}
+    \label{Curves:studio_SpsTB}
+\end{center}
+\end{minipage}
+
+\section{Room Correction}
+
+\subsection{Measurements}
+
+\subsubsection{Influence of the load}
+\label{Curves:InfluLoad}
+
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{RoomComp/Compa_NFS_BAffle} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Comparison between the TRF of a measure in baffle and a measure in the box.} 
+	\label{fig:Load_Compa}
+\end{center}
+
+
+\subsubsection{Influence of microphone position}
+\label{Curves:InfluMicPos}
+
+
+\begin{center}	
+	\includegraphics[scale=0.76,angle=90]{RoomComp/MicPos_TRF} 
+	\captionsetup{hypcap=false} 
+	\captionof{figure}{Transfer functions for all microphones positions} 
+	\label{fig:micpos_TRF_big}
+\end{center}
+
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{RoomComp/MicPos_Diff_NFS_TRF_zoom} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Difference between NFS and transfer functions - zoom on 150 Hz - 20 kHz} 
+	\label{fig:MicPos_Diff_NFS_Zoom}
+\end{center}
+
+
+\subsection{Room Correction solutions}
+
+\subsubsection{D. B. Keele method for Far Field extrapolation}
+\label{Curves:dbkFF}
+
+\begin{center}
+	\includegraphics[width=\textwidth]{Appendix/DKeele_FF_All} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}[Application of DB Keele method compared with NFS results]{Application of DB Keele method compared with NFS results - Left: shifted curves; Right: non-shifted curves} 
+	\label{fig:dbk_fig}
+\end{center}
+
 
 		% Symmetry
 
@@ -976,6 +1281,7 @@ Rotational symmetry (see figure \ref{fig:rotsym}) is observed for many circular 
 C_{mn} = 0 \; \; \; \;  m \neq 0
 \label{eq:Crotsym}
 \end{equation}
+\myequations{Coefficients for rotational symmetry}
 All m $\neq$ 0 coefficients are vanishing, meaning that only m = 0, n = n+1 coefficients have to be estimated. \\
 
 Once the coefficients have been estimated, s symmetry factor S can be estimated. For rotation symmetry, $S_{rs}$ is given by equation \ref{eq:Srs}.
@@ -1005,7 +1311,7 @@ Dual plane symmetry (see figure \ref{fig:dualpsym}) is mostly observed in 2-way 
 C_{mn}(f) = C_{-mn}(f)R_{m}(f) \; \; \; \;  m = 2s; \; s =1, 2, 3...
 \label{eq:Cdpsym}
 \end{equation}
-
+\myequations{Coefficients for dual plane symmetry}
 Where Rm represents a complex symmetry parameter, expressed in equation \ref{eq:Rm}.
 
 \begin{equation}
@@ -1031,7 +1337,7 @@ If the symmetry axes $\Phi _{e}, \Theta _{e}$ are aligned with the coordinate sy
 C_{mn}(f) = C_{-mn}(f) \; \; \; \;  m = 2s; \; s =1, 2, 3...
 \label{eq:Cdpsymb}
 \end{equation}
-
+\myequations{Coefficients for dual plane symmetry}
 The symmetry factor for the Dual Plane symmetry is then given by equation \ref{eq:Sdps}.
 
 
@@ -1050,7 +1356,7 @@ Baffle symmetry is when the Device Under Test is mounted on a baffle (see figure
 C_{mn} = 0 \; \; \; \; \; \; n-m \, \neq \, 2s; \: \: s \in \mathbb{Z}
 \label{eq:Cbsym}
 \end{equation}
-
+\myequations{Coefficients for baffle symmetry}
 The symmetry factor is then given by equation \ref{eq:Sbs}.
 
 \begin{equation}
@@ -1077,7 +1383,7 @@ Single plane symmetry is the most common in loudspeaker systems using 2 or more 
 C_{mn} = C_{-mn}(f)R_{m}(f) \; \; \; \textup{with} \; \; m\geq 0; \; \; \; 0\leq n\leq N
 \label{eq:spsym}
 \end{equation}
-
+\myequations{Coefficients for single plane symmetry}
 It should be noted that depending of the type of symmetry (left/right or top/bottom), $R_{m}$ will change, modifying the relation between the coefficients. \\
 
 The symmetry factor is then given by equation \ref{eq:Ssps}.
@@ -1086,7 +1392,7 @@ The symmetry factor is then given by equation \ref{eq:Ssps}.
 S_{sps} = 1-\frac{\sum_{n=1}^{N}\sum_{m=1}^{n}\left | (-1)^{m}(f) C_{-mn}-C_{mn} \right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
 \label{eq:Ssps}
 \end{equation}
-\myequations{Symmetry factor for single-plane symmetry}
+\myequations{Symmetry factor for single plane symmetry}
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 \begin{center}
@@ -1138,8 +1444,8 @@ function [Csym, Crest, power_sym, power_rest] = CheckSymAll(C, N, f, SymType)
    //             SymType: a string with the symmetry types. 
    //	          Allowed values are: 'ROT', 'DPS', 'BS', 'SPS_LR', 'SPS_TB' 
    //                      representing respectively Rotational Symmetry, Dual Plane Symmetry, 
-   //                      Baffle Symmetry, Single Plane Symmetry (Top/Bottom), Single 
-   //                      Plane Symmetry (Left/Right)
+   //                      Baffle Symmetry, Single Plane Symmetry (Left/Right),
+   //					   Single Plane Symmetry (Top/Bottom).
    // Outputs:    Csym: coefficients of the symmetry condition
    //             Crest: rest of coefficients = all coeffs - Csym
    //             power_sym: power of the symmetry coefficients
@@ -1152,87 +1458,91 @@ function [Csym, Crest, power_sym, power_rest] = CheckSymAll(C, N, f, SymType)
    
    // Calculation of coefficient according to symmetry condition assumed
    select SymType
-   
-   case 'ROT' 	// Rotational symmetry
+   case 'ROT' 
       [nm] = calc_nm_index(N*ones(f), 1);                      
-      [n, m] = order_suborder(nm(:,1));   // Finding the equivalent nm value 
+      [n, m] = order_suborder(nm(:,1));   // Finding the equivalent n and m values   
       
       // Finding the equivalent index value for m=0
-      for i = 1:size(m,'r')
-         index(i) = GetIndex(n(i), m(i));
-         if m(i)==0 then
-            Csym(index(i),:) = C(index(i),:);   // If m=0 we put the value in C in the Csym
-         end
-      end
-      
-   case 'DPS'	// Dual Plane symmetry
+      index = GetIndex(n, m);      
+      Csym(index,:) = C(index,:);   // If m=0 we put the value in C in the Csym
+      // Calculation of rest 
+      Crest = C - Csym;
+   case 'DPS'
       [nm] = calc_nm_index(N*ones(f), 5);                
       [n, m] = order_suborder(nm(:,1));   // Finding the equivalent n and m values
-      
       index_row = GetIndex(n, m);
+
       Csym_l(index_row,:) = C(index_row,:);  // Filling the Coeffs of the left with the correct data
       
-      // Finding the equivalent m value and index for the right side
-      // Calculation of corresponding coefficient
+      // Finding the equivalent m value for the right side
       for i = 1:size(m,'r')
          m_r(i) = -1*m(i);
          index_r(i) = GetIndex(n(i), m_r(i));
          index_l(i) = GetIndex(n(i), m(i));
-         
          if isequal(index_l(i),index_r(i))==%F then
             Csym_r(index_r(i),:) = (1)*C(index_l(i),:);
          end
       end
-      Csym = Csym_l + Csym_r; 
-      
-   case 'BS'	// Baffle symmetry
+      Csym = Csym_l + Csym_r;
+      // Calculation of rest 
+      Crest = C - Csym;
+   case 'BS'
       [nm] = calc_nm_index(N*ones(f), 2);    // For baffle
-      [n, m] = order_suborder(nm(:,1));   
+      [n, m] = order_suborder(nm(:,1));   // Finding the equivalent n and m values      
+      index_row = GetIndex(n, m);                // Index of relevant rows for the Coeffs         
+      Csym(index_row,:) = C(index_row,:);  
+      // Calculation of rest 
+      Crest = C - Csym;
+   case 'SPS_LR'
+      [nm] = calc_nm_index(N*ones(f), 4);         // Indexes of left side
+      [n, m] = order_suborder(nm(:,1));   // Finding the equivalent n and m values
+      index_left = GetIndex(n, m);
+            
+      m_right = -1.*m;                          // Indexes of right side
+      weights = ((-1)^(m));
+      index_right = GetIndex(n, m_right);
       
-      index_row = GetIndex(n, m);                 
-      Csym(index_row,:) = C(index_row,:); 
+      [nm] = calc_nm_index(N*ones(f), 1);         // Indexes of middle (m=0)
+      [n, m] = order_suborder(nm(:,1));   // Finding the equivalent n and m values
+      index_middle = GetIndex(n, m);
       
-   case 'SPS_LR'	// Single Plane (L/R) symmetry
-      [nm] = calc_nm_index(N*ones(f), 4);                // For single plane symmetry
-      [n, m] = order_suborder(nm(:,1));   
-      
-      index_row = GetIndex(n, m);
-      Csym_l(index_row,:) = C(index_row,:); 
-      
-      for i = 1:size(m,'r')
-         m_r(i) = -1*m(i);
-         index_r(i) = GetIndex(n(i), m_r(i));
-         index_l(i) = GetIndex(n(i), m(i));
-         
-         if isequal(index_l(i),index_r(i))==%F then
-            Csym_r(index_r(i),:) = C(index_l(i),:)*(-1)^(m(i));
-         end
+      Csym_l(index_left,:) = C(index_left,:);      
+      for i=1:size(C,'c')
+         Csym_r(index_right,i) = Csym_l(index_left,i).*weights;   // Weighting the coefficients
       end
-      Csym = Csym_l + Csym_r;
+      Csym_m(index_middle,:) = C(index_middle,:);      
+      Csym_r2(index_right,:) = C(index_right,:);
+      for i=1:size(C,'c')
+         Csym_l2(index_left,i) = Csym_r2(index_right,i)./weights;
+      end 
       
-   case 'SPS_TB'	// Single Plane (T/B) symmetry
-      [nm] = calc_nm_index(N*ones(f), 4);                // For single plane symmetry
-      theta_sym = %pi/2; // symmetry angle  
-      [n, m] = order_suborder(nm(:,1));  
+      avg_Left = (Csym_l + Csym_l2)/2;
+      avg_Right = (Csym_r + Csym_r2)/2;
+      Csym = Csym_m + avg_Left + avg_Right;
+      Crest = C - Csym;
+   case 'SPS_TB'
+      [nm] = calc_nm_index(N*ones(f), 4);         // Indexes of left side
+      [n, m] = order_suborder(nm(:,1));   // Finding the equivalent n and m values
+      index_left = GetIndex(n, m);
       
-      index_row = GetIndex(n, m);
-      Csym_l(index_row,:) = C(index_row,:); 
+      m_right = -1*m;
+      index_right = GetIndex(n, m_right);
       
-      for i = 1:size(m,'r')
-         m_r(i) = -1*m(i);
-         index_r(i) = GetIndex(n(i), m_r(i));
-         index_l(i) = GetIndex(n(i), m(i));
-         
-         Rm(i) = ((-1)^(m_r(i)+1))*(sin(m_r(i)*theta_sym) + %i*cos(m_r(i)*theta_sym))^2;
-         if isequal(index_l(i),index_r(i))==%F then
-            Csym_r(index_r(i),:) = C(index_l(i),:)*Rm(i);
-         end
-      end
-      Csym = Csym_l + Csym_r;
+      [nm] = calc_nm_index(N*ones(f), 1);         // Indexes of middle (m=0)
+      [n, m] = order_suborder(nm(:,1));   // Finding the equivalent n and m values
+      index_middle = GetIndex(n, m);
+      
+      Csym_l(index_left,:) = C(index_left,:);
+      Csym_r(index_right,:) = Csym_l(index_left,:);   // No weighting is needed for the T/B symmetry
+      Csym_m(index_middle,:) = C(index_middle,:);      
+      Csym_r2(index_right,:) = C(index_right,:);
+      Csym_l2(index_left,:) = Csym_r2(index_right,:);
+      
+      avg_Left = (Csym_l + Csym_l2)/2;
+      avg_Right = (Csym_r + Csym_r2)/2;      
+      Csym = Csym_m + avg_Left + avg_Right;
+      Crest = C - Csym;
    end
-   
-   // Calculation of the rest 
-   Crest = C - Csym;
    
    // Calculation of power
    power_sym  = sum(abs(Csym).^2,1);    // Estimating the power of sym
@@ -1311,9 +1621,7 @@ This speaker is a 16 cm fullband speaker. The T\&S parameters are given in table
 \label{spkrlib:BnO}
 
 \begin{minipage}{0.6\textwidth}
-This 2-way speaker presents the particularity of having its tweeter and woofer mounted diagonally (see figure \ref{fig:2wayDiagSpkr}). The measurements have been focused on the tweeter of this speaker, and the reference axis for the measure have been setted along the "measurement axis" showed on figure \ref{fig:2wayDiagSpkr}.\\
-
-The manufacturer didn't gave many information about the speakers, and the only thing known about these tweeters is that they are 3/4''.
+This 2-way speaker presents the particularity of having its tweeter and woofer mounted diagonally as shown by figure \ref{fig:2wayDiagSpkr}. The measurements have been focused on the tweeter of this speaker, and the reference axis for the measure have been setted along the "measurement axis" showed on the side view in figure \ref{fig:2wayDiagSpkr}.
 
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
@@ -1324,6 +1632,23 @@ The manufacturer didn't gave many information about the speakers, and the only t
     \label{fig:2wayDiagSpkr}
 \end{center}
 \end{minipage}
+
+\section{Studio Monitor}
+\label{sprklib:Studio}
+
+\begin{minipage}{0.6\textwidth}
+This system is a 2-way studio monitor, presented in figure \ref{fig:StudioMon}. Its crossover frequency is 2 kHz.
+
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+	\includegraphics[scale=0.05]{Appendix/Studio}
+    \captionsetup{hypcap=false}
+    \captionof{figure}{Studio monitor}
+    \label{fig:StudioMon}
+\end{center}
+\end{minipage}
+
 
 \section{18'' woofer}
 
@@ -1349,88 +1674,14 @@ This speaker is an 18'' JBL WPU1805-X woofer. The T\&S parameters were provided 
 \end{minipage}
 
 
+		% GANTT CHART
+\chapter{Organization of the work}
+\pagenumbering{roman}
 
-
-		% Additional curves
-\chapter{Additional figures}
-This appendix aims to present additional figures that could not be presented in the corpus of this report because of their size, or lacked of relevancy for the discussions. To simplify the navigation, the titles of the section will be the same as the tittle of the chapters this figures are complemented with. 
-
-
-\section{Baffle measurement}
-\subsection{Estimation of baffle influence}
-\label{Curves:BaffleInfluence}
+The following will present the work schedule I have followed, what work have been done and when it have been started and finished. This is presented in the following GANTT chart.
 
 \begin{center}
-	\includegraphics[width=0.9\textwidth]{Appendix/Vib_RadPow}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Radiated Powers at 1m for different measurement points on the baffle}
-    \label{Curves:Baffle_RadPow}
-\end{center}
-
-
-\section{Measurement time optimization}
-\subsection{Oval speaker}
-\label{Curves:oval}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{Appendix/Rad_Pow_OvalSpkr_ZoomHF}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Radiated Powers for oval speaker: zoom on 7 - 20 kHz}
-\end{center}
-
-\subsection{2-way "diagonal" speaker}
-
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{Appendix/Rad_Pow_BnO_ZoomHF}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Radiated Powers for 2-way diagonal speaker: zoom on crossover frequency}
-    \label{Curves:2way}
-\end{center}
-
-
-\section{Room Correction}
-
-\subsection{Measurements}
-
-\subsubsection{Influence of the load}
-\label{Curves:InfluLoad}
-
-\begin{center}
-	\includegraphics[width=0.8\textwidth]{RoomComp/Compa_NFS_BAffle} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Comparison between the TRF of a measure in baffle and a measure in the box.} 
-	\label{fig:Load_Compa}
-\end{center}
-
-
-\subsubsection{Influence of microphone position}
-\label{Curves:InfluMicPos}
-
-
-\begin{center}	
-	\includegraphics[scale=0.76,angle=90]{RoomComp/MicPos_TRF} 
-	\captionsetup{hypcap=false} 
-	\captionof{figure}{Transfer functions for all microphones positions} 
-	\label{fig:micpos_TRF_big}
-\end{center}
-
-\begin{center}
-	\includegraphics[width=0.8\textwidth]{RoomComp/MicPos_Diff_NFS_TRF_zoom} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Difference between NFS and transfer functions - zoom on 150 Hz - 20 kHz} 
-	\label{fig:MicPos_Diff_NFS_Zoom}
-\end{center}
-
-
-\subsection{Room Correction solutions}
-
-\subsubsection{D. B. Keele method for Far Field extrapolation}
-\label{Curves:dbkFF}
-
-\begin{center}
-	\includegraphics[width=\textwidth]{Appendix/DKeele_FF_All} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}[Application of DB Keele method compared with NFS results]{Application of DB Keele method compared with NFS results - Left: shifted curves; Right: non-shifted curves} 
-	\label{fig:dbk_fig}
+	\includegraphics[width=\textwidth]{Appendix/Plan1} 
 \end{center}
 
 
