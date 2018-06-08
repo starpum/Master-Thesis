@@ -35,29 +35,29 @@
 \usepackage{natbib}
 
 %--------------------------------------------------- MATHS STUFF 
-\usepackage{float}					% For float
+\usepackage{float}						% For float
 \usepackage{amsmath,amscd,amssymb,epsfig}  %sci equations
 \usepackage{matlab-prettifier}      % MATLAB codes
 \usepackage[numbered,framed]{mcode} % For MATLAB code
-\usepackage{verbatim}               % to quote code
-\usepackage{listings}               % Include the listings-package
+\usepackage{verbatim}               	% to quote code
+\usepackage{listings}               	% Include the listings-package
 \usepackage{lipsum}					% Cite code
-\usepackage{tocloft}				% Different codes inputs manager (python, SciLab, ...)
+\usepackage{tocloft}					% Different codes inputs manager (python, SciLab, ...)
 
 %--------------------------------------------------- INCLUSIONS 
-\usepackage{array}									% Required for tabulars 
-\usepackage{graphicx} 							% Required for the inclusion of images
+\usepackage{array}						% Required for tabulars 
+\usepackage{graphicx} 				% Required for the inclusion of images
 \usepackage[format=plain,
 			font={small},
 			labelfont={bf,it},
-			textfont=it]{caption}   					% To include captions (small, figure in bold, all text in italic)
-\usepackage{enumitem}              				% To make lists
-\usepackage{url}                    					% to quote URLs
-\usepackage{pdfpages}			    			% To include PDFs (annexes)
-\usepackage{textcomp}		        			% For copyright symbol
-\usepackage{hyperref}								% To make references 
-\usepackage{movie15}								% To include gifs
-\usepackage{circuitikz}				% To include circuits
+			textfont=it]{caption}   		% To include captions (small, figure in bold, all text in italic)
+\usepackage{enumitem}              	% To make lists
+\usepackage{url}                    		% to quote URLs
+\usepackage{pdfpages}			    % To include PDFs (annexes)
+\usepackage{textcomp}		        % For copyright symbol
+\usepackage{hyperref}					% To make references 
+\usepackage{movie15}					% To include gifs
+\usepackage{circuitikz}					% To include circuits
 
 %--------------------------------------------------- TODOs / DRAFT MODE
  
@@ -172,18 +172,15 @@ I want to particularly thanks the Université du Mans and all the professors and
 
 \vspace{0.5cm}
 
-I would also like to acknowledge Valentin Binet, for all the support and love he provided since he knows me; and as the second reader of this report. I am gratefully indebted to him for his very valuable comments on this report.
-
-\vspace{0.5cm}
-
-Finally, I want to express my profound gratitude to my family who supported me during my studies. I would've never made it without you. Thank you.
+Finally, I want to express my profound gratitude to my family, who supported me during my studies. I would've never made it without you. Thank you.
 
 \vfill % Fill the rest of the page with white
 \fi	% End of condition
+
 %---------------------------------------------------------------------
 %	TABLE OF CONTENTS - LIST OF FIGURES
 %---------------------------------------------------------------------
-\pagenumbering{alph} % aplha page numbering for ToC and LoF
+\pagenumbering{alph} % alpha page numbering for ToC and LoF
 
 \clearpage
 	% Change the name of table of contents and other lists
@@ -212,25 +209,12 @@ Finally, I want to express my profound gratitude to my family who supported me d
 %\label{fig:name_of_label}
 %\end{center}
 
-	% EASY SUPRESCRIPT
-    
- 
-%\newcommand{\ts}{\textsuperscript}  %write with usepackage
-
-%1\ts{rst} 2\ts{nd} 3\ts{rd}  ....
-
 	% ADD CONTENT TO ToC 
     
 %\addcontentsline{toc}{[type]}{[Name]}
 % type : chapter section subsection ...?
 % Name : introduction, ...?
 
-	% MINIMIZE SPACE BETWEEN LINES IN ITEMIZE
-% \begin{itemize}
-% 	\setlength\itemsep{1em}
-% 	\item What is the influence of the position of the speaker?
-% 	\item Can a mispositioned DUT be detected and adjusted?
-% \end{itemize}
 
 %--------------------------------------------------------------
 %	INTRODUCTION
@@ -286,9 +270,9 @@ Over the years, Klippel GmbH has acquired a huge notoriety for their innovative 
 \section{Context and aim of the work}
 
 \begin{minipage}{0.6\textwidth}
-The Near Field Scanner (NFS) is a Klippel product, shown in figure \ref{fig:nfs}, used to perform near field measurements of various audio products (laptop speakers, line arrays, ...). The particularity of this product is that the Device Under Test (DUT) is at a fixed position, and the microphone moves thanks to a robotic arm. This allows to ensure a constant interaction between the DUT and the acoustical boundaries, such as the diffraction from the edges of a turntable. By using the field separation method described in section \ref{sec:FieldSep}, the contributions from the boundaries can be removed from the measurement. \\
+The Near Field Scanner (NFS) is a Klippel product, shown in figure \ref{fig:nfs}, performing acoustic measurements of direct sound radiated in the near field of various audio products (laptop speakers, line arrays, ...). The direct sound can then be determined at any distance and angle outside the scanning surface, allowing to estimate the far field behavior of the source. \\
 
-This work has three main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS and the enhancement of the measurement grid; the optimization of measurement time by exploiting symmetry conditions on the complex coefficients of the spherical wave expansion; and the application of room correction on non-anechoic measurements.
+The particularity of this product is that the Device Under Test (DUT) is at a fixed position, and the microphone moves thanks to a robotic arm. This allows to ensure a constant interaction between the DUT and the acoustical boundaries, such as the diffraction from the edges of a turntable. By using the field separation method described in section \ref{sec:FieldSep}, the contributions from the boundaries can be removed from the measurement. 
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{center}
@@ -299,11 +283,11 @@ This work has three main guidelines, which are the measurement of a speaker moun
 \end{center}
 \end{minipage}\newline
 
-The NFS baffle measurement aims to create several application notes on how to perform a near field scanning of a loudspeaker mounted on a baffle and evaluate the baffle's influence on the measurement. To do so, the required tasks are the assembly and critical evaluation a baffle prototype, and the optimization the measurement grid.\\
+This work has three main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS and the enhancement of the measurement grid; the optimization of measurement time by exploiting symmetry conditions on the complex coefficients of the spherical wave expansion; and the application of room correction on non-anechoic measurements.\\
 
+The NFS baffle measurement aims to create an application note on how to perform a near field scanning of a loudspeaker mounted on a baffle and evaluate the baffle's influence on the measurement. To do so, the required tasks are the assembly and critical evaluation a baffle prototype, and the optimization the measurement grid.\\
 The measurement time optimization part aims to reduce the scanning effort of the NFS by assuming symmetry conditions on the DUT 's geometry and applying these conditions on the complex coefficients of the spherical wave expansion (see equation \ref{eq:sphwvexp}). \\
-
-Finally, the room correction part aims to test and enhance the room correction module allowing to make fast non-anechoic measurements, and test a IEC standard tetrahedral measurement box provided by Geoff Hill \citep[see][]{tetbox}. \\
+Finally, the room correction part aims to test and enhance the room correction module allowing to make fast non-anechoic measurements, to test a IEC standard tetrahedral measurement box provided by Geoff Hill \citep[see][]{tetbox}, and to create an application note on how to correct non-anechoic measurements, \\
 
 There is no particular price constrains or technical constrains associated with this project, as the required hardware and software is already available. 
 
@@ -313,7 +297,7 @@ There is no particular price constrains or technical constrains associated with 
 \section{Literature review}
 
 Performing measurements of a loudspeaker on a baffle can lead to many problems, mainly caused by the diffraction at the edges of the baffle, and the influence of the room on the measurement \cite{LIS}.\\
-The Klippel Near Field Scanner uses the spherical wave expansion to determine the 3D sound pressure output of a DUT, by performing a measurement in the nearfield of the DUT and solving the wave equation in spherical coordinates in order to apply the field separation method described by G. Weinreich and tested by M. Melon in the ASA publication \textit{Evaluation of a method for the measurement of subwoofers in usual rooms} and AES publication \textit{Comparison of four subwoofer measurement techniques}  \cite{melon1, melon2}. The complete theory behind this method is beyond the scope of this report, and will only be presented succinctly  \citep[see][sect.~3]{aeshs} \citep[see][chap.~6]{Fourier}. 
+The Klippel Near Field Scanner uses the spherical wave expansion to determine the 3D sound pressure output of a DUT at any point in its far field, by performing a measurement in the nearfield of the DUT and solving the wave equation in spherical coordinates in order to apply the field separation method described by G. Weinreich and tested by M. Melon in the ASA publication \textit{Evaluation of a method for the measurement of subwoofers in usual rooms} and AES publication \textit{Comparison of four subwoofer measurement techniques}  \cite{melon1, melon2}. The complete theory behind this method is beyond the scope of this report, and will only be presented succinctly \citep[see][sect.~3]{aeshs} \citep[see][chap.~6]{Fourier}. 
 
 \subsection{Field Separation}
 \label{sec:FieldSep}
@@ -444,7 +428,6 @@ Investigations on this parameter have already been conducted \cite{pres, aeshs, 
 At very low frequencies the measurement is polluted by the poor Signal to Noise Ratio (SNR) between the microphone's input and the noise; and increasing the maximum order of expansion has little to no effect on the $TFE$. 
 
 
-
 %--------------------------------------------------------------
 %	BAFFLE MEASUREMENT
 %--------------------------------------------------------------
@@ -543,7 +526,7 @@ Moreover, the contributions from the baffle itself aren't really problematic: if
 
 \begin{minipage}{0.5\textwidth} % Figures
 \begin{center}
-	\includegraphics[width=0.9\textwidth]{GridOpti/Vib_Pow} 
+	\includegraphics[width=\textwidth]{GridOpti/Vib_Pow} 
 \end{center}
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Comparison of apparent power in the Near Field for different measurement points} 
@@ -551,7 +534,7 @@ Moreover, the contributions from the baffle itself aren't really problematic: if
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=0.9\textwidth]{GridOpti/Vib_Pow_SPW} 
+	\includegraphics[width=\textwidth]{GridOpti/Vib_Pow_SPW} 
 \end{center}
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Comparison of radiated powers in the Far Field for the speaker and speaker + wood measurements} 
@@ -596,9 +579,18 @@ Exploiting symmetry conditions on the complex coefficients of the spherical wave
 To implement this, the idea is to start from a measurement done with a coarse grid, and to check the existence of symmetry condition on the coefficients by using the different equations provided in appendix \ref{chap:sym}. The symmetries under study are given in appendix \ref{chap:sym}.
 Once the coefficients satisfying each symmetry condition have been found, the symmetry factor (given by equations \ref{eq:Srs}, \ref{eq:Sdps}, \ref{eq:Sbs}, \ref{eq:Ssps}) is estimated. By setting different thresholds, the user is informed that the DUT may present certain types of symmetry that could be used to perform a faster full measurement.
 
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{Sym/flowchart} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Flowchart of the symmetry check} 
+	\label{fig:sym_flow}
+\end{center}
+
 \section{Measurements}
 
-After implementation in SciLab, the validity of these symmetry assumptions must be verified. To do so, different measurements have been performed of several speakers presenting interesting geometries. A library of these speakers is given in appendix \ref{chap:spk_lib}. 
+After implementation in SciLab, the validity of the symmetry assumptions must be verified. To do so, different measurements have been performed of several speakers presenting interesting geometries. A library of these speakers is given in appendix \ref{chap:spk_lib}. 
+
+\todo[inline, color=red!40]{Rephrase... ca sonne pas très bien je trouve}
 
 \subsection{10 cm woofer}
 
@@ -606,7 +598,7 @@ The DUT is a circular, 10 cm woofer (see appendix \ref{spkrlib:10cm}), mounted o
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_10cmWoofer} 
+	\includegraphics[width=\textwidth]{Sym/Rad_Pow_10cmWoofer} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Radiated Powers of 10cm woofer} 
 	\label{fig:rad_pow_10cm}
@@ -614,7 +606,7 @@ The DUT is a circular, 10 cm woofer (see appendix \ref{spkrlib:10cm}), mounted o
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_10cmWoofer} 
+	\includegraphics[width=\textwidth]{Sym/Sym_Fact_10cmWoofer} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Symmetry Factors of 10cm woofer} 
 	\label{fig:sym_fact_10cm}
@@ -629,14 +621,14 @@ Figure \ref{fig:sym_fact_10cm} presents the symmetry factors for different types
 Comparing the radiated power in figure \ref{fig:rad_pow_10cm} and appendix \ref{Curves:10cm} for the different symmetries gives interesting results: in the low frequency domain, the total radiated power and the powers radiated by the different symmetry conditions presents no differences, no matter the symmetry type. In low frequency, the driver behaves as a monopole and have an omnidirectional directivity pattern; fulfilling all the symmetry conditions. \\
 However, in high frequencies, disruptions appears and the rest increases significantly: the higher the frequency, and the more interferences will be produced by the speaker. This can be observed on the contour plot of the woofer's directivity, presented in appendix \ref{fig:contour_10cm}. \\
 
-Comparing the symmetry factors shows that the most present symmetries are the Single Plane symmetries. This result could be a bit surprising as the rotational symmetry is expected to be dominant, but as seen with the radiated powers in high frequencies the speaker isn't a monopole: the cone breakups spoils the rotational symmetry. 
+Comparing the symmetry factors shows that the most present symmetries are the Single Plane symmetries. This result may be unexpected and one could expect the rotational symmetry to be dominant, but as seen with the radiated powers in high frequencies the speaker isn't a monopole: the cone breakups spoils the rotational symmetry. 
 
 \subsection{Oval speaker}
 The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baffle. The particular geometry of this speaker gives hints about the expected results: the rotational symmetry should be the lowest one, and the planar symmetries should be dominant (single plane or dual plane symmetries).  Figures \ref{fig:rad_pow_Oval} and \ref{fig:sym_fact_Oval} presents the radiated powers and the symmetry factors respectively. The radiated powers are presented in separated graphs in appendix \ref{Curves:oval}.\\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_OvalSpkr} 
+	\includegraphics[width=\textwidth]{Sym/Rad_Pow_OvalSpkr} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Radiated Powers of oval speaker} 
 	\label{fig:rad_pow_Oval}
@@ -644,7 +636,7 @@ The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baf
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_OvalSpkr} 
+	\includegraphics[width=\textwidth]{Sym/Sym_Fact_OvalSpkr} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Symmetry Factors of oval speaker} 
 	\label{fig:sym_fact_Oval}
@@ -652,28 +644,32 @@ The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baf
 \end{minipage}
 \vspace{0.1cm}
 
-Observing the Radiated Powers shows that expected results have been encountered: in the high frequencies from 8.5 kHz, the rest of the rotational symmetry radiated power is higher that the radiated power by the rotational symmetry. This means that there is more power given by the coefficients which do not respect the condition for rotational symmetry, than by the coefficients validating $C_{mn} = 0 \;  \textup{for m}  \neq 0$.  \\
+Observing the radiated powers for the different symmetries, it is found that in the 20 Hz - 1.5 kHz range there is no differences between the total radiated power and the symmetries radiated power. Similarly to the 10 cm woofer, the drivers behaves as a monopole in this range. This is observed on the contour plot provided in figure \ref{Curves:oval_contour}. \\
+After 1.5 kHz, differences appear for the Dual Plane, Single Plane and Rotational symmetries. Characterizing the speaker's behavior in higher frequencies requires to look at the symmetry factors. However, it can already be observed that the power radiated by rotational symmetry coefficients is bellow all other radiated powers after 1.5 kHz, meaning that the rotational symmetry condition is not satisfied. \\
 
-Interestingly, the top/bottom Single Plane Symmetry factor is higher than other symmetries from 5 kHz. This could be explained by the speaker's geometry: the larger dimension makes it more prone to rocking mode, spoiling the Left/Right Single Plane Symmetry. \\
-As expected, the rotational symmetry factor is below all other factors, a phenomenon that has already been observed on the Radiated Powers. \\
+Observing the symmetry factors shows that the rotational symmetry factor is below all other factors, matching with the expected behavior of the driver. The baffle symmetry factor is 0 dB over the whole frequency range, as expected for a measure performed with a driver mounted on baffle.
 
-\todo[inline, color=red!40]{ change text} 
+\begin{minipage}{0.5\textwidth}
+Interestingly, the top/bottom single plane symmetry factor is higher than other symmetry factors from 5 kHz. This could be explained by the speaker's geometry: the larger dimension makes it more prone to rocking mode, spoiling the left/right single plane symmetry. At 9400 Hz there is a peak on the symmetry factors and the radiated power, probably due to a membrane mode.\\
 
+Figure \ref{fig:phase_Oval} the phase balloon at this frequency shows that the left and right side of the membrane vibrates with in opposite phase, validating the hypothesis of the left/right symmetry condition not being satisfied because of the rocking modes of the driver's membrane. 
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{Sym/phase_oval} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Phase balloon at f = 9400 Hz of oval speaker} 
+	\label{fig:phase_Oval}
+\end{center}
+\end{minipage}
 
 \subsection{2-way "diagonal" speaker}
 
-The DUT is a "diagonal" 2-way speaker, and the scan is centered on the tweeter (see appendix \ref{spkrlib:BnO}). This speaker's asymmetrical geometry is very interesting to test the symmetry check. The device also have an integrated crossover. Figures \ref{fig:rad_pow_BnO} and \ref{fig:sym_fact_BnO} presents the radiated powers and the symmetry factors respectively. \\
-
-The crossover frequency range can be observed clearly on both result result curves: the symmetry factors take a dip, and the rest powers are higher than the symmetrical powers (a zoom on the crossover range for the radiated powers in provided in \ref{Curves:2way_zoom}).\\
-
-Observing the Symmetry Factors shows that there is no baffle symmetry for this measurement. Although this result might seem quite trivial since the DUT was not mounted on a baffle, it is good indication that the symmetry estimation works correctly. Another interesting observation is at the crossover frequency: the symmetry factors take a dip. \\
-In this frequency range, both drivers of the DUT are working, and due to their positioning there is no possible symmetry condition. In low frequency, the driver is a monopole, so all symmetry conditions are fulfilled.\\
-
-In high frequency when the twitter alone is emitting, some symmetry is observed. The Top/Bottom single plane symmetry have the highest coefficients, meaning that it could be possible to measure only the top half of this driver and to deduce the coefficients using equation \ref{eq:spsym}.\\
+The DUT is a "diagonal" 2-way speaker, and the scan is centered on the tweeter (see appendix \ref{spkrlib:BnO}). This speaker's asymmetrical geometry is very interesting for the symmetry measurement. The device also have an integrated crossover. Figures \ref{fig:rad_pow_BnO} and \ref{fig:sym_fact_BnO} presents the radiated powers and the symmetry factors respectively. The radiated powers are plotted in separated graphs in appendix \ref{Curves:2way}. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_BnO} 
+	\includegraphics[width=\textwidth]{Sym/Rad_Pow_BnO} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Radiated Powers of diagonal speaker} 
 	\label{fig:rad_pow_BnO}
@@ -681,13 +677,24 @@ In high frequency when the twitter alone is emitting, some symmetry is observed.
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_BnO} 
+	\includegraphics[width=\textwidth]{Sym/Sym_Fact_BnO} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Symmetry Factors of diagonal speaker} 
 	\label{fig:sym_fact_BnO}
 \end{center}
 \end{minipage}
+
 \vspace{0.1cm}
+
+Observing the radiated powers shows that the systems have an omnidirectional behavior until 175 Hz, shown by the contour plot in figure \ref{Curves:2way_contour}. Unlike the previous measurements, this system have 2 drivers emitting, making it less susceptible to present symmetries.\\
+The crossover frequency range can be observed clearly on both result result curves: the symmetry factors take a dip, and the rest powers are higher than the symmetrical powers. \\
+
+Observing the Symmetry Factors shows that there is no baffle symmetry for this measurement. Although this result might seem quite trivial since the DUT was not mounted on a baffle, it is good indication that the symmetry estimation works correctly. Another interesting observation is at the crossover frequency: the symmetry factors take a dip. \\
+In this frequency range, both drivers of the DUT are working, and due to their positioning there is no possible symmetry condition. In low frequency, the driver is a monopole, so all symmetry conditions are fulfilled.\\
+
+In high frequency when the twitter alone is emitting, some symmetry is observed. The Top/Bottom single plane symmetry have the highest coefficients, meaning that it could be possible to measure only the top half of this driver and to deduce the coefficients using equation \ref{eq:spsym}.\\
+
+
 
 \subsection{Studio Monitor}
  The DUT is a 2-way studio monitor (see appendix \ref{sprklib:Studio}). Similarly to the 2-way diagonal speaker, this system have a built-in crossover. Figures \ref{fig:rad_pow_studio} and \ref{fig:sym_fact_studio} presents the radiated powers and the symmetry factors respectively.
@@ -695,7 +702,7 @@ In high frequency when the twitter alone is emitting, some symmetry is observed.
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{Sym/Rad_Pow_studio} 
+	\includegraphics[width=\textwidth]{Sym/Rad_Pow_studio} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Radiated Powers of studio monitor} 
 	\label{fig:rad_pow_studio}
@@ -703,7 +710,7 @@ In high frequency when the twitter alone is emitting, some symmetry is observed.
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{Sym/Sym_Fact_studio} 
+	\includegraphics[width=\textwidth]{Sym/Sym_Fact_studio} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Symmetry Factors of studio monitor} 
 	\label{fig:sym_fact_studio}
@@ -776,7 +783,7 @@ x(\omega ) = e_{g}\cdot \frac{C_{ms}Bl}{R_{e}}\cdot \frac{1}{(j\omega /\omega _{
 \end{equation}
 \myequations{Displacement transfer function in free air}
 
-Figure \ref{fig:eq_circ} represents the simplified equivalent circuit of the driver in the box.
+Figure \ref{fig:eq_circ} represents the simplified equivalent circuit of the driver in the box. The effect of the box is represented by the compliance $C_{box}$. $e_{g}$ represents the input voltage, $R_{e}$ the electrical resistance; $R_{ms}$, $C_{ms}$ and $M_{ms}$ the mechanical parameters of the driver and $Bl$ the force factor.
 
 \begin{figure}[ht]
 	\begin{center}
@@ -784,7 +791,7 @@ Figure \ref{fig:eq_circ} represents the simplified equivalent circuit of the dri
 		\draw
   	 	 (2,2) node[gyrator] (T) {}
     (T.A2)  -- + (-2,0) coordinate (aux1)
-            to[V^=$U_{in}$]    (aux1  |- T.A1) 
+            to[V^=$e_{g}$]    (aux1  |- T.A1) 
             to[generic,l=$R_{e}$] (T.A1)           
     (T.B1)  to[R=$R_{ms}$] + (2,0)
             to[C=$C_{ms}$] + (2,0)
@@ -797,7 +804,7 @@ Figure \ref{fig:eq_circ} represents the simplified equivalent circuit of the dri
 	\end{center}
 \end{figure}
 
-From equation \ref{eq:TRF_disp} the displacement transfer function of the system in the box can be estimated by assuming that only $C_{ms}$ will change, giving equation \ref{eq:TRF_dispbox} where $C_{msb}$ is the compliance of the system in the box and $e_{gb}$ the input voltage.
+From equation \ref{eq:TRF_disp} and the equivalent circuit presented by figure \ref{fig:eq_circ} the displacement transfer function of the system in the box can be expressed by equation \ref{eq:TRF_dispbox}. $C_{msb}$ is the equivalent compliance of the system in the box such as $C_{msb} = C_{ms} + C_{box}$ and $e_{gb}$ the input voltage.
 
 \begin{equation}
 x_{b}(\omega ) = e_{gb}\cdot \frac{C_{msb}Bl}{R_{e}}\cdot \frac{1}{(j\omega /\omega _{s})^{2}+(1/Q_{ts})(j\omega /\omega _{s})+1}
@@ -830,7 +837,7 @@ e_{gb} = e_{g}\cdot \frac{(2 \pi f_{s})^{2}}{(2 \pi f_{b})^{2}}
 \myequations{Voltage correction for the box as a function of resonance frequency}
 
 Equation \ref{eq:V_corr_fs} gives the compensated voltage for the box, where $ f_{s}$ is the resonance frequency of the driver in free air and $ f_{b}$ the resonance frequency of the driver in the box. This implies that 2 measurements are required: one of the driver in free air, and one of the driver in the box. \\
-Now that the theory is expressed, this assumptions needs to be verified. To do so, the impedance of the driver and the displacement transfer function of the driver's membrane have been measured on the 10 cm woofer by using the Klippel system, coupled with a laser for the displacement. \\
+Now that the theory is expressed, this assumptions needs to be verified. To do so, the impedance of the driver and the displacement transfer function of the driver's membrane have been measured on the 10 cm woofer by using the Klippel system, and with a laser pointing on the driver's membrane estimates the displacement. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -1055,10 +1062,10 @@ This appendix aims to present additional figures that could not be presented in 
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=0.9\textwidth]{Appendix/Rad_Pow_Oval_ZoomHF}
+	\includegraphics[width=\textwidth]{Sym/contour_oval}
     \captionsetup{hypcap=false}
     \captionof{figure}{Oval speaker, Radiated Powers: zoom on 6 - 20 kHz}
-    \label{Curves:oval_zoom}
+    \label{Curves:oval_contour}
 \end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
@@ -1104,10 +1111,10 @@ This appendix aims to present additional figures that could not be presented in 
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=0.9\textwidth]{Sym/Contour_BnO}
+	\includegraphics[width=\textwidth]{Sym/Contour_BnO}
     \captionsetup{hypcap=false}
     \captionof{figure}{Contour plot of the diagonal speaker at 10 m, centered on-axis, horizontal plane.}
-    \label{Curves:2way_zoom}
+    \label{Curves:2way_contour}
 \end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
@@ -1153,9 +1160,9 @@ This appendix aims to present additional figures that could not be presented in 
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=0.9\textwidth]{Appendix/Rad_Pow_studio_ZoomHF}
+	\includegraphics[width=\textwidth]{Sym/contour_studio}
     \captionsetup{hypcap=false}
-    \captionof{figure}{Studio monitor, Radiated Powers: zoom on crossover frequency}
+    \captionof{figure}{Contour plot of the studio monitor at 10 m, centered on-axis, horizontal plane.}
     \label{Curves:studio_zoom}
 \end{center}
 \end{minipage}
@@ -1271,7 +1278,6 @@ The solution of the three-dimensional wave equation in spherical coordinates can
 Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders (n,m) (\textit{all images presented in this chapter are courtesy of W. Klippel, from the presentation \cite{lect2018}}). \\~\\~\\~\\
 \end{minipage}
 
-
 \textbf{Influence of symmetry on coefficients} \\
 
 \begin{minipage}{0.7\textwidth}
@@ -1301,8 +1307,6 @@ S_{rs} = 1-\frac{\sum_{n=1}^{N}\sum_{s=1}^{n}\left | C_{sn} \right |^{2}}{\sum_{
     \label{fig:rotsym}
 \end{center}
 \end{minipage}
-
-\vspace{1cm}
 
 \begin{minipage}{0.7\textwidth}
 Dual plane symmetry (see figure \ref{fig:dualpsym}) is mostly observed in 2-way closed box systems, and make half of the coefficients vanish according to the relation given by equation \ref{eq:Cdpsym}. 

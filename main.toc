@@ -25,9 +25,9 @@
 \contentsline {section}{\numberline {3.2}Measurements}{9}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}10 cm woofer}{9}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Oval speaker}{10}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}2-way "diagonal" speaker}{10}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Studio Monitor}{11}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Discussion}{11}{section.3.3}
+\contentsline {subsection}{\numberline {3.2.3}2-way "diagonal" speaker}{11}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Studio Monitor}{12}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Discussion}{12}{section.3.3}
 \contentsline {chapter}{\numberline {4}Room correction}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}Principle}{13}{section.4.1}
 \contentsline {section}{\numberline {4.2}Measurements in the tetrahedral box}{13}{section.4.2}
@@ -53,13 +53,13 @@
 \contentsline {subsection}{\numberline {A.3.2}Room Correction solutions}{26}{subsection.a.A.3.2}
 \contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{26}{subsubsection*.23}
 \contentsline {chapter}{Appendix \numberline {B}Equations for symmetry condition on complex coefficients of spherical wave expansion}{27}{Appendix.a.B}
-\contentsline {chapter}{Appendix \numberline {C}Speaker library}{32}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}10 cm woofer}{32}{section.a.C.1}
-\contentsline {section}{\numberline {C.2}Oval speaker}{32}{section.a.C.2}
-\contentsline {section}{\numberline {C.3}16 cm fullband speaker}{32}{section.a.C.3}
-\contentsline {section}{\numberline {C.4}2-way diagonal speaker}{33}{section.a.C.4}
-\contentsline {section}{\numberline {C.5}Studio Monitor}{33}{section.a.C.5}
-\contentsline {section}{\numberline {C.6}18'' woofer}{33}{section.a.C.6}
+\contentsline {chapter}{Appendix \numberline {C}Speaker library}{31}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}10 cm woofer}{31}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Oval speaker}{31}{section.a.C.2}
+\contentsline {section}{\numberline {C.3}16 cm fullband speaker}{31}{section.a.C.3}
+\contentsline {section}{\numberline {C.4}2-way diagonal speaker}{32}{section.a.C.4}
+\contentsline {section}{\numberline {C.5}Studio Monitor}{32}{section.a.C.5}
+\contentsline {section}{\numberline {C.6}18'' woofer}{32}{section.a.C.6}
 \contentsline {chapter}{Appendix \numberline {D}Organization of the work}{i}{Appendix.a.D}
 \contentsline {chapter}{Appendix \numberline {E}Baffle Prototype pictures}{ii}{Appendix.a.E}
 \contentsline {chapter}{Appendix \numberline {F}Application notes}{iii}{Appendix.a.F}
