@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {2.1}Problematic}{6}{section.2.1}
 \contentsline {section}{\numberline {2.2}Grid optimization}{6}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Principle}{6}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Measurements}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Measurements}{7}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Discussion}{7}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Application note for baffle measurements}{7}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Estimation of baffle influence}{8}{section.2.3}
@@ -24,25 +24,26 @@
 \contentsline {subsection}{\numberline {2.3.3}Discussion}{9}{subsection.2.3.3}
 \contentsline {chapter}{\numberline {3}Measurement time optimization}{10}{chapter.3}
 \contentsline {section}{\numberline {3.1}Principle}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Equations for symmetry condition on complex coefficients of the spherical wave expansion}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Measurements}{12}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}10 cm woofer}{12}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Oval speaker}{13}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}2-way "diagonal" speaker}{14}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Studio Monitor}{15}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Discussion}{16}{section.3.4}
-\contentsline {chapter}{\numberline {4}Room correction}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Principle}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Measurements in the tetrahedral box}{17}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Influence of the load}{17}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Influence of microphone position}{19}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Room Correction solutions}{20}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Generation of a generic Correction Curve for the tetrahedral box}{21}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Compensation by a Near Field measurement}{21}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}D. B. Keele method for Far Field extrapolation}{21}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Discussion}{21}{section.4.4}
-\contentsline {chapter}{Conclusion}{22}{chapter*.24}
-\contentsline {chapter}{References}{22}{chapter*.24}
+\contentsline {subsection}{\numberline {3.1.1}Equations for symmetry condition on complex coefficients of the spherical wave expansion}{10}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Processing}{12}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Measurements}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}10 cm woofer}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Oval speaker}{13}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}2-way "diagonal" speaker}{14}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Studio Monitor}{14}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Discussion}{15}{section.3.3}
+\contentsline {chapter}{\numberline {4}Room correction}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}Principle}{16}{section.4.1}
+\contentsline {section}{\numberline {4.2}Measurements in the tetrahedral box}{16}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Influence of the load}{16}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Influence of microphone position}{18}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Room Correction solutions}{19}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Generation of a generic Correction Curve for the tetrahedral box}{20}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Compensation by a Near Field measurement}{20}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}D. B. Keele method for Far Field extrapolation}{20}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Discussion}{20}{section.4.4}
+\contentsline {chapter}{Conclusion}{21}{chapter*.23}
+\contentsline {chapter}{References}{21}{chapter*.23}
 \contentsline {chapter}{Appendix \numberline {A}Additional figures}{i}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Baffle measurement}{i}{section.a.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Estimation of baffle influence}{i}{subsection.a.A.1.1}
@@ -53,10 +54,10 @@
 \contentsline {subsection}{\numberline {A.2.4}Studio monitor}{v}{subsection.a.A.2.4}
 \contentsline {section}{\numberline {A.3}Room Correction}{vi}{section.a.A.3}
 \contentsline {subsection}{\numberline {A.3.1}Measurements}{vi}{subsection.a.A.3.1}
-\contentsline {subsubsection}{Influence of the load}{vi}{subsubsection*.26}
-\contentsline {subsubsection}{Influence of microphone position}{vii}{subsubsection*.27}
+\contentsline {subsubsection}{Influence of the load}{vi}{subsubsection*.25}
+\contentsline {subsubsection}{Influence of microphone position}{vii}{subsubsection*.26}
 \contentsline {subsection}{\numberline {A.3.2}Room Correction solutions}{viii}{subsection.a.A.3.2}
-\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{viii}{subsubsection*.28}
+\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{viii}{subsubsection*.27}
 \contentsline {chapter}{Appendix \numberline {B}Speaker library}{ix}{Appendix.a.B}
 \contentsline {section}{\numberline {B.1}10 cm woofer}{ix}{section.a.B.1}
 \contentsline {section}{\numberline {B.2}Oval speaker}{ix}{section.a.B.2}

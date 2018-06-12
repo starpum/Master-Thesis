@@ -2,17 +2,16 @@
 \contentsline {todo}{Finir de r\IeC {\'e}diger l'introduction}{1}{section*.4}
 \contentsline {todo}{D\IeC {\'e}velopper les limites fr\IeC {\'e}quencielles du systeme}{5}{section*.7}
 \contentsline {todo}{Redo the measurements for sph / elip grids, because these are probs false}{7}{section*.8}
-\contentsline {todo}{Rephrase the contect / principle}{10}{section*.9}
-\contentsline {todo}{put the appendix here + show how the different measures could be done, say that other idea could be considering symmetry in post processing and not just scan}{12}{section*.10}
-\contentsline {todo}{Rephrase... ca sonne pas tr\IeC {\`e}s bien je trouve}{12}{section*.11}
-\contentsline {todo}{Finish the discussion and see how your code have been implemented}{16}{section*.12}
-\contentsline {todo}{start before 0 to show the pre-ringing + explain motivations with time windows needing to be correctly adjusted to avoid overlapping + time domain correction}{17}{section*.13}
-\contentsline {todo}{explain }{17}{section*.14}
-\contentsline {todo}{Expliquer que les diff\IeC {\'e}rences sont dues \IeC {\`a} l'approximation trop simpliste sur le mod\IeC {\`e}le de la boite, mais bien formul\IeC {\'e}. Ajouter les sch\IeC {\'e}mas \IeC {\'e}quivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}{19}{section*.16}
-\contentsline {todo}{mieux formuler + tirer des conclusions etfaire le lien avec les autres figures}{19}{section*.17}
-\contentsline {todo}{Tu ne parle pas de la bonne figure pour appr\IeC {\'e}cier les diff\IeC {\'e}rences. La diff\IeC {\'e}rence entre les RCs est + pertinente car elle devrais \IeC {\^e}tre de 0 dB si le mic n'avais pas d'influence}{20}{section*.18}
-\contentsline {todo}{Place this first before talking about the box!!!!!}{20}{section*.19}
-\contentsline {todo}{Maybe explain a bit more the context of this + flowchart of the module}{21}{section*.20}
-\contentsline {todo}{Cr\IeC {\'e}er la courbe de correction g\IeC {\'e}n\IeC {\'e}rique}{21}{section*.21}
-\contentsline {todo}{I don't think this subsection is very pertinent nor interesting}{21}{section*.22}
-\contentsline {todo}{name}{21}{section*.23}
+\contentsline {todo}{put the appendix here + show how the different measures could be done, say that other idea could be considering symmetry in post processing and not just scan}{12}{section*.9}
+\contentsline {todo}{Rephrase... ca sonne pas tr\IeC {\`e}s bien je trouve}{12}{section*.10}
+\contentsline {todo}{Finish the discussion and see how your code have been implemented}{15}{section*.11}
+\contentsline {todo}{start before 0 to show the pre-ringing + explain motivations with time windows needing to be correctly adjusted to avoid overlapping + time domain correction}{16}{section*.12}
+\contentsline {todo}{explain }{16}{section*.13}
+\contentsline {todo}{Expliquer que les diff\IeC {\'e}rences sont dues \IeC {\`a} l'approximation trop simpliste sur le mod\IeC {\`e}le de la boite, mais bien formul\IeC {\'e}. Ajouter les sch\IeC {\'e}mas \IeC {\'e}quivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}{18}{section*.15}
+\contentsline {todo}{mieux formuler + tirer des conclusions etfaire le lien avec les autres figures}{18}{section*.16}
+\contentsline {todo}{Tu ne parle pas de la bonne figure pour appr\IeC {\'e}cier les diff\IeC {\'e}rences. La diff\IeC {\'e}rence entre les RCs est + pertinente car elle devrais \IeC {\^e}tre de 0 dB si le mic n'avais pas d'influence}{19}{section*.17}
+\contentsline {todo}{Place this first before talking about the box!!!!!}{19}{section*.18}
+\contentsline {todo}{Maybe explain a bit more the context of this + flowchart of the module}{20}{section*.19}
+\contentsline {todo}{Cr\IeC {\'e}er la courbe de correction g\IeC {\'e}n\IeC {\'e}rique}{20}{section*.20}
+\contentsline {todo}{I don't think this subsection is very pertinent nor interesting}{20}{section*.21}
+\contentsline {todo}{name}{20}{section*.22}
