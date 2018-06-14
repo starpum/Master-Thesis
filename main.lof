@@ -7,18 +7,18 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Baffle measurement problems\relax }}{6}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Elliptical grid\relax }}{6}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Projection of spherical grid\relax }}{6}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Far Field SPL response\relax }}{7}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Radiated Sound Power\relax }}{7}{figure.2.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Magnitude of SPL response at 10 m\relax }}{7}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Phase of SPL response at 10 m\relax }}{7}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Baffle Prototype\relax }}{8}{figure.2.6}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Comparison of apparent power in the Near Field for different measurement points\relax }}{9}{figure.2.7}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison of radiated powers in the Far Field for the 5 cm and 21 cm measurements\relax }}{9}{figure.2.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of the symmetry check\relax }}{10}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Spherical Harmonics\relax }}{10}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Rotational symmetry\relax }}{10}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Dual Plane symmetry\relax }}{11}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Baffle symmetry\relax }}{11}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Single Plane symmetry\relax }}{11}{figure.3.6}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Rotational\relax }}{11}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Dual Plane\relax }}{11}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Baffle\relax }}{11}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Single Plane\relax }}{11}{figure.3.6}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Radiated Powers of 10cm woofer\relax }}{12}{figure.3.7}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Symmetry Factors of 10cm woofer\relax }}{12}{figure.3.8}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Radiated Powers of oval speaker\relax }}{13}{figure.3.9}
@@ -26,14 +26,14 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Phase balloon at f = 9400 Hz of oval speaker\relax }}{13}{figure.3.11}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Radiated Powers of diagonal speaker\relax }}{14}{figure.3.12}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Symmetry Factors of diagonal speaker\relax }}{14}{figure.3.13}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Radiated Powers of studio monitor\relax }}{15}{figure.3.14}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Symmetry Factors of studio monitor\relax }}{15}{figure.3.15}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Radiated Powers of studio monitor\relax }}{14}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Symmetry Factors of studio monitor\relax }}{14}{figure.3.15}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Measurement result\relax }}{16}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Filter on magnitude\relax }}{16}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Filter minimal phase\relax }}{16}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Filter with LFR\relax }}{16}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{17}{figure.caption.14}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{17}{figure.caption.15}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Comparison of measured impedance\relax }}{18}{figure.4.6}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Comparison of measured displacement TRF\relax }}{18}{figure.4.7}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Microphone position\relax }}{19}{figure.4.8}

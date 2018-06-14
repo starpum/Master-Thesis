@@ -58,7 +58,8 @@
 \usepackage{hyperref}					% To make references 
 \usepackage{movie15}					% To include gifs
 \usepackage{circuitikz}					% To include circuits
-
+\usepackage{tikz}
+\newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \coordinate (#1);}
 %--------------------------------------------------- TODOs / DRAFT MODE
  
 \newif\ifdraft
@@ -385,9 +386,10 @@ However, the Near-Field being much more complex than the Far Field, holographic 
 
 Figure \ref{fig:nfsflow} presents a flowchart of the measurement principle. \\ 
 The first step of the scanning process is the generation of the measurement grid. The main difficulty is to avoid spacial aliasing, which is achieved by generating a non-uniform grid. Once the grid is generated, the measurement is conducted thanks to the robotics.\\
-The measurement being done, the first step of the holographic process is to shift the coordinates of all measurements points to fit the expansion point $r_{E}$ of the system. The expansion point is the center of the spherical waves from equation \ref{eq:sphwvexp}, and its position might change with frequency. This step is required for further processing, in order to make sure that the calculated Far Field is relevant. \\
+The measurement being done, the first step of the holographic process is to shift the coordinates of all measurements points to fit the expansion point $\mathbf{r}_{e}$ of the system. The expansion point is the center of the spherical waves from equation \ref{eq:sphwvexp}, and its position might change with frequency. This step is required for further processing, in order to make sure that the calculated Far Field is relevant. \\
 
-Then, the parameters are fitted to find the optimum coefficients $C_{mn}$. This is done by estimating the deviation $e(f,r_{E})$ between the measured and the modeled transfer function of the system, as expressed in equation \ref{eq:ParamFit}. 
+
+Then, the parameters are fitted to find the optimum coefficients $C_{mn}$. This is done by estimating the deviation ${e(f,\mathbf{r}_{e}) = H_{measured}(f,\mathbf{r}_{e})-H_{model}(f,\mathbf{r}_{e})}$ between the measured and the modeled transfer function of the system, as expressed in equation \ref{eq:ParamFit}. 
 
 \begin{equation}
 \mathbf{c}(f)= \textup{arg} \; \textup{min}\left ( \sum_{\forall \mathbf{r}_{e}\in G}\left | e(f,\mathbf{r}_{e}) \right | ^{2} \right )
@@ -395,7 +397,7 @@ Then, the parameters are fitted to find the optimum coefficients $C_{mn}$. This 
 \end{equation}
 \myequations{Parameter fitting}
 
-The accuracy of the holographic estimation of the sound field is then verified by estimating the Total Fitting Error ($TFE$) of the measurement. This parameter is calculated from the ratio of the truncated of the power series at a maximum order $N$ of the deviation $e(f,r_{E})$ by the transfer function of the system. Evaluating the $TFE$ allows to verify the accuracy of a measurement: if it is lower than -20 dB, it is considered that the holographic model describes the Far-Field of the system with sufficient accuracy. 
+The accuracy of the holographic estimation of the sound field is then verified by estimating the Total Fitting Error ($TFE$) of the measurement. This parameter is calculated from the ratio of the truncated of the power series at a maximum order $N$ of the deviation $e(f,\mathbf{r}_{e})$ by the transfer function of the system. Evaluating the $TFE$ allows to verify the accuracy of a measurement: if it is lower than -20 dB, it is considered that the holographic model describes the Far-Field of the system with sufficient accuracy. 
 
 \begin{equation}
 TFE(f) = 10\textup{log}\left ( \frac{\sum_{\mathbf{r}_{e}\in G}\left | e(f,\mathbf{r}_{e}) \right |^{2}}{\sum_{\mathbf{r}_{e}\in G}\left | H(f,\mathbf{r}_{e}) \right |^{2}} \right )
@@ -418,10 +420,9 @@ Comparing the $ TFE $ and the $MLE$ allows to estimate the measurement's relevan
 The maximum order of expansion $N$ is a very important parameter to obtain accurate data. The higher it is and the more accurate the model becomes, but the longer the calculation. In that regard, a trade-off between accuracy and calculation time has to be made. \\
 
 Investigations on this parameter have already been conducted \cite{pres, aeshs, train8} and have shown that a wave expansion truncated after $N$ = 10 is capable of modeling the 3D sound pressure field of a DUT above 30 Hz with sufficient accuracy. \\
-\todo[inline]{Développer les limites fréquencielles du systeme}
-
 At very low frequencies the measurement is polluted by the poor Signal to Noise Ratio (SNR) between the microphone's input and the noise; and increasing the maximum order of expansion has little to no effect on the $TFE$. 
 
+\todo[inline]{Développer les limites fréquencielles du systeme}
 
 %--------------------------------------------------------------
 %	BAFFLE MEASUREMENT
@@ -483,34 +484,33 @@ The values of the y-coordinates of the ellipse points can then be calculated fro
 
 \subsection{Measurements}
 
-After implementation of the elliptical grid projection in Scilab, a 10 cm woofer (see \ref{spkrlib:10cm}) have been measured using the NFS. The scan was performed using a spherical grid with a scanning radius of 30 cm, and an elliptical grid with a major radius of 30 cm and a minor radius of 10 cm. Both measurements have been done in the same conditions: equal input voltage, same number of points, and same position of the DUT. The results are presented in figures \ref{fig:comp_ElSPh_SPL} and \ref{fig:comp_ElSPh_Pow}. \\
+After implementation of the elliptical grid projection in Scilab, a 10 cm woofer (see \ref{spkrlib:10cm}) have been measured using the NFS. The scan was performed using a spherical grid with a scanning radius of 20 cm, and an elliptical grid with a major radius of 20 cm and a minor radius of 5 cm. Both measurements have been done in the same conditions: equal input voltage, same number of points, and same position of the DUT. Figures \ref{fig:comp_ElSPh_SPL} and \ref{fig:comp_ElSPh_Pow} presents the magnitude and the phase of the SPL response on axis, at 10 m from the DUT. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{GridOpti/FF_Compa_El_Sph}
+	\includegraphics[width=.9\textwidth]{GridOpti/Mag_Compa_El_Sph}
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Far Field SPL response} 
+	\captionof{figure}{Magnitude of SPL response at 10 m} 
 	\label{fig:comp_ElSPh_SPL}
 \end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{GridOpti/SP_Compa_El_Sph}
+	\includegraphics[width=.9\textwidth]{GridOpti/Phase_Compa_El_Sph}
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Radiated Sound Power} 
+	\captionof{figure}{Phase of SPL response at 10 m} 
 	\label{fig:comp_ElSPh_Pow}
 \end{center}
 \end{minipage}
-\vspace{0.1cm}
 
-\todo[inline, color=red!40]{Redo the measurements for sph / elip grids, because these are probs false}
+
 \subsection{Discussion}
 
-Observing the magnitude of the Far Field SPL response, it can be noted that the elliptical grid provides a much smoother curve than the spherical grid, especially in the low frequencies. This effect could be explained by the fact that the measurement points being much closer to the driver, it is much less sensible to systematic errors that cannot be removed by Field Separation, such as the baffle vibrating inside the scanning radius. \\
-
+Observing the magnitude of the Far Field SPL response, it can be noted that the elliptical grid provides a much smoother curve than the spherical grid, especially in the low frequencies. This effect could be explained by the fact that the measurement points being much closer to the driver, the measure is much less sensible to systematic errors that cannot be removed by Field Separation, such as the baffle vibrating inside the scanning radius. \\
 The phase of the Far Field SPL Response gives interesting results. The elliptical grid's phase presents less phase shifts, meaning that less resonances are present on this measurement, matching with the previous hypothesis of a removed systematic error due to the baffle vibrating. \\
 
-The radiated sound Power is extremely similar for both measurements, which was expected considering that the same speaker have been measured twice using in equal configuration. Similarly to the Far Field SPL response, the curve is smoothed when using an elliptical grid. \\
+It should be noted that the previous measurements have been performed using the field separation method (see section \ref{sec:FieldSep} of the literature review), allowing to remove the contributions from the room. In that case, going closer to the speaker allows to improve the SNR, making the measurement with the elliptical grid robuster to room modes.
+If the field separation cannot be applied; using the elliptical grid can greatly improve the measurement: moving the microphone closer to the DUT will make the final results more accurate thanks to the robustness to room mode mentioned previously. \\
 
 It can be concluded that using different measurement grid is relevant. A well adjusted grid have shown to give more accurate results. Following this investigation, several grids could be generated, for example a half-cylindrical grid for rectangular systems mounted in baffle, such as wall speakers.\\
 Further investigations should be conducted on the influence of the measurement grid on the measurement accuracy.
@@ -545,7 +545,9 @@ The blue curve represents the power from the speaker. This scan have been center
 Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration impacts the system: the differences between the 2 plots can only come from the plate vibration, as the field separation method removed all contributions from the room. \\
 Comparing the variations on the speaker+wood results with the contribution of the wood shows that most of the variations matches with the peaks of the wood's contribution; whereas a few variations matches with the baffle contribution's peaks (see figure \ref{Curves:Baffle_RadPow} for matching peaks and a bigger figure). \\
 
-Moreover, the contributions from the baffle itself aren't really problematic: if the scanning radius is correctly chosen, the field separation method will remove the baffle's contribution from the measurement. The contributions from the wooden plate are much more problematic, since the field separation method cannot remove contributions coming from inside the scanning radius, and the scanning radius cannot be smaller than the driver's. 
+Moreover, the contributions from the baffle itself aren't really problematic: if the scanning radius is correctly chosen, the field separation method will remove the baffle's contribution from the measurement. The contributions from the wooden plate are much more problematic, since the field separation method cannot remove contributions coming from inside the scanning radius, and the scanning radius cannot be smaller than the driver's. \\
+
+Figure \ref{fig:vib_comp} compares the radiated powers in the far field (r = 10m) of the speaker (5 cm scan) and the speaker+wood (21 cm scan) measurements, evidencing the effect of the wooden plate's vibration on the measurement. At the resonance (f = 180 Hz), a strong cancellation effect is observed on the speaker+wood measurement, with a difference of almost 3 dB between the curves. This cancellation is most likely to be due to the plate vibrating in opposite phase with the speaker. \\
 
 \begin{minipage}{0.5\textwidth} 
 \begin{center}
@@ -565,8 +567,10 @@ Moreover, the contributions from the baffle itself aren't really problematic: if
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:vib_comp} compares the radiated powers in the far field (r = 10m) of the speaker (5 cm scan) and the speaker+wood (21 cm scan) measurements, evidencing the effect of the wooden plate's vibration on the measurement. At the resonance (f = 180 Hz), a strong cancellation effect is observed on the speaker+wood measurement, with a difference of almost 3 dB between the curves. This cancellation is most likely to be due to the plate vibrating in opposite phase with the speaker. \\
-The movie bellow shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 180 Hz. The plate is vibrating in opposite phase with the speaker,  which confirms the previous hypothesis of the wooden plate creating a cancellation effect on the Sound Pressure response of the driver. 
+
+The movie below shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 180 Hz. The plate is vibrating in opposite phase with the speaker,  which confirms the previous hypothesis of the wooden plate creating a cancellation effect on the Sound Pressure response of the driver. 
+
+\todo[inline, color=green!40]{quote Chuan for the measurements}
 
 \ifdraft
 \begin{center}
@@ -608,9 +612,8 @@ Exploiting symmetry conditions on the complex coefficients of the spherical wave
 
 Figure \ref{fig:sym_flow} presents the flowchart of the optimization. The first step is to perform a fast measurement with a coarse grid of 150 points, approximately 20 minutes of measurement. From this measurement, it is possible to check the existence of symmetries on the DUT's geometry by using the different equations provided in the following subsection. 
 
-\subsection[Equations for symmetry condition on complex coefficients of the spherical wave expansion]{Equations for symmetry condition on complex coefficients of the\\ spherical wave expansion}
+\subsection{Impact of symmetries on complex coefficients of the spherical wave expansion}
 \label{chap:sym}
-
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -623,149 +626,140 @@ Figure \ref{fig:sym_flow} presents the flowchart of the optimization. The first 
 \begin{minipage}{0.5\textwidth}
 The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp}.The free-field transfer function of a loudspeaker can be expressed by only considering the direct sound (outgoing wave) in equation \ref{eq:sphwvexp} and is expressed in equation \ref{eq:ffHf}.\\
 
-Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders (n,m) (\textit{all images presented in this chapter are courtesy of W. Klippel, from the presentation \cite{lect2018}}). 
+Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders (n,m) (\textit{all figures presented in this subsection are courtesy of W. Klippel, from the presentation \cite{lect2018}}). 
 \end{minipage}
-
 \vspace{0.4cm}
 
-\begin{minipage}{0.7\textwidth}
-\textbf{Rotational symmetry} (see figure \ref{fig:rotsym}) is observed for many circular drivers and is the simplest type of symmetry as a lot of coefficients are vanishing according to the relation given by equation \ref{eq:Crotsym} \cite{aeshs}.
+If the DUT's geometry presents certain symmetries, its radiated sound field will exhibit the same symmetries. This property allows to decrease the number of coefficients, thus reducing the scanning effort. The different symmetries under study are listed below.\\
 
-\begin{equation}
-C_{mn} = 0 \; \; \; \;  m \neq 0
-\label{eq:Crotsym}
-\end{equation}
-\myequations{Coefficients for rotational symmetry}
-All m $\neq$ 0 coefficients are vanishing, meaning that only m = 0, n = n+1 coefficients have to be estimated. \\
-
-Once the coefficients have been estimated, the symmetry factor S can be estimated,  estimating the ratio of coefficients satisfying the symmetry condition by the total coefficients. For rotational symmetry, $S_{rs}$ is given by equation \ref{eq:Srs} \cite{aeshs}.
-
-\begin{equation}
-S_{rs} = 1-\frac{\sum_{n=1}^{N}\sum_{s=1}^{n}\left | C_{sn} \right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
-\label{eq:Srs}
-\end{equation}
-\myequations{Symmetry factor for rotational symmetry}
-
+\begin{minipage}{0.5\textwidth}	%Rotational Sym - text
+	\textbf{Rotational symmetry} (see figure \ref{fig:rotsym}) is observed for many circular drivers and is the simplest type of symmetry as a lot of coefficients are vanishing according to the relation given by equation \ref{eq:Crotsym} \cite{aeshs}.
 \end{minipage}
-\begin{minipage}{0.3\textwidth}
-\begin{center}
-	\includegraphics[width=\textwidth]{Appendix/Rot_Sym}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Rotational symmetry}
-    \label{fig:rotsym}
-\end{center}
+\begin{minipage}{0.5\textwidth}	%Rotational Sym - equation
+	\begin{equation}
+		C_{mn} = 0 \; \; \; \; \forall \; m \neq 0
+		\label{eq:Crotsym}
+	\end{equation}
+	\myequations{Coefficients for rotational symmetry}
 \end{minipage}
 
-\begin{minipage}{0.7\textwidth}
-\textbf{Dual plane symmetry} (see figure \ref{fig:dualpsym}) is mostly observed in 2-way closed box systems, and make half of the coefficients vanish according to the relation given by equation \ref{eq:Cdpsym} \cite{aeshs}. 
+\begin{minipage}{0.5\textwidth}	% Dual plane sym - text
+	\textbf{Dual plane symmetry} (see figure \ref{fig:dualpsym}) is mostly observed in 2-way closed box systems, and make half of the coefficients vanish according to the relation given by equation \ref{eq:Cdpsym} \cite{aeshs}.\\
+	$R_{m}$ represents a complex symmetry parameter, expressed in equation \ref{eq:Rm} \citep{aeshs} where $\phi _{s}$ is the symmetry axis; and $m$ the suborder of the coefficient under study. \\
 
-\begin{equation}
-C_{mn}(f) = C_{-mn}(f)R_{m}(f) \; \; \; \;  m = 2s; \; s =1, 2, 3...
-\label{eq:Cdpsym}
-\end{equation}
-\myequations{Coefficients for dual plane symmetry}
-Where Rm represents a complex symmetry parameter, expressed in equation \ref{eq:Rm} \cite{aeshs}.
-
-\begin{equation}
-R_{m}(f) = (-1)^{m+1}(\textup{sin}(m \phi _{s}(f)) + i\textup{cos}(m \phi _{s}(f)))^{2}
-\label{eq:Rm}
-\end{equation}
-\myequations{Complex symmetry parameter}
-With $\phi _{s}$ is the symmetry axis; and $m$ the suborder of the coefficient under study.
+	If the symmetry axes $\Phi _{e}, \Theta _{e}$ are aligned with the coordinate system, equation \ref{eq:Cdpsym} can be simplified to the relation given in equation \ref{eq:Cdpsymb} \cite{aeshs}.
 \end{minipage}
-\begin{minipage}{0.3\textwidth}
-\begin{center}
-	\includegraphics[width=\textwidth]{Appendix/Dual_Plane_Sym}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Dual Plane symmetry}
-    \label{fig:dualpsym}
-\end{center}
-\end{minipage}\\
+\begin{minipage}{0.5\textwidth}	% Dual Plane sym - equations
+	\begin{equation}
+		C_{mn}(f) = C_{-mn}(f)R_{m}(f) \; \; \; \;  m = 2s; \; s =1, 2, 3...
+		\label{eq:Cdpsym}
+	\end{equation}
+	\myequations{Coefficients for dual plane symmetry}
 
+	\begin{equation}
+		R_{m}(f) = (-1)^{m+1}(\textup{sin}(m \phi _{s}(f)) + i\textup{cos}(m \phi _{s}(f)))^{2}
+		\label{eq:Rm}
+	\end{equation}
+	\myequations{Complex symmetry parameter}
 
-If the symmetry axes $\Phi _{e}, \Theta _{e}$ are aligned with the coordinate system, equation \ref{eq:Cdpsym} can be simplified to the relation given in equation \ref{eq:Cdpsymb} \cite{aeshs}.
-
-\begin{equation}
-C_{mn}(f) = C_{-mn}(f) \; \; \; \;  m = 2s; \; s =1, 2, 3...
-\label{eq:Cdpsymb}
-\end{equation}
-\myequations{Coefficients for dual plane symmetry}
-The symmetry factor for the Dual Plane symmetry is then given by equation \ref{eq:Sdps}.
-
-
-\begin{equation}
-S_{dps} = 1-\frac{\sum_{n=1}^{N}\sum_{s=1}^{n/2}\left | (-1)^{2s}C_{(2s)n} - C_{(2s)n}\right |^{2} + \sum_{n=1}^{N}\sum_{s=0}^{n/2}\left | C_{(2s+1)n}\right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
-\label{eq:Sdps}
-\end{equation}
-\myequations{Symmetry factor for dual-plane symmetry}
+	\begin{equation}
+		C_{mn}(f) = C_{-mn}(f) \; \; \; \;  m = 2s; \; s =1, 2, 3...
+		\label{eq:Cdpsymb}
+	\end{equation}
+	\myequations{Coefficients for dual plane symmetry}
+\end{minipage}
 
 \vspace{0.1cm}
 
-\begin{minipage}{0.7\textwidth}
-\textbf{Baffle symmetry} is when the Device Under Test is mounted on a baffle (see figure \ref{fig:bafflesym}), and make half of the coefficient vanish according to the relation given by equation \ref{eq:Cbsym} \cite{aeshs}.
-
-\begin{equation}
-C_{mn} = 0 \; \; \; \; \; \; n-m \, \neq \, 2s; \: \: s \in \mathbb{Z}
-\label{eq:Cbsym}
-\end{equation}
-\myequations{Coefficients for baffle symmetry}
-The symmetry factor is then given by equation \ref{eq:Sbs} \cite{aeshs}.
-
-\begin{equation}
-S_{bs} = 1-\frac{\sum_{n=1}^{N}\sum_{s=0}^{n/2}\left | C_{(2s)n} \right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
-\label{eq:Sbs}
-\end{equation}
-\myequations{Symmetry factor for baffle symmetry}
+\begin{minipage}{0.5\textwidth}	%Baffle sym - text
+	\textbf{Baffle symmetry} is when the Device Under Test is mounted on a baffle (see figure \ref{fig:bafflesym}), and make half of the coefficient vanish according to the relation given by equation \ref{eq:Cbsym} \cite{aeshs}.
 \end{minipage}
-\begin{minipage}{0.3\textwidth}
-\begin{center}
-	\includegraphics[width=\textwidth]{Appendix/Baffle_Sym}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Baffle symmetry}
-    \label{fig:bafflesym}
-\end{center}
+\begin{minipage}{0.5\textwidth}	%Baffle sym - equation
+	\begin{equation}
+		C_{mn} = 0 \; \; \; \; \; \; n-m \, \neq \, 2s; \: \: s \in \mathbb{Z}
+		\label{eq:Cbsym}
+	\end{equation}
+	\myequations{Coefficients for baffle symmetry}
 \end{minipage}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
-\begin{minipage}{0.7\textwidth}
-\textbf{Single plane symmetry} is the most common in loudspeaker systems using 2 or more drivers. This symmetry can be between the left and right side of the DUT, as presented in figure \ref{fig:singplsym}; but also between the top and bottom of the DUT. Only the coefficients on the left side have to be estimated. The coefficients of the right side are linked to the left side by the relation given by equation \ref{eq:spsym} \cite{aeshs}.
+\begin{minipage}{0.5\textwidth}	%Single plane - text
+	\textbf{Single plane symmetry} is the most common in loudspeaker systems using 2 or more drivers (see figure \ref{fig:singplsym}). Only the coefficients on either the left or right side have to be estimated; and the remainging coefficients are calulated by using equation \ref{eq:spsym} \cite{aeshs}. 
+\end{minipage}
+\begin{minipage}{0.5\textwidth}	% Single Plane sym - equation
+	\begin{equation}
+		C_{mn} = C_{-mn}(f)R_{m}(f) \; \; \; \textup{with} \; \; m\geq 0; \; \; \; 0\leq n\leq N
+		\label{eq:spsym}
+	\end{equation}
+	\myequations{Coefficients for single plane symmetry}
+\end{minipage}
+\vspace{0.1cm}
+
+This symmetry can be between the left and right side of the DUT, as presented in figure \ref{fig:singplsym}; but also between the top and bottom of the DUT, shifting the symmetry plane by 90°.
+It should be noted that depending of the type of symmetry (left/right or top/bottom), $R_{m}$ will change, modifying the relation between the coefficients. 
+
+\begin{minipage}{0.248\textwidth}	% Rot - img
+	\begin{center}
+		\includegraphics[width=0.9\textwidth, height=5cm]{Appendix/Rot_Sym}
+   	 	\captionsetup{hypcap=false}
+   	 	\captionof{figure}{Rotational}
+    	\label{fig:rotsym}
+	\end{center}
+\end{minipage}
+\begin{minipage}{0.248\textwidth}	%DPS - Img
+	\begin{center}
+		\includegraphics[width=0.9\textwidth, height=5cm]{Appendix/Dual_Plane_Sym}
+    	\captionsetup{hypcap=false}
+    	\captionof{figure}{Dual Plane}
+    	\label{fig:dualpsym}
+	\end{center}
+\end{minipage}
+\begin{minipage}{0.248\textwidth}	%Baffle - img
+	\begin{center}
+		\includegraphics[width=0.9\textwidth, height=5cm]{Appendix/Baffle_Sym}
+    	\captionsetup{hypcap=false}
+    	\captionof{figure}{Baffle}
+    	\label{fig:bafflesym}
+	\end{center}
+\end{minipage}
+\begin{minipage}{0.248\textwidth} %SPS - img
+	\begin{center}
+		\includegraphics[width=0.85\textwidth, height=5cm]{Appendix/Single_Plane_Sym}
+    	\captionsetup{hypcap=false}
+   	 	\captionof{figure}{Single Plane}
+    	\label{fig:singplsym}
+	\end{center}
+\end{minipage}
+
+\subsection{Application of the symmetry}
+
+
+\todo[inline, color=red!40]{Give the power equations and explain the symmetry factor + and explain why in the code you average on the 2 sides bc we don't know which is the correct solution}
+
+\subsection{Post-processing}
+
+After performing a measure with a coarse grid and calculating the factors for each symmetry listed above; it is possible to deduce whether the DUT presents symmetries or not. For example a symmetry factor above 90\% means that there is a difference of $\approx$-0.5 dB between the measured radiated power and the power radiated by the coefficients corresponding to the symmetry condition under study. The power are calculated by using equation \ref{eq:power}.
 
 \begin{equation}
-C_{mn} = C_{-mn}(f)R_{m}(f) \; \; \; \textup{with} \; \; m\geq 0; \; \; \; 0\leq n\leq N
-\label{eq:spsym}
+\Pi(f) = \frac{1}{2\rho _{0}c k^{2}} \sum \mid C_{mn}(f)\mid ^{2}
+\label{eq:power}
 \end{equation}
-\myequations{Coefficients for single plane symmetry}
-It should be noted that depending of the type of symmetry (left/right or top/bottom), $R_{m}$ will change, modifying the relation between the coefficients. \\
+\myequations{Radiated power from complex coefficients}
 
-The symmetry factor is then given by equation \ref{eq:Ssps} \cite{aeshs}.
+Once the dominant symmetry is identified, the user is informed that a faster scan can be performed. For example if the Dual Plane Symmetry is found to be dominant, it is possible to scan only a fourth of the device and to reconstruct the emitted sound field.\\
 
-\begin{equation}
-S_{sps} = 1-\frac{\sum_{n=1}^{N}\sum_{m=1}^{n}\left | (-1)^{m}(f) C_{-mn}-C_{mn} \right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
-\label{eq:Ssps}
-\end{equation}
-\myequations{Symmetry factor for single plane symmetry}
-\end{minipage}
-\begin{minipage}{0.3\textwidth}
-\begin{center}
-	\includegraphics[width=\textwidth]{Appendix/Single_Plane_Sym}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Single Plane symmetry}
-    \label{fig:singplsym}
-\end{center}
-\end{minipage}
-
-\subsection{Processing}
-
-After calculating the symmetry factors, it is possible to compare them to different thresholds, the user is informed that the DUT may present certain types of symmetry that could be used to perform a faster full measurement.
+Another use of the symmetry can be in post-processing only: after finding a symmetry for a device, it is possible to speed the processing by removing the irrelevant coefficients. For the Dual Plane Symmetry example, all coefficients  $C_{mn} \;  \textup{for}   m = 2s; \; s =1, 2, 3...$ will be zero, thus reducing the number of coefficients by 70\%.\\
 
 
-\todo[inline, color=red!40]{put the appendix here + show how the different measures could be done, say that other idea could be considering symmetry in post processing and not just scan}
+
+
+\todo[inline, color=red!40]{finish the processing, say that other idea could be considering symmetry in post processing and not just scan}
 
 
 \section{Measurements}
 
-After implementation in SciLab (the code is given in appendix , the validity of the symmetry assumptions must be verified. To do so, different measurements have been performed of several speakers presenting interesting geometries. A library of these speakers is given in appendix \ref{chap:spk_lib}. 
+After implementation in SciLab (the code is given in appendix \ref{Chap:imple_sym}) , the validity of the symmetry assumptions must be verified. To do so, different measurements have been performed of several speakers presenting interesting geometries. A library of these speakers is given in appendix \ref{chap:spk_lib}. 
 
 \todo[inline, color=red!40]{Rephrase... ca sonne pas très bien je trouve}
 
@@ -822,7 +816,7 @@ The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baf
 \vspace{0.1cm}
 
 Observing the radiated powers for the different symmetries, it is found that in the 20 Hz - 1.5 kHz range there is no differences between the total radiated power and the symmetries radiated power. Similarly to the 10 cm woofer, the drivers behaves as a monopole in this range. This is observed on the contour plot provided in figure \ref{Curves:oval_contour}. \\
-After 1.5 kHz, differences appear for the Dual Plane, Single Plane and Rotational symmetries. Characterizing the speaker's behavior in higher frequencies requires to look at the symmetry factors. However, it can already be observed that the power radiated by rotational symmetry coefficients is bellow all other radiated powers after 1.5 kHz, meaning that the rotational symmetry condition is not satisfied. \\
+After 1.5 kHz, differences appear for the Dual Plane, Single Plane and Rotational symmetries. Characterizing the speaker's behavior in higher frequencies requires to look at the symmetry factors. However, it can already be observed that the power radiated by rotational symmetry coefficients is below all other radiated powers after 1.5 kHz, meaning that the rotational symmetry condition is not satisfied. \\
 
 Observing the symmetry factors shows that the rotational symmetry factor is below all other factors, matching with the expected behavior of the driver. The baffle symmetry factor is 0 dB over the whole frequency range, as expected for a measure performed with a driver mounted on baffle.
 
@@ -1923,3 +1917,173 @@ The following will present the work schedule I have followed, what work have bee
 \end{appendices}
 
 \end{document}
+
+% USELESS SHIT (but I spent time on it so I keep it mwahaha)
+
+%
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=0.8\textwidth]{Appendix/Spherical_Harmo}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Spherical Harmonics}
+%    \label{fig:Sph_Harmo}
+%\end{center}
+%\end{minipage}
+%\begin{minipage}{0.5\textwidth}
+%The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp}.The free-field transfer function of a loudspeaker can be expressed by only considering the direct sound (outgoing wave) in equation \ref{eq:sphwvexp} and is expressed in equation \ref{eq:ffHf}.\\
+%
+%Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders (n,m) (\textit{all figures presented in this subsection are courtesy of W. Klippel, from the presentation \cite{lect2018}}). 
+%\end{minipage}
+%\vspace{0.4cm}
+%
+%If the DUT's geometry presents certain symmetries, its radiated sound field will exhibit the same symmetries. This property allows to decrease the number of coefficients, thus reducing the scanning effort. The different symmetries under study are listed below.\\
+%
+%\begin{minipage}{0.7\textwidth}
+%\textbf{Rotational symmetry} (see figure \ref{fig:rotsym}) is observed for many circular drivers and is the simplest type of symmetry as a lot of coefficients are vanishing according to the relation given by equation \ref{eq:Crotsym} \cite{aeshs}.
+%
+%\begin{equation}
+%C_{mn} = 0 \; \; \; \; \forall \; m \neq 0
+%\label{eq:Crotsym}
+%\end{equation}
+%\myequations{Coefficients for rotational symmetry}
+%
+%From the measurements, the coefficients are obtained in matrix form where the columns represent the $nm$ orders and the rows the frequency, shown in equation \ref{eq:matrix_cmn}.
+%
+%%-------------------------- Coeffs matrix
+%\begin{equation}
+%\label{eq:matrix_cmn}
+%\resizebox{.9\textwidth}{!}{$\displaystyle
+%  C_{mn} = \qquad \bordermatrix{   &   & \tikzmark{harrowleft} &  &  &  &  &  \tikzmark{harrowright}  &  &&  \cr
+%                    \tikzmark{varrowtop} & C_{0,0} &  C_{-1,1} & C_{0,1} & C_{1,1} & C_{-2,2} & C_{-1,2} & C_{0,2} & C_{1,2} & C_{2,2} & ...  \cr                   								 
+%                    \tikzmark{varrowbottom} & ... & ... & ... & ... & ... & ... & ... & ... & ... & ... \cr
+%                    }
+%$}
+%\end{equation}
+%\myequations{Matrix of coefficients}
+%
+%\tikz[overlay,remember picture] {
+%  \draw[->] ([yshift=1.1ex,xshift=1ex]harrowleft) -- ([yshift=1.1ex]harrowright)
+%            node[midway,above] {\scriptsize $m,n$};
+%  \draw[->] ([yshift=1ex,xshift=-1ex]varrowtop) -- ([xshift=-1ex]varrowbottom)
+%            node[near end,left] {\scriptsize $f$};
+%}
+%%-------------------------- Coeffs matrix
+%\end{minipage}
+%\begin{minipage}{0.3\textwidth}
+%\begin{center}
+%	\includegraphics[width=\textwidth]{Appendix/Rot_Sym}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Rotational symmetry}
+%    \label{fig:rotsym}
+%\end{center}
+%\end{minipage}
+%
+%All m $\neq$ 0 coefficients are vanishing, meaning that only m = 0, n = n+1 coefficients have to be estimated. \\
+%
+%Once the coefficients have been estimated, the symmetry factor S can be deduced from the ratio of coefficients satisfying the symmetry condition by the total coefficients. For rotational symmetry, $S_{rs}$ is given by equation \ref{eq:Srs} \cite{aeshs}.
+%
+%\begin{equation}
+%S_{rs} = 1-\frac{\sum_{n=1}^{N}\sum_{s=1}^{n}\left | C_{sn} \right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
+%\label{eq:Srs}
+%\end{equation}
+%\myequations{Symmetry factor for rotational symmetry}
+%
+%
+%\begin{minipage}{0.7\textwidth}
+%\textbf{Dual plane symmetry} (see figure \ref{fig:dualpsym}) is mostly observed in 2-way closed box systems, and make half of the coefficients vanish according to the relation given by equation \ref{eq:Cdpsym} \cite{aeshs}. 
+%
+%\begin{equation}
+%C_{mn}(f) = C_{-mn}(f)R_{m}(f) \; \; \; \;  m = 2s; \; s =1, 2, 3...
+%\label{eq:Cdpsym}
+%\end{equation}
+%\myequations{Coefficients for dual plane symmetry}
+%Where Rm represents a complex symmetry parameter, expressed in equation \ref{eq:Rm} \cite{aeshs}.
+%
+%\begin{equation}
+%R_{m}(f) = (-1)^{m+1}(\textup{sin}(m \phi _{s}(f)) + i\textup{cos}(m \phi _{s}(f)))^{2}
+%\label{eq:Rm}
+%\end{equation}
+%\myequations{Complex symmetry parameter}
+%Where $\phi _{s}$ is the symmetry axis; and $m$ the suborder of the coefficient under study.
+%\end{minipage}
+%\begin{minipage}{0.3\textwidth}
+%\begin{center}
+%	\includegraphics[width=0.8\textwidth]{Appendix/Dual_Plane_Sym}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Dual Plane symmetry}
+%    \label{fig:dualpsym}
+%\end{center}
+%\end{minipage}\\
+%
+%
+%If the symmetry axes $\Phi _{e}, \Theta _{e}$ are aligned with the coordinate system, equation \ref{eq:Cdpsym} can be simplified to the relation given in equation \ref{eq:Cdpsymb} \cite{aeshs}.
+%
+%\begin{equation}
+%C_{mn}(f) = C_{-mn}(f) \; \; \; \;  m = 2s; \; s =1, 2, 3...
+%\label{eq:Cdpsymb}
+%\end{equation}
+%\myequations{Coefficients for dual plane symmetry}
+%The symmetry factor for the Dual Plane symmetry is then given by equation \ref{eq:Sdps} \cite{aeshs}.
+%
+%
+%\begin{equation}
+%S_{dps} = 1-\frac{\sum_{n=1}^{N}\sum_{s=1}^{n/2}\left | (-1)^{2s}C_{(2s)n} - C_{(2s)n}\right |^{2} + \sum_{n=1}^{N}\sum_{s=0}^{n/2}\left | C_{(2s+1)n}\right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
+%\label{eq:Sdps}
+%\end{equation}
+%\myequations{Symmetry factor for dual-plane symmetry}
+%
+%\vspace{0.1cm}
+%
+%\begin{minipage}{0.7\textwidth}
+%\textbf{Baffle symmetry} is when the Device Under Test is mounted on a baffle (see figure \ref{fig:bafflesym}), and make half of the coefficient vanish according to the relation given by equation \ref{eq:Cbsym} \cite{aeshs}.
+%
+%\begin{equation}
+%C_{mn} = 0 \; \; \; \; \; \; n-m \, \neq \, 2s; \: \: s \in \mathbb{Z}
+%\label{eq:Cbsym}
+%\end{equation}
+%\myequations{Coefficients for baffle symmetry}
+%The symmetry factor is then given by equation \ref{eq:Sbs} \cite{aeshs}.
+%
+%\begin{equation}
+%S_{bs} = 1-\frac{\sum_{n=1}^{N}\sum_{s=0}^{n/2}\left | C_{(2s)n} \right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
+%\label{eq:Sbs}
+%\end{equation}
+%\myequations{Symmetry factor for baffle symmetry}
+%\end{minipage}
+%\begin{minipage}{0.3\textwidth}
+%\begin{center}
+%	\includegraphics[width=0.95\textwidth]{Appendix/Baffle_Sym}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Baffle symmetry}
+%    \label{fig:bafflesym}
+%\end{center}
+%\end{minipage}
+%
+%\vspace{0.1cm}
+%
+%\begin{minipage}{0.7\textwidth}
+%\textbf{Single plane symmetry} is the most common in loudspeaker systems using 2 or more drivers. This symmetry can be between the left and right side of the DUT, as presented in figure \ref{fig:singplsym}; but also between the top and bottom of the DUT, shifting the symmetry plane by 90°. Only the coefficients on the left side have to be estimated. The coefficients of the right side are linked to the left side by the relation given by equation \ref{eq:spsym} \cite{aeshs}.
+%
+%\begin{equation}
+%C_{mn} = C_{-mn}(f)R_{m}(f) \; \; \; \textup{with} \; \; m\geq 0; \; \; \; 0\leq n\leq N
+%\label{eq:spsym}
+%\end{equation}
+%\myequations{Coefficients for single plane symmetry}
+%It should be noted that depending of the type of symmetry (left/right or top/bottom), $R_{m}$ will change, modifying the relation between the coefficients. \\
+%
+%The symmetry factor is then given by equation \ref{eq:Ssps} \cite{aeshs}.
+%
+%\begin{equation}
+%S_{sps} = 1-\frac{\sum_{n=1}^{N}\sum_{m=1}^{n}\left | (-1)^{m}(f) C_{-mn}-C_{mn} \right |^{2}}{\sum_{n=0}^{N}\sum_{m=-n}^{n} C_{mn}^{2}}
+%\label{eq:Ssps}
+%\end{equation}
+%\myequations{Symmetry factor for single plane symmetry}
+%\end{minipage}
+%\begin{minipage}{0.3\textwidth}
+%\begin{center}
+%	\includegraphics[width=\textwidth]{Appendix/Single_Plane_Sym}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Single Plane symmetry}
+%    \label{fig:singplsym}
+%\end{center}
+%\end{minipage}
