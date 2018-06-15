@@ -60,6 +60,7 @@
 \usepackage{circuitikz}					% To include circuits
 \usepackage{tikz}
 \newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \coordinate (#1);}
+
 %--------------------------------------------------- TODOs / DRAFT MODE
  
 \newif\ifdraft
@@ -625,12 +626,12 @@ Figure \ref{fig:sym_flow} presents the flowchart of the optimization. The first 
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp}.The free-field transfer function of a loudspeaker can be expressed by only considering the direct sound (outgoing wave) in equation \ref{eq:sphwvexp} and is expressed in equation \ref{eq:ffHf}.\\
-
-Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders (n,m) (\textit{all figures presented in this subsection are courtesy of W. Klippel, from the presentation \cite{lect2018}}). 
+\todo[inline, color=blue!40]{Réécrire, ca sonne super mal, et tu parle meme pas des coefficients}
+Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders $n,m$ (\textit{all figures presented in this subsection are courtesy of W. Klippel, from the presentation \cite{lect2018}}). 
 \end{minipage}
 \vspace{0.4cm}
 
-If the DUT's geometry presents certain symmetries, its radiated sound field will exhibit the same symmetries. This property allows to decrease the number of coefficients, thus reducing the scanning effort. The different symmetries under study are listed below.\\
+Symmetries on the DUT's geometry yield symmetries in the emitted sound field, thus on coefficients of the spherical wave expansions. This property allows to find relationship between the coefficients, allowing to reduce their number. The symmetries under study, and the derived relations between coefficients, are described bellow.    \\
 
 \begin{minipage}{0.5\textwidth}	%Rotational Sym - text
 	\textbf{Rotational symmetry} (see figure \ref{fig:rotsym}) is observed for many circular drivers and is the simplest type of symmetry as a lot of coefficients are vanishing according to the relation given by equation \ref{eq:Crotsym} \cite{aeshs}.
@@ -644,10 +645,10 @@ If the DUT's geometry presents certain symmetries, its radiated sound field will
 \end{minipage}
 
 \begin{minipage}{0.5\textwidth}	% Dual plane sym - text
-	\textbf{Dual plane symmetry} (see figure \ref{fig:dualpsym}) is mostly observed in 2-way closed box systems, and make half of the coefficients vanish according to the relation given by equation \ref{eq:Cdpsym} \cite{aeshs}.\\
-	$R_{m}$ represents a complex symmetry parameter, expressed in equation \ref{eq:Rm} \citep{aeshs} where $\phi _{s}$ is the symmetry axis; and $m$ the suborder of the coefficient under study. \\
+	\textbf{Dual plane symmetry} (see figure \ref{fig:dualpsym}) is mostly observed in 2-way closed box systems, and reduces the number of coefficients by half according to the relation given by equation \ref{eq:Cdpsym} \cite{aeshs}.\\
+	$R_{m}$ represents the complex symmetry weights, expressed in equation \ref{eq:Rm} \citep{aeshs} where $\phi _{e}$ is the symmetry axis; and $m$ the suborder of the coefficient under study. \\
 
-	If the symmetry axes $\Phi _{e}, \Theta _{e}$ are aligned with the coordinate system, equation \ref{eq:Cdpsym} can be simplified to the relation given in equation \ref{eq:Cdpsymb} \cite{aeshs}.
+	If the symmetry axes $\phi _{e} \textup{and} \Theta _{e}$ are aligned with the coordinate system, equation \ref{eq:Cdpsym} can be simplified to the relation given in equation \ref{eq:Cdpsymb} \cite{aeshs}.
 \end{minipage}
 \begin{minipage}{0.5\textwidth}	% Dual Plane sym - equations
 	\begin{equation}
@@ -657,7 +658,7 @@ If the DUT's geometry presents certain symmetries, its radiated sound field will
 	\myequations{Coefficients for dual plane symmetry}
 
 	\begin{equation}
-		R_{m}(f) = (-1)^{m+1}(\textup{sin}(m \phi _{s}(f)) + i\textup{cos}(m \phi _{s}(f)))^{2}
+		R_{m}(f) = (-1)^{m+1}(\textup{sin}(m \phi _{e}(f)) + i\textup{cos}(m \phi _{e}(f)))^{2}
 		\label{eq:Rm}
 	\end{equation}
 	\myequations{Complex symmetry parameter}
@@ -669,10 +670,9 @@ If the DUT's geometry presents certain symmetries, its radiated sound field will
 	\myequations{Coefficients for dual plane symmetry}
 \end{minipage}
 
-\vspace{0.1cm}
 
 \begin{minipage}{0.5\textwidth}	%Baffle sym - text
-	\textbf{Baffle symmetry} is when the Device Under Test is mounted on a baffle (see figure \ref{fig:bafflesym}), and make half of the coefficient vanish according to the relation given by equation \ref{eq:Cbsym} \cite{aeshs}.
+	\textbf{Baffle symmetry} isobserved  when the DUT is mounted on a baffle (see figure \ref{fig:bafflesym}), and make half of the coefficient vanish according to the relation given by equation \ref{eq:Cbsym} \cite{aeshs}.
 \end{minipage}
 \begin{minipage}{0.5\textwidth}	%Baffle sym - equation
 	\begin{equation}
@@ -681,8 +681,7 @@ If the DUT's geometry presents certain symmetries, its radiated sound field will
 	\end{equation}
 	\myequations{Coefficients for baffle symmetry}
 \end{minipage}
-
-\vspace{0.1cm}
+\vspace{0.2cm}
 
 \begin{minipage}{0.5\textwidth}	%Single plane - text
 	\textbf{Single plane symmetry} is the most common in loudspeaker systems using 2 or more drivers (see figure \ref{fig:singplsym}). Only the coefficients on either the left or right side have to be estimated; and the remainging coefficients are calulated by using equation \ref{eq:spsym} \cite{aeshs}. 
@@ -696,8 +695,7 @@ If the DUT's geometry presents certain symmetries, its radiated sound field will
 \end{minipage}
 \vspace{0.1cm}
 
-This symmetry can be between the left and right side of the DUT, as presented in figure \ref{fig:singplsym}; but also between the top and bottom of the DUT, shifting the symmetry plane by 90°.
-It should be noted that depending of the type of symmetry (left/right or top/bottom), $R_{m}$ will change, modifying the relation between the coefficients. 
+The Single Plane Symmetry can occur between the left and right side of the DUT, as presented in figure \ref{fig:singplsym}; but also between the top and bottom of the DUT, shifting the symmetry plane by 90°. It should be noted that depending of the type of symmetry (left/right or top/bottom), $R_{m}$ will change, modifying the relation between the coefficients. 
 
 \begin{minipage}{0.248\textwidth}	% Rot - img
 	\begin{center}
@@ -732,20 +730,105 @@ It should be noted that depending of the type of symmetry (left/right or top/bot
 	\end{center}
 \end{minipage}
 
-\subsection{Application of the symmetry}
+\subsection{Implementation}
+
+Once a measurement have been performed, the complex outgoing coefficients are identified and expressed in a matrix form shown in equation \ref{eq:matrix_cmn}. Each row represent a $m,n$ order and suborder, and each column a frequency.
+
+%-------------------------- Coeffs matrix
+\begin{equation}
+\label{eq:matrix_cmn}
+C_{mn} = \qquad \bordermatrix{
+						      & \tikzmark{harrowleft}  &     &     & \tikzmark{harrowright}\cr
+\tikzmark{varrowtop} & C_{0,0}(f_{1})           & ... & ... & C_{0,0}(f_{n})   \cr 
+        					  & C_{-1,1}(f_{1})         & ... & ... & C_{-1,1}(f_{n}) \cr
+         					  & C_{0,1}(f_{1})          & ... & ... & C_{0,1}(f_{n})   \cr
+         					  & C_{1,1}(f_{1})          & ... & ... & C_{1,1}(f_{n})   \cr 
+         					  & ...                            & ... & ... & ...                    \cr
+\tikzmark{varrowbottom} & C_{m,n}(f_{1})     & ... & ... & C_{m,n}(f_{n}) \cr }
+\end{equation}
+\myequations{Matrix representation of coefficients}
+\tikz[overlay,remember picture] {
+  \draw[->] ([yshift=1.1ex,xshift=1ex]harrowleft) -- ([yshift=1.1ex]harrowright)
+            node[midway,above] {\scriptsize $f$};
+  \draw[->] ([yshift=1ex,xshift=-1ex]varrowtop) -- ([xshift=-1ex]varrowbottom)
+            node[near end,left] {\scriptsize $m,n$};
+}
+
+From the complete matrix of coefficients and the relationships expressed in section \ref{chap:sym}; it is possible to derive matrices containing only the coefficients satisfying each symmetry condition.\\
+The code of the symmetry verification is given in appendix \ref{Chap:imple_sym}; and the following will describe the algorithm. \\
+The first step is to initialize the matrices that will contain the coefficients to be filled with zeros and the same size than the complete matrix of coefficients.\\
+For the rotational symmetry, the indexes of the rows containing the coefficients of order $m = 0$ are calculated, and the symmetry matrix is generated by replacing the zeroes in the previously initialized matrix by the coefficients at the corresponding indexes. the resulting matrix is given by equation \ref{eq:matrix_cmn_ROT}.
+
+\begin{equation}
+\label{eq:matrix_cmn_ROT}
+C_{mn_{rotational}}  = \begin{pmatrix}
+							 C_{0,0}(f_{1})           & ... & ... & C_{0,0}(f_{n})   \\ 
+        					   0        & ... & ... & 0 \\
+         					  C_{0,1}(f_{1})          & ... & ... & C_{0,1}(f_{n})   \\
+         					   0         & ... & ... & 0   \\
+							  ...                          & ... & ... & ...                  \\ \end{pmatrix}
+\end{equation}
+\myequations{Matrix of rotational symmetry coefficients}
+
+For the single plane symmetry, the indexes of the coefficients on left side satisfying $m = -2s; \; s = 1,2,3,...$ are calculated and the left-side symmetry matrix is filled using the same method as for the rotational symmetry. The indexes corresponding to the coefficients on the right side satisfying $m = 2s$ are calculated, and the coefficients on the left are duplicated to their corresponding right-side indexes, as shown by equation \ref{eq:matrix_SPS}.
+
+\begin{equation}
+C_{mn_{Left}} = \begin{pmatrix}
+    C_{0,0}(f_{1})    & ... & ... & C_{0,0}(f_{n})   \cr 
+    C_{-1,1}(f_{1})   & ... & ... & C_{-1,1}(f_{n}) \tikzmark{aarrowtop}\cr
+     C_{0,1}(f_{1})    & ... & ... & C_{0,1}(f_{n})   \cr
+     0       & ... & ... & 0   \cr
+     C_{-2,2}(f_{1})    & ... & ... & C_{-2,2}(f_{n})  \tikzmark{barrowtop} \cr
+     C_{-1,2}(f_{1})    & ... & ... & C_{-1,2}(f_{n})  \tikzmark{carrowtop} \cr 
+    ...               & ... & ... & ...               \cr \end{pmatrix} \quad
+C_{mn_{Right}} = \begin{pmatrix}
+     0    & ... & ... & 0   \cr 
+     0   & ... & ... & 0 \cr
+     0    & ... & ... & 0   \cr
+ \tikzmark{aarrowbottom}    C_{1,1}(f_{1})    & ... & ... & C_{1,1}(f_{n})   \cr
+    0    & ... & ... & 0   \cr
+    0    & ... & ... & 0  \cr 
+    0    & ... & ... & 0   \cr 
+  \tikzmark{carrowbottom}    C_{1,2}(f_{1})    & ... & ... & C_{1,2}(f_{n})  \cr 
+  \tikzmark{barrowbottom}  C_{2,2}(f_{1})    & ... & ... & C_{2,2}(f_{n})\cr 
+    ...               & ... & ... & ...               \cr \end{pmatrix}
+\label{eq:matrix_SPS}
+\end{equation}
+\myequations{Matrix of single plane symmetry coefficients}
+
+\tikz[overlay,remember picture] {
+  \draw[->] ([xshift=1.5ex]aarrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]aarrowbottom);
+  \draw[->] ([xshift=1.5ex]barrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]barrowbottom);	
+  \draw[->] ([xshift=1.5ex]carrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]carrowbottom);
+}
+
+The $R_{m}$ weights matrix is calculated for each $mn$ orders and each frequency using equation \ref{eq:Rm}. For the left/right symmetry the angle $\phi_{e}$ is $\frac{\pi}{2}$ and for the top/bottom symmetry, $\phi_{e} = 0$; changing the values of the weights. The right-side matrix is then weighted by $R_{m}$ by multiplying the matrices: $C_{mn_{Right}} = R_{m} \times C_{mn_{Right}}$. \\
+To avoid overlapping and ensure that the single plane symmetry coefficient matrix is correct, the coefficients of order $m = 0$ are only filled once in the left-side matrix. The coefficient matrix is then computed by adding the right-side and left-side matrices $C_{mn_{SinglePlane}} = C_{mn_{Left}} + C_{mn_{Right}}$. \\
+
+
+For the baffle and the dual plane symmetries, the same principle as for the single plane symmetries is applied; the main difference being the indexes of the relevant coefficients. There is no need the multiply the right-side matrix by the weights matrix $R_{m}$ for those symmetries, as seen in subsection \ref{chap:sym}. \\
+
+From the coefficients matrices the radiated power is calculated by using equation \ref{eq:power}.
+\begin{equation}
+	\Pi(f) = \frac{1}{2\rho _{0}c k^{2}} \sum \mid C_{mn}(f)\mid ^{2}
+	\label{eq:power}
+\end{equation}
+\myequations{Radiated power from complex coefficients}
+
+Now that the coefficient matrix is known, the rest matrix is calculated by subtracting the symmetry coefficients matrix to the total coefficients matrix: $C_{rest} = C_{total} - C_{symmetry}$. The rest matrix allows to characterize how much the system is fulfilling the symmetry conditions by comparing the power radiated by the symmetry coefficients and the power radiated by the rest: if the rest's power is higher than the symmetry's power then the system is not fulfilling the condition.\\
+
+Another method to asses the symmetry of a system is... (sym factor)
 
 
 \todo[inline, color=red!40]{Give the power equations and explain the symmetry factor + and explain why in the code you average on the 2 sides bc we don't know which is the correct solution}
+
+
 
 \subsection{Post-processing}
 
 After performing a measure with a coarse grid and calculating the factors for each symmetry listed above; it is possible to deduce whether the DUT presents symmetries or not. For example a symmetry factor above 90\% means that there is a difference of $\approx$-0.5 dB between the measured radiated power and the power radiated by the coefficients corresponding to the symmetry condition under study. The power are calculated by using equation \ref{eq:power}.
 
-\begin{equation}
-\Pi(f) = \frac{1}{2\rho _{0}c k^{2}} \sum \mid C_{mn}(f)\mid ^{2}
-\label{eq:power}
-\end{equation}
-\myequations{Radiated power from complex coefficients}
+
 
 Once the dominant symmetry is identified, the user is informed that a faster scan can be performed. For example if the Dual Plane Symmetry is found to be dominant, it is possible to scan only a fourth of the device and to reconstruct the emitted sound field.\\
 
@@ -1919,6 +2002,33 @@ The following will present the work schedule I have followed, what work have bee
 \end{document}
 
 % USELESS SHIT (but I spent time on it so I keep it mwahaha)
+
+%\begin{equation}
+%C_{mn_{Left}} = \begin{pmatrix}
+%    C_{0,0}(f_{1})    & ... & ... & C_{0,0}(f_{n})   \cr 
+%    0   & ... & ... & 0 \cr
+%    C_{0,1}(f_{1})    & ... & ... & C_{0,1}(f_{n})   \cr
+%    0       & ... & ... & 0   \cr
+%    C_{-2,2}(f_{1})    & ... & ... & C_{-2,2}(f_{n})  \tikzmark{aarrowtop} \cr
+%    ...               & ... & ... & ...               \cr \end{pmatrix} \qquad
+%C_{mn_{Right}} =  \begin{pmatrix}
+%    0    & ... & ... & 0   \cr 
+%    0    & ... & ... & 0 \cr
+%    0    & ... & ... & 0   \cr
+%    0    & ... & ... & 0   \cr
+%    0    & ... & ... & 0   \cr
+%    0    & ... & ... & 0  \cr 
+%    0    & ... & ... & 0   \cr 
+%    0    & ... & ... & 0  \cr 
+%  \tikzmark{aarrowbottom}  C_{2,2}(f_{1})    & ... & ... & C_{2,2}(f_{n})\cr 
+%    ...               & ... & ... & ...               \cr \end{pmatrix}
+%\label{eq:matrix_DPS}
+%\end{equation}
+%\tikz[overlay,remember picture] {
+%  \draw[->] ([xshift=1.5ex]aarrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]aarrowbottom)
+%  node[midway,above] {\scriptsize $=$};
+%}
+
 
 %
 %\begin{minipage}{0.5\textwidth}
