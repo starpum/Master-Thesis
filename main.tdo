@@ -8,7 +8,7 @@
 \contentsline {todo}{Rephrase... ca sonne pas tr\IeC {\`e}s bien je trouve}{13}{section*.12}
 \contentsline {todo}{Finish the discussion and see how your code have been implemented}{16}{section*.13}
 \contentsline {todo}{start before 0 to show the pre-ringing + explain motivations with time windows needing to be correctly adjusted to avoid overlapping + time domain correction}{17}{section*.14}
-\contentsline {todo}{explain }{17}{section*.15}
+\contentsline {todo}{Speak about the general cases then the box, explain how to have a good reference }{17}{section*.15}
 \contentsline {todo}{Expliquer que les diff\IeC {\'e}rences sont dues \IeC {\`a} l'approximation trop simpliste sur le mod\IeC {\`e}le de la boite, mais bien formul\IeC {\'e}. Ajouter les sch\IeC {\'e}mas \IeC {\'e}quivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}{19}{section*.17}
 \contentsline {todo}{mieux formuler + tirer des conclusions etfaire le lien avec les autres figures}{19}{section*.18}
 \contentsline {todo}{Tu ne parle pas de la bonne figure pour appr\IeC {\'e}cier les diff\IeC {\'e}rences. La diff\IeC {\'e}rence entre les RCs est + pertinente car elle devrais \IeC {\^e}tre de 0 dB si le mic n'avais pas d'influence}{20}{section*.19}

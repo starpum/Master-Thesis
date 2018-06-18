@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600) (preloaded format=pdflatex 2018.4.25)  15 JUN 2018 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600) (preloaded format=pdflatex 2018.4.25)  18 JUN 2018 09:51
 entering extended mode
 **./main.tex
 (main.tex
@@ -1819,23 +1819,23 @@ _RoomCor.png (PNG copy)>]
 <RoomComp/Imp_Comps.png, id=908, 796.6563pt x 597.432pt>
 File: RoomComp/Imp_Comps.png Graphic file (type png)
 <use RoomComp/Imp_Comps.png>
-Package pdftex.def Info: RoomComp/Imp_Comps.png  used on input line 1113.
+Package pdftex.def Info: RoomComp/Imp_Comps.png  used on input line 1115.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <RoomComp/Disp_Comps.png, id=909, 796.6563pt x 597.432pt>
 File: RoomComp/Disp_Comps.png Graphic file (type png)
 <use RoomComp/Disp_Comps.png>
-Package pdftex.def Info: RoomComp/Disp_Comps.png  used on input line 1121.
+Package pdftex.def Info: RoomComp/Disp_Comps.png  used on input line 1123.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
  [18]
 <RoomComp/Mic_Pos_Schm.png, id=927, 538.26094pt x 542.77782pt>
 File: RoomComp/Mic_Pos_Schm.png Graphic file (type png)
 <use RoomComp/Mic_Pos_Schm.png>
-Package pdftex.def Info: RoomComp/Mic_Pos_Schm.png  used on input line 1147.
+Package pdftex.def Info: RoomComp/Mic_Pos_Schm.png  used on input line 1149.
 (pdftex.def)             Requested size: 163.03181pt x 164.39992pt.
 <RoomComp/MicPos_TRF.png, id=928, 796.6563pt x 597.432pt>
 File: RoomComp/MicPos_TRF.png Graphic file (type png)
 <use RoomComp/MicPos_TRF.png>
-Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 1155.
+Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 1157.
 (pdftex.def)             Requested size: 310.53665pt x 232.87903pt.
  [19 <./RoomComp/Imp_Comps.png (PNG copy)> <./RoomComp/Disp_Comps.png (PNG copy
 )>]
@@ -1843,13 +1843,13 @@ Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 1155.
 File: RoomComp/MicPos_Diff_NFS_TRF.png Graphic file (type png)
 <use RoomComp/MicPos_Diff_NFS_TRF.png>
 Package pdftex.def Info: RoomComp/MicPos_Diff_NFS_TRF.png  used on input line 1
-170.
+172.
 (pdftex.def)             Requested size: 232.89853pt x 174.6784pt.
 <RoomComp/MicPos_Diff_RefMEas.png, id=937, 796.6563pt x 597.432pt>
 File: RoomComp/MicPos_Diff_RefMEas.png Graphic file (type png)
 <use RoomComp/MicPos_Diff_RefMEas.png>
 Package pdftex.def Info: RoomComp/MicPos_Diff_RefMEas.png  used on input line 1
-178.
+180.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
  [20 <./RoomComp/Mic_Pos_Schm.png> <./RoomComp/MicPos_TRF.png (PNG copy)> <./Ro
 omComp/MicPos_Diff_NFS_TRF.png (PNG copy)> <./RoomComp/MicPos_Diff_RefMEas.png 
@@ -1857,7 +1857,7 @@ omComp/MicPos_Diff_NFS_TRF.png (PNG copy)> <./RoomComp/MicPos_Diff_RefMEas.png
 <RoomComp/NFFF_Setup.png, id=943, 584.1825pt x 484.81125pt>
 File: RoomComp/NFFF_Setup.png Graphic file (type png)
 <use RoomComp/NFFF_Setup.png>
-Package pdftex.def Info: RoomComp/NFFF_Setup.png  used on input line 1206.
+Package pdftex.def Info: RoomComp/NFFF_Setup.png  used on input line 1208.
 (pdftex.def)             Requested size: 144.91278pt x 120.26302pt.
  [21 <./RoomComp/NFFF_Setup.png>] (main.bbl [22
 
@@ -1868,17 +1868,17 @@ Appendix A.
 <Appendix/Vib_RadPow.png, id=966, 246.6816pt x 185.0112pt>
 File: Appendix/Vib_RadPow.png Graphic file (type png)
 <use Appendix/Vib_RadPow.png>
-Package pdftex.def Info: Appendix/Vib_RadPow.png  used on input line 1275.
+Package pdftex.def Info: Appendix/Vib_RadPow.png  used on input line 1277.
 (pdftex.def)             Requested size: 465.79709pt x 349.38223pt.
 <Sym/contour.png, id=967, 858.95906pt x 379.4175pt>
 File: Sym/contour.png Graphic file (type png)
 <use Sym/contour.png>
-Package pdftex.def Info: Sym/contour.png  used on input line 1289.
+Package pdftex.def Info: Sym/contour.png  used on input line 1291.
 (pdftex.def)             Requested size: 232.89853pt x 102.8725pt.
 <Sym/10cm_RadPow_Rot.png, id=968, 796.6563pt x 597.432pt>
 File: Sym/10cm_RadPow_Rot.png Graphic file (type png)
 <use Sym/10cm_RadPow_Rot.png>
-Package pdftex.def Info: Sym/10cm_RadPow_Rot.png  used on input line 1297.
+Package pdftex.def Info: Sym/10cm_RadPow_Rot.png  used on input line 1299.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 [1
 
@@ -1886,32 +1886,32 @@ Package pdftex.def Info: Sym/10cm_RadPow_Rot.png  used on input line 1297.
 <Sym/10cm_RadPow_B.png, id=974, 796.6563pt x 597.432pt>
 File: Sym/10cm_RadPow_B.png Graphic file (type png)
 <use Sym/10cm_RadPow_B.png>
-Package pdftex.def Info: Sym/10cm_RadPow_B.png  used on input line 1305.
+Package pdftex.def Info: Sym/10cm_RadPow_B.png  used on input line 1307.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/10cm_RadPow_Dps.png, id=975, 796.6563pt x 597.432pt>
 File: Sym/10cm_RadPow_Dps.png Graphic file (type png)
 <use Sym/10cm_RadPow_Dps.png>
-Package pdftex.def Info: Sym/10cm_RadPow_Dps.png  used on input line 1312.
+Package pdftex.def Info: Sym/10cm_RadPow_Dps.png  used on input line 1314.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/10cm_RadPow_SpsLR.png, id=976, 796.6563pt x 597.432pt>
 File: Sym/10cm_RadPow_SpsLR.png Graphic file (type png)
 <use Sym/10cm_RadPow_SpsLR.png>
-Package pdftex.def Info: Sym/10cm_RadPow_SpsLR.png  used on input line 1320.
+Package pdftex.def Info: Sym/10cm_RadPow_SpsLR.png  used on input line 1322.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/10cm_RadPow_SpsTB.png, id=977, 796.6563pt x 597.432pt>
 File: Sym/10cm_RadPow_SpsTB.png Graphic file (type png)
 <use Sym/10cm_RadPow_SpsTB.png>
-Package pdftex.def Info: Sym/10cm_RadPow_SpsTB.png  used on input line 1327.
+Package pdftex.def Info: Sym/10cm_RadPow_SpsTB.png  used on input line 1329.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/contour_oval.png, id=978, 947.54pt x 548.0475pt>
 File: Sym/contour_oval.png Graphic file (type png)
 <use Sym/contour_oval.png>
-Package pdftex.def Info: Sym/contour_oval.png  used on input line 1338.
+Package pdftex.def Info: Sym/contour_oval.png  used on input line 1340.
 (pdftex.def)             Requested size: 258.77791pt x 149.6724pt.
 <Sym/Oval_RadPow_Rot.png, id=979, 796.6563pt x 597.432pt>
 File: Sym/Oval_RadPow_Rot.png Graphic file (type png)
 <use Sym/Oval_RadPow_Rot.png>
-Package pdftex.def Info: Sym/Oval_RadPow_Rot.png  used on input line 1346.
+Package pdftex.def Info: Sym/Oval_RadPow_Rot.png  used on input line 1348.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
  [2 <./Sym/contour.png> <./Sym/10cm_RadPow_Rot.png (PNG copy)> <./Sym/10cm_RadP
 ow_B.png (PNG copy)> <./Sym/10cm_RadPow_Dps.png (PNG copy)> <./Sym/10cm_RadPow_
@@ -1919,32 +1919,32 @@ SpsLR.png (PNG copy)> <./Sym/10cm_RadPow_SpsTB.png (PNG copy)>]
 <Sym/Oval_RadPow_B.png, id=985, 796.6563pt x 597.432pt>
 File: Sym/Oval_RadPow_B.png Graphic file (type png)
 <use Sym/Oval_RadPow_B.png>
-Package pdftex.def Info: Sym/Oval_RadPow_B.png  used on input line 1354.
+Package pdftex.def Info: Sym/Oval_RadPow_B.png  used on input line 1356.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/Oval_RadPow_Dps.png, id=986, 796.6563pt x 597.432pt>
 File: Sym/Oval_RadPow_Dps.png Graphic file (type png)
 <use Sym/Oval_RadPow_Dps.png>
-Package pdftex.def Info: Sym/Oval_RadPow_Dps.png  used on input line 1361.
+Package pdftex.def Info: Sym/Oval_RadPow_Dps.png  used on input line 1363.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/Oval_RadPow_SpsLR.png, id=987, 796.6563pt x 597.432pt>
 File: Sym/Oval_RadPow_SpsLR.png Graphic file (type png)
 <use Sym/Oval_RadPow_SpsLR.png>
-Package pdftex.def Info: Sym/Oval_RadPow_SpsLR.png  used on input line 1369.
+Package pdftex.def Info: Sym/Oval_RadPow_SpsLR.png  used on input line 1371.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/Oval_RadPow_SpsTB.png, id=988, 796.6563pt x 597.432pt>
 File: Sym/Oval_RadPow_SpsTB.png Graphic file (type png)
 <use Sym/Oval_RadPow_SpsTB.png>
-Package pdftex.def Info: Sym/Oval_RadPow_SpsTB.png  used on input line 1376.
+Package pdftex.def Info: Sym/Oval_RadPow_SpsTB.png  used on input line 1378.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/Contour_BnO.png, id=989, 947.54pt x 548.0475pt>
 File: Sym/Contour_BnO.png Graphic file (type png)
 <use Sym/Contour_BnO.png>
-Package pdftex.def Info: Sym/Contour_BnO.png  used on input line 1387.
+Package pdftex.def Info: Sym/Contour_BnO.png  used on input line 1389.
 (pdftex.def)             Requested size: 258.77791pt x 149.6724pt.
 <Sym/BnO_RadPow_Rot.png, id=990, 796.6563pt x 597.432pt>
 File: Sym/BnO_RadPow_Rot.png Graphic file (type png)
 <use Sym/BnO_RadPow_Rot.png>
-Package pdftex.def Info: Sym/BnO_RadPow_Rot.png  used on input line 1395.
+Package pdftex.def Info: Sym/BnO_RadPow_Rot.png  used on input line 1397.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
  [3 <./Sym/contour_oval.png> <./Sym/Oval_RadPow_Rot.png (PNG copy)> <./Sym/Oval
 _RadPow_B.png (PNG copy)> <./Sym/Oval_RadPow_Dps.png (PNG copy)> <./Sym/Oval_Ra
@@ -1952,32 +1952,32 @@ dPow_SpsLR.png (PNG copy)> <./Sym/Oval_RadPow_SpsTB.png (PNG copy)>]
 <Sym/BnO_RadPow_B.png, id=996, 796.6563pt x 597.432pt>
 File: Sym/BnO_RadPow_B.png Graphic file (type png)
 <use Sym/BnO_RadPow_B.png>
-Package pdftex.def Info: Sym/BnO_RadPow_B.png  used on input line 1403.
+Package pdftex.def Info: Sym/BnO_RadPow_B.png  used on input line 1405.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/BnO_RadPow_Dps.png, id=997, 796.6563pt x 597.432pt>
 File: Sym/BnO_RadPow_Dps.png Graphic file (type png)
 <use Sym/BnO_RadPow_Dps.png>
-Package pdftex.def Info: Sym/BnO_RadPow_Dps.png  used on input line 1410.
+Package pdftex.def Info: Sym/BnO_RadPow_Dps.png  used on input line 1412.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/BnO_RadPow_SpsLR.png, id=998, 796.6563pt x 597.432pt>
 File: Sym/BnO_RadPow_SpsLR.png Graphic file (type png)
 <use Sym/BnO_RadPow_SpsLR.png>
-Package pdftex.def Info: Sym/BnO_RadPow_SpsLR.png  used on input line 1418.
+Package pdftex.def Info: Sym/BnO_RadPow_SpsLR.png  used on input line 1420.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/BnO_RadPow_SpsTB.png, id=999, 796.6563pt x 597.432pt>
 File: Sym/BnO_RadPow_SpsTB.png Graphic file (type png)
 <use Sym/BnO_RadPow_SpsTB.png>
-Package pdftex.def Info: Sym/BnO_RadPow_SpsTB.png  used on input line 1425.
+Package pdftex.def Info: Sym/BnO_RadPow_SpsTB.png  used on input line 1427.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/contour_studio.png, id=1000, 947.54pt x 549.05125pt>
 File: Sym/contour_studio.png Graphic file (type png)
 <use Sym/contour_studio.png>
-Package pdftex.def Info: Sym/contour_studio.png  used on input line 1436.
+Package pdftex.def Info: Sym/contour_studio.png  used on input line 1438.
 (pdftex.def)             Requested size: 258.77791pt x 149.94652pt.
 <Sym/studio_RadPow_Rot.png, id=1001, 796.6563pt x 597.432pt>
 File: Sym/studio_RadPow_Rot.png Graphic file (type png)
 <use Sym/studio_RadPow_Rot.png>
-Package pdftex.def Info: Sym/studio_RadPow_Rot.png  used on input line 1444.
+Package pdftex.def Info: Sym/studio_RadPow_Rot.png  used on input line 1446.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
  [4 <./Sym/Contour_BnO.png> <./Sym/BnO_RadPow_Rot.png (PNG copy)> <./Sym/BnO_Ra
 dPow_B.png (PNG copy)> <./Sym/BnO_RadPow_Dps.png (PNG copy)> <./Sym/BnO_RadPow_
@@ -1985,27 +1985,27 @@ SpsLR.png (PNG copy)> <./Sym/BnO_RadPow_SpsTB.png (PNG copy)>]
 <Sym/studio_RadPow_B.png, id=1007, 796.6563pt x 597.432pt>
 File: Sym/studio_RadPow_B.png Graphic file (type png)
 <use Sym/studio_RadPow_B.png>
-Package pdftex.def Info: Sym/studio_RadPow_B.png  used on input line 1453.
+Package pdftex.def Info: Sym/studio_RadPow_B.png  used on input line 1455.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/studio_RadPow_Dps.png, id=1008, 796.6563pt x 597.432pt>
 File: Sym/studio_RadPow_Dps.png Graphic file (type png)
 <use Sym/studio_RadPow_Dps.png>
-Package pdftex.def Info: Sym/studio_RadPow_Dps.png  used on input line 1461.
+Package pdftex.def Info: Sym/studio_RadPow_Dps.png  used on input line 1463.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/studio_RadPow_SpsLR.png, id=1009, 796.6563pt x 597.432pt>
 File: Sym/studio_RadPow_SpsLR.png Graphic file (type png)
 <use Sym/studio_RadPow_SpsLR.png>
-Package pdftex.def Info: Sym/studio_RadPow_SpsLR.png  used on input line 1470.
+Package pdftex.def Info: Sym/studio_RadPow_SpsLR.png  used on input line 1472.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <Sym/studio_RadPow_SpsTB.png, id=1010, 796.6563pt x 597.432pt>
 File: Sym/studio_RadPow_SpsTB.png Graphic file (type png)
 <use Sym/studio_RadPow_SpsTB.png>
-Package pdftex.def Info: Sym/studio_RadPow_SpsTB.png  used on input line 1478.
+Package pdftex.def Info: Sym/studio_RadPow_SpsTB.png  used on input line 1480.
 (pdftex.def)             Requested size: 232.89853pt x 174.65471pt.
 <RoomComp/Compa_NFS_BAffle.png, id=1011, 796.6563pt x 597.432pt>
 File: RoomComp/Compa_NFS_BAffle.png Graphic file (type png)
 <use RoomComp/Compa_NFS_BAffle.png>
-Package pdftex.def Info: RoomComp/Compa_NFS_BAffle.png  used on input line 1493
+Package pdftex.def Info: RoomComp/Compa_NFS_BAffle.png  used on input line 1495
 .
 (pdftex.def)             Requested size: 414.04623pt x 310.51146pt.
  [5 <./Sym/contour_studio.png> <./Sym/studio_RadPow_Rot.png (PNG copy)> <./Sym/
@@ -2014,20 +2014,20 @@ studio_RadPow_B.png (PNG copy)> <./Sym/studio_RadPow_Dps.png (PNG copy)> <./Sym
 ]
 File: RoomComp/MicPos_TRF.png Graphic file (type png)
 <use RoomComp/MicPos_TRF.png>
-Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 1505.
+Package pdftex.def Info: RoomComp/MicPos_TRF.png  used on input line 1507.
 (pdftex.def)             Requested size: 605.45293pt x 454.04393pt.
  [6 <./RoomComp/Compa_NFS_BAffle.png (PNG copy)>]
 <RoomComp/MicPos_Diff_NFS_TRF_zoom.png, id=1021, 796.6563pt x 597.432pt>
 File: RoomComp/MicPos_Diff_NFS_TRF_zoom.png Graphic file (type png)
 <use RoomComp/MicPos_Diff_NFS_TRF_zoom.png>
 Package pdftex.def Info: RoomComp/MicPos_Diff_NFS_TRF_zoom.png  used on input l
-ine 1512.
+ine 1514.
 (pdftex.def)             Requested size: 414.04623pt x 310.51146pt.
  [7]
 <Appendix/DKeele_FF_All.png, id=1028, 1603.49063pt x 585.68813pt>
 File: Appendix/DKeele_FF_All.png Graphic file (type png)
 <use Appendix/DKeele_FF_All.png>
-Package pdftex.def Info: Appendix/DKeele_FF_All.png  used on input line 1525.
+Package pdftex.def Info: Appendix/DKeele_FF_All.png  used on input line 1527.
 (pdftex.def)             Requested size: 517.55583pt x 189.0416pt.
  [8 <./RoomComp/MicPos_Diff_NFS_TRF_zoom.png (PNG copy)> <./Appendix/DKeele_FF_
 All.png>]
@@ -2035,17 +2035,17 @@ Appendix B.
 <Appendix/Round_Spkr.png, id=1035, 103.24286pt x 93.7445pt>
 File: Appendix/Round_Spkr.png Graphic file (type png)
 <use Appendix/Round_Spkr.png>
-Package pdftex.def Info: Appendix/Round_Spkr.png  used on input line 1544.
+Package pdftex.def Info: Appendix/Round_Spkr.png  used on input line 1546.
 (pdftex.def)             Requested size: 103.2426pt x 93.74426pt.
 <Appendix/Oval_Spkr.png, id=1037, 103.24286pt x 68.75975pt>
 File: Appendix/Oval_Spkr.png Graphic file (type png)
 <use Appendix/Oval_Spkr.png>
-Package pdftex.def Info: Appendix/Oval_Spkr.png  used on input line 1575.
+Package pdftex.def Info: Appendix/Oval_Spkr.png  used on input line 1577.
 (pdftex.def)             Requested size: 103.2426pt x 68.75957pt.
 <Sym/Spkr_BmO.png, id=1041, 919.93687pt x 546.54187pt>
 File: Sym/Spkr_BmO.png Graphic file (type png)
 <use Sym/Spkr_BmO.png>
-Package pdftex.def Info: Sym/Spkr_BmO.png  used on input line 1607.
+Package pdftex.def Info: Sym/Spkr_BmO.png  used on input line 1609.
 (pdftex.def)             Requested size: 183.98412pt x 109.30643pt.
 [9
 
@@ -2053,29 +2053,29 @@ Package pdftex.def Info: Sym/Spkr_BmO.png  used on input line 1607.
 <Appendix/Studio.png, id=1051, 1505.625pt x 1505.625pt>
 File: Appendix/Studio.png Graphic file (type png)
 <use Appendix/Studio.png>
-Package pdftex.def Info: Appendix/Studio.png  used on input line 1623.
+Package pdftex.def Info: Appendix/Studio.png  used on input line 1625.
 (pdftex.def)             Requested size: 75.28566pt x 75.28566pt.
 <Appendix/bigwoof.png, id=1053, 451.6875pt x 451.6875pt>
 File: Appendix/bigwoof.png Graphic file (type png)
 <use Appendix/bigwoof.png>
-Package pdftex.def Info: Appendix/bigwoof.png  used on input line 1647.
+Package pdftex.def Info: Appendix/bigwoof.png  used on input line 1649.
 (pdftex.def)             Requested size: 124.21275pt x 124.211pt.
  [10 <./Sym/Spkr_BmO.png> <./Appendix/Studio.png> <./Appendix/bigwoof.png>]
 Appendix C.
 <Appendix/baffle_back.jpg, id=1060, 368.7835pt x 358.04623pt>
 File: Appendix/baffle_back.jpg Graphic file (type jpg)
 <use Appendix/baffle_back.jpg>
-Package pdftex.def Info: Appendix/baffle_back.jpg  used on input line 1661.
+Package pdftex.def Info: Appendix/baffle_back.jpg  used on input line 1663.
 (pdftex.def)             Requested size: 232.89853pt x 226.11664pt.
 <Appendix/baffle_clamps.jpg, id=1061, 322.11772pt x 375.804pt>
 File: Appendix/baffle_clamps.jpg Graphic file (type jpg)
 <use Appendix/baffle_clamps.jpg>
-Package pdftex.def Info: Appendix/baffle_clamps.jpg  used on input line 1667.
+Package pdftex.def Info: Appendix/baffle_clamps.jpg  used on input line 1669.
 (pdftex.def)             Requested size: 232.89853pt x 271.7198pt.
 <Appendix/baffle_side.jpg, id=1062, 221.55917pt x 503.61865pt>
 File: Appendix/baffle_side.jpg Graphic file (type jpg)
 <use Appendix/baffle_side.jpg>
-Package pdftex.def Info: Appendix/baffle_side.jpg  used on input line 1675.
+Package pdftex.def Info: Appendix/baffle_side.jpg  used on input line 1677.
 (pdftex.def)             Requested size: 232.89853pt x 529.41458pt.
 [11
 
@@ -2083,19 +2083,19 @@ Package pdftex.def Info: Appendix/baffle_side.jpg  used on input line 1675.
 _side.jpg>]
 Appendix D.
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 1837.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 1839.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1837.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1839.
 (D:\LaTeX\texmfs\install\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 1840.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 1842.
 
 
 (D:\LaTeX\texmfs\install\tex\latex\psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 1844
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 1846
 .
 
 (D:\LaTeX\texmfs\install\tex\latex\psnfss\ts1pcr.fd
@@ -2107,7 +2107,7 @@ Appendix E.
 <Appendix/Plan1.png, id=1213, 915.42pt x 731.73375pt>
 File: Appendix/Plan1.png Graphic file (type png)
 <use Appendix/Plan1.png>
-Package pdftex.def Info: Appendix/Plan1.png  used on input line 1985.
+Package pdftex.def Info: Appendix/Plan1.png  used on input line 1987.
 (pdftex.def)             Requested size: 517.55583pt x 413.72064pt.
 [14
 
@@ -2127,14 +2127,18 @@ Package movie15 Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 (movie15)                @@ Rerun to get object references right! @@
 (movie15)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2002.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2002.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2004.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2004.
 (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2002.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2002.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2004.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2004.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2AFFCF0F41DA337F096CD1DDD730E78E;4783.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  34507 strings out of 495204
@@ -2161,7 +2165,7 @@ s/type1/public/amsfonts/symbols/msbm10.pfb><D:/LaTeX/texmfs/install/fonts/type1
 a.pfb><D:/LaTeX/texmfs/install/fonts/type1/urw/helvetic/uhvbo8a.pfb><D:/LaTeX/t
 exmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/LaTeX/texmfs/install/font
 s/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (45 pages, 17930455 bytes).
+Output written on main.pdf (45 pages, 17930504 bytes).
 PDF statistics:
  1396 PDF objects out of 1440 (max. 8388607)
  417 named destinations out of 1000 (max. 500000)
