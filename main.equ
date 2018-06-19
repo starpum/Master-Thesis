@@ -5,7 +5,7 @@
 \contentsline {myequations}{\numberline {1.2}Free-field transfer function of a loudspeaker in spherical coordinates}{3}{myequations.2}
 \contentsline {myequations}{\numberline {1.3}General solution for sound field measured in non-anechoic environments}{3}{myequations.3}
 \contentsline {myequations}{\numberline {1.4}System of equation of measured sound field}{3}{myequations.4}
-\contentsline {myequations}{\numberline {1.5}Matrix form of measured sound field}{3}{myequations.5}
+\contentsline {myequations}{\numberline {1.5}Matrix form of measured sound field}{4}{myequations.5}
 \contentsline {myequations}{\numberline {1.6}Outgoing field solution for field separation}{4}{myequations.6}
 \contentsline {myequations}{\numberline {1.7}Parameter fitting}{4}{myequations.7}
 \contentsline {myequations}{\numberline {1.8}Total Fitting Error}{5}{myequations.8}
@@ -25,12 +25,12 @@
 \contentsline {myequations}{\numberline {3.10}Radiated power from complex coefficients}{12}{myequations.20}
 \contentsline {myequations}{\numberline {3.11}Symmetry factor}{12}{myequations.21}
 \addvspace {10\p@ }
-\contentsline {myequations}{\numberline {4.1}Near-Far field pressure relation}{18}{myequations.22}
-\contentsline {myequations}{\numberline {4.2}Displacement transfer function in free air}{19}{myequations.23}
-\contentsline {myequations}{\numberline {4.3}Displacement transfer function in the box}{19}{myequations.24}
-\contentsline {myequations}{\numberline {4.4}Voltage correction for the box}{19}{myequations.25}
-\contentsline {myequations}{\numberline {4.5}Resonance frequency of a speaker}{19}{myequations.26}
-\contentsline {myequations}{\numberline {4.6}Voltage correction for the box as a function of resonance frequency}{19}{myequations.27}
+\contentsline {myequations}{\numberline {4.1}Near-Far field pressure relation}{17}{myequations.22}
+\contentsline {myequations}{\numberline {4.2}Displacement transfer function in free air}{18}{myequations.23}
+\contentsline {myequations}{\numberline {4.3}Displacement transfer function in the box}{18}{myequations.24}
+\contentsline {myequations}{\numberline {4.4}Voltage correction for the box}{18}{myequations.25}
+\contentsline {myequations}{\numberline {4.5}Resonance frequency of a speaker}{18}{myequations.26}
+\contentsline {myequations}{\numberline {4.6}Voltage correction for the box as a function of resonance frequency}{18}{myequations.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

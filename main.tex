@@ -112,6 +112,7 @@
 
 \textsc{\large International Master Degree in Electro-Acoustics, 2\ts{nd} Year internship report}\\[0.4cm] % Major heading 
 \textsc{\normalsize Academic year 2017 - 2018}\\[0.7cm] % Minor heading 
+\textsc{\normalsize Company: Klippel GmbH}\\[0.7cm] % Minor heading 
 
 	%	TITLE 
 
@@ -325,31 +326,31 @@ H_{free}(f, \mathbf{r}) & = \sum_{N(f)}^{n=0}\sum_{n}^{m=-n}C_{mn}(f)\cdot h_{n}
 \end{equation}
 \myequations{Free-field transfer function of a loudspeaker in spherical coordinates}
 
-Where $\mathbf{b}(f,\mathbf{r})$ represents the base functions used and are solution of the wave equation in spherical coordinates, and $\mathbf{c}(f)$ represents the weighting coefficients. \\
+Where $\mathbf{b}(f,\mathbf{r})$ represents the solution of the wave equation in spherical coordinates, and $\mathbf{c}(f)$ represents the weighting coefficients. The Hankel function of the second kind $h_{n}^{(2)}(kr)$ describes the radial dependency of the wave radiating from the near field to the far field. \\
 For non-anechoic measurements, an additional expansion term is required to describe the influence of external sound sources (room reflections, resonances) that are described by the Bessel function $j_{n}(kr)$, leading to the general solution for the sound field measured in a non-anechoic measurement given in equation \ref{eq:ffHt}  \cite{aeswb}.
 
 \begin{equation}
 \begin{split}
-H_{test}(f, \mathbf{r}) &= \sum_{n=0}^{N(f)}\sum_{m=-n}^{n}\left [ C_{mn}(f)\cdot h_{n}^{(2)}(kr )\cdot Y_{n}^{m}(\theta ,\phi )+R_{mn}(f)\cdot j_{n}(kr)\cdot Y_{n}^{m}(\theta ,\phi ) \right ] \\
-&= \mathbf{c}(f)\mathbf{b}(f,\mathbf{r})+\mathbf{r}(f)\mathbf{b}_{room}(f,\mathbf{r})
+H_{meas}(f, \mathbf{r}) &= \sum_{n=0}^{N(f)}\sum_{m=-n}^{n}\left [ C_{mn}^{out}(f)\cdot h_{n}^{(2)}(kr )\cdot Y_{n}^{m}(\theta ,\phi )+C_{mn}^{in}(f)\cdot j_{n}(kr)\cdot Y_{n}^{m}(\theta ,\phi ) \right ] \\
+&= \mathbf{c}^{out}(f)\mathbf{b}(f,\mathbf{r})+\mathbf{c}^{in}(f)\mathbf{b}_{room}(f,\mathbf{r})
 \end{split}
 \label{eq:ffHt}
 \end{equation}
 \myequations{General solution for sound field measured in non-anechoic environments}
 
-Where $\mathbf{c}(f)$ represents the outgoing coefficients and $\mathbf{r}(f)$ the incoming coefficients. \\
+Where $\mathbf{c}^{out}(f)$ represents the outgoing coefficients and $\mathbf{c}^{in}(f)$ the incoming coefficients. \\
 If the pressure is measured on 2 hemispherical surfaces in front of the baffle, the sound field can be expressed as equation \ref{eq:ffHt} for each surface. This can be expressed in matrix form by equation \ref{eq:holo_fieldsep} \cite{fieldsep}.
 
 \begin{equation}
 \begin{split}
-&H_{1} = \mathbf{c}_{1}\mathbf{b}_{1}+\mathbf{r}_{1}\mathbf{b}_{room_{1}} \\
-&H_{2} = \mathbf{c}_{2}\mathbf{b}_{2}+\mathbf{r}_{2}\mathbf{b}_{room_{2}}
+&H_{1} = \mathbf{c}_{1}^{out}\mathbf{b}_{1}+\mathbf{c}_{1}^{in}\mathbf{b}_{room_{1}} \\
+&H_{2} = \mathbf{c}_{2}^{out}\mathbf{b}_{2}+\mathbf{c}_{2}^{in}\mathbf{b}_{room_{2}}
 \end{split}
 \label{eq:holo_fieldsep}
 \end{equation}
 \myequations{System of equation of measured sound field}
 
-Where the subscripts $1$ and $2$ refer to the two scanning surfaces. This system of equations can be assembled and expressed as equation \ref{eq:holo_matrix} \cite{fieldsep}.
+Each set of base functions $\mathbf{b}$ and $\mathbf{b}_{room}$ contains the elementatry functions. The subscripts $1$ and $2$ refer to the two scanning surfaces. This system of equations can be assembled and expressed as equation \ref{eq:holo_matrix} \cite{fieldsep}.
 
 \begin{equation}
 H_{m} = M_{h}\mathbf{c}_{m}
@@ -357,10 +358,10 @@ H_{m} = M_{h}\mathbf{c}_{m}
 \end{equation}
 \myequations{Matrix form of measured sound field}
 
-Where $ H_{m} $ represents the vector of measured pressures and $ \mathbf{c}_{m} $ the matrix of outgoing and outgoing coefficients. After retrieving the coefficient matrix $ \mathbf{c}_{m} $ by performing the inversion of equation \ref{eq:holo_matrix}, the outgoing field from the primary source can be retrieved and is expressed in equation \ref{eq:holo_solve}; where $A_{h}$ is the matrix containing the outgoing elementary waves $Y_{n}^{m}(\theta ,\phi )$ \cite{fieldsep}.
+Where $ H_{m} $ represents the vector of measured pressures and $ \mathbf{c}_{m} $ the matrix of outgoing and ingoing coefficients. After retrieving the coefficient matrix $ \mathbf{c}_{m} $ by performing the inversion of equation \ref{eq:holo_matrix}, the outgoing field from the primary source can be retrieved and is expressed in equation \ref{eq:holo_solve}; where $ b(f,\mathbf{r})$ is the matrix containing the outgoing elementary spherical harmonics $Y_{n}^{m}(\theta ,\phi )$ \cite{fieldsep}.
 
 \begin{equation}
-H_{out} = A_{h}\mathbf{c}_{out}
+H_{out} = \mathbf{b}(f,\mathbf{r})\mathbf{c}_{mn}^{out}
 \label{eq:holo_solve}
 \end{equation}
 \myequations{Outgoing field solution for field separation}
@@ -388,7 +389,6 @@ However, the Near-Field being much more complex than the Far Field, holographic 
 Figure \ref{fig:nfsflow} presents a flowchart of the measurement principle. \\ 
 The first step of the scanning process is the generation of the measurement grid. The main difficulty is to avoid spacial aliasing, which is achieved by generating a non-uniform grid. Once the grid is generated, the measurement is conducted thanks to the robotics.\\
 The measurement being done, the first step of the holographic process is to shift the coordinates of all measurements points to fit the expansion point $\mathbf{r}_{e}$ of the system. The expansion point is the center of the spherical waves from equation \ref{eq:sphwvexp}, and its position might change with frequency. This step is required for further processing, in order to make sure that the calculated Far Field is relevant. \\
-
 
 Then, the parameters are fitted to find the optimum coefficients $C_{mn}$. This is done by estimating the deviation ${e(f,\mathbf{r}_{e}) = H_{measured}(f,\mathbf{r}_{e})-H_{model}(f,\mathbf{r}_{e})}$ between the measured and the modeled transfer function of the system, as expressed in equation \ref{eq:ParamFit}. 
 
@@ -540,15 +540,38 @@ Before starting the production of this item, a critical evaluation must be perfo
 
 \subsection{Measurements}
 
-Figure \ref{fig:vib_pow} present the apparent power in the near field of the DUT for different measurements points. \\
-The blue curve represents the power from the speaker. This scan have been centered on the speaker, using a 5 cm radius for the scanning grid. The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centered on the speaker, with a 21 cm radius for the scanning grid. The grey curve represents the contribution from the baffle: the scan was centered on the lower right corner of the baffle, with a 5 cm scanning radius. Finally, the light orange curve represents the contribution from the wooden plate: this scan was centered midway between the speaker and the baffle, with a 5 cm scanning radius. \\
+Figure \ref{fig:vib_pow} present the apparent power in the near field of the 10 cm woofer (see \ref{spkrlib:10cm}) for different measurements configurations, shown by figure \ref{fig:baffle_proto_meas}.
 
-Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration impacts the system: the differences between the 2 plots can only come from the plate vibration, as the field separation method removed all contributions from the room. \\
+\vspace{0.5cm}
+
+\begin{minipage}{0.3\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{GridOpti/Baffle_meas_Points} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Measurement points} 
+	\label{fig:baffle_proto_meas}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+
+\begin{itemize}
+\item The blue curve represents the power from the speaker. This scan have been centered on the speaker, using a 5 cm radius for the scanning grid. 
+\item The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centered on the speaker, with a 21 cm radius for the scanning grid.
+\item The light orange curve represents the contribution from the wooden plate: this scan was centered midway between the speaker and the baffle, with a 5 cm scanning radius. 
+\item  The grey curve represents the contribution from the baffle: the scan was centered on the lower right corner of the baffle, with a 5 cm scanning radius. 
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm}
+
+Comparing the contributions from the speaker with the speaker + wood allows to estimate how the wooden plate vibration impacts the system: thanks to the field separation method, the differences between the 2 plots can only come from vibrations inside the scanning radius.\\
 Comparing the variations on the speaker+wood results with the contribution of the wood shows that most of the variations matches with the peaks of the wood's contribution; whereas a few variations matches with the baffle contribution's peaks (see figure \ref{Curves:Baffle_RadPow} for matching peaks and a bigger figure). \\
 
 Moreover, the contributions from the baffle itself aren't really problematic: if the scanning radius is correctly chosen, the field separation method will remove the baffle's contribution from the measurement. The contributions from the wooden plate are much more problematic, since the field separation method cannot remove contributions coming from inside the scanning radius, and the scanning radius cannot be smaller than the driver's. \\
 
 Figure \ref{fig:vib_comp} compares the radiated powers in the far field (r = 10m) of the speaker (5 cm scan) and the speaker+wood (21 cm scan) measurements, evidencing the effect of the wooden plate's vibration on the measurement. At the resonance (f = 180 Hz), a strong cancellation effect is observed on the speaker+wood measurement, with a difference of almost 3 dB between the curves. This cancellation is most likely to be due to the plate vibrating in opposite phase with the speaker. \\
+
+
 
 \begin{minipage}{0.5\textwidth} 
 \begin{center}
@@ -568,30 +591,30 @@ Figure \ref{fig:vib_comp} compares the radiated powers in the far field (r = 10m
 \end{minipage}
 \vspace{0.1cm}
 
+In order to have a better understanding of the wooden plate behavior, a measurement have been performed using the Klippel Scanning Vibrometer System (SCN) of the speaker mounted on the baffle. The measurement's radius have been selected to be wide enough to measure the speaker and the baffle vibrations. the results are presented in movie below \footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}}, for f = 180 Hz. The plate is vibrating in opposite phase with the speaker,  which confirms the previous hypothesis of the wooden plate creating a cancellation effect on the Sound Pressure response of the driver. 
 
-The movie below shows an animation\footnote{If the animation is not playing correctly, \href{https://www.dropbox.com/sh/1jlodpb3biuxmhy/AADFRz8B249n8ERu3nkwyyisa?dl=0}{please download it by clicking \underline{here}.}} of a scan performed on the baffle using Klippel's laser scanning system, at f = 180 Hz. The plate is vibrating in opposite phase with the speaker,  which confirms the previous hypothesis of the wooden plate creating a cancellation effect on the Sound Pressure response of the driver. 
-
-\todo[inline, color=green!40]{quote Chuan for the measurements}
 
 \ifdraft
 \begin{center}
-	\includemovie[draft,repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{6cm}{4cm}{GridOpti/baffle_vib.avi}
+	\includemovie[draft,repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{7cm}{5cm}{GridOpti/baffle_vib.avi}
 \end{center}
 \else
 \begin{center}
-	\includemovie[repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{6cm}{4cm}{GridOpti/baffle_vib.avi}
+	\includemovie[repeat,poster,label=baffle_vib,text={\small(Click to start...)}]{7cm}{5cm}{GridOpti/baffle_vib.avi}
 \end{center}
 \fi
 
+
 \subsection{Discussion}
 
-The previous investigations highlighted several problems with the baffle prototype. Particular attention should be given to the following:
+The previous investigations highlighted several problems with the baffle prototype. In order to avoid vibrations and concellation effects, particular attention should be given to the following:
 \begin{description}
 \item[Wooden plate] special attention should be given to its thickness, material and damping. A solution to attenuate the vibration of the plate would be to stiffen it by attaching beams to the backside. As a general advice, MDF should be avoided because of its lightness. 
-\item[Clamping system] the system clamping the plate in place is not satisfying to conduct acoustical measurements. The nuts supposed to hold the wooden plate in place are subject to rattling, even when strongly tightened.
-\item[Baffle] the baffle itself generates some vibration, that is believed to not be critical for the measurements since it can be removed by using the field identification. Maybe damping could be added, although the baffle cannot be modified too much. 
+\item[Clamping system] the system clamping the plate in place could generate additional vibrations if not used correctly. The nuts supposed to hold the wooden plate in place are subject to rattling, and should be strongly tightened.
+\item[Baffle] the baffle itself generates some vibration, that is believed to not be critical for the measurements since it can be removed by using the field identification. 
 \end{description}
 
+To conclude, the baffle prototype allows to generate accurate acoustic measurements of systems if the scanning radius, the plate material and the scan's geometry are selected carefully. 
 
 %--------------------------------------------------------------
 %	SYMMETRY
@@ -959,28 +982,28 @@ In high frequency when the twitter alone is emitting, some symmetry is observed.
 
 
 
-\subsection{Studio Monitor}
- The DUT is a 2-way studio monitor (see appendix \ref{sprklib:Studio}). Similarly to the 2-way diagonal speaker, this system have a built-in crossover. Figures \ref{fig:rad_pow_studio} and \ref{fig:sym_fact_studio} presents the radiated powers and the symmetry factors respectively.  The radiated powers are plotted in separated graphs in appendix \ref{Curves:studio}.
-
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=\textwidth]{Sym/Rad_Pow_studio} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Radiated Powers of studio monitor} 
-	\label{fig:rad_pow_studio}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=\textwidth]{Sym/Sym_Fact_studio} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Symmetry Factors of studio monitor} 
-	\label{fig:sym_fact_studio}
-\end{center}
-\end{minipage}
-\vspace{0.1cm}
-
-This system's total radiated power is very similar to the 
+%\subsection{Studio Monitor}
+% The DUT is a 2-way studio monitor (see appendix \ref{sprklib:Studio}). Similarly to the 2-way diagonal speaker, this system have a built-in crossover. Figures \ref{fig:rad_pow_studio} and \ref{fig:sym_fact_studio} presents the radiated powers and the symmetry factors respectively.  The radiated powers are plotted in separated graphs in appendix \ref{Curves:studio}.
+%
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=\textwidth]{Sym/Rad_Pow_studio} 
+%    \captionsetup{hypcap=false} 
+%	\captionof{figure}{Radiated Powers of studio monitor} 
+%	\label{fig:rad_pow_studio}
+%\end{center}
+%\end{minipage}
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=\textwidth]{Sym/Sym_Fact_studio} 
+%    \captionsetup{hypcap=false} 
+%	\captionof{figure}{Symmetry Factors of studio monitor} 
+%	\label{fig:sym_fact_studio}
+%\end{center}
+%\end{minipage}
+%\vspace{0.1cm}
+%
+%This system's total radiated power is very similar to the 
 
 \section{Discussion}
 
@@ -1463,59 +1486,59 @@ This appendix aims to present additional figures that could not be presented in 
 \end{center}
 \end{minipage}
 
-\subsection{Studio monitor}
-\label{Curves:studio}
-
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=\textwidth]{Sym/contour_studio}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Contour plot of the studio monitor at 10 m, centered on-axis, horizontal plane.}
-    \label{Curves:studio_zoom}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_Rot}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Studio monitor, Radiated Powers: rotational symmetry}
-    \label{Curves:studio_rot}
-\end{center}
-\end{minipage}
-
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_B}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Studio monitor, Radiated Powers: baffle symmetry}
-    \label{Curves:studio_B}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_Dps}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Studio monitor, Radiated Powers: dual plane symmetry}
-    \label{Curves:studio_Dps}
-\end{center}
-\end{minipage}
-
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_SpsLR}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Studio monitor, Radiated Powers: single plane (left/right) symmetry}
-    \label{Curves:studio_SpsLR}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_SpsTB}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Studio monitor, Radiated Powers: single plane (top/bottom) symmetry}
-    \label{Curves:studio_SpsTB}
-\end{center}
-\end{minipage}
+%\subsection{Studio monitor}
+%\label{Curves:studio}
+%
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=\textwidth]{Sym/contour_studio}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Contour plot of the studio monitor at 10 m, centered on-axis, horizontal plane.}
+%    \label{Curves:studio_zoom}
+%\end{center}
+%\end{minipage}
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_Rot}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Studio monitor, Radiated Powers: rotational symmetry}
+%    \label{Curves:studio_rot}
+%\end{center}
+%\end{minipage}
+%
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_B}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Studio monitor, Radiated Powers: baffle symmetry}
+%    \label{Curves:studio_B}
+%\end{center}
+%\end{minipage}
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_Dps}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Studio monitor, Radiated Powers: dual plane symmetry}
+%    \label{Curves:studio_Dps}
+%\end{center}
+%\end{minipage}
+%
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_SpsLR}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Studio monitor, Radiated Powers: single plane (left/right) symmetry}
+%    \label{Curves:studio_SpsLR}
+%\end{center}
+%\end{minipage}
+%\begin{minipage}{0.5\textwidth}
+%\begin{center}
+%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_SpsTB}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Studio monitor, Radiated Powers: single plane (top/bottom) symmetry}
+%    \label{Curves:studio_SpsTB}
+%\end{center}
+%\end{minipage}
 
 \section{Room Correction}
 
@@ -1646,21 +1669,21 @@ This 2-way speaker presents the particularity of having its tweeter and woofer m
 \end{center}
 \end{minipage}
 
-\section{Studio Monitor}
-\label{sprklib:Studio}
-
-\begin{minipage}{0.6\textwidth}
-This system is a 2-way studio monitor, presented in figure \ref{fig:StudioMon}. Its crossover frequency is 2 kHz.
-
-\end{minipage}
-\begin{minipage}{0.4\textwidth}
-\begin{center}
-	\includegraphics[scale=0.05]{Appendix/Studio}
-    \captionsetup{hypcap=false}
-    \captionof{figure}{Studio monitor}
-    \label{fig:StudioMon}
-\end{center}
-\end{minipage}
+%\section{Studio Monitor}
+%\label{sprklib:Studio}
+%
+%\begin{minipage}{0.6\textwidth}
+%This system is a 2-way studio monitor, presented in figure \ref{fig:StudioMon}. Its crossover frequency is 2 kHz.
+%
+%\end{minipage}
+%\begin{minipage}{0.4\textwidth}
+%\begin{center}
+%	\includegraphics[scale=0.05]{Appendix/Studio}
+%    \captionsetup{hypcap=false}
+%    \captionof{figure}{Studio monitor}
+%    \label{fig:StudioMon}
+%\end{center}
+%\end{minipage}
 
 
 \section{18'' woofer}

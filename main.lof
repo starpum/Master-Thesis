@@ -10,8 +10,9 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Magnitude of SPL response at 10 m\relax }}{7}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Phase of SPL response at 10 m\relax }}{7}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Baffle Prototype\relax }}{8}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Comparison of apparent power in the Near Field for different measurement points\relax }}{9}{figure.2.7}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison of radiated powers in the Far Field for the 5 cm and 21 cm measurements\relax }}{9}{figure.2.8}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Measurement points\relax }}{8}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison of apparent power in the Near Field for different measurement points\relax }}{9}{figure.2.8}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Comparison of radiated powers in the Far Field for the 5 cm and 21 cm measurements\relax }}{9}{figure.2.9}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of the symmetry check\relax }}{10}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Spherical Harmonics\relax }}{10}{figure.3.2}
@@ -26,23 +27,21 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Phase balloon at f = 9400 Hz of oval speaker\relax }}{14}{figure.3.11}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Radiated Powers of diagonal speaker\relax }}{15}{figure.3.12}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Symmetry Factors of diagonal speaker\relax }}{15}{figure.3.13}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Radiated Powers of studio monitor\relax }}{15}{figure.3.14}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Symmetry Factors of studio monitor\relax }}{15}{figure.3.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Measurement result\relax }}{17}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Filter on magnitude\relax }}{17}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Filter minimal phase\relax }}{17}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Filter with LFR\relax }}{17}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Measurement setup\relax }}{18}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces TRF at different measurement points\relax }}{18}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Results with compensation\relax }}{18}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{19}{figure.caption.20}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparison of measured impedance\relax }}{20}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Comparison of measured displacement TRF\relax }}{20}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Microphone position\relax }}{21}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Transfer Functions for different positions\relax }}{21}{figure.4.12}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Difference between NFS and TRF\relax }}{21}{figure.4.13}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Difference between Room Compensation functions\relax }}{21}{figure.4.14}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Measurement result\relax }}{16}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Filter on magnitude\relax }}{16}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Filter minimal phase\relax }}{16}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Filter with LFR\relax }}{16}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Measurement setup\relax }}{17}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces TRF at different measurement points\relax }}{17}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Results with compensation\relax }}{17}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparison of measured impedance\relax }}{19}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Comparison of measured displacement TRF\relax }}{19}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Microphone position\relax }}{20}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Transfer Functions for different positions\relax }}{20}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Difference between NFS and TRF\relax }}{20}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Difference between Room Compensation functions\relax }}{20}{figure.4.14}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Radiated Powers at 1m for different measurement points on the baffle\relax }}{i}{figure.a.A.1}
 \contentsline {figure}{\numberline {A.2}{\ignorespaces Contour plot of the woofer at 10 m, centered on-axis, horizontal plane.\relax }}{ii}{figure.a.A.2}
@@ -63,26 +62,19 @@
 \contentsline {figure}{\numberline {A.17}{\ignorespaces Diagonal speaker, Radiated Powers: dual plane symmetry\relax }}{iv}{figure.a.A.17}
 \contentsline {figure}{\numberline {A.18}{\ignorespaces Diagonal speaker, Radiated Powers: single plane (left/right) symmetry\relax }}{iv}{figure.a.A.18}
 \contentsline {figure}{\numberline {A.19}{\ignorespaces Diagonal speaker, Radiated Powers: single plane (top/bottom) symmetry\relax }}{iv}{figure.a.A.19}
-\contentsline {figure}{\numberline {A.20}{\ignorespaces Contour plot of the studio monitor at 10 m, centered on-axis, horizontal plane.\relax }}{v}{figure.a.A.20}
-\contentsline {figure}{\numberline {A.21}{\ignorespaces Studio monitor, Radiated Powers: rotational symmetry\relax }}{v}{figure.a.A.21}
-\contentsline {figure}{\numberline {A.22}{\ignorespaces Studio monitor, Radiated Powers: baffle symmetry\relax }}{v}{figure.a.A.22}
-\contentsline {figure}{\numberline {A.23}{\ignorespaces Studio monitor, Radiated Powers: dual plane symmetry\relax }}{v}{figure.a.A.23}
-\contentsline {figure}{\numberline {A.24}{\ignorespaces Studio monitor, Radiated Powers: single plane (left/right) symmetry\relax }}{v}{figure.a.A.24}
-\contentsline {figure}{\numberline {A.25}{\ignorespaces Studio monitor, Radiated Powers: single plane (top/bottom) symmetry\relax }}{v}{figure.a.A.25}
-\contentsline {figure}{\numberline {A.26}{\ignorespaces Comparison between the TRF of a measure in baffle and a measure in the box.\relax }}{vi}{figure.a.A.26}
-\contentsline {figure}{\numberline {A.27}{\ignorespaces Transfer functions for all microphones positions\relax }}{vii}{figure.a.A.27}
-\contentsline {figure}{\numberline {A.28}{\ignorespaces Difference between NFS and transfer functions - zoom on 150 Hz - 20 kHz\relax }}{viii}{figure.a.A.28}
-\contentsline {figure}{\numberline {A.29}{\ignorespaces Application of DB Keele method compared with NFS results}}{viii}{figure.a.A.29}
+\contentsline {figure}{\numberline {A.20}{\ignorespaces Comparison between the TRF of a measure in baffle and a measure in the box.\relax }}{v}{figure.a.A.20}
+\contentsline {figure}{\numberline {A.21}{\ignorespaces Transfer functions for all microphones positions\relax }}{vi}{figure.a.A.21}
+\contentsline {figure}{\numberline {A.22}{\ignorespaces Difference between NFS and transfer functions - zoom on 150 Hz - 20 kHz\relax }}{vii}{figure.a.A.22}
+\contentsline {figure}{\numberline {A.23}{\ignorespaces Application of DB Keele method compared with NFS results}}{vii}{figure.a.A.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces 10 cm woofer\relax }}{ix}{figure.a.B.1}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Oval speaker\relax }}{ix}{figure.a.B.2}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces 2-way diagonal speaker\relax }}{x}{figure.a.B.3}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Studio monitor\relax }}{x}{figure.a.B.4}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces 18'' woofer\relax }}{x}{figure.a.B.5}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces 10 cm woofer\relax }}{viii}{figure.a.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Oval speaker\relax }}{viii}{figure.a.B.2}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces 2-way diagonal speaker\relax }}{ix}{figure.a.B.3}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces 18'' woofer\relax }}{ix}{figure.a.B.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Back of the baffle\relax }}{xi}{figure.a.C.1}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Closeup of the clamping system\relax }}{xi}{figure.a.C.2}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Side of the baffle\relax }}{xi}{figure.a.C.3}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Back of the baffle\relax }}{x}{figure.a.C.1}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Closeup of the clamping system\relax }}{x}{figure.a.C.2}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Side of the baffle\relax }}{x}{figure.a.C.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
