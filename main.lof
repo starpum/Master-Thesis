@@ -13,35 +13,36 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Measurement points\relax }}{8}{figure.2.7}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison of apparent power in the Near Field for different measurement points\relax }}{9}{figure.2.8}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Comparison of radiated powers in the Far Field for the 5 cm and 21 cm measurements\relax }}{9}{figure.2.9}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Total and residual signals of the baffle rattling\relax }}{10}{figure.2.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of the symmetry check\relax }}{10}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Spherical Harmonics\relax }}{10}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Rotational\relax }}{11}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Dual Plane\relax }}{11}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Baffle\relax }}{11}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Single Plane\relax }}{11}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Radiated Powers of 10cm woofer\relax }}{13}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Symmetry Factors of 10cm woofer\relax }}{13}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Radiated Powers of oval speaker\relax }}{14}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Symmetry Factors of oval speaker\relax }}{14}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Phase balloon at f = 9400 Hz of oval speaker\relax }}{14}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Radiated Powers of diagonal speaker\relax }}{15}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Symmetry Factors of diagonal speaker\relax }}{15}{figure.3.13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of the symmetry check\relax }}{11}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Spherical Harmonics\relax }}{11}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Rotational\relax }}{12}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Dual Plane\relax }}{12}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Baffle\relax }}{12}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Single Plane\relax }}{12}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Radiated Powers of 10cm woofer\relax }}{14}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Symmetry Factors of 10cm woofer\relax }}{14}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Radiated Powers of oval speaker\relax }}{15}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Symmetry Factors of oval speaker\relax }}{15}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Phase balloon at f = 9400 Hz of oval speaker\relax }}{15}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Radiated Powers of diagonal speaker\relax }}{16}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Symmetry Factors of diagonal speaker\relax }}{16}{figure.3.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Measurement result\relax }}{16}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Filter on magnitude\relax }}{16}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Filter minimal phase\relax }}{16}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Filter with LFR\relax }}{16}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Measurement setup\relax }}{17}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces TRF at different measurement points\relax }}{17}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Results with compensation\relax }}{17}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{18}{figure.caption.19}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparison of measured impedance\relax }}{19}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Comparison of measured displacement TRF\relax }}{19}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Microphone position\relax }}{20}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Transfer Functions for different positions\relax }}{20}{figure.4.12}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Difference between NFS and TRF\relax }}{20}{figure.4.13}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Difference between Room Compensation functions\relax }}{20}{figure.4.14}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Measurement result\relax }}{17}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Filter on magnitude\relax }}{17}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Filter with LFR\relax }}{17}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Pre-filter flowchart\relax }}{17}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Measurement setup\relax }}{18}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces TRF at different measurement points\relax }}{18}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Results with compensation\relax }}{18}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{19}{figure.caption.17}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparison of measured impedance\relax }}{20}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Comparison of measured displacement TRF\relax }}{20}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Microphone position\relax }}{21}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Transfer Functions for different positions\relax }}{21}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Difference between NFS and TRF\relax }}{21}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Difference between Room Compensation functions\relax }}{21}{figure.4.14}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Radiated Powers at 1m for different measurement points on the baffle\relax }}{i}{figure.a.A.1}
 \contentsline {figure}{\numberline {A.2}{\ignorespaces Contour plot of the woofer at 10 m, centered on-axis, horizontal plane.\relax }}{ii}{figure.a.A.2}

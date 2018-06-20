@@ -94,6 +94,7 @@
 \hbadness=99999  % or any number >=10000
 \hfuzz=3pt
 
+
 \begin{document}
 
 %---------------------------------------------------------------------
@@ -353,7 +354,7 @@ If the pressure is measured on 2 hemispherical surfaces in front of the baffle, 
 Each set of base functions $\mathbf{b}$ and $\mathbf{b}_{room}$ contains the elementatry functions. The subscripts $1$ and $2$ refer to the two scanning surfaces. This system of equations can be assembled and expressed as equation \ref{eq:holo_matrix} \cite{fieldsep}.
 
 \begin{equation}
-H_{m} = M_{h}\mathbf{c}_{m}
+H_{m} = B_{h}\mathbf{c}_{m}
 \label{eq:holo_matrix}
 \end{equation}
 \myequations{Matrix form of measured sound field}
@@ -433,7 +434,7 @@ At very low frequencies the measurement is polluted by the poor Signal to Noise 
 \section{Problematic}
 
 Performing measurements of devices mounted on a baffle requires particular attention to avoid measurement errors from the edge diffraction, the acoustical shortcut between the front and the back of the baffle, or the vibrations of the baffle itself; as shown on figure \ref{fig:baffle_problems}. \\
-This section's work aims to generate a better suited measurement grid for the NFS to perform baffle measurements by modifying the "Grid Generation" block in \ref{fig:nfsflow}, and the critical evaluation of a baffle prototype designed to perform high accuracy baffle measurements with the NFS. 
+This section's work aims to generate a better suited measurement grid for the NFS to perform baffle measurements by modifying the "Grid Generation" block in figure \ref{fig:nfsflow}, and the critical evaluation of a baffle prototype designed to perform high accuracy baffle measurements with the NFS. 
 
 \begin{center}
 	\includegraphics[width=0.6\textwidth]{GridOpti/baffle_problems} 
@@ -510,11 +511,14 @@ After implementation of the elliptical grid projection in Scilab, a 10 cm woofer
 Observing the magnitude of the Far Field SPL response, it can be noted that the elliptical grid provides a much smoother curve than the spherical grid, especially in the low frequencies. This effect could be explained by the fact that the measurement points being much closer to the driver, the measure is much less sensible to systematic errors that cannot be removed by Field Separation, such as the baffle vibrating inside the scanning radius. \\
 The phase of the Far Field SPL Response gives interesting results. The elliptical grid's phase presents less phase shifts, meaning that less resonances are present on this measurement, matching with the previous hypothesis of a removed systematic error due to the baffle vibrating. \\
 
-It should be noted that the previous measurements have been performed using the field separation method (see section \ref{sec:FieldSep} of the literature review), allowing to remove the contributions from the room. In that case, going closer to the speaker allows to improve the SNR, making the measurement with the elliptical grid robuster to room modes.
-If the field separation cannot be applied; using the elliptical grid can greatly improve the measurement: moving the microphone closer to the DUT will make the final results more accurate thanks to the robustness to room mode mentioned previously. \\
+It should be noted that the previous measurements have been performed using the field separation method (see section \ref{sec:FieldSep} of the literature review), allowing to remove the contributions from the room. In that case, going closer to the speaker allows to improve the Signal-Noise Ratio (SNR), making the measurement with the elliptical grid robuster to room modes.
+As a matter of fact, the SNR can be improved by using smoothing if the measurement have been performed using the NFS and the field separation.\\
 
-It can be concluded that using different measurement grid is relevant. A well adjusted grid have shown to give more accurate results. Following this investigation, several grids could be generated, for example a half-cylindrical grid for rectangular systems mounted in baffle, such as wall speakers.\\
-Further investigations should be conducted on the influence of the measurement grid on the measurement accuracy.
+If the field separation cannot be applied on the measurement; using the elliptical grid can greatly improve the results: moving the microphone closer to the DUT will make the final results more accurate thanks to the robustness to room mode mentioned previously. \\
+
+
+It can be concluded that using different measurement grid is relevant, particularly for measurements performed without field separation: a well adjusted grid have shown to give more accurate results. \\
+Following this investigation, several grids could be generated, for example a half-cylindrical grid for rectangular systems mounted in baffle, such as wall speakers. Further investigations should be conducted on the influence of the measurement grid on the measurement accuracy.
 
 \subsection{Application note for baffle measurements}
 
@@ -571,23 +575,21 @@ Moreover, the contributions from the baffle itself aren't really problematic: if
 
 Figure \ref{fig:vib_comp} compares the radiated powers in the far field (r = 10m) of the speaker (5 cm scan) and the speaker+wood (21 cm scan) measurements, evidencing the effect of the wooden plate's vibration on the measurement. At the resonance (f = 180 Hz), a strong cancellation effect is observed on the speaker+wood measurement, with a difference of almost 3 dB between the curves. This cancellation is most likely to be due to the plate vibrating in opposite phase with the speaker. \\
 
-
-
 \begin{minipage}{0.5\textwidth} 
-\begin{center}
-	\includegraphics[width=\textwidth]{GridOpti/Vib_Pow} 
-\end{center}
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Comparison of apparent power in the Near Field for different measurement points} 
+	\begin{center}
+		\includegraphics[width=\textwidth]{GridOpti/Vib_Pow} 
+    	\captionsetup{hypcap=false} 
+		\captionof{figure}{Comparison of apparent power in the Near Field for different measurement points} 
 	\label{fig:vib_pow}
+	\end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=\textwidth]{GridOpti/Vib_Pow_SPW} 
-\end{center}
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Comparison of radiated powers in the Far Field for the 5 cm and 21 cm measurements} 
-	\label{fig:vib_comp}
+	\begin{center}
+		\includegraphics[width=\textwidth]{GridOpti/Vib_Pow_SPW} 
+	    \captionsetup{hypcap=false} 
+		\captionof{figure}{Comparison of radiated powers in the Far Field for the 5 cm and 21 cm measurements} 
+		\label{fig:vib_comp}
+	\end{center}
 \end{minipage}
 \vspace{0.1cm}
 
@@ -604,6 +606,15 @@ In order to have a better understanding of the wooden plate behavior, a measurem
 \end{center}
 \fi
 
+Another investigation have been performed to identify the rattling generated by the clamping system (see picture in appendix \ref{Chap:baffle_pics}): if the nuts aren't tighten enough, an audible rattling sound is emitted and will pollute the measurement. Figure \ref{fig:sweep_baffle} presents the time signal measured by a microphone on the upper left corner of the baffle
+
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{GridOpti/Baffle_Rattle} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Total and residual signals of the baffle rattling} 
+	\label{fig:sweep_baffle}
+\end{center}
+
 
 \subsection{Discussion}
 
@@ -615,6 +626,7 @@ The previous investigations highlighted several problems with the baffle prototy
 \end{description}
 
 To conclude, the baffle prototype allows to generate accurate acoustic measurements of systems if the scanning radius, the plate material and the scan's geometry are selected carefully. 
+\todo[inline]{say the plate vibration probs can be reduced by a smaller radius, but will never be totally eased off because the speaker's mounting system vibrates too and it would be stupid to make a meas IN the speaker} 
 
 %--------------------------------------------------------------
 %	SYMMETRY
@@ -648,8 +660,8 @@ Figure \ref{fig:sym_flow} presents the flowchart of the optimization. The first 
 \end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp}.The free-field transfer function of a loudspeaker can be expressed by only considering the direct sound (outgoing wave) in equation \ref{eq:sphwvexp} and is expressed in equation \ref{eq:ffHf}.\\
-\todo[inline, color=blue!40]{Réécrire, ca sonne super mal, et tu parle meme pas des coefficients}
+The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp}, where $c_{n,m}^{out}(j \omega)$ \\
+
 Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders $n,m$ (\textit{all figures presented in this subsection are courtesy of W. Klippel, from the presentation \cite{lect2018}}). 
 \end{minipage}
 \vspace{0.4cm}
@@ -793,7 +805,7 @@ C_{mn_{rotational}}  = \begin{pmatrix}
 \end{equation}
 \myequations{Matrix of rotational symmetry coefficients}
 
-For the single plane symmetry, the indexes of the coefficients on left side satisfying $m = -2s; \; s = 1,2,3,...$ are calculated and the left-side symmetry matrix is filled using the same method as for the rotational symmetry. The indexes corresponding to the coefficients on the right side satisfying $m = 2s$ are calculated, and the coefficients on the left are duplicated to their corresponding right-side indexes, as shown by equation \ref{eq:matrix_SPS}.
+For the single plane symmetry, the indexes of the coefficients on left side satisfying $m \geq 0 \; 0 \leq n \leq N$ are calculated and the left-side symmetry matrix is filled using the same method as for the rotational symmetry. The indexes corresponding to the coefficients on the right side satisfying $m = 2s$ are calculated, and the coefficients on the left are duplicated to their corresponding right-side indexes, as shown by equation \ref{eq:matrix_SPS}.
 
 \begin{equation}
 C_{mn_{Left}} = \begin{pmatrix}
@@ -820,16 +832,16 @@ C_{mn_{Right}} = \begin{pmatrix}
 \myequations{Matrix of single plane symmetry coefficients}
 
 \tikz[overlay,remember picture] {
-  \draw[->] ([xshift=1.5ex]aarrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]aarrowbottom);
-  \draw[->] ([xshift=1.5ex]barrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]barrowbottom);	
-  \draw[->] ([xshift=1.5ex]carrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]carrowbottom);
+  \draw[dashed,->] ([xshift=1.5ex]aarrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]aarrowbottom);
+  \draw[dashed,->] ([xshift=1.5ex]barrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]barrowbottom);	
+  \draw[dashed,->] ([xshift=1.5ex]carrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]carrowbottom);
 }
 
 The $R_{m}$ weights matrix is calculated for each $mn$ orders and each frequency using equation \ref{eq:Rm}. For the left/right symmetry the angle $\phi_{e}$ is $\frac{\pi}{2}$ and for the top/bottom symmetry, $\phi_{e} = 0$; changing the values of the weights. The right-side matrix is then weighted by $R_{m}$ by multiplying the matrices: $C_{mn_{Right}} = R_{m} \times C_{mn_{Right}}$. \\
 To avoid overlapping and ensure that the single plane symmetry coefficient matrix is correct, the coefficients of order $m = 0$ are only filled once in the left-side matrix. The coefficient matrix is then computed by adding the right-side and left-side matrices $C_{mn_{SinglePlane}} = C_{mn_{Left}} + C_{mn_{Right}}$. \\
 
 
-For the baffle and the dual plane symmetries, the same principle as for the single plane symmetries is applied; the main difference being the indexes of the relevant coefficients. There is no need the multiply the right-side matrix by the weights matrix $R_{m}$ for those symmetries, as seen in subsection \ref{chap:sym}. \\
+For the baffle and the dual plane symmetries, the same principle as for the single plane symmetry is applied to retrieve the coefficient matrix. Of course, the the indexes of the coefficients. There is no need the multiply the right-side matrix by the weights matrix $R_{m}$ for those symmetries, as seen in subsection \ref{chap:sym}. \\
 
 From the coefficients matrices the radiated power is calculated by using equation \ref{eq:power}.
 \begin{equation}
@@ -843,32 +855,17 @@ Now that the coefficient matrix is known, the rest matrix is calculated by subtr
 Another method to asses the symmetry of a system is calculating the ratio of the power radiated by the symmetry and the total power. This parameter is called the symmetry factor, and is given by equation \ref{eq:symfqct}.
 
 \begin{equation}
-	S = \frac{\Pi_{sym}}{\Pi{total}}
+	S = \frac{\Pi_{sym}}{\Pi_{total}}
 	\label{eq:symfqct}
 \end{equation}
 \myequations{Symmetry factor}
 
-The symmetry factor can be expressed in dB
-
-\todo[inline, color=red!40]{Give the power equations and explain the symmetry factor + and explain why in the code you average on the 2 sides bc we don't know which is the correct solution}
-
-
-
-\subsection{Post-processing}
-
-After performing a measure with a coarse grid and calculating the factors for each symmetry listed above; it is possible to deduce whether the DUT presents symmetries or not. For example a symmetry factor above 90\% means that there is a difference of $\approx$-0.5 dB between the measured radiated power and the power radiated by the coefficients corresponding to the symmetry condition under study. The power are calculated by using equation \ref{eq:power}.
-
-
+The symmetry factor can be expressed in dB, and allows to quantify the differences between the total radiated power and the symmetry radiated power. The symmetry presenting the less differences is called the "dominant symmetry". \\
 
 Once the dominant symmetry is identified, the user is informed that a faster scan can be performed. For example if the Dual Plane Symmetry is found to be dominant, it is possible to scan only a fourth of the device and to reconstruct the emitted sound field.\\
-
 Another use of the symmetry can be in post-processing only: after finding a symmetry for a device, it is possible to speed the processing by removing the irrelevant coefficients. For the Dual Plane Symmetry example, all coefficients  $C_{mn} \;  \textup{for}   m = 2s; \; s =1, 2, 3...$ will be zero, thus reducing the number of coefficients by 70\%.\\
 
-
-
-
-\todo[inline, color=red!40]{finish the processing, say that other idea could be considering symmetry in post processing and not just scan}
-
+\todo[inline, color=red!40]{Give the power equations and explain the symmetry factor + and explain why in the code you average on the 2 sides bc we don't know which is the correct solution}
 
 \section{Measurements}
 
@@ -1014,15 +1011,15 @@ The previous results are promising for the investigation on symmetry conditions 
 %--------------------------------------------------------------
 %	ROOM CORRECTION
 %--------------------------------------------------------------
-\chapter{Room correction}
+\chapter{Room Compensation}
 
-Being able to generate room correction curves is great for the everyday measurement of loudspeakers since it allows to compensate the effect of any environment and to create quasi-perfect measurements. According to the AES standard \cite{aesstandart}, "\textit{accurate and repeatable loudspeaker driver measurements require that environmental and boundary influence have minimal impact on the measurement}". Such measurements are usually done in anechoic rooms, and accurate results are difficult to achieve for companies not having access to such a room or for a hobbyist. This section aims to explore different solutions to ease off the boundaries effect on an acoustic measurement performed in a "normal" room such as a workshop.
+Being able to generate room correction curves is great for the everyday measurement of loudspeakers since it allows to compensate the effect of any environment and to create quasi-perfect measurements. According to the AES standard \cite{aesstandart}, "\textit{accurate and repeatable loudspeaker driver measurements require that environmental and boundary influence have minimal impact on the measurement}". Such measurements are usually done in anechoic rooms, and accurate results are difficult to achieve for companies not having access to such a room or for a hobbyist.
 
 \section{Principle}
 
-By using post-processing, it is possible to generate a correction curve for the box, and to obtain accurate measurements by compensating its influence on the DUT. Several methods are available to generate this room correction curves \citep[see][]{aeswb}.\\
+By using post-processing, it is possible to simulate free field conditions and to compensate the influence of the room on the measurement. Several methods are available to generate this compensated curves, from time windowing to the generation of compensation functions \citep[see][]{aeswb}. Describing all of these methods is beyond the scope of this report, and this section is focused on the compensation by a reference curve method \\
 
-\begin{minipage}{0.248\textwidth}
+\begin{minipage}{0.331\textwidth}
 \begin{center}
 	\includegraphics[width=0.95\textwidth]{RoomComp/Sonograph_Meas} 
     \captionsetup{hypcap=false} 
@@ -1030,7 +1027,7 @@ By using post-processing, it is possible to generate a correction curve for the 
 	\label{fig:comp_meas}
 \end{center}
 \end{minipage}
-\begin{minipage}{0.248\textwidth}
+\begin{minipage}{0.331\textwidth}
 \begin{center}
 	\includegraphics[width=0.95\textwidth]{RoomComp/Sonograph_MagFilt} 
     \captionsetup{hypcap=false} 
@@ -1038,15 +1035,7 @@ By using post-processing, it is possible to generate a correction curve for the 
 	\label{fig:comp_mag}
 \end{center}
 \end{minipage}
-\begin{minipage}{0.248\textwidth}
-\begin{center}
-	\includegraphics[width=0.95\textwidth]{RoomComp/Sonograph_MinPhase} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Filter minimal phase} 
-	\label{fig:comp_minphase}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.248\textwidth}
+\begin{minipage}{0.331\textwidth}
 \begin{center}
 	\includegraphics[width=0.95\textwidth]{RoomComp/Sonograph_RoomCor} 
     \captionsetup{hypcap=false} 
@@ -1054,19 +1043,28 @@ By using post-processing, it is possible to generate a correction curve for the 
 	\label{fig:comp_RoomCor}
 \end{center}
 \end{minipage}
+
 \vspace{0.1cm}
 
-\todo[inline, color=red!40]{start before 0 to show the pre-ringing + explain motivations with time windows needing to be correctly adjusted to avoid overlapping + time domain correction}
+Figures \ref{fig:comp_meas}, \ref{fig:comp_mag} and \ref{fig:comp_RoomCor} presents the Time-Frequency Analysis (TFA) of the measurement of the 10 cm woofer (see \ref{spkrlib:10cm}) Transfer Function (TRF) in free air. Different methods have been applied to simulate free field conditions and compensate for the room influence:
 
-Figures \ref{fig:comp_meas}, \ref{fig:comp_mag}, \ref{fig:comp_minphase} and \ref{fig:comp_RoomCor} presents the Time-Frequency Analysis (TFA) of three different methods to perform a room correction, applied on the measurement of the 10 cm woofer (see \ref{spkrlib:10cm}) Transfer Function (TRF) in free air.
 \begin{description}
-\item[Figure \ref{fig:comp_meas}] the measurements without any correction applied. Here a lot of artifacts are visible: acausal pre-ringing of the speaker, 
-\item[Figure \ref{fig:comp_mag}] a pre-filter have been applied on the magnitude of the TRF. This method is the most straight-forward but generates ringing artefacts on the TFA: the filter is only applied to the magnitude and does take the phase between the correction curve and the measured curve in consideration. 
-\item[Figure \ref{fig:comp_minphase}] the same pre-filter have been applied on the TRF, including the minimal phase that have been reconstructed from the cepstrum of the TRF. Reconstructing the minimal phase enhances the accuracy of the correction in low frequency. However, in high frequencies this method does not dissociate the room from the speaker's contributions, and some ringing can still be observed.
-\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Correction curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. This method provides the best result: by using a reference curve provided by a measurement of the woofer, the phase response of the room can be isolated from the measurement, removing the ringing artifacts visible on the TFA. 
+\item[Figure \ref{fig:comp_meas}] presents the measurements without any compensation applied. The decay of the room have a large impact on the measurement, and makes the speaker's behavior hard to discriminate from the room's artifacts. In low frequencies, the modes are clearly visible and spreaded and will have a big impact on the measurement because they'll be there all the time. In high frequencies, the modes could be eased-off by smoothing the TRF.
+
+\item[Figure \ref{fig:comp_mag}] a pre-filter have been applied on the magnitude of the TRF, using the method shown in figure \ref{fig:flow_postfilt}, where the filter $H_{c}$ is the difference between a reference measurement done with the NFS and the TRF measurement. This method is the most straight-forward to implement, but the filter $H_{c}$ has a zero phase and is only applied on the magnitude. The lack of phase information generates the acausality observed on the TFA.
+
+\begin{center}
+	\includegraphics[width=0.4\textwidth]{RoomComp/flowchart_prefilter} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Pre-filter flowchart} 
+	\label{fig:flow_postfilt}
+\end{center}
+
+\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Compensation reference curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. This method provides the best result: by using a reference curve provided by a measurement of the woofer using the NFS, the phase response of the room can be isolated from the measurement, removing the ringing artifacts visible on the TFA. 
 \end{description}
 
-The measurement filtered by a reference curve gives accurate results, but requires specific. In the following, different methods of reference
+The Low-Frequency Reference method gives accurate results, but requires a good reference curve to be relevant. In the following, different methods of obtaining the reference curve and different measurement environments 
+
 \todo[inline, color=red!40]{Parle du fait que les résultats montrent que la RC est mieux, explique qu'on explore différents méthodes d'exploitation de la méthode Low-Frequency reference curve}
 
 \section{Measurements}
@@ -1087,7 +1085,6 @@ The measurement filtered by a reference curve gives accurate results, but requir
 A very simple and straightforward approach to generate the Reference Curve is to exploit a measure done in the near field of the DUT. Figure \ref{fig:SetupNFFF} presents the measurement set-up: the reference point is located at 5 cm on-axis of the speaker; and the measurements are taken in the far field at different angles. \\
 
 Figure \ref{fig:resNFFF} presents the different far field measurement when compensated using the near-field reference curve and the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. 
-\todo[inline, color=red!40]{expliquer vite fait principe correct LF, et passe à DB keele}
 \end{minipage}
 
 \vspace{0.4cm}
@@ -1109,7 +1106,9 @@ Figure \ref{fig:resNFFF} presents the different far field measurement when compe
 \end{center}
 \end{minipage}
 
-The results shows a good match before the cross-frequency range (shown by the vertical yellow bars) 
+\todo[inline, color=red!40]{expliquer vite fait principe correct LF, et passe à DB keele+ dire que ca amrche que pour 1 driver}
+
+The results shows a good match before the cross-frequency range (shown by the vertical yellow bars in figure \ref{fig:resNFFF}) 
 
 
 \subsection{D. B. Keele method for Far Field extrapolation}
@@ -1126,8 +1125,11 @@ Where $p_{N}$ and $p_{F}$ are respectively the Near and Far field pressures, $r$
 
 The results of this extrapolation, after implementation in SciLab, are given in appendix \ref{Curves:dbkFF}. 
 
+
+
 \subsection{Measurements in the tetrahedral box}
-A solution to this problematic is to measure in test boxes, such as the tetrahedral test box created by Hill Acoustics \citep[see][]{tetbox}. 
+Although the previous methods are effective, they require the reference curve to be remeasured for each environment or change of the DUT position, because the room effects will change. A solution to this problematic is to measure in test boxes, such as the tetrahedral test box created by Hill Acoustics \citep[see][]{tetbox}: the boxes provide a shielding against the outside environment, allowing a reproductibility of results. For example measuring
+
 \subsubsection{4.2.3.1 $\qquad$ Influence of the load}
 
 The tetrahedral test box being a closed box system, it will have an impact on the speaker's behavior. Closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the blue curve is the measure in the box and the orange curve the result of the NFS of the 10 cm woofer (see appendix \ref{spkrlib:10cm}). In the 20 Hz - 150 Hz range the box creates a "bass boost" effect. \\
@@ -1222,6 +1224,7 @@ Using the voltage correction calculated either by the ratio of resonance frequen
 
 The mismatches between the free air and voltage compensated curves are most likely due to the approximations made on the box's behavior. The effect of the box of the driver is much more complicated than a change on the mechanical compliance, especially since leakage isn't taken in account.  
 
+\todo[inline]{Expliquer que l'on peut utiliser ca pour compenser l'effet de la boite dans le domaine linèaire}
 \todo[inline, color=red!40]{Expliquer que les différences sont dues à l'approximation trop simpliste sur le modèle de la boite, mais bien formulé. Ajouter les schémas équivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}
 
 \subsubsection{4.2.3.2 $\qquad$ Influence of microphone position}
