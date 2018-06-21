@@ -69,7 +69,7 @@
 %\draftfalse
 
 \ifdraft
-\usepackage{todonotes}
+\usepackage[colorinlistoftodos]{todonotes}
 \else
 \usepackage[disable]{todonotes}
 \fi
@@ -694,7 +694,7 @@ Figure \ref{fig:sym_flow} presents the flowchart of the optimization. The first 
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp}, where $c_{n,m}^{out}(j \omega)$ \\
-
+\todo[inline, color=red!40]{FINIR DE REDIGER}
 Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders $n,m$ (\textit{all figures presented in this subsection are courtesy of W. Klippel, from the presentation \cite{lect2018}}). 
 \end{minipage}
 \vspace{0.4cm}
@@ -1123,7 +1123,7 @@ Figure \ref{fig:resNFFF} presents the different far field measurement when compe
 \vspace{0.2cm}
 
 The results shows a good match before the cross-frequency range (shown by the vertical yellow bars in figure \ref{fig:resNFFF}); where the measure is compensated; but have poor results in higher frequencies. Even if the compensation was over the whole frequency range, the near field effects couldn't be removed in high frequencies.\\
-Furthermore, it the DUT is a 2-way (or more) system, this method isn't applicable: the driver interfering with each other would make the reference curve inaccurate,  giving erroneous results. 
+Furthermore, it the DUT is a 2-way (or more) system, this method isn't applicable: the driver interfering with each other would make the reference curve inaccurate, giving erroneous results. 
 
 
 \section{D. B. Keele method for Far Field extrapolation}
@@ -1139,8 +1139,9 @@ p_{N} = \frac{2r}{a} \cdot p_{F}
 
 Where $p_{N}$ and $p_{F}$ are respectively the Near and Far field pressures, $r$ is the distance between the center of the driver's membrane and the measuring point, and $a$ the radius of the driver's membrane.\\
 
-The results of this extrapolation, after implementation in SciLab, are given in appendix \ref{Curves:dbkFF}. 
+The method have some serious drawbacks, mainly it only works on-axis and the absolute level isn't good.
 
+\todo[inline, color=red!40]{faire la far field method pour la mesure précédente et comparer les résults}
 
 
 \section{Measurements in the tetrahedral box}
@@ -1170,10 +1171,7 @@ Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different d
 \end{minipage}
 \vspace{0.1cm} 
 
-
-From this result it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. This set of curves is the Room Compensation functions, or references. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This boost can be easily eased off by applying the LFR room compensation method.\\
-\todo[inline, color=red!40]{Tu ne parle pas de la bonne figure pour apprécier les différences. La différence entre les RCs est + pertinente car elle devrais être de 0 dB si le mic n'avais pas d'influence}
-A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoom}. In this frequency range, the accepted level of differences is $\pm$ 5 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical to ensure an accurate measurement. \\
+From the previous observations it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. This set of curves is the Room Compensation functions, or references. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This effect can be compensated and the matter is discussed in section \ref{sec:load}.\\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -1192,10 +1190,38 @@ A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoo
 \end{center}
 \end{minipage}
 
+\todo[inline, color=red!40]{Tu ne parle pas de la bonne figure pour apprécier les différences. La différence entre les RCs est + pertinente car elle devrais être de 0 dB si le mic n'avais pas d'influence}
+
+Figure \ref{fig:MicPosDiffRC} shows the difference between the Room Compensation functions presented in figure \ref{fig:MicPosDiffNFS}. If the microphone position had no influence on the measurement, the difference should be zero.
+
+
+ In this frequency range, the accepted level of differences is $\pm$ 5 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical to ensure an accurate measurement. \\
+
+
 
 \subsection{Influence of the load}
+\label{sec:load}
 
 The tetrahedral test box being a closed box system, it has an impact on the speaker's behavior. A closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the blue curve is the measure in the box and the orange curve the result of the NFS of the 10 cm woofer (see appendix \ref{spkrlib:10cm}). In the 20 Hz - 150 Hz range the box creates a "bass boost" effect. \\
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{RoomComp/Compa_NFS_BAffle} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Comparison between the TRF of a measure in baffle and a measure in the box.} 
+	\label{fig:Load_Compa}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{RoomComp/diff_kms} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Comparison between the $K_{ms}$ in free air and in the box} 
+	\label{fig:kms_comp}
+\end{center}
+\end{minipage}
+
+\vspace{0.2cm}
 
 Assuming that the driver is in the linear range, the displacement transfer function of a driver in free air is given by equation \ref{eq:TRF_disp}, where $ e_{g}$ is the input voltage, $C_{ms}$ the compliance, $Bl$ the force factor, $\omega_{s}$ the resonance frequency of the system, and $Q_{ts}$ the total quality factor of the system.
 
@@ -1496,14 +1522,6 @@ This appendix aims to present additional figures that could not be presented in 
 \subsubsection{Influence of the load}
 \label{Curves:InfluLoad}
 
-\begin{center}
-	\includegraphics[width=0.8\textwidth]{RoomComp/Compa_NFS_BAffle} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Comparison between the TRF of a measure in baffle and a measure in the box.} 
-	\label{fig:Load_Compa}
-\end{center}
-
-
 \subsubsection{Influence of microphone position}
 \label{Curves:InfluMicPos}
 
@@ -1515,25 +1533,7 @@ This appendix aims to present additional figures that could not be presented in 
 	\label{fig:micpos_TRF_big}
 \end{center}
 
-\begin{center}
-	\includegraphics[width=0.8\textwidth]{RoomComp/MicPos_Diff_NFS_TRF_zoom} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Difference between NFS and transfer functions - zoom on 150 Hz - 20 kHz} 
-	\label{fig:MicPos_Diff_NFS_Zoom}
-\end{center}
-
-
-\subsection{Room Correction solutions}
-
-\subsubsection{D. B. Keele method for Far Field extrapolation}
-\label{Curves:dbkFF}
-
-\begin{center}
-	\includegraphics[width=\textwidth]{Appendix/DKeele_FF_All} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}[Application of DB Keele method compared with NFS results]{Application of DB Keele method compared with NFS results - Left: shifted curves; Right: non-shifted curves} 
-	\label{fig:dbk_fig}
-\end{center}
+\missingfigure{Zoom sur les différences de Room Comp}
 
 		% Speaker library
 \chapter{Speaker library}

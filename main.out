@@ -35,8 +35,8 @@
 \BOOKMARK [2][-]{subsection.4.4.1}{Influence of microphone position}{section.4.4}% 35
 \BOOKMARK [2][-]{subsection.4.4.2}{Influence of the load}{section.4.4}% 36
 \BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 37
-\BOOKMARK [0][-]{chapter*.9}{Conclusion}{}% 38
-\BOOKMARK [0][-]{chapter*.9}{References}{}% 39
+\BOOKMARK [0][-]{chapter*.11}{Conclusion}{}% 38
+\BOOKMARK [0][-]{chapter*.11}{References}{}% 39
 \BOOKMARK [0][-]{Appendix.a.A}{Appendix Additional figures}{}% 40
 \BOOKMARK [1][-]{section.a.A.1}{Baffle measurements}{Appendix.a.A}% 41
 \BOOKMARK [2][-]{subsection.a.A.1.1}{Estimation of baffle influence}{section.a.A.1}% 42
@@ -46,16 +46,15 @@
 \BOOKMARK [2][-]{subsection.a.A.2.3}{2-way "diagonal" speaker}{section.a.A.2}% 46
 \BOOKMARK [1][-]{section.a.A.3}{Room Correction}{Appendix.a.A}% 47
 \BOOKMARK [2][-]{subsection.a.A.3.1}{Measurements}{section.a.A.3}% 48
-\BOOKMARK [2][-]{subsection.a.A.3.2}{Room Correction solutions}{section.a.A.3}% 49
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Speaker library}{}% 50
-\BOOKMARK [1][-]{section.a.B.1}{10 cm woofer}{Appendix.a.B}% 51
-\BOOKMARK [1][-]{section.a.B.2}{Oval speaker}{Appendix.a.B}% 52
-\BOOKMARK [1][-]{section.a.B.3}{16 cm fullband speaker}{Appendix.a.B}% 53
-\BOOKMARK [1][-]{section.a.B.4}{2-way diagonal speaker}{Appendix.a.B}% 54
-\BOOKMARK [1][-]{section.a.B.5}{18'' woofer}{Appendix.a.B}% 55
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Baffle Prototype pictures}{}% 56
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix SciLab implementation of symmetry verification}{}% 57
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Organization of the work}{}% 58
-\BOOKMARK [0][-]{Appendix.a.F}{Appendix Application notes}{}% 59
-\BOOKMARK [1][-]{section.a.F.1}{Baffle measurement}{Appendix.a.F}% 60
-\BOOKMARK [1][-]{section.a.F.2}{Complex Room Compensation module}{Appendix.a.F}% 61
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Speaker library}{}% 49
+\BOOKMARK [1][-]{section.a.B.1}{10 cm woofer}{Appendix.a.B}% 50
+\BOOKMARK [1][-]{section.a.B.2}{Oval speaker}{Appendix.a.B}% 51
+\BOOKMARK [1][-]{section.a.B.3}{16 cm fullband speaker}{Appendix.a.B}% 52
+\BOOKMARK [1][-]{section.a.B.4}{2-way diagonal speaker}{Appendix.a.B}% 53
+\BOOKMARK [1][-]{section.a.B.5}{18'' woofer}{Appendix.a.B}% 54
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Baffle Prototype pictures}{}% 55
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix SciLab implementation of symmetry verification}{}% 56
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Organization of the work}{}% 57
+\BOOKMARK [0][-]{Appendix.a.F}{Appendix Application notes}{}% 58
+\BOOKMARK [1][-]{section.a.F.1}{Baffle measurement}{Appendix.a.F}% 59
+\BOOKMARK [1][-]{section.a.F.2}{Complex Room Compensation module}{Appendix.a.F}% 60

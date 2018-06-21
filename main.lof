@@ -43,9 +43,11 @@
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Transfer Functions for different positions\relax }}{19}{figure.4.10}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Difference between NFS and TRF\relax }}{20}{figure.4.11}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Difference between Room Compensation functions\relax }}{20}{figure.4.12}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{20}{figure.caption.8}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Comparison of measured impedance\relax }}{21}{figure.4.14}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Comparison of measured displacement TRF\relax }}{21}{figure.4.15}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Comparison between the TRF of a measure in baffle and a measure in the box.\relax }}{20}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Comparison between the $K_{ms}$ in free air and in the box\relax }}{20}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{21}{figure.caption.10}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Comparison of measured impedance\relax }}{22}{figure.4.16}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Comparison of measured displacement TRF\relax }}{22}{figure.4.17}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Radiated Powers at 1m for different measurement points on the baffle\relax }}{i}{figure.a.A.1}
 \contentsline {figure}{\numberline {A.2}{\ignorespaces Contour plot of the woofer at 10 m, centered on-axis, horizontal plane.\relax }}{ii}{figure.a.A.2}
@@ -66,19 +68,16 @@
 \contentsline {figure}{\numberline {A.17}{\ignorespaces Diagonal speaker, Radiated Powers: dual plane symmetry\relax }}{iv}{figure.a.A.17}
 \contentsline {figure}{\numberline {A.18}{\ignorespaces Diagonal speaker, Radiated Powers: single plane (left/right) symmetry\relax }}{iv}{figure.a.A.18}
 \contentsline {figure}{\numberline {A.19}{\ignorespaces Diagonal speaker, Radiated Powers: single plane (top/bottom) symmetry\relax }}{iv}{figure.a.A.19}
-\contentsline {figure}{\numberline {A.20}{\ignorespaces Comparison between the TRF of a measure in baffle and a measure in the box.\relax }}{v}{figure.a.A.20}
-\contentsline {figure}{\numberline {A.21}{\ignorespaces Transfer functions for all microphones positions\relax }}{vi}{figure.a.A.21}
-\contentsline {figure}{\numberline {A.22}{\ignorespaces Difference between NFS and transfer functions - zoom on 150 Hz - 20 kHz\relax }}{vii}{figure.a.A.22}
-\contentsline {figure}{\numberline {A.23}{\ignorespaces Application of DB Keele method compared with NFS results}}{vii}{figure.a.A.23}
+\contentsline {figure}{\numberline {A.20}{\ignorespaces Transfer functions for all microphones positions\relax }}{v}{figure.a.A.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces 10 cm woofer\relax }}{viii}{figure.a.B.1}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Oval speaker\relax }}{viii}{figure.a.B.2}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces 2-way diagonal speaker\relax }}{ix}{figure.a.B.3}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces 18'' woofer\relax }}{ix}{figure.a.B.4}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces 10 cm woofer\relax }}{vii}{figure.a.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Oval speaker\relax }}{vii}{figure.a.B.2}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces 2-way diagonal speaker\relax }}{viii}{figure.a.B.3}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces 18'' woofer\relax }}{viii}{figure.a.B.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Back of the baffle\relax }}{x}{figure.a.C.1}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Closeup of the clamping system\relax }}{x}{figure.a.C.2}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Side of the baffle\relax }}{x}{figure.a.C.3}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Back of the baffle\relax }}{ix}{figure.a.C.1}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Closeup of the clamping system\relax }}{ix}{figure.a.C.2}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Side of the baffle\relax }}{ix}{figure.a.C.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
