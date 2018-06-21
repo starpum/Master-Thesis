@@ -26,26 +26,23 @@
 \contentsline {section}{\numberline {3.1}Principle}{11}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Impact of symmetries on complex coefficients of the spherical wave expansion}{11}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Implementation}{12}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Measurements}{13}{section.3.2}
+\contentsline {section}{\numberline {3.2}Measurements}{14}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}10 cm woofer}{14}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Oval speaker}{14}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}2-way "diagonal" speaker}{15}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.2}Oval speaker}{15}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}2-way "diagonal" speaker}{16}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Discussion}{16}{section.3.3}
 \contentsline {chapter}{\numberline {4}Room Compensation}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Principle}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Measurements}{18}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Compensation by a Near Field measurement}{18}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}D. B. Keele method for Far Field extrapolation}{18}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Measurements in the tetrahedral box}{18}{subsection.4.2.3}
-\contentsline {subsubsection}{4.2.3.1 $\hskip 2em\relax $ Influence of the load}{19}{subsubsection*.16}
-\contentsline {subsubsection}{4.2.3.2 $\hskip 2em\relax $ Influence of microphone position}{20}{subsubsection*.20}
-\contentsline {section}{\numberline {4.3}Room Correction solutions}{22}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Generation of a generic Correction Curve for the tetrahedral box}{22}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}Discussion}{22}{section.4.4}
-\contentsline {chapter}{Conclusion}{23}{chapter*.27}
-\contentsline {chapter}{References}{23}{chapter*.27}
+\contentsline {section}{\numberline {4.2}Compensation by a Near Field measurement}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}D. B. Keele method for Far Field extrapolation}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}Measurements in the tetrahedral box}{19}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Influence of microphone position}{19}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Influence of the load}{20}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Discussion}{22}{section.4.5}
+\contentsline {chapter}{Conclusion}{23}{chapter*.9}
+\contentsline {chapter}{References}{23}{chapter*.9}
 \contentsline {chapter}{Appendix \numberline {A}Additional figures}{i}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Baffle measurement}{i}{section.a.A.1}
+\contentsline {section}{\numberline {A.1}Baffle measurements}{i}{section.a.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Estimation of baffle influence}{i}{subsection.a.A.1.1}
 \contentsline {section}{\numberline {A.2}Measurement time optimization}{ii}{section.a.A.2}
 \contentsline {subsection}{\numberline {A.2.1}10 cm woofer}{ii}{subsection.a.A.2.1}
@@ -53,10 +50,10 @@
 \contentsline {subsection}{\numberline {A.2.3}2-way "diagonal" speaker}{iv}{subsection.a.A.2.3}
 \contentsline {section}{\numberline {A.3}Room Correction}{v}{section.a.A.3}
 \contentsline {subsection}{\numberline {A.3.1}Measurements}{v}{subsection.a.A.3.1}
-\contentsline {subsubsection}{Influence of the load}{v}{subsubsection*.29}
-\contentsline {subsubsection}{Influence of microphone position}{vi}{subsubsection*.30}
+\contentsline {subsubsection}{Influence of the load}{v}{subsubsection*.11}
+\contentsline {subsubsection}{Influence of microphone position}{vi}{subsubsection*.12}
 \contentsline {subsection}{\numberline {A.3.2}Room Correction solutions}{vii}{subsection.a.A.3.2}
-\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{vii}{subsubsection*.31}
+\contentsline {subsubsection}{D. B. Keele method for Far Field extrapolation}{vii}{subsubsection*.13}
 \contentsline {chapter}{Appendix \numberline {B}Speaker library}{viii}{Appendix.a.B}
 \contentsline {section}{\numberline {B.1}10 cm woofer}{viii}{section.a.B.1}
 \contentsline {section}{\numberline {B.2}Oval speaker}{viii}{section.a.B.2}

@@ -10,6 +10,7 @@
 \usepackage[absolute]{textpos}
 \usepackage{booktabs}
 \usepackage{etoolbox}					% Manage toclof lines
+\usepackage[bottom]{footmisc}		% Throw footnotes to the very bottom of the page
 
 \usepackage{expdlist}
 \newenvironment{itemize*}%			% Creates a custom itemize environment, called by itemize* 
@@ -168,7 +169,7 @@ Chlo\'{e} \textsc{Corno}
 {\Large\textbf{Acknowledgements}} 
 \end{center}
 \vspace{1cm}
-I would first like to thanks my supervisor Chrisitan Bellmann for all the help and support he provided me during these 5 months. 
+I would first like to thanks my supervisor Christian Bellmann for all the help and support he provided me during these 5 months. 
 
 \vspace{0.5cm}
 
@@ -236,7 +237,7 @@ Although this method is widely used, it presents several drawbacks:
 \begin{itemize}
 \item Resolution: the higher the angular resolution, the better the measurement but the longer it takes. 
 \item Accuracy: a good measurement must ideally be performed in an anechoic room, and in the far field of the Device to avoid any near field effects such as diffraction and interferences.
-\item Price: the materials required such as an anechoic room or a performant microphone array can either very expansive or difficult to access. 
+\item Price: the materials required such as an anechoic room or a performant microphone array can either very expensive or difficult to access. 
 \end{itemize}
 
 
@@ -289,11 +290,11 @@ The particularity of this product is that the Device Under Test (DUT) is at a fi
 
 This work has three main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS and the enhancement of the measurement grid; the optimization of measurement time by exploiting symmetry conditions on the complex coefficients of the spherical wave expansion; and the application of room correction on non-anechoic measurements.\\
 
-The NFS baffle measurement aims to create an application note on how to perform a near field scanning of a loudspeaker mounted on a baffle and evaluate the baffle's influence on the measurement. To do so, the required tasks are the assembly and critical evaluation a baffle prototype, and the optimization the measurement grid.\\
+The NFS baffle measurement aims to create an application note on how to perform a near field scanning of a loudspeaker mounted on a baffle and evaluate the baffle's influence on the measurement. To do so, the required tasks are the assembly and critical evaluation a baffle prototype, and the optimization of the measurement grid.\\
 The measurement time optimization part aims to reduce the scanning effort of the NFS by assuming symmetry conditions on the DUT 's geometry and applying these conditions on the complex coefficients of the spherical wave expansion (see equation \ref{eq:sphwvexp}). \\
 Finally, the room correction part aims to test and enhance the room correction module allowing to make fast non-anechoic measurements, to test a tetrahedral measurement box provided by Hill Acoustics \citep[see][]{tetbox}, and to create an application note on how to correct non-anechoic measurements. \\
 
-There is no particular price constrains or technical constrains associated with this project, as the required hardware and software is already available. 
+There is no particular price constraints or technical constraints associated with this project, as the required hardware and software is already available. 
 
 \newpage
 
@@ -418,13 +419,15 @@ MLE = 10log\left ( \frac{\sum_{\mathbf{r}_{e}\in G}\left | e(f,\mathbf{r}_{e})-e
 Comparing the $ TFE $ and the $MLE$ allows to estimate the measurement's relevancy: if the errors have the same order of magnitude, it is considered that the measurement is polluted.
 
 \subsubsection{Maximum order of expansion}
+\label{sec:maxN}
 
-The maximum order of expansion $N$ is a very important parameter to obtain accurate data. The higher it is and the more accurate the model becomes, but the longer the calculation. In that regard, a trade-off between accuracy and calculation time has to be made. \\
+The maximum order of expansion $N$ is a very important parameter to obtain accurate data. The higher it is and the more accurate the model becomes, but the longer the calculation. In that regard, a trade-off between accuracy and calculation time has to be made. The following merely aims to explain succinctly the limits on the maximum order of expansion.\\
 
 Investigations on this parameter have already been conducted \cite{pres, aeshs, train8} and have shown that a wave expansion truncated after $N$ = 10 is capable of modeling the 3D sound pressure field of a DUT above 30 Hz with sufficient accuracy. \\
-At very low frequencies the measurement is polluted by the poor Signal to Noise Ratio (SNR) between the microphone's input and the noise; and increasing the maximum order of expansion has little to no effect on the $TFE$. 
+At very low frequencies the measurement is polluted by the poor Signal to Noise Ratio (SNR) between the microphone's input and the noise; and increasing the maximum order of expansion has little to no effect on the $TFE$. \\
 
-\todo[inline]{Développer les limites fréquencielles du systeme}
+In high frequency, increasing the number of expansion allows to reduce the $TFE$. In theory, the maximal order $N$ should be infinite but this is not possible for real applications: a computer has a limited memory size, and the engine used to interpret the diverse algorithms (in that case, SciLab) has to cope with that limit to avoid system failures.\\
+Because of these physical limitations, the order of expansion can only be increased up to a certain threshold. It should be noted that the more complex the sound field, the more coefficients are required to describe it, and the lower the maximum order of expansion $N$ will be. 
 
 %--------------------------------------------------------------
 %	BAFFLE MEASUREMENT
@@ -514,7 +517,7 @@ The phase of the Far Field SPL Response gives interesting results. The elliptica
 It should be noted that the previous measurements have been performed using the field separation method (see section \ref{sec:FieldSep} of the literature review), allowing to remove the contributions from the room. In that case, going closer to the speaker allows to improve the Signal-Noise Ratio (SNR), making the measurement with the elliptical grid robuster to room modes.
 As a matter of fact, the SNR can be improved by using smoothing if the measurement have been performed using the NFS and the field separation.\\
 
-If the field separation cannot be applied on the measurement; using the elliptical grid can greatly improve the results: moving the microphone closer to the DUT will make the final results more accurate thanks to the robustness to room mode mentioned previously. \\
+If the field separation cannot be applied on the measurement; using the elliptical grid can greatly improve the results: moving the microphone closer to the DUT makes the final results more accurate thanks to the robustness to room effects mentioned previously. \\
 
 
 It can be concluded that using different measurement grid is relevant, particularly for measurements performed without field separation: a well adjusted grid have shown to give more accurate results. \\
@@ -531,7 +534,7 @@ Another task was to create an application note to explain how to perform baffle 
 \begin{minipage}{0.6\textwidth}
 A baffle prototype has been designed to allow relevant measurements of devices mounted on a baffle with the NFS. The prototype is shown figure \ref{fig:baffle_proto}. More pictures are given in appendix \ref{Chap:baffle_pics}. \\
 
-Before starting the production of this item, a critical evaluation must be performed in order to estimate the influence of the baffle on the measurement. Different analysis will be conduced, mainly to check the vibration of the baffle itself, the vibration of the wood plate used to mount the speaker, and a measurement centered on the speaker in order to have a point of comparison to identify vibration problems.
+Before starting the production of this item, a critical evaluation must be performed in order to estimate the influence of the baffle on the measurement. Different analysis have been be conduced, mainly to check the vibration of the baffle itself, the vibration of the wood plate used to mount the speaker, and a measurement centered on the speaker in order to have a point of comparison to identify vibration problems.
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{center}
@@ -606,15 +609,32 @@ In order to have a better understanding of the wooden plate behavior, a measurem
 \end{center}
 \fi
 
-Another investigation have been performed to identify the rattling generated by the clamping system (see picture in appendix \ref{Chap:baffle_pics}): if the nuts aren't tighten enough, an audible rattling sound is emitted and will pollute the measurement. Figure \ref{fig:sweep_baffle} presents the time signal measured by a microphone on the upper left corner of the baffle
+\vspace{0.4cm}
 
+Figure \ref{fig:sweep_baffle} presents the time signal measured by a microphone on the upper left corner of the baffle, recorded when exciting the baffle with a sinusoidal tone at f = 83 Hz. At this frequency, an audible rattling noise was emitted by the vibration of the nuts of the clamping system (see appendix \ref{Chap:baffle_pics} for pictures).\\
+The blue curve represents the signal recorded by the microphone; and the black curve shows the residual signal, calculated by the difference between the modeled response of the system and the measured signal. \\
+
+The residuum signal exhibits a periodicity with a period T $\approx$ 12 ms, corresponding to the frequency of the excitation. However, the frequency of the vibration is much higher than the frequency of the excitation signal: the rattling generates higher order distortions, which is why the vibrations are audible.\\
+Figure \ref{fig:sweep_baffle_sono} presents the Time-Frequency Analysis (TFA) of the Transfer Function of the signal measured by a microphone at the position where rattling have been notified. The disturbances in low frequency and spreading in the time domain comes from the room influence; whereas the short time, high-frequency contributions are generated by the rattling. Although the rattling contributions have a very low power, they are clearly audible and can have a critical impact on the measurement.\\
+
+It should be remarked that the localization of the rattling varies with the frequency of the excitation and the tightening of the clamping system; meaning that each change of setup might change the rattling behavior. 
+
+\begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{GridOpti/Baffle_Rattle} 
+	\includegraphics[width=0.9\textwidth]{GridOpti/Baffle_Rattle} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Total and residual signals of the baffle rattling} 
 	\label{fig:sweep_baffle}
 \end{center}
-
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{GridOpti/Baffle_Rattle_Sono} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Sonograph of residual signal} 
+	\label{fig:sweep_baffle_sono}
+\end{center}
+\end{minipage}
 
 \subsection{Discussion}
 
@@ -625,8 +645,21 @@ The previous investigations highlighted several problems with the baffle prototy
 \item[Baffle] the baffle itself generates some vibration, that is believed to not be critical for the measurements since it can be removed by using the field identification. 
 \end{description}
 
-To conclude, the baffle prototype allows to generate accurate acoustic measurements of systems if the scanning radius, the plate material and the scan's geometry are selected carefully. 
-\todo[inline]{say the plate vibration probs can be reduced by a smaller radius, but will never be totally eased off because the speaker's mounting system vibrates too and it would be stupid to make a meas IN the speaker} 
+To conclude, the baffle prototype allows to generate accurate acoustic measurements of systems if the scanning radius, the plate material and the scan's geometry are selected carefully. The plate vibration and the rattling will never be totally eased off, but can be reduced by choosing a smaller scanning radius and by tightening the clamping system. \\
+
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{GridOpti/meas_rattling} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Plane grid for baffle diagnostics} 
+	\label{fig:diag_baffle}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+The next steps of this study of the baffle is the creation of a "diagnostic tool" to identify rattling and other problems with the baffle, for example by making a coarse measurement with the NFS using a plane grid parallel to the baffle, as shown by figure \ref{fig:diag_baffle}.\\
+Using holographic processing would allow to identify the localization and frequencies where the vibration is critical for the measurement by generating a "map" of the vibrations.
+\end{minipage}
+
 
 %--------------------------------------------------------------
 %	SYMMETRY
@@ -707,7 +740,7 @@ Symmetries on the DUT's geometry yield symmetries in the emitted sound field, th
 
 
 \begin{minipage}{0.5\textwidth}	%Baffle sym - text
-	\textbf{Baffle symmetry} isobserved  when the DUT is mounted on a baffle (see figure \ref{fig:bafflesym}), and make half of the coefficient vanish according to the relation given by equation \ref{eq:Cbsym} \cite{aeshs}.
+	\textbf{Baffle symmetry} is observed  when the DUT is mounted on a baffle (see figure \ref{fig:bafflesym}), and makes half of the coefficient vanish according to the relation given by equation \ref{eq:Cbsym} \cite{aeshs}.
 \end{minipage}
 \begin{minipage}{0.5\textwidth}	%Baffle sym - equation
 	\begin{equation}
@@ -719,7 +752,7 @@ Symmetries on the DUT's geometry yield symmetries in the emitted sound field, th
 \vspace{0.2cm}
 
 \begin{minipage}{0.5\textwidth}	%Single plane - text
-	\textbf{Single plane symmetry} is the most common in loudspeaker systems using 2 or more drivers (see figure \ref{fig:singplsym}). Only the coefficients on either the left or right side have to be estimated; and the remainging coefficients are calulated by using equation \ref{eq:spsym} \cite{aeshs}. 
+	\textbf{Single plane symmetry} is the most common in loudspeaker systems using 2 or more drivers (see figure \ref{fig:singplsym}). Only the coefficients on either the left or right side have to be estimated; and the remaining coefficients are calulated by using equation \ref{eq:spsym} \cite{aeshs}. 
 \end{minipage}
 \begin{minipage}{0.5\textwidth}	% Single Plane sym - equation
 	\begin{equation}
@@ -730,7 +763,7 @@ Symmetries on the DUT's geometry yield symmetries in the emitted sound field, th
 \end{minipage}
 \vspace{0.1cm}
 
-The Single Plane Symmetry can occur between the left and right side of the DUT, as presented in figure \ref{fig:singplsym}; but also between the top and bottom of the DUT, shifting the symmetry plane by 90°. It should be noted that depending of the type of symmetry (left/right or top/bottom), $R_{m}$ will change, modifying the relation between the coefficients. 
+The Single Plane Symmetry can occur between the left and right side of the DUT, as presented in figure \ref{fig:singplsym}; but also between the top and bottom of the DUT, shifting the symmetry plane by 90°. It should be noted that depending of the type of symmetry (left/right or top/bottom), $R_{m}$ changes, modifying the relation between the coefficients. 
 
 \begin{minipage}{0.248\textwidth}	% Rot - img
 	\begin{center}
@@ -766,6 +799,7 @@ The Single Plane Symmetry can occur between the left and right side of the DUT, 
 \end{minipage}
 
 \subsection{Implementation}
+\label{sec:sym_imple}
 
 Once a measurement have been performed, the complex outgoing coefficients are identified and expressed in a matrix form shown in equation \ref{eq:matrix_cmn}. Each row represent a $m,n$ order and suborder, and each column a frequency.
 
@@ -790,7 +824,7 @@ C_{mn} = \qquad \bordermatrix{
 }
 
 From the complete matrix of coefficients and the relationships expressed in section \ref{chap:sym}; it is possible to derive matrices containing only the coefficients satisfying each symmetry condition.\\
-The code of the symmetry verification is given in appendix \ref{Chap:imple_sym}; and the following will describe the algorithm. \\
+The code of the symmetry verification is given in appendix \ref{Chap:imple_sym}; and the following describes the functioning of the algorithm. \\
 The first step is to initialize the matrices that will contain the coefficients to be filled with zeros and the same size than the complete matrix of coefficients.\\
 For the rotational symmetry, the indexes of the rows containing the coefficients of order $m = 0$ are calculated, and the symmetry matrix is generated by replacing the zeroes in the previously initialized matrix by the coefficients at the corresponding indexes. the resulting matrix is given by equation \ref{eq:matrix_cmn_ROT}.
 
@@ -852,7 +886,7 @@ From the coefficients matrices the radiated power is calculated by using equatio
 
 Now that the coefficient matrix is known, the rest matrix is calculated by subtracting the symmetry coefficients matrix to the total coefficients matrix: $C_{rest} = C_{total} - C_{symmetry}$. The rest matrix allows to characterize how much the system is fulfilling the symmetry conditions by comparing the power radiated by the symmetry coefficients and the power radiated by the rest: if the rest's power is higher than the symmetry's power then the system is not fulfilling the condition.\\
 
-Another method to asses the symmetry of a system is calculating the ratio of the power radiated by the symmetry and the total power. This parameter is called the symmetry factor, and is given by equation \ref{eq:symfqct}.
+Another method to assess the symmetry of a system is calculating the ratio of the power radiated by the symmetry and the total power. This parameter is called the symmetry factor, and is given by equation \ref{eq:symfqct}.
 
 \begin{equation}
 	S = \frac{\Pi_{sym}}{\Pi_{total}}
@@ -862,16 +896,17 @@ Another method to asses the symmetry of a system is calculating the ratio of the
 
 The symmetry factor can be expressed in dB, and allows to quantify the differences between the total radiated power and the symmetry radiated power. The symmetry presenting the less differences is called the "dominant symmetry". \\
 
-Once the dominant symmetry is identified, the user is informed that a faster scan can be performed. For example if the Dual Plane Symmetry is found to be dominant, it is possible to scan only a fourth of the device and to reconstruct the emitted sound field.\\
-Another use of the symmetry can be in post-processing only: after finding a symmetry for a device, it is possible to speed the processing by removing the irrelevant coefficients. For the Dual Plane Symmetry example, all coefficients  $C_{mn} \;  \textup{for}   m = 2s; \; s =1, 2, 3...$ will be zero, thus reducing the number of coefficients by 70\%.\\
+Once the dominant symmetry is identified, the user is informed that a faster scan can be performed. For example if the Dual Plane Symmetry is found to be dominant, it is possible to scan only a fourth of the device and to reconstruct the emitted sound field by mirroring the results to the remaining unmeasured quadrants.\\
 
-\todo[inline, color=red!40]{Give the power equations and explain the symmetry factor + and explain why in the code you average on the 2 sides bc we don't know which is the correct solution}
+Another use of the symmetry can be in post-processing only: after finding a symmetry for a device, it is possible to speed the processing by removing the irrelevant coefficients. For the Dual Plane Symmetry example, all coefficients  $C_{mn} \;  \textup{for}   m = 2s; \; s =1, 2, 3...$ are null, thus reducing the number of coefficients by 70\%.\\
+This reduction of the number of coefficients can be applied to all of the symmetry conditions, and can speed up the post-processing significantly. Having less coefficients would also allow to increase the order of expansion $N$; since less memory will be required as explained in section \ref{sec:maxN}; leading to a more accurate model of the 3D sound field emitted by the DUT and a higher frequency resolution.
+
+\newpage
 
 \section{Measurements}
 
 After implementation in SciLab (the code is given in appendix \ref{Chap:imple_sym}) , the validity of the symmetry assumptions must be verified. To do so, different measurements have been performed of several speakers presenting interesting geometries. A library of these speakers is given in appendix \ref{chap:spk_lib}. 
 
-\todo[inline, color=red!40]{Rephrase... ca sonne pas très bien je trouve}
 
 \subsection{10 cm woofer}
 
@@ -895,14 +930,16 @@ The DUT is a circular, 10 cm woofer (see appendix \ref{spkrlib:10cm}), mounted o
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the radiated power by coefficients not satisfying the symmetry condition described in appendix \ref{chap:sym}, in the example of a rotational symmetry the rest will be all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$. For a better reading, all the radiated power curves are provided in separate graphs in appendix \ref{Curves:10cm}.\\
+Figure \ref{fig:rad_pow_10cm} presents the calculated radiated powers for different symmetry conditions. The dashed curves represents the "rest", which is the power radiated by coefficients not satisfying the symmetry condition described in section \ref{chap:sym}, in the example of a rotational symmetry the rest is constituted of all coefficients $C_{mn} \neq 0 \;  \textup{for m}  \neq 0$. For a better reading, all the radiated power curves are provided in separate graphs in appendix \ref{Curves:10cm}.\\
 
 Figure \ref{fig:sym_fact_10cm} presents the symmetry factors for different types of symmetry, expressed in dB. A 0 dB value means that the power radiated by considering only the coefficients satisfying the symmetry condition and the total radiated power present no differences. Observing the symmetry factor for the baffle symmetry shows that this value is 0 dB over the whole frequency band: this result is matching the expectations since the measurement have been done with the speaker mounted on a baffle. \\
 
 Comparing the radiated power in figure \ref{fig:rad_pow_10cm} and appendix \ref{Curves:10cm} for the different symmetries gives interesting results: in the low frequency domain, the total radiated power and the powers radiated by the different symmetry conditions presents no differences, no matter the symmetry type. In low frequency, the driver behaves as a monopole and have an omnidirectional directivity pattern; fulfilling all the symmetry conditions. \\
-However, in high frequencies, disruptions appears and the rest increases significantly: the higher the frequency, and the more interferences will be produced by the speaker. This can be observed on the contour plot of the woofer's directivity, presented in appendix \ref{fig:contour_10cm}. \\
+However, in high frequencies, disruptions appears and the rest increases significantly: the higher the frequency, and the more interferences are produced by the speaker. This can be observed on the contour plot of the woofer's directivity, presented in appendix \ref{fig:contour_10cm}. \\
 
-Comparing the symmetry factors shows that the most present symmetries are the Single Plane symmetries. This result may be unexpected and one could expect the rotational symmetry to be dominant, but as seen with the radiated powers in high frequencies the speaker isn't a monopole: the cone breakups spoils the rotational symmetry. 
+Comparing the symmetry factors shows that the most present symmetries are the Single Plane symmetries. This result may be surprising and one could expect the rotational symmetry to be dominant; but as seen on the contour plot in high frequencies the speaker isn't a monopole: the cone breakups spoils the rotational symmetry. 
+
+\newpage
 
 \subsection{Oval speaker}
 The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baffle. The particular geometry of this speaker gives hints about the expected results: the rotational symmetry should be the lowest one, and the planar symmetries should be dominant (single plane or dual plane symmetries).  Figures \ref{fig:rad_pow_Oval} and \ref{fig:sym_fact_Oval} presents the radiated powers and the symmetry factors respectively. The radiated powers are presented in separated graphs in appendix \ref{Curves:oval}.\\
@@ -928,10 +965,10 @@ The DUT is an oval speaker (see appendix \ref{spkrlib:oval}), mounted on the baf
 Observing the radiated powers for the different symmetries, it is found that in the 20 Hz - 1.5 kHz range there is no differences between the total radiated power and the symmetries radiated power. Similarly to the 10 cm woofer, the drivers behaves as a monopole in this range. This is observed on the contour plot provided in figure \ref{Curves:oval_contour}. \\
 After 1.5 kHz, differences appear for the Dual Plane, Single Plane and Rotational symmetries. Characterizing the speaker's behavior in higher frequencies requires to look at the symmetry factors. However, it can already be observed that the power radiated by rotational symmetry coefficients is below all other radiated powers after 1.5 kHz, meaning that the rotational symmetry condition is not satisfied. \\
 
-Observing the symmetry factors shows that the rotational symmetry factor is below all other factors, matching with the expected behavior of the driver. The baffle symmetry factor is 0 dB over the whole frequency range, as expected for a measure performed with a driver mounted on baffle.
+Observing the symmetry factors shows that the rotational symmetry is below all other factors, matching with the expected behavior of the driver. The baffle symmetry factor is 0 dB over the whole frequency range, as expected for a measure performed with a driver mounted on baffle.\\
 
 \begin{minipage}{0.5\textwidth}
-Interestingly, the top/bottom single plane symmetry factor is higher than other symmetry factors from 5 kHz. This could be explained by the speaker's geometry: the larger dimension makes it more prone to rocking mode, spoiling the left/right single plane symmetry. At 9400 Hz there is a peak on the symmetry factors and the radiated power, probably due to a membrane mode.\\
+Interestingly, the top/bottom single plane symmetry factor is higher than the other factors from 5 kHz. This could be explained by the speaker's geometry: the larger dimension makes it more prone to rocking mode, spoiling the left/right single plane symmetry. At 9400 Hz there is a peak on the symmetry factors and the radiated power, probably due to a membrane mode.\\
 
 Figure \ref{fig:phase_Oval} presents the phase balloon of the oval speaker at 9400 Hz. It can be observed that the left and right side of the membrane vibrates with in opposite phase, validating the hypothesis of the left/right symmetry condition not being satisfied because of the rocking modes of the driver's membrane. 
 \end{minipage}
@@ -944,7 +981,7 @@ Figure \ref{fig:phase_Oval} presents the phase balloon of the oval speaker at 94
 \end{center}
 \end{minipage}
 
-%\todo[inline, color=red!40]{talk about how we can improve fitting and increase frequency range & order of xpension + redov measurement and show an example}
+\newpage
 
 \subsection{2-way "diagonal" speaker}
 
@@ -967,46 +1004,20 @@ The DUT is a "diagonal" 2-way speaker, and the scan is centered on the tweeter (
 \end{center}
 \end{minipage}
 
-\vspace{0.1cm}
+\vspace{0.4cm}
 
 Observing the radiated powers shows that the system have an omnidirectional directivity pattern until 175 Hz, also visible on the contour plot given in figure \ref{Curves:2way_contour}. Due to its geometry and 2 drivers, the system less susceptible to present symmetries than a single speaker mounted on a baffle seen in the previous examples.\\
 The crossover frequency range can be observed clearly on both result result curves: the symmetry factors take a dip, and the rest powers are higher than the symmetrical powers. \\
 
 Observing the Symmetry Factors shows that there is no baffle symmetry for this measurement. Although this result might seem quite trivial since the DUT was not mounted on a baffle, it is good indication that the symmetry estimation works correctly. \\
-At crossover frequency range (800 Hz - 3.5 kHz), both drivers of the DUT are working, and due to their diagonal positioning the system cannot fulfill any of the symmetry conditions.\\
-
-In high frequency when the twitter alone is emitting, some symmetry is observed. The Top/Bottom single plane symmetry have the highest coefficients, meaning that it could be possible to measure only the top half of this driver and to deduce the coefficients using equation \ref{eq:spsym}.\\
-
-
-
-%\subsection{Studio Monitor}
-% The DUT is a 2-way studio monitor (see appendix \ref{sprklib:Studio}). Similarly to the 2-way diagonal speaker, this system have a built-in crossover. Figures \ref{fig:rad_pow_studio} and \ref{fig:sym_fact_studio} presents the radiated powers and the symmetry factors respectively.  The radiated powers are plotted in separated graphs in appendix \ref{Curves:studio}.
-%
-%\begin{minipage}{0.5\textwidth}
-%\begin{center}
-%	\includegraphics[width=\textwidth]{Sym/Rad_Pow_studio} 
-%    \captionsetup{hypcap=false} 
-%	\captionof{figure}{Radiated Powers of studio monitor} 
-%	\label{fig:rad_pow_studio}
-%\end{center}
-%\end{minipage}
-%\begin{minipage}{0.5\textwidth}
-%\begin{center}
-%	\includegraphics[width=\textwidth]{Sym/Sym_Fact_studio} 
-%    \captionsetup{hypcap=false} 
-%	\captionof{figure}{Symmetry Factors of studio monitor} 
-%	\label{fig:sym_fact_studio}
-%\end{center}
-%\end{minipage}
-%\vspace{0.1cm}
-%
-%This system's total radiated power is very similar to the 
+Around crossover frequency range (800 Hz - 3.5 kHz), both drivers of the DUT are working, and due to their diagonal positioning the system cannot fulfill any of the symmetry conditions. The highly asymmetric behavior of the system is very visible on the contour plot given in figure \ref{Curves:2way_contour}. \\
+In high frequency when the twitter alone is emitting, the symmetry factors of the rotational and planar symmetries increase again, meaning that the sound field emitted by the tweeter fulfill these conditions. 
 
 \section{Discussion}
 
-The previous results are promising for the investigation on symmetry conditions to ease off the measurement time. The calculated symmetry factors match with the expected results for all measurements, and can be implemented in the NFS scripts to be exploited for reducing the number of measurements points. 
+The previous results are promising for the investigation on symmetry conditions to ease off the measurement or processing time. The calculated symmetry factors match with the expected results for all measured systems, and can be implemented in the NFS scripts to be exploited for reducing the number of measurements points. \\
 
-\todo[inline, color=red!40]{Finish the discussion and see how your code have been implemented}
+The symmetry verification algorithm described in section \ref{sec:sym_imple} and given in appendix \ref{Chap:imple_sym} is ready to be integrated to the NFS field identification module, and the next step of this work will be to generate the grids for each symmetry (for example a line scan for the rotational symmetry). The symmetries can also be combined, for example it is possible to generate a quarter of an half-sphere to measure a device mounted on baffle that presents a Dual Plane symmetry. 
 
 %--------------------------------------------------------------
 %	ROOM CORRECTION
@@ -1049,9 +1060,9 @@ By using post-processing, it is possible to simulate free field conditions and t
 Figures \ref{fig:comp_meas}, \ref{fig:comp_mag} and \ref{fig:comp_RoomCor} presents the Time-Frequency Analysis (TFA) of the measurement of the 10 cm woofer (see \ref{spkrlib:10cm}) Transfer Function (TRF) in free air. Different methods have been applied to simulate free field conditions and compensate for the room influence:
 
 \begin{description}
-\item[Figure \ref{fig:comp_meas}] presents the measurements without any compensation applied. The decay of the room have a large impact on the measurement, and makes the speaker's behavior hard to discriminate from the room's artifacts. In low frequencies, the modes are clearly visible and spreaded and will have a big impact on the measurement because they'll be there all the time. In high frequencies, the modes could be eased-off by smoothing the TRF.
+\item[Figure \ref{fig:comp_meas}] presents the measurements without any compensation applied. The decay of the room have a large impact on the measurement, and makes the speaker's behavior difficult to discriminate from the room's artifacts. In low frequencies, the room modes are very remarkable and have a critical impact on the measure because of how they spread over the whole measurement time. In high frequencies, the modes are less critical and could be eased-off by smoothing the TRF.
 
-\item[Figure \ref{fig:comp_mag}] a pre-filter have been applied on the magnitude of the TRF, using the method shown in figure \ref{fig:flow_postfilt}, where the filter $H_{c}$ is the difference between a reference measurement done with the NFS and the TRF measurement. This method is the most straight-forward to implement, but the filter $H_{c}$ has a zero phase and is only applied on the magnitude. The lack of phase information generates the acausality observed on the TFA.
+\item[Figure \ref{fig:comp_mag}] a pre-filter have been applied on the magnitude of the TRF, using the method shown in figure \ref{fig:flow_postfilt}, where the filter $H_{c}$ is the difference between a reference measurement done with the NFS and the TRF measurement. This method is the most straight-forward to implement, but the filter $H_{c}$ has a zero phase and is only applied on the magnitude. The lack of phase information generates the acausality and other artifacts observed on the TFA.
 
 \begin{center}
 	\includegraphics[width=0.4\textwidth]{RoomComp/flowchart_prefilter} 
@@ -1060,18 +1071,22 @@ Figures \ref{fig:comp_meas}, \ref{fig:comp_mag} and \ref{fig:comp_RoomCor} prese
 	\label{fig:flow_postfilt}
 \end{center}
 
-\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Compensation reference curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. This method provides the best result: by using a reference curve provided by a measurement of the woofer using the NFS, the phase response of the room can be isolated from the measurement, removing the ringing artifacts visible on the TFA. 
+\item[Figure \ref{fig:comp_RoomCor}] the TRF have been post-filtered by a Room Compensation reference curve calculated using the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb} and shown in figure \ref{fig:flow_LFR}. This method provides the best result: by using a reference curve provided by a measurement of the woofer using the NFS, the phase response of the room can be isolated from the measurement, removing the ringing artifacts visible on the TFA. 
 \end{description}
 
-The Low-Frequency Reference method gives accurate results, but requires a good reference curve to be relevant. In the following, different methods of obtaining the reference curve and different measurement environments 
+\begin{center}
+	\includegraphics[width=0.4\textwidth]{RoomComp/flowchart_LFR} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Low-Frequency Reference flowchart} 
+	\label{fig:flow_LFR}
+\end{center}
 
-\todo[inline, color=red!40]{Parle du fait que les résultats montrent que la RC est mieux, explique qu'on explore différents méthodes d'exploitation de la méthode Low-Frequency reference curve}
+\vspace{0.2cm}
 
-\section{Measurements}
+The Low-Frequency Reference method gives accurate results, but requires a good reference curve to be relevant: if the reference curve isn't accurate, the compensation will give erroneous results. \\
+In the following, different methods of obtaining the reference curve and different exploitation of the Low-Frequency Reference method will be tested. 
 
-\todo[inline, color=red!40]{Speak about the general cases then the box, explain how to have a good reference }
-
-\subsection{Compensation by a Near Field measurement}
+\section{Compensation by a Near Field measurement}
 
 \begin{minipage}{0.4\textwidth}
 \begin{center}
@@ -1082,9 +1097,9 @@ The Low-Frequency Reference method gives accurate results, but requires a good r
 \end{center}
 \end{minipage}
 \begin{minipage}{0.6\textwidth}
-A very simple and straightforward approach to generate the Reference Curve is to exploit a measure done in the near field of the DUT. Figure \ref{fig:SetupNFFF} presents the measurement set-up: the reference point is located at 5 cm on-axis of the speaker; and the measurements are taken in the far field at different angles. \\
+A very simple and straightforward approach to generate the Reference Curve is to exploit a measure performed in the near field of the DUT. Figure \ref{fig:SetupNFFF} presents the measurement set-up: the reference point is located at 5 cm on-axis of the speaker; and the measurements are taken in the far field at different angles. \\
 
-Figure \ref{fig:resNFFF} presents the different far field measurement when compensated using the near-field reference curve and the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. 
+Figure \ref{fig:resNFFF} presents the different far field measurement when compensated using the near field reference curve and the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. 
 \end{minipage}
 
 \vspace{0.4cm}
@@ -1105,14 +1120,15 @@ Figure \ref{fig:resNFFF} presents the different far field measurement when compe
 	\label{fig:resNFFF}
 \end{center}
 \end{minipage}
+\vspace{0.2cm}
 
-\todo[inline, color=red!40]{expliquer vite fait principe correct LF, et passe à DB keele+ dire que ca amrche que pour 1 driver}
+The results shows a good match before the cross-frequency range (shown by the vertical yellow bars in figure \ref{fig:resNFFF}); where the measure is compensated; but have poor results in higher frequencies. Even if the compensation was over the whole frequency range, the near field effects couldn't be removed in high frequencies.\\
+Furthermore, it the DUT is a 2-way (or more) system, this method isn't applicable: the driver interfering with each other would make the reference curve inaccurate,  giving erroneous results. 
 
-The results shows a good match before the cross-frequency range (shown by the vertical yellow bars in figure \ref{fig:resNFFF}) 
 
+\section{D. B. Keele method for Far Field extrapolation}
+\label{sec:dBKeele}
 
-\subsection{D. B. Keele method for Far Field extrapolation}
-\todo[inline]{I don't think this subsection is very pertinent nor interesting}
 D. B. Keele presented a simplified method for extrapolation of the Far Field pressure of a device by measuring in the near field. The theory is given in the article \textit{Low-Frequency Loudspeaker Assessment by Nearfield Sound-Pressure Measurement} \citep[see][]{dkeele}. The Near - Far pressure relation is given in equation \ref{eq:nfpressure}.
 
 \begin{equation}
@@ -1127,12 +1143,59 @@ The results of this extrapolation, after implementation in SciLab, are given in 
 
 
 
-\subsection{Measurements in the tetrahedral box}
-Although the previous methods are effective, they require the reference curve to be remeasured for each environment or change of the DUT position, because the room effects will change. A solution to this problematic is to measure in test boxes, such as the tetrahedral test box created by Hill Acoustics \citep[see][]{tetbox}: the boxes provide a shielding against the outside environment, allowing a reproductibility of results. For example measuring
+\section{Measurements in the tetrahedral box}
+Although the previous methods are effective, they require the reference curve to be remeasured for each environment or change of the DUT position, because the room effects depends on the positioning of the loudspeaker. A solution to this problematic is to measure in test boxes, such as the tetrahedral test box created by Hill Acoustics \citep[see][]{tetbox}: the boxes provide a shielding against the outside environment, allowing a reproductibility of results. 
 
-\subsubsection{4.2.3.1 $\qquad$ Influence of the load}
+\subsection{Influence of microphone position}
 
-The tetrahedral test box being a closed box system, it will have an impact on the speaker's behavior. Closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the blue curve is the measure in the box and the orange curve the result of the NFS of the 10 cm woofer (see appendix \ref{spkrlib:10cm}). In the 20 Hz - 150 Hz range the box creates a "bass boost" effect. \\
+Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distances $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
+
+Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different distances $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150 Hz, the transfer functions are similar. After 150 Hz strong differences appear between the transfer functions. The larger the distance $D_{ms}$ is and the bigger the box influences the measurement, generating a dip on the response at around 1 kHz. This phenomenon is believed to be the first box mode and is observed when measuring different speakers. \\
+
+\begin{minipage}{0.35\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{RoomComp/Mic_Pos_Schm} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Microphone position} 
+	\label{fig:micpos_schema}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+\begin{center}
+	\includegraphics[width=1\textwidth]{RoomComp/MicPos_TRF} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Transfer Functions for different positions} 
+	\label{fig:MicPosTRF}
+\end{center}
+\end{minipage}
+\vspace{0.1cm} 
+
+
+From this result it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. This set of curves is the Room Compensation functions, or references. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This boost can be easily eased off by applying the LFR room compensation method.\\
+\todo[inline, color=red!40]{Tu ne parle pas de la bonne figure pour apprécier les différences. La différence entre les RCs est + pertinente car elle devrais être de 0 dB si le mic n'avais pas d'influence}
+A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoom}. In this frequency range, the accepted level of differences is $\pm$ 5 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical to ensure an accurate measurement. \\
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{RoomComp/MicPos_Diff_NFS_TRF} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Difference between NFS and TRF} 
+	\label{fig:MicPosDiffNFS}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{RoomComp/MicPos_Diff_RefMEas} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Difference between Room Compensation functions} 
+	\label{fig:MicPosDiffRC}
+\end{center}
+\end{minipage}
+
+
+\subsection{Influence of the load}
+
+The tetrahedral test box being a closed box system, it has an impact on the speaker's behavior. A closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the blue curve is the measure in the box and the orange curve the result of the NFS of the 10 cm woofer (see appendix \ref{spkrlib:10cm}). In the 20 Hz - 150 Hz range the box creates a "bass boost" effect. \\
 
 Assuming that the driver is in the linear range, the displacement transfer function of a driver in free air is given by equation \ref{eq:TRF_disp}, where $ e_{g}$ is the input voltage, $C_{ms}$ the compliance, $Bl$ the force factor, $\omega_{s}$ the resonance frequency of the system, and $Q_{ts}$ the total quality factor of the system.
 
@@ -1196,7 +1259,7 @@ e_{gb} = e_{g}\cdot \frac{(2 \pi f_{s})^{2}}{(2 \pi f_{b})^{2}}
 \myequations{Voltage correction for the box as a function of resonance frequency}
 
 Equation \ref{eq:V_corr_fs} gives the compensated voltage for the box, where $ f_{s}$ is the resonance frequency of the driver in free air and $ f_{b}$ the resonance frequency of the driver in the box. This implies that 2 measurements are required: one of the driver in free air, and one of the driver in the box. \\
-Now that the theory is expressed, this assumptions needs to be verified. To do so, the impedance of the driver and the displacement transfer function of the driver's membrane have been measured on the 10 cm woofer by using the Klippel system, and with a laser pointing on the driver's membrane estimates the displacement. \\
+Now that the theory is expressed, this assumption needs to be verified. To do so, the impedance of the driver and the displacement transfer function of the driver's membrane have been measured on the 10 cm woofer by using the Klippel system, and with a laser pointing on the driver's membrane estimates the displacement. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -1222,76 +1285,13 @@ When looking at this results, few differences between the impedance in the box a
 Comparing the free air and in box measurement shows that up to 50 Hz the membrane's displacement is greater in the box, generating the "bass boost" effect observed before (figure \ref{Curves:InfluLoad}). The displacement is then larger in free air than in the box, expect at the driver's resonance.\\
 Using the voltage correction calculated either by the ratio of resonance frequencies $f_{s}$ and $f_{b}$ or the ratio of stiffness $K_{ms}$ lowers the membrane's displacement in the box, although the attenuation provided by the ratio of resonance frequencies is overestimated: the membrane's displacement is too attenuated in the 20 - 500 Hz frequency band. The attenuation provided by the ratio of stiffness gives promising results, particularly in the "bass boost" frequency band (20 - 50 Hz) and around the resonance, where the displacement transfer function in the box gets close to the one measured in free air. \\
 
-The mismatches between the free air and voltage compensated curves are most likely due to the approximations made on the box's behavior. The effect of the box of the driver is much more complicated than a change on the mechanical compliance, especially since leakage isn't taken in account.  
+The mismatches between the free air and voltage compensated curves are most likely due to the approximations made on the box's behavior. The effect of the box of the driver is much more complicated than a change on the mechanical compliance, especially since leakage isn't taken in account.  \\
 
-\todo[inline]{Expliquer que l'on peut utiliser ca pour compenser l'effet de la boite dans le domaine linèaire}
-\todo[inline, color=red!40]{Expliquer que les différences sont dues à l'approximation trop simpliste sur le modèle de la boite, mais bien formulé. Ajouter les schémas équivalents + citer J. Panzer (cours transducer basics / Acoustics / LEM Sealed Box)}
-
-\subsubsection{4.2.3.2 $\qquad$ Influence of microphone position}
-
-Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distances $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
-
-Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different distances $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150 Hz, the transfer functions are similar. After 150 Hz strong differences appear between the transfer functions. The larger the distance $D_{ms}$ is and the bigger the box influences the measurement, generating a dip on the response at around 1 kHz. This phenomenon is believed to be the first box mode and is observed when measuring different speakers. \\
-\todo[inline, color=red!40]{mieux formuler + tirer des conclusions etfaire le lien avec les autres figures}
-\begin{minipage}{0.35\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{RoomComp/Mic_Pos_Schm} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Microphone position} 
-	\label{fig:micpos_schema}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.6\textwidth}
-\begin{center}
-	\includegraphics[width=1\textwidth]{RoomComp/MicPos_TRF} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Transfer Functions for different positions} 
-	\label{fig:MicPosTRF}
-\end{center}
-\end{minipage}
-\vspace{0.1cm} 
-
-
-From this result it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. This set of curves is the Room Compensation functions, or references. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This boost can be easily eased off by applying the LFR room compensation method.\\
-\todo[inline, color=red!40]{Tu ne parle pas de la bonne figure pour apprécier les différences. La différence entre les RCs est + pertinente car elle devrais être de 0 dB si le mic n'avais pas d'influence}
-A zoom on the 150 Hz - 20 kHz is provided in figure \ref{fig:MicPos_Diff_NFS_Zoom}. In this frequency range, the accepted level of differences is $\pm$ 5 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical to ensure an accurate measurement. \\
-
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{RoomComp/MicPos_Diff_NFS_TRF} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Difference between NFS and TRF} 
-	\label{fig:MicPosDiffNFS}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{RoomComp/MicPos_Diff_RefMEas} 
-    \captionsetup{hypcap=false} 
-	\captionof{figure}{Difference between Room Compensation functions} 
-	\label{fig:MicPosDiffRC}
-\end{center}
-\end{minipage}
-
-
-
-
-\section{Room Correction solutions}
-
-\todo[inline, color=red!40]{Place this first before talking about the box!!!!!}
-
-The aim of this task is to enhance klippel's Complex Room Compensation module. To do so, several approach of how to perform a Room Compensation will be investigated. Furthermore, an application note about how to use the module have been written and is given in appendix \ref{chap:AN_CRC}.
-
-\todo[inline]{Maybe explain a bit more the context of this + flowchart of the module}
-
-\subsection{Generation of a generic Correction Curve for the tetrahedral box}
-In order to correct the previous measurements and ensure a good measurement in the tetrahedral test box, several solution of Room Correction methods have been investigated. The aim is to generate a single Room Correction function, valid for all speaker, up to the cut-off frequency of the box.
-\todo[inline]{Pas possible}
-
+Although using voltage compensation to ease-off the influence of the box isn't the most accurate solution, it can be considered as the "quick and dirty" fix for performing measurement of loudspeakers in the linear domain and the near field. Furthermore, it is possible to extrapolate these measurement to the far field of the driver by using the dB Keele method described in section \ref{sec:dBKeele}.
 
 \section{Discussion}
 
-In this \todo[color=green]{name}{}chapter, several methods for compensating the effect of the environment on an acoustic measurement have been  investigated. 
+In this chapter, several methods for compensating the effect of the environment on an acoustic measurement have been  investigated. To bring all of these results together, a comparative table have been created.
 
 
 %--------------------------------------------------------------
@@ -1325,10 +1325,10 @@ Thank you for reading my work.
 		% Additional curves
 \chapter{Additional figures}
 \pagenumbering{roman}
-This appendix aims to present additional figures that could not be presented in the corpus of this report because of their size, or lacked of relevancy for the discussions. To simplify the navigation, the titles of the section will be the same as the tittle of the chapters this figures are complemented with. 
+This appendix aims to present additional figures that could not be presented in the corpus of this report because of their size, or lacked of relevancy for the discussions. To simplify the navigation, the titles of the section are the same as the titles of the chapters this figures are complemented with. 
 
 
-\section{Baffle measurement}
+\section{Baffle measurements}
 \subsection{Estimation of baffle influence}
 \label{Curves:BaffleInfluence}
 
@@ -1488,60 +1488,6 @@ This appendix aims to present additional figures that could not be presented in 
     \captionof{figure}{Diagonal speaker, Radiated Powers: single plane (top/bottom) symmetry}
 \end{center}
 \end{minipage}
-
-%\subsection{Studio monitor}
-%\label{Curves:studio}
-%
-%\begin{minipage}{0.5\textwidth}
-%\begin{center}
-%	\includegraphics[width=\textwidth]{Sym/contour_studio}
-%    \captionsetup{hypcap=false}
-%    \captionof{figure}{Contour plot of the studio monitor at 10 m, centered on-axis, horizontal plane.}
-%    \label{Curves:studio_zoom}
-%\end{center}
-%\end{minipage}
-%\begin{minipage}{0.5\textwidth}
-%\begin{center}
-%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_Rot}
-%    \captionsetup{hypcap=false}
-%    \captionof{figure}{Studio monitor, Radiated Powers: rotational symmetry}
-%    \label{Curves:studio_rot}
-%\end{center}
-%\end{minipage}
-%
-%\begin{minipage}{0.5\textwidth}
-%\begin{center}
-%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_B}
-%    \captionsetup{hypcap=false}
-%    \captionof{figure}{Studio monitor, Radiated Powers: baffle symmetry}
-%    \label{Curves:studio_B}
-%\end{center}
-%\end{minipage}
-%\begin{minipage}{0.5\textwidth}
-%\begin{center}
-%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_Dps}
-%    \captionsetup{hypcap=false}
-%    \captionof{figure}{Studio monitor, Radiated Powers: dual plane symmetry}
-%    \label{Curves:studio_Dps}
-%\end{center}
-%\end{minipage}
-%
-%\begin{minipage}{0.5\textwidth}
-%\begin{center}
-%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_SpsLR}
-%    \captionsetup{hypcap=false}
-%    \captionof{figure}{Studio monitor, Radiated Powers: single plane (left/right) symmetry}
-%    \label{Curves:studio_SpsLR}
-%\end{center}
-%\end{minipage}
-%\begin{minipage}{0.5\textwidth}
-%\begin{center}
-%	\includegraphics[width=0.9\textwidth]{Sym/studio_RadPow_SpsTB}
-%    \captionsetup{hypcap=false}
-%    \captionof{figure}{Studio monitor, Radiated Powers: single plane (top/bottom) symmetry}
-%    \label{Curves:studio_SpsTB}
-%\end{center}
-%\end{minipage}
 
 \section{Room Correction}
 
@@ -2040,7 +1986,7 @@ endfunction
 \chapter{Organization of the work}
 
 
-The following will present the work schedule I have followed, what work have been done and when it have been started and finished. This is presented in the following GANTT chart.
+The following presents the work schedule I have followed, what work have been done and when it have been started and finished. This is presented in the following GANTT chart.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{Appendix/Plan1} 
