@@ -30,31 +30,33 @@
 \BOOKMARK [0][-]{chapter.4}{Room Compensation}{}% 30
 \BOOKMARK [1][-]{section.4.1}{Principle}{chapter.4}% 31
 \BOOKMARK [1][-]{section.4.2}{Compensation by a Near Field measurement}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.3}{D. B. Keele method for Far Field extrapolation}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.4}{Measurements in the tetrahedral box}{chapter.4}% 34
-\BOOKMARK [2][-]{subsection.4.4.1}{Influence of microphone position}{section.4.4}% 35
-\BOOKMARK [2][-]{subsection.4.4.2}{Influence of the load}{section.4.4}% 36
-\BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 37
-\BOOKMARK [0][-]{chapter*.11}{Conclusion}{}% 38
-\BOOKMARK [0][-]{chapter*.11}{References}{}% 39
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Additional figures}{}% 40
-\BOOKMARK [1][-]{section.a.A.1}{Baffle measurements}{Appendix.a.A}% 41
-\BOOKMARK [2][-]{subsection.a.A.1.1}{Estimation of baffle influence}{section.a.A.1}% 42
-\BOOKMARK [1][-]{section.a.A.2}{Measurement time optimization}{Appendix.a.A}% 43
-\BOOKMARK [2][-]{subsection.a.A.2.1}{10 cm woofer}{section.a.A.2}% 44
-\BOOKMARK [2][-]{subsection.a.A.2.2}{Oval speaker}{section.a.A.2}% 45
-\BOOKMARK [2][-]{subsection.a.A.2.3}{2-way "diagonal" speaker}{section.a.A.2}% 46
-\BOOKMARK [1][-]{section.a.A.3}{Room Correction}{Appendix.a.A}% 47
-\BOOKMARK [2][-]{subsection.a.A.3.1}{Measurements}{section.a.A.3}% 48
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Speaker library}{}% 49
-\BOOKMARK [1][-]{section.a.B.1}{10 cm woofer}{Appendix.a.B}% 50
-\BOOKMARK [1][-]{section.a.B.2}{Oval speaker}{Appendix.a.B}% 51
-\BOOKMARK [1][-]{section.a.B.3}{16 cm fullband speaker}{Appendix.a.B}% 52
-\BOOKMARK [1][-]{section.a.B.4}{2-way diagonal speaker}{Appendix.a.B}% 53
-\BOOKMARK [1][-]{section.a.B.5}{18'' woofer}{Appendix.a.B}% 54
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Baffle Prototype pictures}{}% 55
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix SciLab implementation of symmetry verification}{}% 56
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Organization of the work}{}% 57
-\BOOKMARK [0][-]{Appendix.a.F}{Appendix Application notes}{}% 58
-\BOOKMARK [1][-]{section.a.F.1}{Baffle measurement}{Appendix.a.F}% 59
-\BOOKMARK [1][-]{section.a.F.2}{Complex Room Compensation module}{Appendix.a.F}% 60
+\BOOKMARK [1][-]{section.4.3}{Compensation by a NFS result}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.4}{D. B. Keele method for Far Field extrapolation}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.5}{Tetrahedral box}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.5.1}{Influence of microphone position}{section.4.5}% 36
+\BOOKMARK [2][-]{subsection.4.5.2}{Influence of the load}{section.4.5}% 37
+\BOOKMARK [2][-]{subsection.4.5.3}{Measures in the tetrahedral box}{section.4.5}% 38
+\BOOKMARK [1][-]{section.4.6}{Discussion}{chapter.4}% 39
+\BOOKMARK [0][-]{chapter*.10}{Conclusion}{}% 40
+\BOOKMARK [0][-]{section*.11}{References}{}% 41
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Additional figures}{}% 42
+\BOOKMARK [1][-]{section.a.A.1}{Baffle measurements}{Appendix.a.A}% 43
+\BOOKMARK [2][-]{subsection.a.A.1.1}{Estimation of baffle influence}{section.a.A.1}% 44
+\BOOKMARK [1][-]{section.a.A.2}{Measurement time optimization}{Appendix.a.A}% 45
+\BOOKMARK [2][-]{subsection.a.A.2.1}{10 cm woofer}{section.a.A.2}% 46
+\BOOKMARK [2][-]{subsection.a.A.2.2}{Oval speaker}{section.a.A.2}% 47
+\BOOKMARK [2][-]{subsection.a.A.2.3}{2-way "diagonal" speaker}{section.a.A.2}% 48
+\BOOKMARK [1][-]{section.a.A.3}{Room Compensation}{Appendix.a.A}% 49
+\BOOKMARK [2][-]{subsection.a.A.3.1}{Measurements in the tatrahedral box}{section.a.A.3}% 50
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Speaker library}{}% 51
+\BOOKMARK [1][-]{section.a.B.1}{10 cm woofer}{Appendix.a.B}% 52
+\BOOKMARK [1][-]{section.a.B.2}{Oval speaker}{Appendix.a.B}% 53
+\BOOKMARK [1][-]{section.a.B.3}{16 cm fullband speaker}{Appendix.a.B}% 54
+\BOOKMARK [1][-]{section.a.B.4}{2-way diagonal speaker}{Appendix.a.B}% 55
+\BOOKMARK [1][-]{section.a.B.5}{18'' woofer}{Appendix.a.B}% 56
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Baffle Prototype pictures}{}% 57
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix SciLab implementation of symmetry verification}{}% 58
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Organization of the work}{}% 59
+\BOOKMARK [0][-]{Appendix.a.F}{Appendix Application notes}{}% 60
+\BOOKMARK [1][-]{section.a.F.1}{Baffle measurement}{Appendix.a.F}% 61
+\BOOKMARK [1][-]{section.a.F.2}{Complex Room Compensation module}{Appendix.a.F}% 62

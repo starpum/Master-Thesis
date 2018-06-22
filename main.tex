@@ -245,7 +245,7 @@ Although this method is widely used, it presents several drawbacks:
 
 The following reports aims to present the work that have been conducted during a 5-months internship at the company Klippel GmbH. This internship is mandatory to graduate from the International Master Degree in Electro-Acoustics (IMDEA) at the Université du Mans, in France. \\
 
-This document will cover different points, starting with a preface presenting the company, the context and aim of this work, and a literature review. Then the different measurements and results obtained during this work will be presented by using three topic: measurement of systems mounted in baffle, optimization of the measurement time of a device called the Near Field Scanner, and correction of measurements in bad rooms such as workshops. 
+This document will cover different points, starting with a preface presenting the company, the context and aim of this work, and a literature review. Then the different measurements and results obtained during this work will be presented by using three topic: measurement of systems mounted in baffle, optimization of the measurement time of a device called the Near Field Scanner, and compensation of measurements in bad rooms such as workshops. 
 
 
 %--------------------------------------------------------------
@@ -288,11 +288,12 @@ The particularity of this product is that the Device Under Test (DUT) is at a fi
 \end{center}
 \end{minipage}\newline
 
-This work has three main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS and the enhancement of the measurement grid; the optimization of measurement time by exploiting symmetry conditions on the complex coefficients of the spherical wave expansion; and the application of room correction on non-anechoic measurements.\\
+This work has three main guidelines, which are the measurement of a speaker mounted on a baffle using the NFS and the enhancement of the measurement grid; the optimization of measurement time by exploiting symmetry conditions on the complex coefficients of the spherical wave expansion; and the application of room compensation on non-anechoic measurements.\\
 
 The NFS baffle measurement aims to create an application note on how to perform a near field scanning of a loudspeaker mounted on a baffle and evaluate the baffle's influence on the measurement. To do so, the required tasks are the assembly and critical evaluation a baffle prototype, and the optimization of the measurement grid.\\
 The measurement time optimization part aims to reduce the scanning effort of the NFS by assuming symmetry conditions on the DUT 's geometry and applying these conditions on the complex coefficients of the spherical wave expansion (see equation \ref{eq:sphwvexp}). \\
-Finally, the room correction part aims to test and enhance the room correction module allowing to make fast non-anechoic measurements, to test a tetrahedral measurement box provided by Hill Acoustics \citep[see][]{tetbox}, and to create an application note on how to correct non-anechoic measurements. \\
+Finally, the room compensation part aims to test and enhance the Room correction module allowing to make fast non-anechoic measurements, to test a tetrahedral measurement box provided by Hill Acoustics \citep[see][]{tetbox}, and to create an application note on how to correct non-anechoic measurements. \\
+\todo[inline, color=red!40]{Changer les objectifs du dernier, c'faux}
 
 There is no particular price constraints or technical constraints associated with this project, as the required hardware and software is already available. 
 
@@ -427,7 +428,8 @@ Investigations on this parameter have already been conducted \cite{pres, aeshs, 
 At very low frequencies the measurement is polluted by the poor Signal to Noise Ratio (SNR) between the microphone's input and the noise; and increasing the maximum order of expansion has little to no effect on the $TFE$. \\
 
 In high frequency, increasing the number of expansion allows to reduce the $TFE$. In theory, the maximal order $N$ should be infinite but this is not possible for real applications: a computer has a limited memory size, and the engine used to interpret the diverse algorithms (in that case, SciLab) has to cope with that limit to avoid system failures.\\
-Because of these physical limitations, the order of expansion can only be increased up to a certain threshold. It should be noted that the more complex the sound field, the more coefficients are required to describe it, and the lower the maximum order of expansion $N$ will be. 
+Because of these physical limitations, the order of expansion can only be increased up to a certain threshold. It should be noted that the more complex the sound field, the more coefficients are required to describe it, and the lower the maximum order of expansion $N$ will be.\\
+
 
 %--------------------------------------------------------------
 %	BAFFLE MEASUREMENT
@@ -1024,7 +1026,7 @@ The symmetry verification algorithm described in section \ref{sec:sym_imple} and
 %--------------------------------------------------------------
 \chapter{Room Compensation}
 
-Being able to generate room correction curves is great for the everyday measurement of loudspeakers since it allows to compensate the effect of any environment and to create quasi-perfect measurements. According to the AES standard \cite{aesstandart}, "\textit{accurate and repeatable loudspeaker driver measurements require that environmental and boundary influence have minimal impact on the measurement}". Such measurements are usually done in anechoic rooms, and accurate results are difficult to achieve for companies not having access to such a room or for a hobbyist.
+Being able to generate room compensation curves is great for the everyday measurement of loudspeakers since it allows to compensate the effect of any environment and to create quasi-perfect measurements. According to the AES standard \cite{aesstandart}, "\textit{accurate and repeatable loudspeaker driver measurements require that environmental and boundary influence have minimal impact on the measurement}". Such measurements are usually done in anechoic rooms, and accurate results are difficult to achieve for companies not having access to such a room or for a hobbyist.
 
 \section{Principle}
 
@@ -1097,9 +1099,9 @@ In the following, different methods of obtaining the reference curve and differe
 \end{center}
 \end{minipage}
 \begin{minipage}{0.6\textwidth}
-A very simple and straightforward approach to generate the Reference Curve is to exploit a measure performed in the near field of the DUT. Figure \ref{fig:SetupNFFF} presents the measurement set-up: the reference point is located at 5 cm on-axis of the speaker; and the measurements are taken in the far field at different angles. \\
+A very simple and straightforward approach to generate the Reference Curve is to exploit a measure performed in the near field of the DUT. Figure \ref{fig:SetupNFFF} presents the measurement set-up: the reference point is located at 5 cm on-axis of the speaker; and the measurements are taken in the far field at 0.5 m at different angles. The DUT is the 10 cm woofer (see appendix \ref{spkrlib:10cm}). \\
 
-Figure \ref{fig:resNFFF} presents the different far field measurement when compensated using the near field reference curve and the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. 
+Figure \ref{fig:rawNFFF} presents the measurement results without compensation; and figure \ref{fig:resNFFF} presents the different far field measurement when compensated using the near field reference curve and the Low-Frequency Reference method described in \citep[][sect.~4]{aeswb}. 
 \end{minipage}
 
 \vspace{0.4cm}
@@ -1122,14 +1124,26 @@ Figure \ref{fig:resNFFF} presents the different far field measurement when compe
 \end{minipage}
 \vspace{0.2cm}
 
-The results shows a good match before the cross-frequency range (shown by the vertical yellow bars in figure \ref{fig:resNFFF}); where the measure is compensated; but have poor results in higher frequencies. Even if the compensation was over the whole frequency range, the near field effects couldn't be removed in high frequencies.\\
-Furthermore, it the DUT is a 2-way (or more) system, this method isn't applicable: the driver interfering with each other would make the reference curve inaccurate, giving erroneous results. 
+The results shows a good match before the cross-frequency range (shown by the vertical yellow bars in figure \ref{fig:resNFFF}); where the measure is compensated; but have poor results in higher frequencies. Measurements in the near field of speakers are polluted by the interferences effects, and even if the compensation was applied to the whole frequency range, these near field effects couldn't be eased off in high frequencies.\\
+Furthermore, it the DUT has several diaphragms (for example a 2-way system), this method isn't applicable: the driver interfering with each other would make the reference curve inaccurate, giving erroneous results. 
 
+\section{Compensation by a NFS result}
+
+This method uses the same principle as the compensation by a nearfield measurement, but the reference curve is now generated from a Near Field Scanner measurement. The measurement curves are the same as the previous section (far field on-axis, far field 10° off-axis and far field 20° off-axis). The results are given in figure \ref{fig:NFSc}.\\
+
+\begin{center}
+	\includegraphics[width=0.4\textwidth]{RoomComp/NFS_compa} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Results with NFS compensation} 
+	\label{fig:NFSc}
+\end{center}
+
+In the low frequency range, there is a good agreement between the results; but from 1.5 kHz differences start to appear. These differences are due to the reference curve: to generate the result, the reference curve have been calculated on-axis at 0.5 m; or to compensate for an off-axis measurement the reference curve should be calculated off-axis. Although it can be fixed easily, it underlines another problematic with the compensation of free-field measurement: the reference curve must be recalculated (or remeasured) for each change in the measurement configuration.
 
 \section{D. B. Keele method for Far Field extrapolation}
 \label{sec:dBKeele}
 
-D. B. Keele presented a simplified method for extrapolation of the Far Field pressure of a device by measuring in the near field. The theory is given in the article \textit{Low-Frequency Loudspeaker Assessment by Nearfield Sound-Pressure Measurement} \citep[see][]{dkeele}. The Near - Far pressure relation is given in equation \ref{eq:nfpressure}.
+D. B. Keele presented a simplified method for performing the extrapolation of the Far Field pressure of a device by measuring in the near field. The theory is given in the article \textit{Low-Frequency Loudspeaker Assessment by Nearfield Sound-Pressure Measurement} \citep[see][]{dkeele}. The Near - Far pressure relation is given in equation \ref{eq:nfpressure}.
 
 \begin{equation}
 p_{N} = \frac{2r}{a} \cdot p_{F}
@@ -1138,17 +1152,25 @@ p_{N} = \frac{2r}{a} \cdot p_{F}
 \myequations{Near-Far field pressure relation}
 
 Where $p_{N}$ and $p_{F}$ are respectively the Near and Far field pressures, $r$ is the distance between the center of the driver's membrane and the measuring point, and $a$ the radius of the driver's membrane.\\
+Figure \ref{fig:dbk} presents the results of the Far Field extrapolation applied to the free air Near Field measurement presented in figure \ref{fig:rawNFFF}, compared with the measure in Far Field and the compensated Far Field measurement. \\
 
-The method have some serious drawbacks, mainly it only works on-axis and the absolute level isn't good.
+\begin{center}
+	\includegraphics[width=0.4\textwidth]{RoomComp/dbkeele} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{D.B. Keele Far Field extrapolation} 
+	\label{fig:dbk}
+\end{center}
 
-\todo[inline, color=red!40]{faire la far field method pour la mesure précédente et comparer les résults}
+In the low frequency domain, the method gives accurate results and there is an agreement between all of the curves. Strong discrepancies appear around 2 kHz, where the interferences effects starts to impact the near field measurement. In his paper, D. B. Keele has found the pressure to be constant up to the frequency where $a / \lambda$ = 0.26; with $\lambda$ the wavelength; meaning that the measurement in the near field is only accurate up to a certain frequency, depending on the DUT's radius \citep[see][section Nearfield Pressure]{dkeele}. \\
 
+Unlike the compensation by a near field measurement, the Far Field extrapolation is only valid on axis of the DUT.\\
+The extrapolation can be applied to multiple diaphragms systems providing the near field responses to be measured individually and summed in the ratio of the square root of their diameter. The sums needs to be complex to ensure the phase shift associated with each diaphragm is considered and give accurate results. \\
 
-\section{Measurements in the tetrahedral box}
-Although the previous methods are effective, they require the reference curve to be remeasured for each environment or change of the DUT position, because the room effects depends on the positioning of the loudspeaker. A solution to this problematic is to measure in test boxes, such as the tetrahedral test box created by Hill Acoustics \citep[see][]{tetbox}: the boxes provide a shielding against the outside environment, allowing a reproductibility of results. 
+\section{Tetrahedral box}
+Although the previous methods are effective in low frequency range, they require the reference curve (the near field measurement) to be remeasured for each environment or change of the DUT position, as the room effects will vary with the positioning of the loudspeaker. A solution to this problematic is to measure in test boxes, such as the tetrahedral test box created by Hill Acoustics \citep[see][]{tetbox}: the boxes provide a shielding against the outside environment, allowing a reproductibility of results. 
 
 \subsection{Influence of microphone position}
-
+Before experimenting with the Room Compensation functions for the box, the accuracy of the measurements must be ensured.\\ 
 Investigating the influence of the microphone position allows to deduce how critical this parameter is, and how to ensure a correct microphone positioning. Several measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been performed for different microphone - speaker distances $D_{ms}$. A schematic of the measurement is given in figure \ref{fig:micpos_schema}.  \\
 
 Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different distances $D_{ms}$ (see figure \ref{fig:micpos_TRF_big} for a bigger version). In low frequencies up to 150 Hz, the transfer functions are similar. After 150 Hz strong differences appear between the transfer functions. The larger the distance $D_{ms}$ is and the bigger the box influences the measurement, generating a dip on the response at around 1 kHz. This phenomenon is believed to be the first box mode and is observed when measuring different speakers. \\
@@ -1157,7 +1179,7 @@ Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different d
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{RoomComp/Mic_Pos_Schm} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Microphone position} 
+	\captionof{figure}{Measurement setup} 
 	\label{fig:micpos_schema}
 \end{center}
 \end{minipage}
@@ -1165,19 +1187,21 @@ Figure \ref{fig:MicPosTRF} shows the transfer functions obtained for different d
 \begin{center}
 	\includegraphics[width=1\textwidth]{RoomComp/MicPos_TRF} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Transfer Functions for different positions} 
+	\captionof{figure}{Transfer Functions for different distances $D_{ms}$} 
 	\label{fig:MicPosTRF}
 \end{center}
 \end{minipage}
-\vspace{0.1cm} 
+\vspace{0.2cm} 
 
-From the previous observations it can be deduced that there is a critical range for the microphone positioning. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. This set of curves is the Room Compensation functions, or references. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This effect can be compensated and the matter is discussed in section \ref{sec:load}.\\
+From the previous observations it can be deduced that there is a critical range for the microphone positioning to avoid the influence of the mode and ensure am accurate measure. Figure \ref{fig:MicPosDiffNFS} shows the differences between the results from the NFS, extrapolated at their respective distances; and the measured transfer functions. This set of curves is the Room Compensation functions, and the NFS results are the references. In the 20 Hz - 150 Hz frequency range a "bass boost" is observed, created by the box's air load. This effect can be compensated and the matter is discussed in section \ref{sec:load}.\\
+
+Figure \ref{fig:MicPosDiffRC} shows the difference between the Room Compensation function generated at $D_{ms}$ = 5cm and the Room Compensation functions at $D_{ms}$ = 6 cm, 7 cm, 8 cm and 15 cm. If the microphone position had no influence on the measurement, there should theoretically be no differences between the Room Compensation functions. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{RoomComp/MicPos_Diff_NFS_TRF} 
     \captionsetup{hypcap=false} 
-	\captionof{figure}{Difference between NFS and TRF} 
+	\captionof{figure}{Room Compensation functions} 
 	\label{fig:MicPosDiffNFS}
 \end{center}
 \end{minipage}
@@ -1189,24 +1213,20 @@ From the previous observations it can be deduced that there is a critical range 
 	\label{fig:MicPosDiffRC}
 \end{center}
 \end{minipage}
+\vspace{0.1cm}
 
-\todo[inline, color=red!40]{Tu ne parle pas de la bonne figure pour apprécier les différences. La différence entre les RCs est + pertinente car elle devrais être de 0 dB si le mic n'avais pas d'influence}
-
-Figure \ref{fig:MicPosDiffRC} shows the difference between the Room Compensation functions presented in figure \ref{fig:MicPosDiffNFS}. If the microphone position had no influence on the measurement, the difference should be zero.
-
-
- In this frequency range, the accepted level of differences is $\pm$ 5 dB. The distances $D_{ms}$ satisfying that range are 5 cm, 6 cm and 7 cm. When the microphone is 8 cm away from the speaker the differences are already too critical to ensure an accurate measurement. \\
-
-
+As a matter of fact, obtaining the exact same Room Compensation function for 2 measurement performed in the same conditions and for the same $D_{ms}$ is unlikely. \\
+To asses the accuracy of the measurement, an difference level of $\pm$ 5 dB between the Room Compensation functions have been arbitrary chosen. The distances satisfying these conditions are the measurements at $D_{ms}$ = 6 cm and $D_{ms}$ = 7 cm. At f = 6500 Hz and f = 10 kHz, the Compensation function at $D_{ms}$ = 7 cm exhibits larger differences with the Compensation function at $D_{ms}$ = 5 cm, and should be avoided. 
 
 \subsection{Influence of the load}
 \label{sec:load}
 
 The tetrahedral test box being a closed box system, it has an impact on the speaker's behavior. A closed box can be approximated as an additional  stiffness on the speaker's equivalent network, due to the springiness of the air volume trapped in the box. This effect is mostly present in low frequency, as shown in figure \ref{fig:Load_Compa}: the blue curve is the measure in the box and the orange curve the result of the NFS of the 10 cm woofer (see appendix \ref{spkrlib:10cm}). In the 20 Hz - 150 Hz range the box creates a "bass boost" effect. \\
+Figure \ref{fig:kms_comp} presents the measured mechanical stiffness $K_{ms}$ in free air and in the box. This measurements evidences how the box's load influences the stiffness of the membrane: providing the driver is still in its linear range, the $K_{ms}$ curve is merely shifted. \\ 
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=0.8\textwidth]{RoomComp/Compa_NFS_BAffle} 
+	\includegraphics[width=0.7\textwidth]{RoomComp/Compa_NFS_BAffle} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Comparison between the TRF of a measure in baffle and a measure in the box.} 
 	\label{fig:Load_Compa}
@@ -1214,7 +1234,7 @@ The tetrahedral test box being a closed box system, it has an impact on the spea
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-	\includegraphics[width=0.8\textwidth]{RoomComp/diff_kms} 
+	\includegraphics[width=0.7\textwidth]{RoomComp/diff_kms} 
     \captionsetup{hypcap=false} 
 	\captionof{figure}{Comparison between the $K_{ms}$ in free air and in the box} 
 	\label{fig:kms_comp}
@@ -1233,9 +1253,9 @@ x(\omega ) = e_{g}\cdot \frac{C_{ms}Bl}{R_{e}}\cdot \frac{1}{(j\omega /\omega _{
 
 Figure \ref{fig:eq_circ} represents the simplified equivalent circuit of the driver in the box. The effect of the box is represented by the compliance $C_{box}$. $e_{g}$ represents the input voltage, $R_{e}$ the electrical resistance; $R_{ms}$, $C_{ms}$ and $M_{ms}$ the mechanical parameters of the driver and $Bl$ the force factor.
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 	\begin{center}
-	\begin{circuitikz}
+	\begin{circuitikz}%[scale=0.8, transform shape]
 		\draw
   	 	 (2,2) node[gyrator] (T) {}
     (T.A2)  -- + (-2,0) coordinate (aux1)
@@ -1285,7 +1305,10 @@ e_{gb} = e_{g}\cdot \frac{(2 \pi f_{s})^{2}}{(2 \pi f_{b})^{2}}
 \myequations{Voltage correction for the box as a function of resonance frequency}
 
 Equation \ref{eq:V_corr_fs} gives the compensated voltage for the box, where $ f_{s}$ is the resonance frequency of the driver in free air and $ f_{b}$ the resonance frequency of the driver in the box. This implies that 2 measurements are required: one of the driver in free air, and one of the driver in the box. \\
-Now that the theory is expressed, this assumption needs to be verified. To do so, the impedance of the driver and the displacement transfer function of the driver's membrane have been measured on the 10 cm woofer by using the Klippel system, and with a laser pointing on the driver's membrane estimates the displacement. \\
+Now that the theory is expressed, this assumption needs to be verified. To do so, the impedance of the driver and the displacement transfer function of the driver's membrane have been measured on the 10 cm woofer by using the Klippel system, and a laser pointing on the driver's membrane estimates the displacement. \\
+
+Figure \ref{fig:imp_comp} presents the comparison of the measured impedances for different conditions: the initial measures in free air and in the box to estimate the voltage compensation to apply, and the results of the new measurements when the voltage compensations is calculated from the $K_{ms}$ (measured using Klippel's laser method for Thiele \& Small parameters estimation) and the $f_{s}$ (measured at the maximum of the impedance curves) have been applied. \\
+When looking at these results, few differences between the impedances can be found. However, when looking at the displacement transfer functions presented in figure \ref{fig:disp_comp}, interesting results are observed. \\
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -1305,19 +1328,33 @@ Now that the theory is expressed, this assumption needs to be verified. To do so
 \end{minipage}
 \vspace{0.1cm}
 
-Figure \ref{fig:imp_comp} presents the comparison of the measured impedances for different conditions: the initial measures in free air and in the box to estimate the voltage compensation to apply, and the results of the new measurements when the voltage compensations is calculated from the $K_{ms}$ (measured using Klippel's laser method for Thiele \& Small parameters estimation) and the $f_{s}$ (measured at the maximum of the impedance curves) have been applied. \\
-When looking at this results, few differences between the impedance in the box and the corrected curves can be found. However, when looking at the displacement transfer functions presented in figure \ref{fig:disp_comp}, interesting results are found. \\
-
-Comparing the free air and in box measurement shows that up to 50 Hz the membrane's displacement is greater in the box, generating the "bass boost" effect observed before (figure \ref{Curves:InfluLoad}). The displacement is then larger in free air than in the box, expect at the driver's resonance.\\
+Comparing the free air and in box measurement shows that up to 50 Hz the membrane's displacement is greater in the box, generating the "bass boost" effect observed on figure \ref{Curves:InfluLoad}. The displacement is then larger in free air than in the box, expect at the driver's resonance.\\
 Using the voltage correction calculated either by the ratio of resonance frequencies $f_{s}$ and $f_{b}$ or the ratio of stiffness $K_{ms}$ lowers the membrane's displacement in the box, although the attenuation provided by the ratio of resonance frequencies is overestimated: the membrane's displacement is too attenuated in the 20 - 500 Hz frequency band. The attenuation provided by the ratio of stiffness gives promising results, particularly in the "bass boost" frequency band (20 - 50 Hz) and around the resonance, where the displacement transfer function in the box gets close to the one measured in free air. \\
 
 The mismatches between the free air and voltage compensated curves are most likely due to the approximations made on the box's behavior. The effect of the box of the driver is much more complicated than a change on the mechanical compliance, especially since leakage isn't taken in account.  \\
 
-Although using voltage compensation to ease-off the influence of the box isn't the most accurate solution, it can be considered as the "quick and dirty" fix for performing measurement of loudspeakers in the linear domain and the near field. Furthermore, it is possible to extrapolate these measurement to the far field of the driver by using the dB Keele method described in section \ref{sec:dBKeele}.
+Although using voltage compensation to ease-off the influence of the box isn't the most accurate solution, it can be considered as the fast solution for performing measurement of loudspeakers in the linear domain using the tetrahedral box; without using a Compensation curve. Furthermore, it is possible to extrapolate these measurement to the far field of the driver by using the dB Keele method described in section \ref{sec:dBKeele}.
+
+\subsection{Measures in the tetrahedral box}
+
+Finally, measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been made in the tetrahedral box and compensated using a measurement done using the Near Field Scanner, and a measure done on-axis at 5 cm of the speaker.\\
+The distance microphone - speaker in the box is $D_{ms}$ = 5 cm. Results are presented in figure \ref{fig:tet_res}.\\
+
+The "bass boot" is very visible on the uncompensated measurement, and have a huge impact on the results in low frequency. \\
+When using a near field measurement to compensate for the box effects, the results are acceptable. Because of the near field interference effects some variations can be observed, particularly in the 130 - 750 Hz range. \\
+When using a NFS result to perform the Room Compensation, the results are very good: the NFS allows to get rid of the near field effects, and provides accurate results over the whole frequency range. 
+
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{RoomComp/tetbox_res} 
+    \captionsetup{hypcap=false} 
+	\captionof{figure}{Measurement in the tetrahedral box} 
+	\label{fig:tet_res}
+\end{center}
+
 
 \section{Discussion}
 
-In this chapter, several methods for compensating the effect of the environment on an acoustic measurement have been  investigated. To bring all of these results together, a comparative table have been created.
+In this chapter, several methods for compensating the effect of the boundaries on an acoustic measurement have been  investigated. To bring all of these results together, a comparative table have been created.
 
 
 %--------------------------------------------------------------
@@ -1327,6 +1364,8 @@ In this chapter, several methods for compensating the effect of the environment 
 \addcontentsline{toc}{chapter}{Conclusion}
 
 Several investigations have been done in the context of this report and gave significant results. \\~\\
+
+\todo[inline, color=blue!40]{describe the work done, their results, and the prospects}
 
 On a more personal note, working at Klippel GmbH have been a very enjoyable experience that gives me more insight about the real functioning of a company and what to expect from my future. I am thrilled to have had the opportunity to conduct this work, and very satisfied with the variety of the tasks I was assigned to, which included programming, measuring, and research to draw conclusion from my experiments. \\
 
@@ -1515,12 +1554,9 @@ This appendix aims to present additional figures that could not be presented in 
 \end{center}
 \end{minipage}
 
-\section{Room Correction}
+\section{Room Compensation}
 
-\subsection{Measurements}
-
-\subsubsection{Influence of the load}
-\label{Curves:InfluLoad}
+\subsection{Measurements in the tatrahedral box}
 
 \subsubsection{Influence of microphone position}
 \label{Curves:InfluMicPos}
@@ -1534,6 +1570,10 @@ This appendix aims to present additional figures that could not be presented in 
 \end{center}
 
 \missingfigure{Zoom sur les différences de Room Comp}
+
+\subsubsection{Influence of the load}
+\label{Curves:InfluLoad}
+
 
 		% Speaker library
 \chapter{Speaker library}

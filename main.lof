@@ -39,15 +39,18 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Measurement setup\relax }}{18}{figure.4.6}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces TRF at different measurement points\relax }}{18}{figure.4.7}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Results with compensation\relax }}{18}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Microphone position\relax }}{19}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Transfer Functions for different positions\relax }}{19}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Difference between NFS and TRF\relax }}{20}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Difference between Room Compensation functions\relax }}{20}{figure.4.12}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Comparison between the TRF of a measure in baffle and a measure in the box.\relax }}{20}{figure.4.13}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Comparison between the $K_{ms}$ in free air and in the box\relax }}{20}{figure.4.14}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{21}{figure.caption.10}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Comparison of measured impedance\relax }}{22}{figure.4.16}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Comparison of measured displacement TRF\relax }}{22}{figure.4.17}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Results with NFS compensation\relax }}{19}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces D.B. Keele Far Field extrapolation\relax }}{19}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Measurement setup\relax }}{20}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Transfer Functions for different distances $D_{ms}$\relax }}{20}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Room Compensation functions\relax }}{21}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Difference between Room Compensation functions\relax }}{21}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Comparison between the TRF of a measure in baffle and a measure in the box.\relax }}{21}{figure.4.15}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Comparison between the $K_{ms}$ in free air and in the box\relax }}{21}{figure.4.16}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{22}{figure.caption.9}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Comparison of measured impedance\relax }}{23}{figure.4.18}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Comparison of measured displacement TRF\relax }}{23}{figure.4.19}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Measurement in the tetrahedral box\relax }}{24}{figure.4.20}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Radiated Powers at 1m for different measurement points on the baffle\relax }}{i}{figure.a.A.1}
 \contentsline {figure}{\numberline {A.2}{\ignorespaces Contour plot of the woofer at 10 m, centered on-axis, horizontal plane.\relax }}{ii}{figure.a.A.2}

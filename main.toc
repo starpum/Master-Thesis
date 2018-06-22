@@ -9,8 +9,8 @@
 \contentsline {section}{\numberline {1.3}Literature review}{3}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Field Separation}{3}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Near Field measurements}{4}{subsection.1.3.2}
-\contentsline {subsubsection}{Measurement principle}{4}{subsubsection*.5}
-\contentsline {subsubsection}{Maximum order of expansion}{5}{subsubsection*.6}
+\contentsline {subsubsection}{Measurement principle}{4}{subsubsection*.6}
+\contentsline {subsubsection}{Maximum order of expansion}{5}{subsubsection*.7}
 \contentsline {chapter}{\numberline {2}Baffle measurements}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}Problematic}{6}{section.2.1}
 \contentsline {section}{\numberline {2.2}Grid optimization}{6}{section.2.2}
@@ -34,13 +34,15 @@
 \contentsline {chapter}{\numberline {4}Room Compensation}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Principle}{17}{section.4.1}
 \contentsline {section}{\numberline {4.2}Compensation by a Near Field measurement}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}D. B. Keele method for Far Field extrapolation}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}Measurements in the tetrahedral box}{19}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Influence of microphone position}{19}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Influence of the load}{20}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Discussion}{22}{section.4.5}
-\contentsline {chapter}{Conclusion}{23}{chapter*.11}
-\contentsline {chapter}{References}{23}{chapter*.11}
+\contentsline {section}{\numberline {4.3}Compensation by a NFS result}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}D. B. Keele method for Far Field extrapolation}{19}{section.4.4}
+\contentsline {section}{\numberline {4.5}Tetrahedral box}{20}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Influence of microphone position}{20}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Influence of the load}{21}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Measures in the tetrahedral box}{23}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Discussion}{24}{section.4.6}
+\contentsline {chapter}{Conclusion}{25}{chapter*.10}
+\contentsline {chapter}{References}{25}{section*.11}
 \contentsline {chapter}{Appendix \numberline {A}Additional figures}{i}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Baffle measurements}{i}{section.a.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Estimation of baffle influence}{i}{subsection.a.A.1.1}
@@ -48,10 +50,10 @@
 \contentsline {subsection}{\numberline {A.2.1}10 cm woofer}{ii}{subsection.a.A.2.1}
 \contentsline {subsection}{\numberline {A.2.2}Oval speaker}{iii}{subsection.a.A.2.2}
 \contentsline {subsection}{\numberline {A.2.3}2-way "diagonal" speaker}{iv}{subsection.a.A.2.3}
-\contentsline {section}{\numberline {A.3}Room Correction}{v}{section.a.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Measurements}{v}{subsection.a.A.3.1}
-\contentsline {subsubsection}{Influence of the load}{v}{subsubsection*.13}
-\contentsline {subsubsection}{Influence of microphone position}{v}{subsubsection*.14}
+\contentsline {section}{\numberline {A.3}Room Compensation}{v}{section.a.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Measurements in the tatrahedral box}{v}{subsection.a.A.3.1}
+\contentsline {subsubsection}{Influence of microphone position}{v}{subsubsection*.13}
+\contentsline {subsubsection}{Influence of the load}{vi}{subsubsection*.14}
 \contentsline {chapter}{Appendix \numberline {B}Speaker library}{vii}{Appendix.a.B}
 \contentsline {section}{\numberline {B.1}10 cm woofer}{vii}{section.a.B.1}
 \contentsline {section}{\numberline {B.2}Oval speaker}{vii}{section.a.B.2}
