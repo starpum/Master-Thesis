@@ -55,12 +55,20 @@
 \usepackage{enumitem}              	% To make lists
 \usepackage{url}                    		% to quote URLs
 \usepackage{pdfpages}			    % To include PDFs (annexes)
-\usepackage{textcomp}		        % For copyright symbol
 \usepackage{hyperref}					% To make references 
 \usepackage{movie15}					% To include gifs
+\usepackage{makecell}				% Line breaks in tabular
+\usepackage{adjustbox}				% Adjustable boxes to fit tabulars
 \usepackage{circuitikz}					% To include circuits
 \usepackage{tikz}
 \newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \coordinate (#1);}
+
+\renewcommand\theadalign{cc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[0.5pt]}
+\renewcommand\cellgape{\Gape[0.5pt]}
+\renewcommand\cellalign{cc}
+\renewcommand\cellgape{\Gape[1pt]}
 
 %--------------------------------------------------- TODOs / DRAFT MODE
  
@@ -240,12 +248,12 @@ Although this method is widely used, it presents several drawbacks:
 \item Price: the materials required such as an anechoic room or a performant microphone array can either very expensive or difficult to access. 
 \end{itemize}
 
+Several solutions are available to ease off these limits, such as the Klippel Near Field Scanner measurement device, the application of Room Compensation functions to measurements; or the simulation of free field condition by measuring in an open space. In this report,  different method of assessing the sound field emitted by a loudspeaker will be explored, with a main accent on the Near Field Scanner. \\
 
-\todo[inline, color=red!40]{Finir de rédiger l'introduction}
 
-The following reports aims to present the work that have been conducted during a 5-months internship at the company Klippel GmbH. This internship is mandatory to graduate from the International Master Degree in Electro-Acoustics (IMDEA) at the Université du Mans, in France. \\
+%The following reports aims to present the work that have been conducted during a 5-months internship at the company Klippel GmbH. This internship is mandatory to graduate from the International Master Degree in Electro-Acoustics (IMDEA) at the Université du Mans, in France. \\
 
-This document will cover different points, starting with a preface presenting the company, the context and aim of this work, and a literature review. Then the different measurements and results obtained during this work will be presented by using three topic: measurement of systems mounted in baffle, optimization of the measurement time of a device called the Near Field Scanner, and compensation of measurements in bad rooms such as workshops. 
+This document will cover different points, starting with a preface presenting the company, the context and aim of this work, and a literature review. Then the different measurements and results obtained during this work will be presented by using three topic: measurement of systems mounted in baffle, optimization of the measurement time of the Near Field Scanner, and compensation of measurements in bad rooms such as workshops. 
 
 
 %--------------------------------------------------------------
@@ -292,8 +300,7 @@ This work has three main guidelines, which are the measurement of a speaker moun
 
 The NFS baffle measurement aims to create an application note on how to perform a near field scanning of a loudspeaker mounted on a baffle and evaluate the baffle's influence on the measurement. To do so, the required tasks are the assembly and critical evaluation a baffle prototype, and the optimization of the measurement grid.\\
 The measurement time optimization part aims to reduce the scanning effort of the NFS by assuming symmetry conditions on the DUT 's geometry and applying these conditions on the complex coefficients of the spherical wave expansion (see equation \ref{eq:sphwvexp}). \\
-Finally, the room compensation part aims to test and enhance the Room correction module allowing to make fast non-anechoic measurements, to test a tetrahedral measurement box provided by Hill Acoustics \citep[see][]{tetbox}, and to create an application note on how to correct non-anechoic measurements. \\
-\todo[inline, color=red!40]{Changer les objectifs du dernier, c'faux}
+Finally, the room compensation part aims to experiment on Room Compensation solutions,  allowing to perform fast non-anechoic measurements, and to create an application note on how to correct non-anechoic measurements.\\
 
 There is no particular price constraints or technical constraints associated with this project, as the required hardware and software is already available. 
 
@@ -695,8 +702,8 @@ Figure \ref{fig:sym_flow} presents the flowchart of the optimization. The first 
 \end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp}, where $c_{n,m}^{out}(j \omega)$ \\
-\todo[inline, color=red!40]{FINIR DE REDIGER}
+The solution of the three-dimensional wave equation in spherical coordinates can be described by a spherical wave expansion given by equation \ref{eq:sphwvexp}, where $c_{n,m}^{out}(j \omega)$ represents the complex coefficients weighting the spherical harmonics.\\
+
 Figure \ref{fig:Sph_Harmo} presents a visual representation of the first few spherical harmonics, and their orders $n,m$ (\textit{all figures presented in this subsection are courtesy of W. Klippel, from the presentation \cite{lect2018}}). 
 \end{minipage}
 \vspace{0.4cm}
@@ -1216,7 +1223,7 @@ Figure \ref{fig:MicPosDiffRC} shows the difference between the Room Compensation
 \vspace{0.1cm}
 
 As a matter of fact, obtaining the exact same Room Compensation function for 2 measurement performed in the same conditions and for the same $D_{ms}$ is unlikely. \\
-To asses the accuracy of the measurement, an difference level of $\pm$ 5 dB between the Room Compensation functions have been arbitrary chosen. The distances satisfying these conditions are the measurements at $D_{ms}$ = 6 cm and $D_{ms}$ = 7 cm. At f = 6500 Hz and f = 10 kHz, the Compensation function at $D_{ms}$ = 7 cm exhibits larger differences with the Compensation function at $D_{ms}$ = 5 cm, and should be avoided. 
+To asses the accuracy of the measurement, a difference level of $\pm$ 5 dB between the Room Compensation functions have been arbitrary chosen. The distances satisfying these conditions are the measurements at $D_{ms}$ = 6 cm and $D_{ms}$ = 7 cm. At f = 6500 Hz and f = 10 kHz, the Compensation function for $D_{ms}$ = 7 cm exhibits larger differences with the Compensation function for $D_{ms}$ = 5 cm, and measuring at a larger distance should be avoided. 
 
 \subsection{Influence of the load}
 \label{sec:load}
@@ -1333,16 +1340,15 @@ Using the voltage correction calculated either by the ratio of resonance frequen
 
 The mismatches between the free air and voltage compensated curves are most likely due to the approximations made on the box's behavior. The effect of the box of the driver is much more complicated than a change on the mechanical compliance, especially since leakage isn't taken in account.  \\
 
-Although using voltage compensation to ease-off the influence of the box isn't the most accurate solution, it can be considered as the fast solution for performing measurement of loudspeakers in the linear domain using the tetrahedral box; without using a Compensation curve. Furthermore, it is possible to extrapolate these measurement to the far field of the driver by using the dB Keele method described in section \ref{sec:dBKeele}.
+Although using voltage compensation to ease-off the influence of the box isn't the most accurate solution, it can be considered as a fast solution for performing measurement of loudspeakers in the linear domain using the tetrahedral box; without using a Compensation curve. Furthermore, it is possible to extrapolate these measurements to the far field of the driver by using the dB Keele method described in section \ref{sec:dBKeele}.
 
 \subsection{Measures in the tetrahedral box}
 
 Finally, measurements of the 10 cm woofer (see appendix \ref{spkrlib:10cm}) have been made in the tetrahedral box and compensated using a measurement done using the Near Field Scanner, and a measure done on-axis at 5 cm of the speaker.\\
 The distance microphone - speaker in the box is $D_{ms}$ = 5 cm. Results are presented in figure \ref{fig:tet_res}.\\
 
-The "bass boot" is very visible on the uncompensated measurement, and have a huge impact on the results in low frequency. \\
-When using a near field measurement to compensate for the box effects, the results are acceptable. Because of the near field interference effects some variations can be observed, particularly in the 130 - 750 Hz range. \\
-When using a NFS result to perform the Room Compensation, the results are very good: the NFS allows to get rid of the near field effects, and provides accurate results over the whole frequency range. 
+The "bass boot" is very visible on the uncompensated measurement, and have a huge impact on the results in low frequency. When using a near field measurement to compensate for the box effects, the results are acceptable. Because of the near field interference effects some variations can be observed, particularly in the 130 - 750 Hz range. \\
+When using a NFS result to perform the Room Compensation, the results are very good: the NFS allows to ease off the near field effects, and provides accurate results over the complete measurement range. 
 
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{RoomComp/tetbox_res} 
@@ -1354,8 +1360,25 @@ When using a NFS result to perform the Room Compensation, the results are very g
 
 \section{Discussion}
 
-In this chapter, several methods for compensating the effect of the boundaries on an acoustic measurement have been  investigated. To bring all of these results together, a comparative table have been created.
+In this chapter, several methods for compensating the effect of the boundaries on an acoustic measurement have been  investigated. Table \ref{tab:room_comp} compares all of these solutions, and evidences the advantages and drawbacks of each method. 
 
+\begin{table}[ht]
+\centering
+\begin{tabular}{ p{2.3cm} *{4}{p{2cm}} *{2}{p{2.3cm}}}
+\toprule
+                                                              & \thead{Fast \\ measure} & \thead{Shielding}   & \thead{low \\ frequency  \\accuracy} & \thead{high \\ frequency \\accuracy}  & \thead{off-axis \\ measure} & \thead{multiple \\ diaphragm \\ systems  \\measure} \\\midrule
+\makecell{nearfield \\ reference}          &		\makecell{\makecell{\textbf{X}}	}			&                 	      &       	\makecell{\textbf{X}}		          &        		      &      	\makecell{\textbf{X}}		           &                                                \\\midrule
+\makecell{NFS \\ reference}                    &			\makecell{\textbf{X}}						&                       &     	\makecell{\textbf{X}}		        &  \makecell{\textbf{X}}		 &       	\makecell{\textbf{X}}		        &       	\makecell{\textbf{X}}		        \\\midrule
+\makecell{D.B.Keele \\ extrapolation}     &				\makecell{\textbf{X}}					&                       & 	\makecell{\textbf{X}}		       &                                 &                                                   &         	\makecell{\textbf{X}}		           \\\midrule
+\makecell{box - voltage \\ compensation}    &			\makecell{\textbf{X}}						&   \makecell{\textbf{X}}		    &                                  & \makecell{\textbf{X}}		        &                 &                                                \\ \midrule
+\makecell{box - nearfield \\ compensation}       &			\makecell{\textbf{X}}						&   \makecell{\textbf{X}}		      &   	\makecell{\textbf{X}}		      &     \makecell{\textbf{X}}		 &                   &                                                \\\midrule
+\makecell{box - NFS \\ compensation}                &				\makecell{\textbf{X}}					&    \makecell{\textbf{X}}		      &      	\makecell{\textbf{X}}		       &  \makecell{\textbf{X}}		&               &                                                \\\bottomrule
+\end{tabular}
+\caption{Comparison of different Room Compensation methods}
+\label{tab:room_comp}
+\end{table}
+
+Depending on the user's intentions and requirements, specific solutions should be preferred to other. For example to attest the quality of a speaker at the end of a production line, solutions providing shielding against changes on the measurement environment and accuracy over the whole frequency spectrum should be preferred; meanwhile an utilization for research and development to asses a speaker array should use the compensation by a NFS measurement. 
 
 %--------------------------------------------------------------
 %	CONCLUSION
