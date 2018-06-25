@@ -9,8 +9,8 @@
 \contentsline {section}{\numberline {1.3}Literature review}{3}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Field Separation}{3}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Near Field measurements}{4}{subsection.1.3.2}
-\contentsline {subsubsection}{Measurement principle}{4}{subsubsection*.4}
-\contentsline {subsubsection}{Maximum order of expansion}{5}{subsubsection*.5}
+\contentsline {subsubsection}{\numberline {1.3.2.1}Measurement principle}{4}{subsubsection.1.3.2.1}
+\contentsline {subsubsection}{\numberline {1.3.2.2}Maximum order of expansion}{5}{subsubsection.1.3.2.2}
 \contentsline {chapter}{\numberline {2}Baffle measurements}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}Problematic}{6}{section.2.1}
 \contentsline {section}{\numberline {2.2}Grid optimization}{6}{section.2.2}
@@ -42,8 +42,8 @@
 \contentsline {subsection}{\numberline {4.5.3}Measures in the tetrahedral box}{23}{subsection.4.5.3}
 \contentsline {section}{\numberline {4.6}Other works}{24}{section.4.6}
 \contentsline {section}{\numberline {4.7}Discussion}{24}{section.4.7}
-\contentsline {chapter}{Conclusion}{25}{chapter*.8}
-\contentsline {chapter}{References}{25}{chapter*.8}
+\contentsline {chapter}{Conclusion}{25}{chapter*.6}
+\contentsline {chapter}{References}{25}{chapter*.6}
 \contentsline {chapter}{Appendix \numberline {A}Additional figures}{i}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Baffle measurements}{i}{section.a.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Estimation of baffle influence}{i}{subsection.a.A.1.1}
@@ -53,7 +53,7 @@
 \contentsline {subsection}{\numberline {A.2.3}2-way "diagonal" speaker}{iv}{subsection.a.A.2.3}
 \contentsline {section}{\numberline {A.3}Room Compensation}{v}{section.a.A.3}
 \contentsline {subsection}{\numberline {A.3.1}Measurements in the tetrahedral box}{v}{subsection.a.A.3.1}
-\contentsline {subsubsection}{Influence of microphone position}{v}{subsubsection*.10}
+\contentsline {subsubsection}{\numberline {A.3.1.1}Influence of microphone position}{v}{subsubsection.a.A.3.1.1}
 \contentsline {chapter}{Appendix \numberline {B}Speaker library}{vi}{Appendix.a.B}
 \contentsline {section}{\numberline {B.1}10 cm woofer}{vi}{section.a.B.1}
 \contentsline {section}{\numberline {B.2}Oval speaker}{vi}{section.a.B.2}
