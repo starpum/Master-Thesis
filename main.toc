@@ -1,8 +1,8 @@
 \babel@toc {english}{}
 ~\hfill \textbf {Page}\par 
-\contentsline {chapter}{List of Figures}{e}{chapter*.2}
-\contentsline {chapter}{List of Equations}{f}{chapter*.2}
-\contentsline {chapter}{Introduction}{1}{chapter*.3}
+\contentsline {chapter}{List of Figures}{d}{Doc-Start}
+\contentsline {chapter}{List of Equations}{e}{Doc-Start}
+\contentsline {chapter}{Introduction}{1}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Preface}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Presentation of the company}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Context and aim of the work}{2}{section.1.2}
@@ -42,8 +42,8 @@
 \contentsline {subsection}{\numberline {4.5.3}Measures in the tetrahedral box}{23}{subsection.4.5.3}
 \contentsline {section}{\numberline {4.6}Other works}{24}{section.4.6}
 \contentsline {section}{\numberline {4.7}Discussion}{24}{section.4.7}
-\contentsline {chapter}{Conclusion}{25}{chapter*.6}
-\contentsline {chapter}{References}{25}{chapter*.6}
+\contentsline {chapter}{Conclusion}{25}{chapter*.4}
+\contentsline {chapter}{References}{25}{chapter*.4}
 \contentsline {chapter}{Appendix \numberline {A}Additional figures}{i}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Baffle measurements}{i}{section.a.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Estimation of baffle influence}{i}{subsection.a.A.1.1}
