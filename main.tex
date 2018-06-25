@@ -252,8 +252,7 @@ Although this method is widely used, it presents several drawbacks:
 
 Several solutions are available to ease off these limits, such as the Klippel Near Field Scanner measurement device, the application of Room Compensation functions to measurements; or the simulation of free field condition by measuring in an open space. In this report,  different method of assessing the sound field emitted by a loudspeaker will be explored, with a main accent on the Near Field Scanner. \\
 
-
-This document will cover different points, starting with a preface presenting the company, the context and aim of this work, and a literature review. Then the different measurements and results obtained during this work will be presented thanks to three topics: measurement of systems mounted in baffle, optimization of the measurement time of the Near Field Scanner, and compensation of measurements in bad rooms such as workshops. \\
+This document will cover different points, starting with a preface presenting the company, the context and aim of this work, and a literature review. Then the different measurements and results obtained during this work will be presented throughout three topics: measurement of systems mounted in baffle, optimization of the measurement time of the Near Field Scanner, and compensation of measurements in bad rooms such as workshops. \\
 
 The following work have been conducted during a 5-months internship at the company Klippel GmbH in Dresden, Germany. This internship is mandatory to graduate from the International Master Degree in Electro-Acoustics (IMDEA) at the Université du Mans, in France. \\
 
@@ -303,7 +302,7 @@ The NFS baffle measurement aims to create an application note on how to perform 
 The measurement time optimization part aims to reduce the scanning effort of the NFS by assuming symmetry conditions on the DUT 's geometry and applying these conditions on the complex coefficients of the spherical wave expansion (see equation \ref{eq:sphwvexp}). \\
 Finally, the room compensation part aims to experiment on Room Compensation solutions,  allowing to perform fast non-anechoic measurements, and to create an application note on how to correct non-anechoic measurements.\\
 
-There is no particular price constraints or technical constraints associated with this project, as the required hardware and software is already available. 
+There are no particular price constraints or technical constraints associated with this project, as the required hardware and software is already available. 
 
 \newpage
 
@@ -361,7 +360,7 @@ If the pressure is measured on 2 hemispherical surfaces in front of the baffle, 
 \end{equation}
 \myequations{System of equation of measured sound field}
 
-Each set of base functions $\mathbf{b}$ and $\mathbf{b}_{room}$ contains the elementatry functions. The subscripts $1$ and $2$ refer to the two scanning surfaces. This system of equations can be assembled and expressed as equation \ref{eq:holo_matrix} \cite{fieldsep}.
+Each set of base functions $\mathbf{b}$ and $\mathbf{b}_{room}$ contains the elementary functions. The subscripts $1$ and $2$ refer to the two scanning surfaces. This system of equations can be assembled and expressed as equation \ref{eq:holo_matrix} \cite{fieldsep}.
 
 \begin{equation}
 H_{m} = B_{h}\mathbf{c}_{m}
@@ -573,7 +572,7 @@ Figure \ref{fig:vib_pow} present the apparent power in the near field of the 10 
 
 \begin{itemize}
 \item The blue curve represents the power from the speaker. This scan have been centered on the speaker, using a 5 cm radius for the scanning grid. 
-\item The bright orange curve represents the contribution form the speaker and the wooden plate: this scan was centered on the speaker, with a 21 cm radius for the scanning grid.
+\item The bright orange curve represents the contribution from the speaker and the wooden plate: this scan was centered on the speaker, with a 21 cm radius for the scanning grid.
 \item The light orange curve represents the contribution from the wooden plate: this scan was centered midway between the speaker and the baffle, with a 5 cm scanning radius. 
 \item  The grey curve represents the contribution from the baffle: the scan was centered on the lower right corner of the baffle, with a 5 cm scanning radius. 
 \end{itemize}
@@ -1021,7 +1020,7 @@ The DUT is a "diagonal" 2-way speaker, and the scan is centered on the tweeter (
 Observing the radiated powers shows that the system have an omnidirectional directivity pattern until 175 Hz, also visible on the contour plot given in figure \ref{Curves:2way_contour}. Due to its geometry and 2 drivers, the system less susceptible to present symmetries than a single speaker mounted on a baffle seen in the previous examples.\\
 The crossover frequency range can be observed clearly on both result result curves: the symmetry factors take a dip, and the rest powers are higher than the symmetrical powers. \\
 
-Observing the Symmetry Factors shows that there is no baffle symmetry for this measurement. Although this result might seem quite trivial since the DUT was not mounted on a baffle, it is good indication that the symmetry estimation works correctly. \\
+Observing the Symmetry Factors shows that there is no baffle symmetry for this measurement. Although this result might seem quite trivial since the DUT was not mounted on a baffle, it is a good indication that the symmetry estimation works correctly. \\
 Around crossover frequency range (800 Hz - 3.5 kHz), both drivers of the DUT are working, and due to their diagonal positioning the system cannot fulfill any of the symmetry conditions. The highly asymmetric behavior of the system is very visible on the contour plot given in figure \ref{Curves:2way_contour}. \\
 In high frequency when the twitter alone is emitting, the symmetry factors of the rotational and planar symmetries increase again, meaning that the sound field emitted by the tweeter fulfill these conditions. 
 
