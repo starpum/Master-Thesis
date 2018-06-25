@@ -36,27 +36,24 @@
 \BOOKMARK [2][-]{subsection.4.5.1}{Influence of microphone position}{section.4.5}% 36
 \BOOKMARK [2][-]{subsection.4.5.2}{Influence of the load}{section.4.5}% 37
 \BOOKMARK [2][-]{subsection.4.5.3}{Measures in the tetrahedral box}{section.4.5}% 38
-\BOOKMARK [1][-]{section.4.6}{Discussion}{chapter.4}% 39
-\BOOKMARK [0][-]{chapter*.8}{Conclusion}{}% 40
-\BOOKMARK [0][-]{section*.9}{References}{}% 41
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Additional figures}{}% 42
-\BOOKMARK [1][-]{section.a.A.1}{Baffle measurements}{Appendix.a.A}% 43
-\BOOKMARK [2][-]{subsection.a.A.1.1}{Estimation of baffle influence}{section.a.A.1}% 44
-\BOOKMARK [1][-]{section.a.A.2}{Measurement time optimization}{Appendix.a.A}% 45
-\BOOKMARK [2][-]{subsection.a.A.2.1}{10 cm woofer}{section.a.A.2}% 46
-\BOOKMARK [2][-]{subsection.a.A.2.2}{Oval speaker}{section.a.A.2}% 47
-\BOOKMARK [2][-]{subsection.a.A.2.3}{2-way "diagonal" speaker}{section.a.A.2}% 48
-\BOOKMARK [1][-]{section.a.A.3}{Room Compensation}{Appendix.a.A}% 49
-\BOOKMARK [2][-]{subsection.a.A.3.1}{Measurements in the tatrahedral box}{section.a.A.3}% 50
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Speaker library}{}% 51
-\BOOKMARK [1][-]{section.a.B.1}{10 cm woofer}{Appendix.a.B}% 52
-\BOOKMARK [1][-]{section.a.B.2}{Oval speaker}{Appendix.a.B}% 53
-\BOOKMARK [1][-]{section.a.B.3}{16 cm fullband speaker}{Appendix.a.B}% 54
-\BOOKMARK [1][-]{section.a.B.4}{2-way diagonal speaker}{Appendix.a.B}% 55
-\BOOKMARK [1][-]{section.a.B.5}{18'' woofer}{Appendix.a.B}% 56
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Baffle Prototype pictures}{}% 57
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix SciLab implementation of symmetry verification}{}% 58
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Organization of the work}{}% 59
-\BOOKMARK [0][-]{Appendix.a.F}{Appendix Application notes}{}% 60
-\BOOKMARK [1][-]{section.a.F.1}{Baffle measurement}{Appendix.a.F}% 61
-\BOOKMARK [1][-]{section.a.F.2}{Complex Room Compensation module}{Appendix.a.F}% 62
+\BOOKMARK [1][-]{section.4.6}{Other works}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.7}{Discussion}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter*.8}{Conclusion}{}% 41
+\BOOKMARK [0][-]{chapter*.8}{References}{}% 42
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Additional figures}{}% 43
+\BOOKMARK [1][-]{section.a.A.1}{Baffle measurements}{Appendix.a.A}% 44
+\BOOKMARK [2][-]{subsection.a.A.1.1}{Estimation of baffle influence}{section.a.A.1}% 45
+\BOOKMARK [1][-]{section.a.A.2}{Measurement time optimization}{Appendix.a.A}% 46
+\BOOKMARK [2][-]{subsection.a.A.2.1}{10 cm woofer}{section.a.A.2}% 47
+\BOOKMARK [2][-]{subsection.a.A.2.2}{Oval speaker}{section.a.A.2}% 48
+\BOOKMARK [2][-]{subsection.a.A.2.3}{2-way "diagonal" speaker}{section.a.A.2}% 49
+\BOOKMARK [1][-]{section.a.A.3}{Room Compensation}{Appendix.a.A}% 50
+\BOOKMARK [2][-]{subsection.a.A.3.1}{Measurements in the tetrahedral box}{section.a.A.3}% 51
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Speaker library}{}% 52
+\BOOKMARK [1][-]{section.a.B.1}{10 cm woofer}{Appendix.a.B}% 53
+\BOOKMARK [1][-]{section.a.B.2}{Oval speaker}{Appendix.a.B}% 54
+\BOOKMARK [1][-]{section.a.B.3}{2-way diagonal speaker}{Appendix.a.B}% 55
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Baffle Prototype pictures}{}% 56
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix SciLab implementation of symmetry verification}{}% 57
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Organization of the work}{}% 58
+\BOOKMARK [0][-]{Appendix.a.F}{Appendix Measurement \046 results databases}{}% 59

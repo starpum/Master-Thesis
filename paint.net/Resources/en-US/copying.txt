@@ -1,0 +1,24 @@
+The following icons are from either the Crystal icon set, http://www.everaldo.com/crystal/, or the Oxygen icon set, http://www.oxygen-icons.org/ . These icons are licensed under the LGPL, available here: http://www.gnu.org/copyleft/lesser.html
+
+As such, use of these icons is covered by the LGPL license, and not the regular Paint.NET license.
+
+Crystal
+-------
+Icons.DentsEffectIcon
+Icons.EllipseToolIcon
+Icons.InkSketchEffectIcon
+Icons.InvertColorsEffect
+
+Oxygen
+------
+Icons.ColorPickerToolIcon
+Icons.CurvesEffect
+Icons.EdgeDetectEffect
+Icons.LineToolIcon
+Icons.MenuEditCutIcon
+Icons.MenuUtilitiesSettingsIcon.24
+Icons.MenuWindowToolsIcon
+Icons.OutlineEffectIcon
+Icons.PaintBrushToolIcon
+Icons.Settings.Tools.24
+Icons.TextToolIcon

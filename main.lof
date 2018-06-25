@@ -50,7 +50,7 @@
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Equivalent circuit of a driver in the box\relax }}{22}{figure.caption.6}
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Comparison of measured impedance\relax }}{23}{figure.4.18}
 \contentsline {figure}{\numberline {4.19}{\ignorespaces Comparison of measured displacement TRF\relax }}{23}{figure.4.19}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Measurement in the tetrahedral box\relax }}{24}{figure.4.20}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Measurement in the tetrahedral box\relax }}{23}{figure.4.20}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Radiated Powers at 1m for different measurement points on the baffle\relax }}{i}{figure.a.A.1}
 \contentsline {figure}{\numberline {A.2}{\ignorespaces Contour plot of the woofer at 10 m, centered on-axis, horizontal plane.\relax }}{ii}{figure.a.A.2}
@@ -73,14 +73,13 @@
 \contentsline {figure}{\numberline {A.19}{\ignorespaces Diagonal speaker, Radiated Powers: single plane (top/bottom) symmetry\relax }}{iv}{figure.a.A.19}
 \contentsline {figure}{\numberline {A.20}{\ignorespaces Transfer functions for all microphones positions\relax }}{v}{figure.a.A.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces 10 cm woofer\relax }}{vii}{figure.a.B.1}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Oval speaker\relax }}{vii}{figure.a.B.2}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces 2-way diagonal speaker\relax }}{viii}{figure.a.B.3}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces 18'' woofer\relax }}{viii}{figure.a.B.4}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces 10 cm woofer\relax }}{vi}{figure.a.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Oval speaker\relax }}{vi}{figure.a.B.2}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces 2-way diagonal speaker\relax }}{vi}{figure.a.B.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Back of the baffle\relax }}{ix}{figure.a.C.1}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Closeup of the clamping system\relax }}{ix}{figure.a.C.2}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Side of the baffle\relax }}{ix}{figure.a.C.3}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Back of the baffle\relax }}{vii}{figure.a.C.1}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Closeup of the clamping system\relax }}{vii}{figure.a.C.2}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Side of the baffle\relax }}{vii}{figure.a.C.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

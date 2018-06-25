@@ -40,9 +40,10 @@
 \contentsline {subsection}{\numberline {4.5.1}Influence of microphone position}{20}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Influence of the load}{21}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Measures in the tetrahedral box}{23}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Discussion}{24}{section.4.6}
+\contentsline {section}{\numberline {4.6}Other works}{24}{section.4.6}
+\contentsline {section}{\numberline {4.7}Discussion}{24}{section.4.7}
 \contentsline {chapter}{Conclusion}{25}{chapter*.8}
-\contentsline {chapter}{References}{25}{section*.9}
+\contentsline {chapter}{References}{25}{chapter*.8}
 \contentsline {chapter}{Appendix \numberline {A}Additional figures}{i}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Baffle measurements}{i}{section.a.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Estimation of baffle influence}{i}{subsection.a.A.1.1}
@@ -51,18 +52,13 @@
 \contentsline {subsection}{\numberline {A.2.2}Oval speaker}{iii}{subsection.a.A.2.2}
 \contentsline {subsection}{\numberline {A.2.3}2-way "diagonal" speaker}{iv}{subsection.a.A.2.3}
 \contentsline {section}{\numberline {A.3}Room Compensation}{v}{section.a.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Measurements in the tatrahedral box}{v}{subsection.a.A.3.1}
-\contentsline {subsubsection}{Influence of microphone position}{v}{subsubsection*.11}
-\contentsline {subsubsection}{Influence of the load}{vi}{subsubsection*.12}
-\contentsline {chapter}{Appendix \numberline {B}Speaker library}{vii}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}10 cm woofer}{vii}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Oval speaker}{vii}{section.a.B.2}
-\contentsline {section}{\numberline {B.3}16 cm fullband speaker}{vii}{section.a.B.3}
-\contentsline {section}{\numberline {B.4}2-way diagonal speaker}{viii}{section.a.B.4}
-\contentsline {section}{\numberline {B.5}18'' woofer}{viii}{section.a.B.5}
-\contentsline {chapter}{Appendix \numberline {C}Baffle Prototype pictures}{ix}{Appendix.a.C}
-\contentsline {chapter}{Appendix \numberline {D}SciLab implementation of symmetry verification}{x}{Appendix.a.D}
-\contentsline {chapter}{Appendix \numberline {E}Organization of the work}{xii}{Appendix.a.E}
-\contentsline {chapter}{Appendix \numberline {F}Application notes}{xiii}{Appendix.a.F}
-\contentsline {section}{\numberline {F.1}Baffle measurement}{xiii}{section.a.F.1}
-\contentsline {section}{\numberline {F.2}Complex Room Compensation module}{xiii}{section.a.F.2}
+\contentsline {subsection}{\numberline {A.3.1}Measurements in the tetrahedral box}{v}{subsection.a.A.3.1}
+\contentsline {subsubsection}{Influence of microphone position}{v}{subsubsection*.10}
+\contentsline {chapter}{Appendix \numberline {B}Speaker library}{vi}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}10 cm woofer}{vi}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Oval speaker}{vi}{section.a.B.2}
+\contentsline {section}{\numberline {B.3}2-way diagonal speaker}{vi}{section.a.B.3}
+\contentsline {chapter}{Appendix \numberline {C}Baffle Prototype pictures}{vii}{Appendix.a.C}
+\contentsline {chapter}{Appendix \numberline {D}SciLab implementation of symmetry verification}{viii}{Appendix.a.D}
+\contentsline {chapter}{Appendix \numberline {E}Organization of the work}{x}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {F}Measurement \& results databases}{xi}{Appendix.a.F}
