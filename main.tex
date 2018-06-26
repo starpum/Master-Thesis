@@ -250,7 +250,7 @@ Although this method is widely used, it presents several drawbacks:
 \item Price: the materials required such as an anechoic room or a performant microphone array can either very expensive or difficult to access. 
 \end{itemize}
 
-Several solutions are available to ease off these limits, such as the Klippel Near Field Scanner measurement device, the application of Room Compensation functions to measurements; or the simulation of free field condition by measuring in an open space. In this report,  different method of assessing the sound field emitted by a loudspeaker will be explored, with a main accent on the Near Field Scanner. \\
+Several solutions are available to ease off these limits, such as the Klippel Near Field Scanner measurement device; the application of Room Compensation functions to measurements; or the simulation of free field condition by measuring in an open space. In this report,  different method of assessing the sound field emitted by a loudspeaker will be explored, with a main accent on the Near Field Scanner. \\
 
 This document will cover different points, starting with a preface presenting the company, the context and aim of this work, and a literature review. Then the different measurements and results obtained during this work will be presented throughout three topics: measurement of systems mounted in baffle, optimization of the measurement time of the Near Field Scanner, and compensation of measurements in bad rooms such as workshops. \\
 
@@ -310,7 +310,7 @@ There are no particular price constraints or technical constraints associated wi
 \section{Literature review}
 
 Performing measurements of a loudspeaker on a baffle can lead to many problems, mainly caused by the diffraction at the edges of the baffle, and the influence of the room on the measurement \cite{LIS}.\\
-The Klippel Near Field Scanner uses the spherical wave expansion to determine the 3D sound pressure output of a DUT at any point in its far field, by performing a measurement in the nearfield of the DUT and solving the wave equation in spherical coordinates in order to apply the field separation method described by G. Weinreich and tested by M. Melon in the ASA publication \textit{Evaluation of a method for the measurement of subwoofers in usual rooms} and AES publication \textit{Comparison of four subwoofer measurement techniques}  \cite{melon1, melon2}. The complete theory behind this method is beyond the scope of this report, and will only be presented succinctly \citep[see][sect.~3]{aeshs} \citep[see][chap.~6]{Fourier}. 
+The Klippel Near Field Scanner uses the spherical wave expansion to determine the 3D sound pressure output of a DUT at any point in its far field, by performing a measurement in the nearfield of the DUT and solving the wave equation in spherical coordinates in order to apply the field separation method described by G. Weinreich and tested by M. Melon in the ASA publication \textit{Evaluation of a method for the measurement of subwoofers in usual rooms}   \cite{melon1}. The complete theory behind this method is beyond the scope of this report, and will only be presented succinctly \citep[see][sect.~3]{aeshs} \citep[see][chap.~6]{Fourier}. 
 
 \subsection{Field Separation}
 \label{sec:FieldSep}
@@ -446,7 +446,7 @@ Because of these physical limitations, the order of expansion can only be increa
 \section{Problematic}
 
 Performing measurements of devices mounted on a baffle requires particular attention to avoid measurement errors from the edge diffraction, the acoustical shortcut between the front and the back of the baffle, or the vibrations of the baffle itself; as shown on figure \ref{fig:baffle_problems}. \\
-This section's work aims to generate a better suited measurement grid for the NFS to perform baffle measurements by modifying the "Grid Generation" block in figure \ref{fig:nfsflow}, and the critical evaluation of a baffle prototype designed to perform high accuracy baffle measurements with the NFS. 
+This section's work aims to generate a better suited measurement grid for the NFS to perform baffle measurements by modifying the "Grid Generation" block in figure \ref{fig:nfsflow}, and to conduct a critical evaluation of a baffle prototype designed to perform high accuracy baffle measurements with the NFS. 
 
 \begin{center}
 	\includegraphics[width=0.6\textwidth]{GridOpti/baffle_problems} 
@@ -666,7 +666,7 @@ To conclude, the baffle prototype allows to generate accurate acoustic measureme
 \end{minipage}
 \begin{minipage}{0.6\textwidth}
 The next steps of this study of the baffle is the creation of a "diagnostic tool" to identify rattling and other problems with the baffle, for example by making a coarse measurement with the NFS using a plane grid parallel to the baffle, as shown by figure \ref{fig:diag_baffle}.\\
-Using holographic processing would allow to identify the localization and frequencies where the vibration is critical for the measurement by generating a "map" of the vibrations.
+Using holographic processing to project the measured plane back onto the baffle's surface would allow to identify the localization and frequencies where the vibration is critical for the measurement by generating a "map" of the vibrations.
 \end{minipage}
 
 
@@ -725,7 +725,7 @@ Symmetries on the DUT's geometry yield symmetries in the emitted sound field, th
 	\textbf{Dual plane symmetry} (see figure \ref{fig:dualpsym}) is mostly observed in 2-way closed box systems, and reduces the number of coefficients by half according to the relation given by equation \ref{eq:Cdpsym} \cite{aeshs}.\\
 	$R_{m}$ represents the complex symmetry weights, expressed in equation \ref{eq:Rm} \citep{aeshs} where $\phi _{e}$ is the symmetry axis; and $m$ the suborder of the coefficient under study. \\
 
-	If the symmetry axes $\phi _{e} \textup{and} \Theta _{e}$ are aligned with the coordinate system, equation \ref{eq:Cdpsym} can be simplified to the relation given in equation \ref{eq:Cdpsymb} \cite{aeshs}.
+	If the symmetry axes $\phi _{e} \; \textup{and} \; \Theta _{e}$ are aligned with the coordinate system, equation \ref{eq:Cdpsym} can be simplified to the relation given in equation \ref{eq:Cdpsymb} \cite{aeshs}.
 \end{minipage}
 \begin{minipage}{0.5\textwidth}	% Dual Plane sym - equations
 	\begin{equation}
@@ -882,7 +882,7 @@ C_{mn_{Right}} = \begin{pmatrix}
   \draw[dashed,->] ([xshift=1.5ex]carrowtop) -- ([xshift=-1.5ex,yshift=0.5ex]carrowbottom);
 }
 
-The $R_{m}$ weights matrix is calculated for each $mn$ orders and each frequency using equation \ref{eq:Rm}. For the left/right symmetry the angle $\phi_{e}$ is $\frac{\pi}{2}$ and for the top/bottom symmetry, $\phi_{e} = 0$; changing the values of the weights. The right-side matrix is then weighted by $R_{m}$ by multiplying the matrices: $C_{mn_{Right}} = R_{m} \times C_{mn_{Right}}$. \\
+The $R_{m}$ weights matrix is calculated for each $m,n$ orders and each frequency using equation \ref{eq:Rm}. For the left/right symmetry the angle $\phi_{e}$ is $\frac{\pi}{2}$ and for the top/bottom symmetry, $\phi_{e} = 0$; changing the values of the weights. The right-side matrix is then weighted by $R_{m}$ by multiplying the matrices: $C_{mn_{Right}} = R_{m} \times C_{mn_{Right}}$. \\
 To avoid overlapping and ensure that the single plane symmetry coefficient matrix is correct, the coefficients of order $m = 0$ are only filled once in the left-side matrix. The coefficient matrix is then computed by adding the right-side and left-side matrices $C_{mn_{SinglePlane}} = C_{mn_{Left}} + C_{mn_{Right}}$. \\
 
 
@@ -1401,7 +1401,7 @@ Depending on the user's intentions and requirements, specific solutions should b
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}
 
-Several investigations have been conducted in the context of this report and gave significant results. \\
+Several investigations have been conducted in the frame of this report and gave significant results. \\
 
 For the NFS measurements in baffle, several measurements have been conducted, allowing to diagnose the problems with a prototype designed to perform such measurements. It has been evidenced that the wooden plate will influence the measurement; and that the baffle is subject to rattling if the clamping system isn't correctly tightened.  \\
 The development of an elliptical measurement grid have shown that for measurement not using the field separation method, measuring closer to the driver gives more accurate results by minimizing the impact of the room modes.\\
