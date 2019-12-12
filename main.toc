@@ -1,64 +1,64 @@
 \babel@toc {english}{}
 ~\hfill \textbf {Page}\par 
-\contentsline {chapter}{List of Figures}{d}{Doc-Start}
-\contentsline {chapter}{List of Equations}{e}{Doc-Start}
-\contentsline {chapter}{Introduction}{1}{chapter*.1}
-\contentsline {chapter}{\numberline {1}Preface}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Presentation of the company}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Context and aim of the work}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Literature review}{3}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Field Separation}{3}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Near Field measurements}{4}{subsection.1.3.2}
-\contentsline {subsubsection}{\numberline {1.3.2.1}Measurement principle}{4}{subsubsection.1.3.2.1}
-\contentsline {subsubsection}{\numberline {1.3.2.2}Maximum order of expansion}{5}{subsubsection.1.3.2.2}
-\contentsline {chapter}{\numberline {2}Baffle measurements}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}Problematic}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Grid optimization}{6}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Principle}{6}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Measurements}{7}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Discussion}{7}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Application note for baffle measurements}{7}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Estimation of baffle influence}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Presentation of the prototype}{8}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Measurements}{8}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Discussion}{10}{subsection.2.3.3}
-\contentsline {chapter}{\numberline {3}Measurement time optimization}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Principle}{11}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Impact of symmetries on complex coefficients of the spherical wave expansion}{11}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Implementation}{12}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Measurements}{14}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}10 cm woofer}{14}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Oval speaker}{15}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}2-way "diagonal" speaker}{16}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Discussion}{16}{section.3.3}
-\contentsline {chapter}{\numberline {4}Room Compensation}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Principle}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Compensation by a Near Field measurement}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}Compensation by a NFS result}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}D. B. Keele method for Far Field extrapolation}{19}{section.4.4}
-\contentsline {section}{\numberline {4.5}Tetrahedral box}{20}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Influence of microphone position}{20}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Influence of the load}{21}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Measures in the tetrahedral box}{23}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Other works}{24}{section.4.6}
-\contentsline {section}{\numberline {4.7}Discussion}{24}{section.4.7}
-\contentsline {chapter}{Conclusion}{25}{chapter*.4}
-\contentsline {chapter}{References}{25}{chapter*.4}
-\contentsline {chapter}{Appendix \numberline {A}Additional figures}{i}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Baffle measurements}{i}{section.a.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Estimation of baffle influence}{i}{subsection.a.A.1.1}
-\contentsline {section}{\numberline {A.2}Measurement time optimization}{ii}{section.a.A.2}
-\contentsline {subsection}{\numberline {A.2.1}10 cm woofer}{ii}{subsection.a.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Oval speaker}{iii}{subsection.a.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}2-way "diagonal" speaker}{iv}{subsection.a.A.2.3}
-\contentsline {section}{\numberline {A.3}Room Compensation}{v}{section.a.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Measurements in the tetrahedral box}{v}{subsection.a.A.3.1}
-\contentsline {subsubsection}{\numberline {A.3.1.1}Influence of microphone position}{v}{subsubsection.a.A.3.1.1}
-\contentsline {chapter}{Appendix \numberline {B}Speaker library}{vi}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}10 cm woofer}{vi}{section.a.B.1}
-\contentsline {section}{\numberline {B.2}Oval speaker}{vi}{section.a.B.2}
-\contentsline {section}{\numberline {B.3}2-way diagonal speaker}{vi}{section.a.B.3}
-\contentsline {chapter}{Appendix \numberline {C}Baffle Prototype pictures}{vii}{Appendix.a.C}
-\contentsline {chapter}{Appendix \numberline {D}SciLab implementation of symmetry verification}{viii}{Appendix.a.D}
-\contentsline {chapter}{Appendix \numberline {E}Organization of the work}{x}{Appendix.a.E}
-\contentsline {chapter}{Appendix \numberline {F}Measurement \& results databases}{xi}{Appendix.a.F}
+\contentsline {chapter}{List of Figures}{d}{Doc-Start}% 
+\contentsline {chapter}{List of Equations}{e}{Doc-Start}% 
+\contentsline {chapter}{Introduction}{1}{chapter*.1}% 
+\contentsline {chapter}{\numberline {1}Preface}{2}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Presentation of the company}{2}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Context and aim of the work}{2}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Literature review}{3}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}Field Separation}{3}{subsection.1.3.1}% 
+\contentsline {subsection}{\numberline {1.3.2}Near Field measurements}{4}{subsection.1.3.2}% 
+\contentsline {subsubsection}{\numberline {1.3.2.1}Measurement principle}{4}{subsubsection.1.3.2.1}% 
+\contentsline {subsubsection}{\numberline {1.3.2.2}Maximum order of expansion}{5}{subsubsection.1.3.2.2}% 
+\contentsline {chapter}{\numberline {2}Baffle measurements}{6}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Problematic}{6}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Grid optimization}{6}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Principle}{6}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Measurements}{7}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Discussion}{7}{subsection.2.2.3}% 
+\contentsline {subsection}{\numberline {2.2.4}Application note for baffle measurements}{7}{subsection.2.2.4}% 
+\contentsline {section}{\numberline {2.3}Estimation of baffle influence}{8}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Presentation of the prototype}{8}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Measurements}{8}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Discussion}{10}{subsection.2.3.3}% 
+\contentsline {chapter}{\numberline {3}Measurement time optimization}{11}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Principle}{11}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Impact of symmetries on complex coefficients of the spherical wave expansion}{11}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Implementation}{12}{subsection.3.1.2}% 
+\contentsline {section}{\numberline {3.2}Measurements}{14}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}10 cm woofer}{14}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Oval speaker}{15}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}2-way "diagonal" speaker}{16}{subsection.3.2.3}% 
+\contentsline {section}{\numberline {3.3}Discussion}{16}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Room Compensation}{17}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Principle}{17}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Compensation by a Near Field measurement}{18}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Compensation by a NFS result}{19}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}D. B. Keele method for Far Field extrapolation}{19}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Tetrahedral box}{20}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}Influence of microphone position}{20}{subsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.5.2}Influence of the load}{21}{subsection.4.5.2}% 
+\contentsline {subsection}{\numberline {4.5.3}Measures in the tetrahedral box}{23}{subsection.4.5.3}% 
+\contentsline {section}{\numberline {4.6}Other works}{24}{section.4.6}% 
+\contentsline {section}{\numberline {4.7}Discussion}{24}{section.4.7}% 
+\contentsline {chapter}{Conclusion}{25}{chapter*.4}% 
+\contentsline {chapter}{References}{25}{chapter*.4}% 
+\contentsline {chapter}{Appendix \numberline {A}Additional figures}{i}{Appendix.a.A}% 
+\contentsline {section}{\numberline {A.1}Baffle measurements}{i}{section.a.A.1}% 
+\contentsline {subsection}{\numberline {A.1.1}Estimation of baffle influence}{i}{subsection.a.A.1.1}% 
+\contentsline {section}{\numberline {A.2}Measurement time optimization}{ii}{section.a.A.2}% 
+\contentsline {subsection}{\numberline {A.2.1}10 cm woofer}{ii}{subsection.a.A.2.1}% 
+\contentsline {subsection}{\numberline {A.2.2}Oval speaker}{iii}{subsection.a.A.2.2}% 
+\contentsline {subsection}{\numberline {A.2.3}2-way "diagonal" speaker}{iv}{subsection.a.A.2.3}% 
+\contentsline {section}{\numberline {A.3}Room Compensation}{v}{section.a.A.3}% 
+\contentsline {subsection}{\numberline {A.3.1}Measurements in the tetrahedral box}{v}{subsection.a.A.3.1}% 
+\contentsline {subsubsection}{\numberline {A.3.1.1}Influence of microphone position}{v}{subsubsection.a.A.3.1.1}% 
+\contentsline {chapter}{Appendix \numberline {B}Speaker library}{vi}{Appendix.a.B}% 
+\contentsline {section}{\numberline {B.1}10 cm woofer}{vi}{section.a.B.1}% 
+\contentsline {section}{\numberline {B.2}Oval speaker}{vi}{section.a.B.2}% 
+\contentsline {section}{\numberline {B.3}2-way diagonal speaker}{vi}{section.a.B.3}% 
+\contentsline {chapter}{Appendix \numberline {C}Baffle Prototype pictures}{vii}{Appendix.a.C}% 
+\contentsline {chapter}{Appendix \numberline {D}SciLab implementation of symmetry verification}{viii}{Appendix.a.D}% 
+\contentsline {chapter}{Appendix \numberline {E}Organization of the work}{x}{Appendix.a.E}% 
+\contentsline {chapter}{Appendix \numberline {F}Measurement \& results databases}{xi}{Appendix.a.F}% 
